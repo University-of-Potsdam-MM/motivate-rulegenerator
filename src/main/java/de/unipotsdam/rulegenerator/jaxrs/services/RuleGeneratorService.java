@@ -1,9 +1,4 @@
-package de.unipotsdam.rulegenerator.jaxrs.rules;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+package de.unipotsdam.rulegenerator.jaxrs.services;
 
 import de.unipotsdam.rulegenerator.enums.FactOperator;
 import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
@@ -26,7 +21,7 @@ public class RuleGeneratorService {
 	 *
 	 * @return the adaptation rule
 	 */
-	public AdaptationRule generateFakeRule() {
+	public static AdaptationRule generateFakeRule() {
 		AdaptationRule rule = new AdaptationRule("AR_1");
 		// set triggering mode
 		rule.setTriggeringMode(new Trigger(TriggeringMode.ON_ENTRY));

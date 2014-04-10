@@ -5,12 +5,8 @@ import java.net.URI;
 
 import javax.ws.rs.core.UriBuilder;
 
-import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
-import org.glassfish.grizzly.ssl.SSLContextConfigurator;
-import org.glassfish.grizzly.ssl.SSLEngineConfigurator;
 
-import com.sun.jersey.api.container.ContainerFactory;
 import com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory;
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;

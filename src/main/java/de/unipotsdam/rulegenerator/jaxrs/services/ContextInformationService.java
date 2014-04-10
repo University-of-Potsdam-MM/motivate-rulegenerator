@@ -1,4 +1,4 @@
-package de.unipotsdam.rulegenerator.jaxrs.contextinformation;
+package de.unipotsdam.rulegenerator.jaxrs.services;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class ContextInformationService {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	protected ContextInformationList getContextInformations()
+	public static ContextInformationList getContextInformations()
 			throws JsonParseException, JsonMappingException, IOException {
 		ContextInformationList informations = new ContextInformationList();
 
