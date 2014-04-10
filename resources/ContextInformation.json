@@ -1,0 +1,30 @@
+{
+   "contextInformations":[
+      {
+         "id":"CI_CURRENT_TEMPERATURE",
+         "name":"Aktuelle Temperatur",
+         "description":"...",
+         "dataType":"Double",
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "LESS_THEN"
+         ]
+      },
+      {
+         "id":"CI_USER_LOCATION_LATITUDE",
+         "name":"Benutzer Geographische Breite",
+         "description":"...",
+         "dataType":"Double",
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "LESS_THEN"
+         ]
+      }
+   ]
+}
