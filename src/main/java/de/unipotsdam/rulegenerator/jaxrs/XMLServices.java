@@ -16,8 +16,8 @@ import de.unipotsdam.rulegenerator.objects.AdaptationRule;
 import de.unipotsdam.rulegenerator.objects.ContextInformationList;
 
 @Path("/xml")
-public class XMLServices {
-
+public class XMLServices extends Services {
+	
 	@GET
 	@Path("/context-information")
 	@Produces(MediaType.TEXT_XML)

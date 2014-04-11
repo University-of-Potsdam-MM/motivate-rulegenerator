@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!-- Configuration of the Ant build system to generate a Jar file -->
+<project name="ServerJar" default="dist" basedir=".">
+	<property name="src" location="src" />
+	<property name="build" location="target/classes" />
+	<property name="dist" location="dist" />
+	<property name="lib" location="lib" />
+
+	<target name="dist" description="Create Jar file">
+		<!-- creates the distribution directory -->
+		<mkdir dir="${dist}/lib" />
+
+		<tstamp />
+
+		<!-- Remove manifest. This jar will end up on the classpath of Test.jar -->
+		<jar jarfile="${dist}/lib/RuleGenerator-${DSTAMP}.jar" basedir="${build}" />
+
+		<manifestclasspath property="mf.classpath" jarfile="${dist}/lib/RuleGenerator.jar">
+			<classpath>
+				<fileset dir="${dist}/lib" includes="*.jar" />
+			</classpath>
+			<!--end tag-->
+		</manifestclasspath>
+
+		<jar jarfile="${dist}/lib/RuleGenerator.jar" basedir="${build}" includes="*.class">
+			<manifest>
+				<attribute name="Main-Class" value="de.unipotsdam.rulegenerator.jaxrs.Main" />
+				<attribute name="Class-Path" value="${mf.classpath}" />
+			</manifest>
+		</jar>
+	</target>
+</project>

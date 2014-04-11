@@ -56,7 +56,7 @@ public class Main {
 	 */
 	protected static HttpServer startServer() throws IOException {
 		ResourceConfig resourceConfig = new PackagesResourceConfig(
-				"de.unipotsdam.rulegenerator");
+				"de.unipotsdam.rulegenerator.jaxrs");
 
 		// Add AuthFilter ////////////
 		resourceConfig.getProperties().put(

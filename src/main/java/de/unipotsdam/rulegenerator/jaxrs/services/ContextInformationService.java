@@ -1,6 +1,5 @@
 package de.unipotsdam.rulegenerator.jaxrs.services;
 
-import java.io.File;
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -31,8 +30,7 @@ public class ContextInformationService {
 		ContextInformationList informations = new ContextInformationList();
 
 		ObjectMapper mapper = new ObjectMapper();
-		informations = mapper.readValue(new File(
-				"resources/ContextInformation.json"),
+		informations = mapper.readValue(ContextInformationService.class.getResourceAsStream("/ContextInformation.json"),
 				ContextInformationList.class);
 
 		return informations;

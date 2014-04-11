@@ -16,8 +16,8 @@ import de.unipotsdam.rulegenerator.objects.AdaptationRule;
 import de.unipotsdam.rulegenerator.objects.ContextInformationList;
 
 @Path("/json")
-public class JSONServices {
-
+public class JSONServices extends Services {
+	
 	@GET
 	@Path("/context-information")
 	@Produces(MediaType.APPLICATION_JSON)
