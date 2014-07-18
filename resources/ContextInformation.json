@@ -1,30 +1,791 @@
 {
    "contextInformations":[
       {
-         "id":"CI_CURRENT_TEMPERATURE",
-         "name":"Aktuelle Temperatur",
+         "id":"CI_USER_LOCATION_LATITUDE",
+         "name":"Geographische Breite des Benutzers",
          "description":"...",
-         "dataType":"Double",
+		 "dataType":"DT_DOUBLE",
+		 "range":[
+		 	"-90",
+		 	"90"
+		 ],
          "acceptedFactOperators":[
             "IS",
             "IS_NOT",
             "LESS_THEN",
             "GREATER_THEN",
-            "LESS_THEN"
+            "NO_VALUE"
          ]
       },
       {
-         "id":"CI_USER_LOCATION_LATITUDE",
+         "id":"CI_USER_LOCATION_LONGITUDE",
          "name":"Benutzer Geographische Breite",
          "description":"...",
-         "dataType":"Double",
+         "dataType":"DT_DOUBLE",
+         "range":[
+         	-180,
+         	180
+         ],
          "acceptedFactOperators":[
             "IS",
             "IS_NOT",
             "LESS_THEN",
             "GREATER_THEN",
-            "LESS_THEN"
+            "NO_VALUE"
          ]
+      },
+      {
+         "id": "CI_USER_LOCATION_ADDRESS",
+         "name": "Adresse des Ortes an dem sich der Benutzer befindet.",
+         "description": "...",
+         "dataType":"DT_STRING",
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "CONTAINS",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_LOCATION_BUILDING",
+         "name": "Das Gebäude, in dem sich der Benutzer befindet.",
+         "description": "...",
+         "dataType":"DT_STRING",
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "CONTAINS",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_LOCATION_REGION",
+         "name": "Die Region, in der sich der Benutzer befindet.",
+         "description": "...",
+         "dataType":"DT_STRING",
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "CONTAINS",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_LOCATION_COUNTRY",
+         "name": "Das Land, in dem sich der Benutzer befindet.",
+         "description": "...",
+         "dataType":"DT_STRING",
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "CONTAINS",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_LOCATION_USER_POI",
+         "name": "Der benutzerdefinierte POI bei dem sich der Benutzer befindet.",
+         "description": "...",
+         "dataType":"DT_CONTEXT_INFORMATION",
+         "possibleValues":[
+         	"CI_USER_POI_HOME",
+         	"CI_USER_POI_WORK"
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_DID_ARRIVE_AT_LOCATION",
+         "name": "Der Benutzer kommt an einem bestimmten Ort an.",
+         "description": "...",
+         "dataType":"DT_BOOLEAN",
+         "parameters":[
+         	{
+         		"id":"CP_TARGET_LATITUDE",
+         		"name":"Latitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-90,
+         			90
+         		],
+         		"required":true
+         	},
+         	{
+         		"id":"CP_TARGET_LONGITUDE",
+         		"name":"Longitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-180,
+         			180
+         		],
+         		"required":true
+         	}
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_DID_LEAVE_LOCATION",
+         "name": "Der Benutzer verlässt einen bestimmten Ort.",
+         "description": "...",
+         "dataType":"DT_BOOLEAN",
+         "parameters":[
+         	{
+         		"id":"CP_TARGET_LATITUDE",
+         		"name":"Latitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-90,
+         			90
+         		],
+         		"required":true
+         	},
+         	{
+         		"id":"CP_TARGET_LONGITUDE",
+         		"name":"Longitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-180,
+         			180
+         		],
+         		"required":true
+         	}
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_IS_AT_LOCATION",
+         "name": "Der Benutzer ist an einen bestimmten Ort.",
+         "description": "...",
+         "dataType":"DT_BOOLEAN",
+         "parameters":[
+         	{
+         		"id":"CP_TARGET_LATITUDE",
+         		"name":"Latitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-90,
+         			90
+         		],
+         		"required":true
+         	},
+         	{
+         		"id":"CP_TARGET_LONGITUDE",
+         		"name":"Longitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-180,
+         			180
+         		],
+         		"required":true
+         	}
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_LOCATION_DISTANCE",
+         "name": "Entfernung des Benutzer zu einem bestimmten Ort.",
+         "description": "...",
+         "dataType":"DT_DOUBLE",
+         "parameters":[
+         	{
+         		"id":"CP_TARGET_LATITUDE",
+         		"name":"Latitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-90,
+         			90
+         		],
+         		"required":true
+         	},
+         	{
+         		"id":"CP_TARGET_LONGITUDE",
+         		"name":"Longitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-180,
+         			180
+         		],
+         		"required":true
+         	},
+         	{
+         		"id":"CP_UNIT_OF_MEASUREMENT",
+         		"name":"Einheit",
+         		"dataType":"DT_STRING_CONSTANT",
+         		"possibleValues":[
+         			"MILES",
+         			"KILOMETERS"
+         		],
+         		"defaultValue":"KILOMETERS",
+         		"required":false
+         	}
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_MEANS_OF_TRANSPORTATION",
+         "name": "Fortbewegungsmittel, dass der Benutzer nutzt.",
+         "description": "...",
+         "dataType":"DT_STRING_CONSTANT",
+         "possibleValues":[
+         	"CV_AFOOT",
+         	"CV_BY_BIKE",
+         	"CV_TRANSPORTATION"
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_MOVEMENT_SPEED",
+         "name": "Geschwindigkeit mit der sich der Benutzer bewegt.",
+         "description": "...",
+         "dataType":"DT_DOUBLE",
+         "parameters":[
+         	{
+         		"id":"CP_UNIT_OF_MEASUREMENT",
+         		"name":"Einheit",
+         		"dataType":"DT_STRING_CONSTANT",
+         		"possibleValues":[
+         			"MILES_PER_OUR",
+         			"KILOMETERS_PER_OUR"
+         		],
+         		"defaultValue":"KILOMETERS_PER_OUR",
+         		"required":false
+         	}
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "NO_VALUE"
+         ]
+      },
+      {
+         "id": "CI_USER_DESTINATION",
+         "name": "Zielort des Benutzers.",
+         "description": "...",
+         "dataType":"DT_BOOLEAN",
+         "parameters":[
+         	{
+         		"id":"CP_TARGET_LATITUDE",
+         		"name":"Latitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-90,
+         			90
+         		],
+         		"required":true
+         	},
+         	{
+         		"id":"CP_TARGET_LONGITUDE",
+         		"name":"Longitude des Zielortes",
+         		"dataType":"DT_DOUBLE",
+         		"range":[
+         			-180,
+         			180
+         		],
+         		"required":true
+         	}
+         ],
+         "acceptedFactOperators":[
+            "IS",
+            "IS_NOT",
+            "NO_VALUE"
+         ]
+      },
+      {
+      	"id":"CI_CURRENT_TEMPERATURE",
+      	"name":"Aktuelle Temperature am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_DOUBLE",
+      	"range":[
+      		-100,
+      		100
+      	],
+      	"parameters":[
+      		{
+      			"id":"CP_UNIT_OF_MEASUREMENT",
+      			"name":"Einheit",
+      			"dataType":"DT_STRING_CONSTANT",
+      			"possibleValues":[
+      				"CELSIUS",
+      				"FARENHEIT",
+      				"KELVIN"
+      			],
+      			"defaultValue":"CELSIUS",
+      			"required":false
+      		}
+      	],
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENT_AIR_PRESSURE",
+      	"name":"Aktueller Luftdruck am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_DOUBLE",
+      	"parameters":[
+      		{
+      			"id":"CP_UNIT_OF_MEASUREMENT",
+      			"name":"Einheit",
+      			"dataType":"DT_STRING_CONSTANT",
+      			"possibleValues":[
+      				"BAR",
+      				"TORR",
+      				"PASCAL",
+      				"MILLIMETER_OF_MERCURY"
+      			],
+      			"defaultValue":"PASCAL",
+      			"required":false
+      		}
+      	],
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENT_AMBIENT_NOISE",
+      	"name":"Aktuelle Umgebungslautstärke am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_DOUBLE",
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENT_LUMINOSITY",
+      	"name":"Aktuelle Lichtstärke am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_DOUBLE",
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENT_TIME",
+      	"name":"Aktuelle Uhrzeit am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_STRING",
+      	"parameters":[
+      		{
+      			"id":"CP_DATE_FORMATE",
+      			"name":"Format",
+      			"dataType":"DT_STRING",
+      			"required":false,
+      			"defaultValue":"dd.mm.yyyy"
+      		}
+      	],
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENTLY_RAINING",
+      	"name":"Regnet es aktuell am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENTLY_SUNNY",
+      	"name":"Scheint die Sonne aktuell am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENT_HUMIDITY",
+      	"name":"Aktuelle Luftfeuchtigkeit am Ort des Benutzers.",
+      	"description":"...",
+      	"dataType":"DT_DOUBLE",
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_CURRENT_APPOINTMENT",
+      	"name":"Der aktuelle Termin des Benutzers",
+      	"description":"...",
+      	"dataType":"DT_STRING",
+      	"parameters":[
+      		"id":"CP_APPOINTMENT_DETAIL",
+      		"name":"Detail",
+      		"dataType":"DT_STRING_CONSTANT,
+      		"possibleValues":[
+      			"TITLE",
+      			"DATE",
+      			"TIME",
+      			"NOTES",
+      			"LOCATION"
+      		],
+      		"required":true
+      	],
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "CONTAINS",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_NEXT_APPOINTMENT",
+      	"name":"Der nächste Termin des Benutzers",
+      	"description":"...",
+      	"dataType":"DT_STRING",
+      	"parameters":[
+      		"id":"CP_APPOINTMENT_DETAIL",
+      		"name":"Detail",
+      		"dataType":"DT_STRING_CONSTANT,
+      		"possibleValues":[
+      			"TITLE",
+      			"DATE",
+      			"TIME",
+      			"NOTES",
+      			"LOCATION"
+      		],
+      		"required":true
+      	],
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "CONTAINS",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_TIME_UNTIL_TIMESTAMP",
+      	"name":"Zeit bis Event",
+      	"description":"...",
+      	"dataType":"DT_INTEGER",
+      	"parameters":[
+      		{
+	      		"id":"CP_TARGET_TIMESTAMP",
+	      		"name":"Timestamp",
+	      		"dataType":"DT_INTEGER",
+	      		"required":true
+      		}
+      	],
+        "acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_USER_CURRENT_LEARNING_STYLE_PERCEPTION",
+      	"name":"Aktuelle Ausprägung des Benutzers in der Learning Style Dimension Wahrnehmung.",
+      	"description":"Sensory / Intuitive",
+      	"dataType":"DT_INTEGER",
+      	"range":[
+      		-11,
+      		11
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_USER_CURRENT_LEARNING_STYLE_INPUT",
+      	"name":"Aktuelle Ausprägung des Benutzers in der Learning Style Dimension Eingabe.",
+      	"description":"Visual / Verbal",
+      	"dataType":"DT_INTEGER",
+      	"range":[
+      		-11,
+      		11
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_USER_CURRENT_LEARNING_STYLE_PROCESSING",
+      	"name":"Aktuelle Ausprägung des Benutzers in der Learning Style Dimension Verarbeitung.",
+      	"description":"Active / Reflective",
+      	"dataType":"DT_INTEGER",
+      	"range":[
+      		-11,
+      		11
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_USER_CURRENT_LEARNING_STYLE_UNDERSTANDING",
+      	"name":"Aktuelle Ausprägung des Benutzers in der Learning Style Dimension Einsicht.",
+      	"description":"Sequential / Global",
+      	"dataType":"DT_INTEGER",
+      	"range":[
+      		-11,
+      		11
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "GREATER_THEN",
+            "LESS_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_USER_DID_FINISH_LEARNING_UNIT",
+      	"name":"Lerneinheit abgeschlossen",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+      	"parameters":[
+      		{
+      			"id":"CP_LEARNING_UNIT_ID",
+      			"name":"ID der Lerneinheit",
+      			"dataType":"DT_STRING",
+      			"required":true
+      		}
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_USER_CURRENT_LEARNING_UNIT",
+      	"name":"Aktuelle Lerneinheit",
+      	"description":"...",
+      	"dataType":"DT_STRING",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_USER_ROLE",
+      	"name":"Role des Benutzers",
+      	"description":"...",
+      	"dataType":"DT_STRING",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_EXPECTED_TIME_NEEDED_FOR_COMPLETION",
+      	"name":"Erwartete Zeit für Beendung der Lerneinheit",
+      	"description":"...",
+      	"dataType":"DT_DOUBLE",
+      	"parameters":[
+      		{
+      			"id":"CP_LEARNING_UNIT_ID",
+      			"name":"ID der Lerneinheit",
+      			"dataType":"DT_STRING",
+      			"required":true
+      		}
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_TIME_NEEDED_FOR_COMPLETION",
+      	"name":"Benötigte Zeit für Lerneinheit",
+      	"description":"...",
+      	"dataType":"DT_DOUBLE",
+      	"parameters":[
+      		{
+      			"id":"CP_LEARNING_UNIT_ID",
+      			"name":"ID der Lerneinheit",
+      			"dataType":"DT_STRING",
+      			"required":true
+      		}
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_PRINTER_AVAILABLE",
+      	"name":"Drucker verfügbar",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+      	"parameters":[
+      		{
+      			"id":"CP_PRINTING_INK",
+      			"name":"Farbe",
+      			"dataType":"DT_STRING_CONSTANT",
+      			"possibleValues":[
+      				"ANY",
+      				"BLACK",
+      				"COLOR"
+      			],
+      			"defaultValue":"ANY",
+      			"required":false
+      		}
+      	],
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_EXTERNAL_DISPLAY_AVAILABLE",
+      	"name":"Verfügbarkeit eines externen Bildschirms",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_DISPLAY_HORIZONTAL_RESOLUTION",
+      	"name":"Horizontale Bildschirmauflösung des Geräts",
+      	"description":"...",
+      	"dataType":"DT_INTEGER",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_DISPLAY_VERTICAL_RESOLUTION",
+      	"name":"Vertikale Bildschirmauflösung des Geräts",
+      	"description":"...",
+      	"dataType":"DT_INTEGER",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "LESS_THEN",
+            "GREATER_THEN",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_MICROPHONE_AVAILABLE",
+      	"name":"Verfügbarkeit eines Mikrofons",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_PHOTO_CAMERA_AVAILABLE",
+      	"name":"Verfügbarkeit eines Fotoapparats.",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_VIDEO_CAMERA_AVAILABLE",
+      	"name":"Verfügbarkeit einer Videokamera.",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
+      },
+      {
+      	"id":"CI_AUDIO_OUTPUT_AVAILABLE",
+      	"name":"Verfügbarkeit von Audio-Ausgabe.",
+      	"description":"...",
+      	"dataType":"DT_BOOLEAN",
+      	"acceptedFactOperators":[
+        	"IS",
+            "IS_NOT",
+            "NO_VALUE"
+        ]
       }
    ]
 }
