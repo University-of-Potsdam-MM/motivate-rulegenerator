@@ -1,11 +1,13 @@
 package de.unipotsdam.rulegenerator.jaxrs.services;
 
+import java.io.File;
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import de.unipotsdam.rulegenerator.objects.ContextInformation;
 import de.unipotsdam.rulegenerator.objects.ContextInformationList;
 
 // TODO: Auto-generated Javadoc
@@ -13,6 +15,21 @@ import de.unipotsdam.rulegenerator.objects.ContextInformationList;
  * The Class ContextInformation.
  */
 public class ContextInformationService {
+
+	private static ContextInformationList loadContextInformations()
+			throws JsonParseException, JsonMappingException, IOException {
+		ContextInformationList informations = new ContextInformationList();
+
+		ObjectMapper mapper = new ObjectMapper();
+		// informations = mapper.readValue(ContextInformationService.class
+		// .getResourceAsStream("/ContextInformation.json"),
+		// ContextInformationList.class);
+		informations = mapper.readValue(new File(
+				"resources/ContextInformation.json"),
+				ContextInformationList.class);
+
+		return informations;
+	}
 
 	/**
 	 * Gets the context informations.
@@ -25,14 +42,15 @@ public class ContextInformationService {
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
-	public static ContextInformationList getContextInformations()
+	public static ContextInformationList getContextInformation()
 			throws JsonParseException, JsonMappingException, IOException {
-		ContextInformationList informations = new ContextInformationList();
+		return ContextInformationService.loadContextInformations();
+	}
 
-		ObjectMapper mapper = new ObjectMapper();
-		informations = mapper.readValue(ContextInformationService.class.getResourceAsStream("/ContextInformation.json"),
-				ContextInformationList.class);
-
-		return informations;
+	public static ContextInformation getContextInformation(String id)
+			throws JsonParseException, JsonMappingException, IOException {
+		ContextInformationList contextInformationList = ContextInformationService
+				.loadContextInformations();
+		return contextInformationList.getContextInformation(id);
 	}
 }
