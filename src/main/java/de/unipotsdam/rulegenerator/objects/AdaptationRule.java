@@ -37,16 +37,10 @@ public class AdaptationRule {
 		this.setId(id);
 	}
 	
-	/**
-	 * Returns the rule in a human readable form.
-	 *
-	 * @return human readable rule description
-	 */
 	@JsonIgnore
 	public String description() {
 		String description = new String();
-		description += this.triggeringMode.description() + this.situation.description() + this.action.description();
-		return description;
+		return description += this.triggeringMode.description() + this.situation.description() + this.action.description();
 	}
 	
 	/**

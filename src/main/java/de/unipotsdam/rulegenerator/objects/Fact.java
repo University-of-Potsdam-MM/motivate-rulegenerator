@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import de.unipotsdam.rulegenerator.enums.DescriptionType;
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.FactOperator;
 
@@ -76,23 +77,39 @@ public class Fact {
 		this.setLogicalOperator(logicalOperator);
 	}
 
-	/**
-	 * Description.
-	 * 
-	 * @return the string
-	 */
-	@JsonIgnore
 	public String description() {
+		return this.description(DescriptionType.PLAIN_TEXT);
+	}
+
+	@JsonIgnore
+	public String description(DescriptionType descriptionType) {
 		String description = new String();
-		if (this.leftParanthesis)
-			description += "(";
-		description += this.getContextInformation() + " "
-				+ this.getOperator().name().replace("_", " ") + " "
-				+ this.getValue();
-		if (this.rightParanthesis)
-			description += ")";
-		if (this.logicalOperator != null) {
-			description += " " + this.logicalOperator.name().replace("_", " ");
+		switch (descriptionType) {
+		case NOOLS_DSL:
+			// Alias
+			description += this.getContextInformation();
+			// Type
+			description += " : ContextInformation ";
+			// Pattern
+			description += this.getContextInformation() + ".value " + this.getOperator(descriptionType) + " " + this.getValue();
+			break;
+		case NOOLS_JSON:
+
+			break;
+		default:
+			if (this.leftParanthesis)
+				description += "(";
+			description += this.getContextInformation() + " "
+					+ this.getOperator().name().replace("_", " ") + " "
+					+ this.getValue();
+			if (this.rightParanthesis)
+				description += ")";
+			if (this.logicalOperator != null) {
+				description += " "
+						+ this.logicalOperator.name().replace("_", " ");
+
+			}
+			break;
 		}
 		return description;
 	}
@@ -122,6 +139,24 @@ public class Fact {
 	 * @return the operator
 	 */
 	public FactOperator getOperator() {
+		return operator;
+	}
+
+	public String getOperator(DescriptionType descriptionType) {
+		String operator = new String();
+		if (descriptionType == DescriptionType.NOOLS_DSL) {
+			if (this.operator == FactOperator.IS) {
+				operator = "=";
+			} else if (this.operator == FactOperator.IS_NOT) {
+				operator = "!=";
+			} else if (this.operator == FactOperator.LESS_THEN) {
+				operator = "<";
+			}
+		} else if (descriptionType == DescriptionType.NOOLS_JSON) {
+			
+		} else {
+			operator = this.getOperator().name().replace("_", " ");
+		}
 		return operator;
 	}
 

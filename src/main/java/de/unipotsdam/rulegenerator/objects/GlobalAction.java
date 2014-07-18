@@ -1,5 +1,7 @@
 package de.unipotsdam.rulegenerator.objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import de.unipotsdam.rulegenerator.enums.GlobalActionOperator;
 
 // TODO: Auto-generated Javadoc
@@ -41,13 +43,11 @@ public class GlobalAction extends Action {
 		this.value = value;
 	}
 
-	/**
-	 * Returns the rule in a human readable form.
-	 * 
-	 * @return human readable rule description
-	 */
+	@JsonIgnore
 	public String description() {
-		String description = this.operator.name().replace("_", " ") + " " + this.getProperty();
+		String description = new String();
+		description = this.operator.name().replace("_", " ") + " "
+				+ this.getProperty();
 		if (this.value != null) {
 			description += " " + this.getValue();
 		}

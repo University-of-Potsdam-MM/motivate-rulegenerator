@@ -1,5 +1,7 @@
 package de.unipotsdam.rulegenerator.objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
 
 // TODO: Auto-generated Javadoc
@@ -34,13 +36,11 @@ public class LocalAction extends Action {
 		this.nuggetId = nuggetId;
 	}
 
-	/**
-	 * Returns the rule in a human readable form.
-	 *
-	 * @return human readable rule description
-	 */
+	@JsonIgnore
 	public String description() {
-		return this.operator.name().replace("_", " ") + " " + this.nuggetId;
+		String description = new String();
+		description = this.operator.name().replace("_", " ") + " " + this.nuggetId;
+		return description;
 	}
 	
 	/**

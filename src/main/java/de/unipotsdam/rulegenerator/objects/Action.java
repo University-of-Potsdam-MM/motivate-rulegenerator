@@ -1,6 +1,7 @@
 package de.unipotsdam.rulegenerator.objects;
 
 
+
 /**
  * The Class Action.
  */
