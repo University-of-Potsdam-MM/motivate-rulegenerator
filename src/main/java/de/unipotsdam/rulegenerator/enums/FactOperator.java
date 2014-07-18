@@ -25,6 +25,7 @@ public enum FactOperator {
 	SUM,
 	/** The no value. */
 	NO_VALUE,
+	CONTAINS,
 	/** The complete. */
 	COMPLETE;
 }
