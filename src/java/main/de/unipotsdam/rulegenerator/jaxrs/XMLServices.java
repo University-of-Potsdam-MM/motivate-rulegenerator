@@ -13,9 +13,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 import de.unipotsdam.rulegenerator.jaxrs.services.ContextInformationService;
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
-import de.unipotsdam.rulegenerator.objects.AdaptationRuleList;
-import de.unipotsdam.rulegenerator.objects.ContextInformation;
-import de.unipotsdam.rulegenerator.objects.ContextInformationList;
+import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
+import de.unipotsdam.rulegenerator.rules.ContextInformation;
+import de.unipotsdam.rulegenerator.rules.ContextInformationList;
 
 // TODO: Auto-generated Javadoc
 /**

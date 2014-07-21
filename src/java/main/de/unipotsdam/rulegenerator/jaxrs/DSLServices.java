@@ -21,7 +21,7 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
-import de.unipotsdam.rulegenerator.objects.AdaptationRuleList;
+import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 
 @Path("/dsl")
 public class DSLServices extends Services {

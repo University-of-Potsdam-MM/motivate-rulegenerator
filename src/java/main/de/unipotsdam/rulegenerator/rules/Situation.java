@@ -1,4 +1,4 @@
-package de.unipotsdam.rulegenerator.objects;
+package de.unipotsdam.rulegenerator.rules;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

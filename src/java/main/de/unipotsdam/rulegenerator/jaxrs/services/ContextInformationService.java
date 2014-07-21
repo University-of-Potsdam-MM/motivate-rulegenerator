@@ -7,8 +7,8 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import de.unipotsdam.rulegenerator.objects.ContextInformation;
-import de.unipotsdam.rulegenerator.objects.ContextInformationList;
+import de.unipotsdam.rulegenerator.rules.ContextInformation;
+import de.unipotsdam.rulegenerator.rules.ContextInformationList;
 
 // TODO: Auto-generated Javadoc
 /**

@@ -9,12 +9,12 @@ import de.unipotsdam.rulegenerator.enums.FactOperator;
 import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
-import de.unipotsdam.rulegenerator.objects.AdaptationRule;
-import de.unipotsdam.rulegenerator.objects.AdaptationRuleList;
-import de.unipotsdam.rulegenerator.objects.Fact;
-import de.unipotsdam.rulegenerator.objects.LocalAction;
-import de.unipotsdam.rulegenerator.objects.Situation;
-import de.unipotsdam.rulegenerator.objects.Trigger;
+import de.unipotsdam.rulegenerator.rules.AdaptationRule;
+import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
+import de.unipotsdam.rulegenerator.rules.Fact;
+import de.unipotsdam.rulegenerator.rules.LocalAction;
+import de.unipotsdam.rulegenerator.rules.Situation;
+import de.unipotsdam.rulegenerator.rules.Trigger;
 
 // TODO: Auto-generated Javadoc
 /**
