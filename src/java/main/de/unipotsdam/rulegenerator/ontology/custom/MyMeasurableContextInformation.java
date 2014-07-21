@@ -14,7 +14,6 @@ import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInforma
 
 public class MyMeasurableContextInformation extends
 		DefaultMeasurableContextInformation implements ContextInformation {
-	static final String label = "MeasurableInformation";
 
 	public MyMeasurableContextInformation(CodeGenerationInference inference,
 			IRI iri) {
@@ -25,9 +24,12 @@ public class MyMeasurableContextInformation extends
 	public void description() {
 		this.description(0);
 	}
-
+	
 	public void description(Integer indent) {
-		System.out.println(this.getIndentSpace(indent) + "<MeasurableInformation>");
+		this.description(indent, true);
+	}
+
+	public void description(Integer indent, Boolean deep) {
 		System.out.println(this.getIndentSpace(indent+1) + "<IRI>" + this.getIRIShort()
 				+ "</IRI>");
 		System.out.println(this.getIndentSpace(indent+1) + "<Class>"
@@ -37,7 +39,7 @@ public class MyMeasurableContextInformation extends
 			int i = 0;
 			for (MyContextInformationParameter parameter : this
 					.getContextInformationParameters()) {
-				parameter.description(indent + 1);
+				parameter.description(indent + 2);
 				if (i != this.getContextInformationParameterCount() - 1)
 					System.out.println();
 				i++;
@@ -48,7 +50,6 @@ public class MyMeasurableContextInformation extends
 		}
 		System.out.println(this.getIndentSpace(indent+1) + "<Value>" + this.getValue()
 				+ "</Value>");
-		System.out.println(this.getIndentSpace(indent) + "</MeasurableInformation>");
 	}
 
 	public String getIRIShort() {

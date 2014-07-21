@@ -13,8 +13,6 @@ import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInformation;
 
 public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit {
-	static final String label = "LearningUnit";
-
 	public MyLearningUnit(CodeGenerationInference inference, IRI iri) {
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
@@ -29,7 +27,6 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 	}
 
 	public void description(Integer indent, Boolean deep) {
-		System.out.println(this.getIndentSpace(indent) + "<LearningUnit>");
 		System.out.println(this.getIndentSpace(indent + 1) + "<IRI>"
 				+ this.getIRIShort() + "</IRI>");
 		System.out.println(this.getIndentSpace(indent + 1) + "<LID>"
@@ -40,16 +37,16 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 					+ "</LogicalOperator>");
 			if (this.hasContextInformation()) {
 				System.out.println(this.getIndentSpace(indent + 1)
-						+ "<MeasurableContextInformation>");
+						+ "<ContextInformation>");
 				for (MyMeasurableContextInformation contextInformation : this
 						.getContextInformation()) {
 					contextInformation.description(indent + 2);
 				}
 				System.out.println(this.getIndentSpace(indent + 1)
-						+ "</MeasurableContextInformation>");
+						+ "</ContextInformation>");
 			} else {
 				System.out.println(this.getIndentSpace(indent + 1)
-						+ "<MeasurableContextInformation/>");
+						+ "<ContextInformation/>");
 			}
 			if (this.hasRelations()) {
 				System.out.println(this.getIndentSpace(indent + 1) + "<Relations>");
@@ -86,7 +83,6 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 						.println(this.getIndentSpace(indent + 1) + "<Relations/>");
 			}
 		}
-		System.out.println(this.getIndentSpace(indent) + "</LearningUnit>");
 	}
 
 	// IRI

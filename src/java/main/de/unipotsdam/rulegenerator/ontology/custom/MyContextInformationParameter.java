@@ -13,8 +13,7 @@ import de.unipotsdam.rulegenerator.ontology.impl.DefaultContextInformationParame
 public class MyContextInformationParameter extends
 		DefaultContextInformationParameter implements
 		ContextInformationParameter {
-	static final String label = "ContextInformationParameter";
-	
+
 	public MyContextInformationParameter(CodeGenerationInference inference,
 			IRI iri) {
 		super(inference, iri);
@@ -24,19 +23,24 @@ public class MyContextInformationParameter extends
 	public void description() {
 		this.description(0);
 	}
-
-	public void description(Integer indent) {
-		System.out.println(this.getIndentSpace(indent) + "<ContextInformationParameter>");
-		System.out.println(this.getIndentSpace(indent+1) + "<IRI>" + this.getIRIShort() + "</IRI>");
-		System.out.println(this.getIndentSpace(indent+1) + "<Class>" + this.getSpecificParameterType() + "</Class>");
-		System.out.println(this.getIndentSpace(indent+1) + "<Value>" + this.getValue() + "</Value>");
-		System.out.println(this.getIndentSpace(indent) + "</ContextInformationParameter>");
-	}
 	
+	public void description(Integer indent) {
+		this.description(indent, true);
+	}
+
+	public void description(Integer indent, Boolean deep) {
+		System.out.println(this.getIndentSpace(indent + 1) + "<IRI>"
+				+ this.getIRIShort() + "</IRI>");
+		System.out.println(this.getIndentSpace(indent + 1) + "<Class>"
+				+ this.getSpecificParameterType() + "</Class>");
+		System.out.println(this.getIndentSpace(indent + 1) + "<Value>"
+				+ this.getValue() + "</Value>");
+	}
+
 	public String getIRIShort() {
 		return this.getOwlIndividual().getIRI().getFragment();
 	}
-	
+
 	public Set<OWLClassExpression> getTypes() {
 		return this.getOwlIndividual().getTypes(this.getOwlOntology());
 	}
@@ -51,10 +55,14 @@ public class MyContextInformationParameter extends
 
 		return "Unknown";
 	}
-	
+
 	public Object getValue() {
-		Object[] values = this.getHasContextInformationParameterValue().toArray();
-		if (values.length > 0) return values[0]; else return "Unknown";
+		Object[] values = this.getHasContextInformationParameterValue()
+				.toArray();
+		if (values.length > 0)
+			return values[0];
+		else
+			return "Unknown";
 	}
 
 }
