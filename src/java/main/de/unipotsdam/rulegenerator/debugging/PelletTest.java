@@ -54,39 +54,6 @@ public class PelletTest {
 				.createNonBufferingReasoner(ontology);
 		manager.addOntologyChangeListener(reasoner);
 
-		// OWLClass LearningUnit = dataFactory.getOWLClass("LearningUnit",
-		// prefixManager);
-		OWLObjectProperty hasRelation = dataFactory.getOWLObjectProperty(
-				"hasRelation", prefixManager);
-		OWLDataProperty hasID = dataFactory.getOWLDataProperty("hasID",
-				prefixManager);
-
-		// Set<OWLNamedIndividual> learningUnits = reasoner.getInstances(
-		// LearningUnit, false).getFlattened();
-		// for (OWLNamedIndividual learningUnit : learningUnits) {
-		// Set<OWLLiteral> ids = reasoner.getDataPropertyValues(learningUnit,
-		// hasID);
-		// NodeSet<OWLClass> types = reasoner.getTypes(learningUnit, true);
-		// NodeSet<OWLNamedIndividual> relatedLearningUnits = reasoner
-		// .getObjectPropertyValues(learningUnit, hasRelation);
-		//
-		// String id = ids.iterator().next().getLiteral();
-		// System.out.println("ID: " + id);
-		//
-		// OWLClass type = types.iterator().next().getRepresentativeElement();
-		// System.out.println( "Type: " + type );
-		//
-		// if (relatedLearningUnits.isEmpty()) {
-		// System.out.println("Relations: unknown");
-		// } else {
-		// System.out.print("Relations: ");
-		// for (Node<OWLNamedIndividual> relatedLearningUnit :
-		// relatedLearningUnits) {
-		// System.out.println(relatedLearningUnit.getRepresentativeElement().getSignature());
-		// }
-		// }
-		// }
-
 		// To generate an inferred ontology we use implementations of inferred
 		// axiom generators
 		// to generate the parts of the ontology we want (e.g. subclass axioms,
