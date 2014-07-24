@@ -13,13 +13,14 @@ public class LocalAction extends Action {
 	/** The operator. */
 	private LocalActionOperator operator;
 
-	/** The nugget id. */
-	private String nuggetId;
+	/** The learning unit id. */
+	private String learningUnitId;
 
 	/**
 	 * Instantiates a new local action.
 	 */
 	public LocalAction() {
+		this(LocalActionOperator.SHOW, null);
 	}
 
 	/**
@@ -27,19 +28,19 @@ public class LocalAction extends Action {
 	 * 
 	 * @param operator
 	 *            the operator
-	 * @param nuggetId
-	 *            the nugget id
+	 * @param learningUnitId
+	 *            the learning unit id
 	 */
-	public LocalAction(LocalActionOperator operator, String nuggetId) {
+	public LocalAction(LocalActionOperator operator, String learningUnitId) {
 		super();
 		this.operator = operator;
-		this.nuggetId = nuggetId;
+		this.learningUnitId = learningUnitId;
 	}
 
 	@JsonIgnore
 	public String description() {
 		String description = new String();
-		description = this.operator.name().replace("_", " ") + " " + this.nuggetId;
+		description = this.operator.name().replace("_", " ") + " " + this.learningUnitId;
 		return description;
 	}
 	
@@ -68,7 +69,7 @@ public class LocalAction extends Action {
 	 * @return the nugget id
 	 */
 	public String getNuggetId() {
-		return nuggetId;
+		return learningUnitId;
 	}
 
 	/**
@@ -78,6 +79,6 @@ public class LocalAction extends Action {
 	 *            the new nugget id
 	 */
 	public void setNuggetId(String nuggetId) {
-		this.nuggetId = nuggetId;
+		this.learningUnitId = nuggetId;
 	}
 }

@@ -11,11 +11,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @XmlRootElement
 public class AdaptationRule {
 
-	/** The id. */
 	private String id;
 	
 	/** The triggering mode. */
-	private Trigger triggeringMode;
+	private Trigger trigger;
 	
 	/** The situation. */
 	private Situation situation;
@@ -40,23 +39,13 @@ public class AdaptationRule {
 	@JsonIgnore
 	public String description() {
 		String description = new String();
-		return description += this.triggeringMode.description() + this.situation.description() + this.action.description();
+		return description += this.trigger.description() + this.situation.description() + this.action.description();
 	}
 	
-	/**
-	 * Gets the id.
-	 *
-	 * @return the id
-	 */
 	public String getId() {
 		return id;
 	}
 	
-	/**
-	 * Sets the id.
-	 *
-	 * @param id the id
-	 */
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -66,18 +55,18 @@ public class AdaptationRule {
 	 *
 	 * @return the triggering mode
 	 */
-	public Trigger getTriggeringMode() {
-		return triggeringMode;
+	public Trigger getTrigger() {
+		return trigger;
 	}
 
 	
 	/**
 	 * Sets the triggering mode.
 	 *
-	 * @param triggeringMode the triggering mode
+	 * @param trigger the triggering mode
 	 */
-	public void setTriggeringMode(Trigger triggeringMode) {
-		this.triggeringMode = triggeringMode;
+	public void setTrigger(Trigger trigger) {
+		this.trigger = trigger;
 	}
 	
 	/**
@@ -97,6 +86,10 @@ public class AdaptationRule {
 	public void setSituation(Situation situation) {
 		this.situation = situation;
 	}
+	
+	public void addFact(Fact fact) {
+		this.situation.addFact(fact);
+	}
 
 	/**
 	 * Gets the action.
@@ -114,5 +107,9 @@ public class AdaptationRule {
 	 */
 	public void setAction(Action action) {
 		this.action = action;
+	}
+	
+	public Boolean checkIntegrity() {
+		return false;
 	}
 }

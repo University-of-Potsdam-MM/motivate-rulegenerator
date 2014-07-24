@@ -19,7 +19,9 @@ public class Trigger {
 	/**
 	 * Instantiates a new trigger.
 	 */
-	public Trigger() { }
+	public Trigger() { 
+		this(TriggeringMode.ON_ENTRY);
+	}
 	
 	/**
 	 * Instantiates a new trigger.

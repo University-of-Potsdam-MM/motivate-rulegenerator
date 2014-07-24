@@ -23,4 +23,8 @@ public class AdaptationRuleList {
 	public void setList(List<AdaptationRule> list) {
 		this.list = list;
 	}
+	
+	public void addAdaptationRule(AdaptationRule adaptationRule) {
+		this.list.add(adaptationRule);
+	}
 }

@@ -24,27 +24,28 @@ public class RuleGeneratorService {
 
 	/**
 	 * Generate fake rule.
-	 *
-	 * @param index the index
+	 * 
+	 * @param index
+	 *            the index
 	 * @return the adaptation rule
 	 */
 	public static AdaptationRule generateFakeRule(Integer index) {
 		SecureRandom rand = new SecureRandom();
 		AdaptationRule rule = new AdaptationRule("AR_" + index);
 		// set triggering mode
-		rule.setTriggeringMode(new Trigger(EnumUtils
-				.randomEnum(TriggeringMode.class)));
+		rule.setTrigger(new Trigger(EnumUtils.randomEnum(TriggeringMode.class)));
 		// facts for the rule
 		ArrayList<Fact> facts = new ArrayList<Fact>();
 		for (int i = 0; i < rand.nextInt((5 - 1) + 1) + 1; i++) {
 			Fact newFact = new Fact("CI_FAKE_INFORMATION",
-					EnumUtils.randomEnum(FactOperator.class), String.valueOf(rand.nextInt((100 - 1) + 1) + 1),
+					EnumUtils.randomEnum(FactOperator.class),
+					String.valueOf(rand.nextInt((100 - 1) + 1) + 1),
 					EnumUtils.randomEnum(LogicalOperator.class));
 			facts.add(newFact);
 		}
 		// add situation with facts
-		rule.setSituation(new Situation(facts.toArray(new Fact[facts.size()]),
-				EnumUtils.randomEnum(LogicalOperator.class)));
+		rule.setSituation(new Situation(EnumUtils
+				.randomEnum(LogicalOperator.class), facts));
 		// set action
 		rule.setAction(new LocalAction(LocalActionOperator.SHOW, "NG_123"));
 
@@ -53,7 +54,7 @@ public class RuleGeneratorService {
 
 	/**
 	 * Generate adaptation rules.
-	 *
+	 * 
 	 * @return the adaptation rule list
 	 */
 	public static AdaptationRuleList generateAdaptationRules() {

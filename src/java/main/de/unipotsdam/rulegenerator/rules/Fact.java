@@ -36,8 +36,7 @@ public class Fact {
 	/**
 	 * Instantiates a new fact.
 	 */
-	public Fact() {
-	}
+	public Fact() { }
 
 	/**
 	 * Instantiates a new fact.
