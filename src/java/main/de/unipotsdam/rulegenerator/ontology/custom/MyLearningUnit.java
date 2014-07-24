@@ -1,16 +1,20 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 
+import de.unipotsdam.rulegenerator.enums.FactOperator;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
 import de.unipotsdam.rulegenerator.ontology.MeasurableContextInformation;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInformation;
+import de.unipotsdam.rulegenerator.rules.Fact;
 
 public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit {
 	public MyLearningUnit(CodeGenerationInference inference, IRI iri) {
@@ -136,7 +140,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 	// Relations
 
 	public Boolean hasRelations() {
-		return this.hasAlternatives() || this.hasPrerequisites();
+		return this.hasAlternatives() || this.hasPrerequisites() || this.hasHelp();
 	}
 
 	// Alternatives
@@ -170,5 +174,35 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 				Vocabulary.OBJECT_PROPERTY_HASPREREQUISITE,
 				MyLearningUnit.class);
 	}
+	
+	// Help
 
+	public boolean hasHelp() {
+		return this.getHelpCount() > 0;
+	}
+	
+	public Integer getHelpCount() {
+		return this.getHelp().toArray().length;
+	}
+	
+	public Collection<? extends WrappedIndividual> getHelp() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASHELP,
+				MyLearningUnit.class);
+	}
+	
+	// Facts
+	
+	public List<Fact> getFacts() {
+		List<Fact> learningUnitFacts = new ArrayList<Fact>();
+		// create facts for the context information associated to the learning unit
+		for (MyMeasurableContextInformation contextInformation : this.getContextInformation()) {
+			Fact learningUnitFact = new Fact();
+			learningUnitFact.setContextInformation(contextInformation.getIRIShort());
+			learningUnitFact.setValue(contextInformation.getValue().toString());
+			learningUnitFact.setOperator(FactOperator.valueOf(contextInformation.getValueOperator()));
+			learningUnitFacts.add(learningUnitFact);
+		}
+		return learningUnitFacts;
+	}
 }

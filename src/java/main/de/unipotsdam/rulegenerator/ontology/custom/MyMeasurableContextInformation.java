@@ -48,6 +48,7 @@ public class MyMeasurableContextInformation extends
 		} else {
 			System.out.println(this.getIndentSpace(indent+1) + "<Parameters/>");
 		}
+		System.out.println("<ValueOperator>"+this.getValueOperator()+"</ValueOperator");
 		System.out.println(this.getIndentSpace(indent+1) + "<Value>" + this.getValue()
 				+ "</Value>");
 	}
@@ -75,6 +76,15 @@ public class MyMeasurableContextInformation extends
 		return this.getContextInformationParameters().toArray().length;
 	}
 
+	public String getValueOperator() {
+		Object[] valuesOperators = this.getHasValueOperator()
+				.toArray();
+		if (valuesOperators.length > 0)
+			return valuesOperators[0].toString();
+		else
+			return "Unknown";
+	}
+	
 	public Object getValue() {
 		Object[] values = this.getHasMeasurableContextInformationValue()
 				.toArray();
