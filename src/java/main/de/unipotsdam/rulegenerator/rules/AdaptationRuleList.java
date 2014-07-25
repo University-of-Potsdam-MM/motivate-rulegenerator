@@ -1,5 +1,6 @@
 package de.unipotsdam.rulegenerator.rules;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdaptationRuleList {
 	@XmlElement(name = "adaptationRule")
 	@JsonProperty("adaptationRule")
-	private List<AdaptationRule> list;
+	private List<AdaptationRule> list = new ArrayList<AdaptationRule>();
 
 	public List<AdaptationRule> getList() {
 		return list;

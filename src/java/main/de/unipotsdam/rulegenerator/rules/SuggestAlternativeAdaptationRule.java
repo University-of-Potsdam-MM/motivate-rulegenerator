@@ -7,7 +7,7 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 
 public class SuggestAlternativeAdaptationRule extends SuggestAdaptationRule {
 	public SuggestAlternativeAdaptationRule(MyLearningUnit currentLearningUnit,
-			MyLearningUnit alternativeLearningUnit) {
+			MyLearningUnit alternativeLearningUnit) throws Exception {
 		// TODO: find id pattern
 		this.setId("foo");
 		// create trigger for the rule
@@ -15,7 +15,7 @@ public class SuggestAlternativeAdaptationRule extends SuggestAdaptationRule {
 		// create the situation for the rule
 		Situation alternativeLearningUnitSituation = new Situation();
 		// create facts to suggest
-		alternativeLearningUnitSituation.addFact(new Fact(
+		alternativeLearningUnitSituation.userFacts.addFact(new Fact(
 				"CurrentLearningUnitMeasurableInformation", FactOperator.IS,
 				currentLearningUnit.getID()));
 

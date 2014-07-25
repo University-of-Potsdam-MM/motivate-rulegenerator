@@ -1,19 +1,23 @@
 package de.unipotsdam.rulegenerator.rules;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import de.unipotsdam.rulegenerator.enums.DescriptionType;
-import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.FactOperator;
+import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class Fact.
  */
-@XmlRootElement
-public class Fact {
+@XmlRootElement(name="fact")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Fact implements FactSetElement {
 
 	/** The context information. */
 	private String contextInformation;
@@ -28,9 +32,13 @@ public class Fact {
 	private LogicalOperator logicalOperator;
 
 	/** The left paranthesis. */
+	@XmlTransient
+	@JsonIgnore
 	private Boolean leftParanthesis = false;
 
 	/** The right paranthesis. */
+	@XmlTransient
+	@JsonIgnore
 	private Boolean rightParanthesis = false;
 
 	/**

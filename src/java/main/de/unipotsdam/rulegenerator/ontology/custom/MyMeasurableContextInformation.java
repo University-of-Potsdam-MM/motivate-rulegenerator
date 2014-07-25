@@ -69,7 +69,7 @@ public class MyMeasurableContextInformation extends
 				return iriFragment;
 		}
 
-		return "Unknown";
+		return "NO_VALUE";
 	}
 
 	public Integer getContextInformationParameterCount() {
@@ -82,7 +82,7 @@ public class MyMeasurableContextInformation extends
 		if (valuesOperators.length > 0)
 			return valuesOperators[0].toString();
 		else
-			return "Unknown";
+			return "NO_VALUE";
 	}
 	
 	public Object getValue() {
@@ -91,7 +91,7 @@ public class MyMeasurableContextInformation extends
 		if (values.length > 0)
 			return values[0];
 		else
-			return "Unknown";
+			return "NO_VALUE";
 	}
 
 	public Collection<MyContextInformationParameter> getContextInformationParameters() {

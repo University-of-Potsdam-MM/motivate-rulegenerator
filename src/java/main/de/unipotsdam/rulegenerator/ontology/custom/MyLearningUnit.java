@@ -1,6 +1,5 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -9,12 +8,14 @@ import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 
 import de.unipotsdam.rulegenerator.enums.FactOperator;
+import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
 import de.unipotsdam.rulegenerator.ontology.MeasurableContextInformation;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInformation;
 import de.unipotsdam.rulegenerator.rules.Fact;
+import de.unipotsdam.rulegenerator.rules.FactSet;
 
 public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit {
 	public MyLearningUnit(CodeGenerationInference inference, IRI iri) {
@@ -102,7 +103,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		if (ids.length > 0)
 			return (String) ids[0];
 		else
-			return "Unknown";
+			return "NO_VALUE";
 	}
 
 	// Logical Operator
@@ -112,7 +113,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		if (operators.length > 0)
 			return (String) operators[0];
 		else
-			return "Unknown";
+			return "NO_VALUE";
 	}
 
 	// Context Information
@@ -193,15 +194,18 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 	
 	// Facts
 	
-	public List<Fact> getFacts() {
-		List<Fact> learningUnitFacts = new ArrayList<Fact>();
+	public FactSet getFacts() throws Exception {
+		FactSet learningUnitFacts = new FactSet();
 		// create facts for the context information associated to the learning unit
+		int i = 0;
 		for (MyMeasurableContextInformation contextInformation : this.getContextInformation()) {
 			Fact learningUnitFact = new Fact();
 			learningUnitFact.setContextInformation(contextInformation.getIRIShort());
 			learningUnitFact.setValue(contextInformation.getValue().toString());
 			learningUnitFact.setOperator(FactOperator.valueOf(contextInformation.getValueOperator()));
-			learningUnitFacts.add(learningUnitFact);
+			learningUnitFacts.addFact(learningUnitFact);
+			if (i < this.getContextInformationCount() - 1) learningUnitFacts.addLogicalOperator(LogicalOperator.valueOf(this.getLogicalOperator()));
+			i++;
 		}
 		return learningUnitFacts;
 	}

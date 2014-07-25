@@ -1,5 +1,11 @@
 package de.unipotsdam.rulegenerator.rules;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
@@ -8,12 +14,16 @@ import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 /**
  * The Class Trigger.
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Trigger {
 	
 	/** The mode. */
+	@XmlElement
 	private TriggeringMode mode;
 	
 	/** The time. */
+	@XmlTransient
 	private Double time = 2.0;
 	
 	/**

@@ -1,21 +1,19 @@
 package de.unipotsdam.rulegenerator.rules;
 
 import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
-import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.SituationTemplate;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 
 public class PreloadAdaptationRule extends AdaptationRule {
 	public PreloadAdaptationRule(MyLearningUnit currentLearningUnit,
-			MyLearningUnit preloadLearningUnit) {
+			MyLearningUnit preloadLearningUnit) throws Exception {
 		// TODO: find id pattern
-		this.setId("foo");
+		this.setId("PreloadRule["+preloadLearningUnit.getID()+"]");
 		// create trigger for the rule
 		this.setTrigger(new Trigger(TriggeringMode.ON_ENTRY));
 		// create the situation for the rule
-		Situation preloadLearningUnitRuleSituation = new Situation(
-				LogicalOperator.AND);
+		Situation preloadLearningUnitRuleSituation = new Situation();
 		// set logical operator
 		preloadLearningUnitRuleSituation
 				.applyTemplate(

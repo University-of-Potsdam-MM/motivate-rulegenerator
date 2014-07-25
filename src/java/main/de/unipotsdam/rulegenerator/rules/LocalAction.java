@@ -1,5 +1,10 @@
 package de.unipotsdam.rulegenerator.rules;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
@@ -8,12 +13,16 @@ import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
 /**
  * The Class LocalAction.
  */
+@XmlRootElement(name="action")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LocalAction extends Action {
 
 	/** The operator. */
+	@XmlElement
 	private LocalActionOperator operator;
 
 	/** The learning unit id. */
+	@XmlElement
 	private String learningUnitId;
 
 	/**

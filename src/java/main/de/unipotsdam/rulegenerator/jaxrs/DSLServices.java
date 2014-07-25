@@ -1,20 +1,19 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Scanner;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stream.StreamResult;
@@ -27,13 +26,20 @@ import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 public class DSLServices extends Services {
 
 	@GET
-	@Path("/get-adaptation-rules")
+	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String getAdaptationRules()
-			throws TransformerFactoryConfigurationError, TransformerException,
-			FileNotFoundException {
-		AdaptationRuleList adaptationRuleList = RuleGeneratorService
-				.generateAdaptationRules();
+	public String getAdaptationRules(@PathParam("ontologyABox") String ABox,
+			@PathParam("ontologyId") String ontologyId)
+			throws TransformerFactoryConfigurationError, Exception {
+		// Write received ontology to file system
+		
+		//String ontologyFileName = ontologyId + ".owl";
+		//PrintWriter writer = new PrintWriter("src/" + ontologyFileName, "UTF-8");
+		//writer.println(ABox);
+		//writer.close();
+		
+		// generate rules
+		AdaptationRuleList adaptationRuleList = RuleGeneratorService.generateAdaptationRules();
 
 		String xml;
 		StringWriter stringWriter = new StringWriter();

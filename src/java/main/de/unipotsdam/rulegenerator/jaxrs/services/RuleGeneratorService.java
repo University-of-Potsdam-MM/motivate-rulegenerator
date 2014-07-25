@@ -1,70 +1,81 @@
 package de.unipotsdam.rulegenerator.jaxrs.services;
 
-import java.security.SecureRandom;
+import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
-import de.unipotsdam.rulegenerator.enums.EnumUtils;
-import de.unipotsdam.rulegenerator.enums.FactOperator;
-import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
-import de.unipotsdam.rulegenerator.enums.LogicalOperator;
-import de.unipotsdam.rulegenerator.enums.TriggeringMode;
-import de.unipotsdam.rulegenerator.rules.AdaptationRule;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLAxiom;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.PrefixManager;
+import org.semanticweb.owlapi.util.DefaultPrefixManager;
+import org.semanticweb.owlapi.util.InferredAxiomGenerator;
+import org.semanticweb.owlapi.util.InferredClassAssertionAxiomGenerator;
+import org.semanticweb.owlapi.util.InferredOntologyGenerator;
+import org.semanticweb.owlapi.util.InferredPropertyAssertionGenerator;
+import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
+
+import com.clarkparsia.pellet.owlapiv3.PelletReasoner;
+import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
+
+import de.unipotsdam.rulegenerator.ontology.LearningUnit;
+import de.unipotsdam.rulegenerator.ontology.MyFactory;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
-import de.unipotsdam.rulegenerator.rules.Fact;
-import de.unipotsdam.rulegenerator.rules.LocalAction;
-import de.unipotsdam.rulegenerator.rules.Situation;
-import de.unipotsdam.rulegenerator.rules.Trigger;
+import de.unipotsdam.rulegenerator.rules.RuleFactory;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class RuleGeneratorService.
  */
 public class RuleGeneratorService {
-
-	/**
-	 * Generate fake rule.
-	 * 
-	 * @param index
-	 *            the index
-	 * @return the adaptation rule
-	 */
-	public static AdaptationRule generateFakeRule(Integer index) {
-		SecureRandom rand = new SecureRandom();
-		AdaptationRule rule = new AdaptationRule("AR_" + index);
-		// set triggering mode
-		rule.setTrigger(new Trigger(EnumUtils.randomEnum(TriggeringMode.class)));
-		// facts for the rule
-		ArrayList<Fact> facts = new ArrayList<Fact>();
-		for (int i = 0; i < rand.nextInt((5 - 1) + 1) + 1; i++) {
-			Fact newFact = new Fact("CI_FAKE_INFORMATION",
-					EnumUtils.randomEnum(FactOperator.class),
-					String.valueOf(rand.nextInt((100 - 1) + 1) + 1),
-					EnumUtils.randomEnum(LogicalOperator.class));
-			facts.add(newFact);
-		}
-		// add situation with facts
-		rule.setSituation(new Situation(EnumUtils
-				.randomEnum(LogicalOperator.class), facts));
-		// set action
-		rule.setAction(new LocalAction(LocalActionOperator.SHOW, "NG_123"));
-
-		return rule;
-	}
+	protected static PelletReasoner reasoner;
+	protected static OWLDataFactory dataFactory;
+	protected static OWLOntologyManager manager;
+	protected static OWLOntology ontology;	
 
 	/**
 	 * Generate adaptation rules.
 	 * 
 	 * @return the adaptation rule list
+	 * @throws Exception 
 	 */
-	public static AdaptationRuleList generateAdaptationRules() {
-		AdaptationRule rule = RuleGeneratorService.generateFakeRule(1);
-		AdaptationRule rule2 = RuleGeneratorService.generateFakeRule(2);
-
-		AdaptationRuleList adaptationRuleList = new AdaptationRuleList();
-		adaptationRuleList.setList(new ArrayList<AdaptationRule>(Arrays.asList(
-				rule, rule2)));
-
+	public static AdaptationRuleList generateAdaptationRules() throws Exception {
+		manager = OWLManager.createOWLOntologyManager();
+		// load received ontology
+		ontology = manager.loadOntologyFromOntologyDocument(new File(
+				"motivate-ontology.owl"));
+		// get data factory
+		dataFactory = manager.getOWLDataFactory();
+		// set default IRI
+		String defaultIri = "http://www.motivate-project.de/ontologies/knowledge#";
+		PrefixManager prefixManager = new DefaultPrefixManager(defaultIri);
+		// get Pellet reasoner
+		reasoner = PelletReasonerFactory.getInstance()
+				.createNonBufferingReasoner(ontology);
+		// listen for ontology changes (might be unnecessary)
+		manager.addOntologyChangeListener(reasoner);
+		// set up list of inferred axiom generators
+		List<InferredAxiomGenerator<? extends OWLAxiom>> generators = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
+		generators.add(new InferredSubClassAxiomGenerator());
+		generators.add(new InferredClassAssertionAxiomGenerator());
+		generators.add(new InferredPropertyAssertionGenerator());
+		// create inferred ontology generator
+		InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner);
+		// fill inferred ontology into the existing one
+		iog.fillOntology(manager, ontology);
+		// create ORM object factory
+		MyFactory factory = new MyFactory(ontology);
+		// get all learning unit individuals from ontology
+		Collection<? extends LearningUnit> learningUnits = factory
+				.getAllLearningUnitInstances();
+		// create rule factory
+		RuleFactory ruleFactory = new RuleFactory(learningUnits);
+		// generate rules
+		AdaptationRuleList adaptationRuleList = ruleFactory.generateRules();
+		
 		return adaptationRuleList;
 	}
 }

@@ -1,12 +1,10 @@
 package de.unipotsdam.rulegenerator.enums;
 
-
 // TODO: Auto-generated Javadoc
 /**
  * The Enum FactOperator.
  */
 public enum FactOperator {
-
 	/** The is. */
 	IS,
 	/** The is not. */
@@ -25,7 +23,8 @@ public enum FactOperator {
 	SUM,
 	/** The no value. */
 	NO_VALUE,
+	/** The contains. */
 	CONTAINS,
 	/** The complete. */
-	COMPLETE;
+	COMPLETE
 }

@@ -53,7 +53,7 @@ public class MyContextInformationParameter extends
 				return iriFragment;
 		}
 
-		return "Unknown";
+		return "NO_VALUE";
 	}
 
 	public Object getValue() {
@@ -62,7 +62,7 @@ public class MyContextInformationParameter extends
 		if (values.length > 0)
 			return values[0];
 		else
-			return "Unknown";
+			return "NO_VALUE";
 	}
 
 }

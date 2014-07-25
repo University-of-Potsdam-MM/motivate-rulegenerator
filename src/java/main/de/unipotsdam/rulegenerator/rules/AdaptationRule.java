@@ -1,14 +1,14 @@
 package de.unipotsdam.rulegenerator.rules;
 
 import javax.xml.bind.annotation.XmlRootElement;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.xml.bind.annotation.XmlType;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class AdaptationRule.
  */
 @XmlRootElement
+@XmlType(name = "", propOrder = { "id", "trigger", "situation", "action" })
 public class AdaptationRule {
 
 	private String id;
@@ -34,12 +34,6 @@ public class AdaptationRule {
 	 */
 	public AdaptationRule(String id) {
 		this.setId(id);
-	}
-	
-	@JsonIgnore
-	public String description() {
-		String description = new String();
-		return description += this.trigger.description() + this.situation.description() + this.action.description();
 	}
 	
 	public String getId() {
@@ -85,10 +79,6 @@ public class AdaptationRule {
 	 */
 	public void setSituation(Situation situation) {
 		this.situation = situation;
-	}
-	
-	public void addFact(Fact fact) {
-		this.situation.addFact(fact);
 	}
 
 	/**

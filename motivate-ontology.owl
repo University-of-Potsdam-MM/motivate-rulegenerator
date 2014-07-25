@@ -16,7 +16,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://www.motivate-project.de/ontologies/motivate.owl"
-     versionIRI="http://www.motivate-project.de/ontologies/motivate.owl/1.0.1">
+     versionIRI="http://www.motivate-project.de/ontologies/motivate.owl/1.0.2">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -24,7 +24,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&xsd;float">1.0.1</Literal>
+        <Literal datatypeIRI="&xsd;float">1.0.2</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
@@ -76,6 +76,36 @@
     </Declaration>
     <Declaration>
         <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
@@ -1121,6 +1151,486 @@
                 <Datatype abbreviatedIRI="xsd:integer"/>
                 <FacetRestriction facet="&xsd;maxInclusive">
                     <Literal datatypeIRI="&xsd;integer">11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextClass"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
                 </FacetRestriction>
             </DatatypeRestriction>
         </DataAllValuesFrom>
@@ -2803,6 +3313,11 @@
         <Literal datatypeIRI="&xsd;float">30.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-CurrentTemperature"/>
+        <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LatitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">52.42357</Literal>
@@ -2843,9 +3358,19 @@
         <Literal datatypeIRI="&xsd;float">52.12436</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserLocationLatitude"/>
+        <Literal datatypeIRI="&xsd;string">IS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserLocationLongitude"/>
         <Literal datatypeIRI="&xsd;float">13.34523</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserLocationLongitude"/>
+        <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
@@ -3179,6 +3704,10 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
+        <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValueOperator"/>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
     </DataPropertyDomain>
     <DataPropertyRange>

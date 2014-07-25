@@ -68,11 +68,12 @@ public class XMLServices extends Services {
 	 * Adaptation rule xml.
 	 * 
 	 * @return the adaptation rule list
+	 * @throws Exception 
 	 */
 	@GET
-	@Path("/generate-adaptation-rules")
+	@Path("/get-adaptation-rules")
 	@Produces(MediaType.TEXT_XML)
-	public AdaptationRuleList generateAdaptationRules() {
+	public AdaptationRuleList getAdaptationRules() throws Exception {
 		return RuleGeneratorService.generateAdaptationRules();
 	}
 }
