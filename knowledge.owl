@@ -10,13 +10,13 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.motivate-project.de/ontologies/motivate.owl"
+     xml:base="http://www.motivate-project.de/ontologies/knowledge"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://www.motivate-project.de/ontologies/motivate.owl"
-     versionIRI="http://www.motivate-project.de/ontologies/motivate.owl/1.0.2">
+     ontologyIRI="http://www.motivate-project.de/ontologies/knowledge"
+     versionIRI="http://www.motivate-project.de/ontologies/knowledge/1.0.2">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -26,9 +26,6 @@
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal datatypeIRI="&xsd;float">1.0.2</Literal>
     </Annotation>
-    <Declaration>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </Declaration>
     <Declaration>
         <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
     </Declaration>
@@ -46,6 +43,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningUnit"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
@@ -315,58 +315,58 @@
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#VelocityUnitContextParameter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <ObjectProperty IRI="#hasAlternative"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasBasis"/>
+        <ObjectProperty IRI="#hasBasis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformation"/>
+        <ObjectProperty IRI="#hasContextInformation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasExtension"/>
+        <ObjectProperty IRI="#hasExtension"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
+        <ObjectProperty IRI="#hasHelp"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasReference"/>
+        <ObjectProperty IRI="#hasReference"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersion"/>
+        <ObjectProperty IRI="#hasVersion"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isBasisOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isContextInformationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isExtensionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isHelpOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isPrerequisiteOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isReferenceOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isVersionOf"/>
+        <ObjectProperty IRI="#isBasisOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isConstraintTailOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isContextInformationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isExtensionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHelpOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPrerequisiteOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isReferenceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVersionOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasConstraintTail"/>
@@ -387,43 +387,34 @@
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#isContextInformationParameterOf"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAuthor"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContentType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasDifficulty"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasIdentifier"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasInteractivity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasKeyword"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLanguage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasSubject"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasTrigger"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersionDate"/>
+        <DataProperty IRI="#hasAuthor"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasContentType"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasContextInformationParameterValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDifficulty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInteractivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasKeyword"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLanguage"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
@@ -435,7 +426,16 @@
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasSubject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTrigger"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasValueOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVersionDate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasAcquisitionDate"/>
@@ -639,28 +639,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-        <ObjectIntersectionOf>
-            <DataAllValuesFrom>
-                <DataProperty IRI="#hasLogicalOperator"/>
-                <DataOneOf>
-                    <Literal datatypeIRI="&rdf;PlainLiteral">AND</Literal>
-                    <Literal datatypeIRI="&rdf;PlainLiteral">OR</Literal>
-                </DataOneOf>
-            </DataAllValuesFrom>
-            <DataExactCardinality cardinality="1">
-                <DataProperty IRI="#hasLogicalOperator"/>
-            </DataExactCardinality>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformation"/>
-            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
     </SubClassOf>
@@ -854,6 +832,28 @@
             <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningUnit"/>
+        <ObjectIntersectionOf>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasLogicalOperator"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">AND</Literal>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">OR</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasLogicalOperator"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningUnit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasContextInformation"/>
+            <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
@@ -3162,15 +3162,15 @@
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#TechnicalContextInformation"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-D"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-E"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-F"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3206,15 +3206,15 @@
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LatitudeParameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3254,12 +3254,12 @@
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#TechnicalContext"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <ObjectProperty IRI="#hasAlternative"/>
         <NamedIndividual IRI="#Example-LearningUnit-E"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
+        <ObjectProperty IRI="#hasHelp"/>
         <NamedIndividual IRI="#Example-LearningUnit-E"/>
         <NamedIndividual IRI="#Example-LearningUnit-F"/>
     </ObjectPropertyAssertion>
@@ -3279,7 +3279,7 @@
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <ObjectProperty IRI="#hasAlternative"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
     </ObjectPropertyAssertion>
@@ -3289,17 +3289,17 @@
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
         <NamedIndividual IRI="#Example-LearningUnit-E"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
         <NamedIndividual IRI="#Example-LearningUnit-D"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
     </ObjectPropertyAssertion>
@@ -3324,17 +3324,17 @@
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LongitudeParameter"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty IRI="#hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-D"/>
         <Literal datatypeIRI="&xsd;string">127</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty IRI="#hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-E"/>
         <Literal datatypeIRI="&xsd;string">128</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty IRI="#hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-F"/>
         <Literal datatypeIRI="&xsd;string">129</Literal>
     </DataPropertyAssertion>
@@ -3384,12 +3384,12 @@
         <Literal datatypeIRI="&xsd;float">52.42357</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty IRI="#hasLID"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
         <Literal datatypeIRI="&xsd;string">124</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty IRI="#hasLID"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
         <Literal datatypeIRI="&xsd;string">126</Literal>
     </DataPropertyAssertion>
@@ -3399,7 +3399,7 @@
         <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty IRI="#hasLID"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
         <Literal datatypeIRI="&xsd;string">125</Literal>
     </DataPropertyAssertion>
@@ -3434,84 +3434,84 @@
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasAlternative"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasBasis"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasBasis"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasExtension"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasExtension"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasHelp"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasReference"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasReference"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersion"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#hasVersion"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isBasisOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#isBasisOf"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isExtensionOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#isExtensionOf"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isHelpOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#isHelpOf"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isPrerequisiteOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#isPrerequisiteOf"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isReferenceOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#isReferenceOf"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isVersionOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
+        <ObjectProperty IRI="#isVersionOf"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isBasisOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasBasis"/>
+        <ObjectProperty IRI="#isBasisOf"/>
+        <ObjectProperty IRI="#hasBasis"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isContextInformationOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformation"/>
+        <ObjectProperty IRI="#isContextInformationOf"/>
+        <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasExtension"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isExtensionOf"/>
+        <ObjectProperty IRI="#hasExtension"/>
+        <ObjectProperty IRI="#isExtensionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isHelpOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
+        <ObjectProperty IRI="#isHelpOf"/>
+        <ObjectProperty IRI="#hasHelp"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isPrerequisiteOf"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty IRI="#isPrerequisiteOf"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasReference"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isReferenceOf"/>
+        <ObjectProperty IRI="#hasReference"/>
+        <ObjectProperty IRI="#isReferenceOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersion"/>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isVersionOf"/>
+        <ObjectProperty IRI="#hasVersion"/>
+        <ObjectProperty IRI="#isVersionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasConstraintTail"/>
@@ -3530,112 +3530,112 @@
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#isContextInformationParameterOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersion"/>
+        <ObjectProperty IRI="#hasVersion"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isVersionOf"/>
+        <ObjectProperty IRI="#isVersionOf"/>
     </FunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersion"/>
+        <ObjectProperty IRI="#hasVersion"/>
     </InverseFunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isVersionOf"/>
+        <ObjectProperty IRI="#isVersionOf"/>
     </InverseFunctionalObjectProperty>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <ObjectProperty IRI="#hasAlternative"/>
     </SymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasBasis"/>
+        <ObjectProperty IRI="#hasBasis"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformation"/>
+        <ObjectProperty IRI="#hasContextInformation"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasExtension"/>
+        <ObjectProperty IRI="#hasExtension"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
+        <ObjectProperty IRI="#hasHelp"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersion"/>
+        <ObjectProperty IRI="#hasVersion"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isBasisOf"/>
+        <ObjectProperty IRI="#isBasisOf"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isContextInformationOf"/>
+        <ObjectProperty IRI="#isContextInformationOf"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isExtensionOf"/>
+        <ObjectProperty IRI="#isExtensionOf"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isHelpOf"/>
+        <ObjectProperty IRI="#isHelpOf"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isPrerequisiteOf"/>
+        <ObjectProperty IRI="#isPrerequisiteOf"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isVersionOf"/>
+        <ObjectProperty IRI="#isVersionOf"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
     </AsymmetricObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <ObjectProperty IRI="#hasAlternative"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasBasis"/>
+        <ObjectProperty IRI="#hasBasis"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformation"/>
+        <ObjectProperty IRI="#hasContextInformation"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasExtension"/>
+        <ObjectProperty IRI="#hasExtension"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
+        <ObjectProperty IRI="#hasHelp"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersion"/>
+        <ObjectProperty IRI="#hasVersion"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isBasisOf"/>
+        <ObjectProperty IRI="#isBasisOf"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isContextInformationOf"/>
+        <ObjectProperty IRI="#isContextInformationOf"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isExtensionOf"/>
+        <ObjectProperty IRI="#isExtensionOf"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isHelpOf"/>
+        <ObjectProperty IRI="#isHelpOf"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isPrerequisiteOf"/>
+        <ObjectProperty IRI="#isPrerequisiteOf"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isVersionOf"/>
+        <ObjectProperty IRI="#isVersionOf"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
     </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <ObjectProperty IRI="#hasAlternative"/>
+        <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformation"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <ObjectProperty IRI="#hasContextInformation"/>
+        <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
+        <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextInformationParameter"/>
@@ -3643,11 +3643,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasRelation"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#LearningUnit"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextInformationParameter"/>
@@ -3682,22 +3682,22 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <FunctionalDataProperty>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasIdentifier"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersionDate"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasIdentifier"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasLID"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasLogicalOperator"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasVersionDate"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasDataType"/>
@@ -3712,108 +3712,96 @@
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#isRequired"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAuthor"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContentType"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasDifficulty"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasInteractivity"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasKeyword"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLanguage"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasSubject"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasTrigger"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersionDate"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <DataProperty IRI="#hasAuthor"/>
+        <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#ConstraintHead"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasContentType"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasContextInformationParameterValue"/>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#ContextInformationParameter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasDifficulty"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInteractivity"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasKeyword"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLID"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLanguage"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasSubject"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTrigger"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasValueOperator"/>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#MeasurableContextInformation"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVersionDate"/>
+        <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAuthor"/>
+        <DataProperty IRI="#hasAuthor"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContentType"/>
+        <DataProperty IRI="#hasContentType"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasDifficulty"/>
+        <DataProperty IRI="#hasDifficulty"/>
         <Datatype abbreviatedIRI="xsd:decimal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasIdentifier"/>
+        <DataProperty IRI="#hasIdentifier"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasInteractivity"/>
+        <DataProperty IRI="#hasInteractivity"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasKeyword"/>
+        <DataProperty IRI="#hasKeyword"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty IRI="#hasLID"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLanguage"/>
+        <DataProperty IRI="#hasLanguage"/>
         <Datatype abbreviatedIRI="xsd:language"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasSubject"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasTrigger"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasVersionDate"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasLogicalOperator"/>
@@ -3821,6 +3809,14 @@
             <Literal datatypeIRI="&rdf;PlainLiteral">AND</Literal>
             <Literal datatypeIRI="&rdf;PlainLiteral">OR</Literal>
         </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSubject"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTrigger"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasValueOperator"/>
@@ -3832,6 +3828,10 @@
             <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
             <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
         </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVersionDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasDataType"/>
