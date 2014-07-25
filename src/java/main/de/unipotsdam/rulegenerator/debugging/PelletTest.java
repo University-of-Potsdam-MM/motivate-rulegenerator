@@ -46,10 +46,8 @@ public class PelletTest {
 			OWLOntologyStorageException, IOException {
 		manager = OWLManager.createOWLOntologyManager();
 		ontology = manager.loadOntologyFromOntologyDocument(new File(
-				"motivate-ontology.owl"));
+				"knowledge.owl"));
 		dataFactory = manager.getOWLDataFactory();
-		String defaultIri = "http://www.motivate-project.de/ontologies/knowledge#";
-		PrefixManager prefixManager = new DefaultPrefixManager(defaultIri);
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);
 		manager.addOntologyChangeListener(reasoner);
@@ -85,7 +83,7 @@ public class PelletTest {
 		// Save the inferred ontology. (Replace the URI with one that is
 		// appropriate for your setup)
 		manager.saveOntology(ontology, new FileOutputStream(
-				"motivate-ontology-inferred.owl"));
+				"knowledge-inferred.owl"));
 
 		MyFactory factory = new MyFactory(ontology);
 		Collection<? extends LearningUnit> learningUnits = factory

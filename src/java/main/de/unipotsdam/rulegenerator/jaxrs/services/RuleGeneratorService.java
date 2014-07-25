@@ -46,12 +46,9 @@ public class RuleGeneratorService {
 		manager = OWLManager.createOWLOntologyManager();
 		// load received ontology
 		ontology = manager.loadOntologyFromOntologyDocument(new File(
-				"motivate-ontology.owl"));
+				"knowledge.owl"));
 		// get data factory
 		dataFactory = manager.getOWLDataFactory();
-		// set default IRI
-		String defaultIri = "http://www.motivate-project.de/ontologies/knowledge#";
-		PrefixManager prefixManager = new DefaultPrefixManager(defaultIri);
 		// get Pellet reasoner
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);
