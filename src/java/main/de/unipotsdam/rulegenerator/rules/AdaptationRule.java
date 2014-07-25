@@ -3,6 +3,8 @@ package de.unipotsdam.rulegenerator.rules;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class AdaptationRule.
@@ -34,6 +36,11 @@ public class AdaptationRule {
 	 */
 	public AdaptationRule(String id) {
 		this.setId(id);
+	}
+	
+	public AdaptationRule(String id, LocalActionOperator operator, String tragetLearningUnitId) {
+		this.setId(id);
+		this.setAction(new LocalAction(operator, tragetLearningUnitId));
 	}
 	
 	public String getId() {

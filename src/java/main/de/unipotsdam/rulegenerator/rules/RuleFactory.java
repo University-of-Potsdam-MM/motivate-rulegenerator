@@ -41,9 +41,11 @@ public class RuleFactory {
 
 			/** SHOW() **/
 
-			// create show rule for the current learning unit
-			ruleList.addAdaptationRule(new ShowAdaptationRule(
-					currentLearningUnit));
+			// create show rule for the current learning unit if context
+			// information are present
+			if (currentLearningUnit.getContextInformationCount() > 0)
+				ruleList.addAdaptationRule(new ShowAdaptationRule(
+						currentLearningUnit));
 
 			/** RELATIONS **/
 
@@ -66,11 +68,12 @@ public class RuleFactory {
 
 						/** SUGGEST() **/
 
-						// suggest alternative learning unit
-						ruleList.addAdaptationRule(new SuggestAlternativeAdaptationRule(
-								currentLearningUnit, alternativeLearningUnit));
+						// suggest alternative learning unit representation
+						// ruleList.addAdaptationRule(new
+						// SuggestAlternativeAdaptationRule(
+						// currentLearningUnit, alternativeLearningUnit));
 
-						/** SHOW() **/
+						/** SHOW REQUESTED ALTERNATIVE **/
 
 						// create a show rule for when the user is requesting
 						// an alternative representation of the learning unit
@@ -136,36 +139,75 @@ public class RuleFactory {
 					for (WrappedIndividual help : currentLearningUnit.getHelp()) {
 						MyLearningUnit helpLearningUnit = (MyLearningUnit) help;
 
-						/** PRELOAD() **/
+						/** PRELOAD HELP **/
 
-						// create selection rule for learning unit
+						// create preload rule for help learning unit
 						ruleList.addAdaptationRule(new PreloadAdaptationRule(
 								currentLearningUnit, helpLearningUnit));
 
-						/** SUGGEST() **/
+						/** SUGGEST HELP WHEN USER CONFUSED **/
 
 						// create a suggestion rule for when the user seems to
 						// be confused
 
-						/** SHOW() **/
+						AdaptationRule suggestHelpWhenConfusedRule = new AdaptationRule(
+								"SuggestHelpWhenConfusedRule["
+										+ currentLearningUnit.getID() + ":"
+										+ helpLearningUnit.getID() + "]",
+								LocalActionOperator.SUGGEST,
+								helpLearningUnit.getID());
+						suggestHelpWhenConfusedRule.setTrigger(new Trigger(
+								TriggeringMode.ON_ENTRY));
+						// create the situation for the rule
+						Situation suggestHelpWhenConfusedRuleSituation = new Situation();
+						// is current learning unit and prerequisites are
+						// satisfied
+						suggestHelpWhenConfusedRuleSituation
+								.applyTemplate(
+										SituationTemplate.CURRENT_LEARNING_UNIT_ID_AND_TARGET_PREREQUISITES,
+										currentLearningUnit, helpLearningUnit);
+						// AND
+						suggestHelpWhenConfusedRuleSituation.constraints
+								.addLogicalOperator(LogicalOperator.AND);
+						// add user did request help constraint
+						suggestHelpWhenConfusedRuleSituation.constraints
+								.addFact(new Fact(
+										"UserStateOfMindConfusionMeasurableInformation",
+										FactOperator.GREATER_THEN, "2"));
+						// add user defined facts for help learning unit
+						suggestHelpWhenConfusedRuleSituation.applyTemplate(
+								SituationTemplate.CURRENT_LEARNING_UNIT_FACTS,
+								helpLearningUnit);
+						// add the situation to the rule
+						suggestHelpWhenConfusedRule
+								.setSituation(suggestHelpWhenConfusedRuleSituation);
+						ruleList.addAdaptationRule(suggestHelpWhenConfusedRule);
+
+						/** SHOW HELP WHEN USER REQUESTED **/
 
 						// create a show rule for when the user is requesting
 						// help
 
 						AdaptationRule showRequestedHelpRule = new AdaptationRule(
-								"ShowRequestedHelpRule"
-										+ currentLearningUnit.getID());
+								"ShowRequestedHelpRule["
+										+ currentLearningUnit.getID() + ":"
+										+ helpLearningUnit.getID() + "]",
+								LocalActionOperator.SHOW,
+								helpLearningUnit.getID());
 						showRequestedHelpRule.setTrigger(new Trigger(
 								TriggeringMode.ON_ENTRY));
 						// create the situation for the rule
 						Situation showRequestedHelpRuleSituation = new Situation();
-						showRequestedHelpRuleSituation.applyTemplate(
-								SituationTemplate.TARGET_PREREQUISITES,
-								currentLearningUnit, helpLearningUnit);
+						// is current learning unit and prerequisites are
+						// satisfied
+						showRequestedHelpRuleSituation
+								.applyTemplate(
+										SituationTemplate.CURRENT_LEARNING_UNIT_ID_AND_TARGET_PREREQUISITES,
+										currentLearningUnit, helpLearningUnit);
+						// AND
+						showRequestedHelpRuleSituation.constraints
+								.addLogicalOperator(LogicalOperator.AND);
 						// add user did request help constraint
-						if (showRequestedHelpRuleSituation.constraints.size() > 0)
-							showRequestedHelpRuleSituation.constraints
-									.addLogicalOperator(LogicalOperator.AND);
 						showRequestedHelpRuleSituation.constraints
 								.addFact(new Fact(
 										"UserRequestsHelpMeasurableInformation",
@@ -177,10 +219,6 @@ public class RuleFactory {
 						// add the situation to the rule
 						showRequestedHelpRule
 								.setSituation(showRequestedHelpRuleSituation);
-						// create the action for the rule
-						showRequestedHelpRule.setAction(new LocalAction(
-								LocalActionOperator.SHOW, helpLearningUnit
-										.getID()));
 						ruleList.addAdaptationRule(showRequestedHelpRule);
 					}
 				}

@@ -16,7 +16,5 @@ public enum SituationTemplate {
 	/** The current learning unit id. */
 	CURRENT_LEARNING_UNIT_ID,
 	/** The prerequisites. */
-	PREREQUISITES,
-	/** The target prerequisites. */
-	TARGET_PREREQUISITES
+	PREREQUISITES
 }

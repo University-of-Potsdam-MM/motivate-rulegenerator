@@ -9,7 +9,7 @@ public class SuggestAlternativeAdaptationRule extends SuggestAdaptationRule {
 	public SuggestAlternativeAdaptationRule(MyLearningUnit currentLearningUnit,
 			MyLearningUnit alternativeLearningUnit) throws Exception {
 		// TODO: find id pattern
-		this.setId("foo");
+		this.setId("SuggestAlternative["+currentLearningUnit.getID()+":"+alternativeLearningUnit.getID()+"]");
 		// create trigger for the rule
 		this.setTrigger(new Trigger(TriggeringMode.ON_ENTRY));
 		// create the situation for the rule
@@ -19,8 +19,10 @@ public class SuggestAlternativeAdaptationRule extends SuggestAdaptationRule {
 				"CurrentLearningUnitMeasurableInformation", FactOperator.IS,
 				currentLearningUnit.getID()));
 
+		//TODO: finish!
+		
 		this.setSituation(alternativeLearningUnitSituation);
 		// create the action for the rule
-		this.setAction(new LocalAction(LocalActionOperator.SUGGEST, currentLearningUnit.getID()));
+		this.setAction(new LocalAction(LocalActionOperator.SUGGEST, alternativeLearningUnit.getID()));
 	}
 }

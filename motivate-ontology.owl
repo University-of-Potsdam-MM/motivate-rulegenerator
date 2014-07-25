@@ -462,6 +462,15 @@
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#isRequired"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnit-D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </Declaration>
     <Declaration>
@@ -486,13 +495,13 @@
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LatitudeParameter"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit3"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LongitudeParameter"/>
@@ -3153,6 +3162,18 @@
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#TechnicalContextInformation"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <NamedIndividual IRI="#Example-LearningUnit-D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#TemperatureScaleContextParameter"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </ClassAssertion>
@@ -3186,15 +3207,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit3"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#LongitudeContextParameter"/>
@@ -3233,6 +3254,21 @@
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#TechnicalContext"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserDidArriveAtLocation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasConstraintTail"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-ConstraintRestrictUsageHead"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-ConstraintUserRoleTail"/>
@@ -3244,28 +3280,38 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit1"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit2"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit3"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="#Example-LearningUnit-D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit3"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserLocationLongitude"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit3"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserLocationLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasMeasurableContextInformation"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserLocationLongitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasContextInformationParameter"/>
@@ -3277,6 +3323,21 @@
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserDidArriveAtLocation"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LongitudeParameter"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <NamedIndividual IRI="#Example-LearningUnit-D"/>
+        <Literal datatypeIRI="&xsd;string">127</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+        <Literal datatypeIRI="&xsd;string">128</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+        <Literal datatypeIRI="&xsd;string">129</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasContextInformationParameterValue"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
@@ -3324,23 +3385,23 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit1"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-A"/>
         <Literal datatypeIRI="&xsd;string">124</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit2"/>
-        <Literal datatypeIRI="&xsd;string">125</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit3"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
         <Literal datatypeIRI="&xsd;string">126</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit3"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-B"/>
         <Literal datatypeIRI="&xsd;string">AND</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-LearningUnit-C"/>
+        <Literal datatypeIRI="&xsd;string">125</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
@@ -3350,7 +3411,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#hasValue"/>
         <NamedIndividual IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#Example-UserDidArriveAtLocation"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
