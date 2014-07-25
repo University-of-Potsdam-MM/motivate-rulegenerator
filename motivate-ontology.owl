@@ -3788,31 +3788,6 @@
         <DataProperty IRI="http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#isRequired"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-    <DLSafeRule>
-        <Body>
-            <ClassAtom>
-                <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
-                <Variable IRI="urn:swrl#x"/>
-            </ClassAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
-                <Variable IRI="urn:swrl#x"/>
-                <Variable IRI="urn:swrl#y"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isPrerequisiteOf"/>
-                <Variable IRI="urn:swrl#y"/>
-                <Variable IRI="urn:swrl#z"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#isPrerequisiteOf"/>
-                <Variable IRI="urn:swrl#x"/>
-                <Variable IRI="urn:swrl#z"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.semanticweb.org/moebert/ontologies/2014/4/untitled-ontology-35#CurrentTemperatureMeasurableInformation</IRI>
