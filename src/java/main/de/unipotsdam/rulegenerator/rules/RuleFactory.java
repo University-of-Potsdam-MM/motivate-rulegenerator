@@ -99,7 +99,7 @@ public class RuleFactory {
 								.addFact(new Fact(
 										"UserRequestsAlternativeMeasurableInformation",
 										FactOperator.IS, "true"));
-						//
+						// add user defined facts for alternative learning unit
 						showRequestedAlternativeRuleSituation.applyTemplate(
 								SituationTemplate.CURRENT_LEARNING_UNIT_FACTS,
 								alternativeLearningUnit);
@@ -123,10 +123,6 @@ public class RuleFactory {
 						MyLearningUnit prerequisiteLearningUnit = (MyLearningUnit) prerequisite;
 
 						/** PRELOAD() **/
-
-						// create selection rule for learning unit
-						ruleList.addAdaptationRule(new PreloadAdaptationRule(
-								currentLearningUnit, prerequisiteLearningUnit));
 
 						/** SHOW() **/
 
@@ -170,10 +166,11 @@ public class RuleFactory {
 						if (showRequestedHelpRuleSituation.constraints.size() > 0)
 							showRequestedHelpRuleSituation.constraints
 									.addLogicalOperator(LogicalOperator.AND);
-						showRequestedHelpRuleSituation.constraints.addFact(new Fact(
-								"UserRequestsHelpMeasurableInformation",
-								FactOperator.IS, "true"));
-						//
+						showRequestedHelpRuleSituation.constraints
+								.addFact(new Fact(
+										"UserRequestsHelpMeasurableInformation",
+										FactOperator.IS, "true"));
+						// add user defined facts for help learning unit
 						showRequestedHelpRuleSituation.applyTemplate(
 								SituationTemplate.CURRENT_LEARNING_UNIT_FACTS,
 								helpLearningUnit);

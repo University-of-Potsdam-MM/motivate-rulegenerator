@@ -1,8 +1,6 @@
 package de.unipotsdam.rulegenerator.rules;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -92,9 +90,33 @@ public class Situation {
 		int i = 0;
 		for (WrappedIndividual prerequisite : prerequisites) {
 			MyLearningUnit prerequisiteLearningUnit = (MyLearningUnit) prerequisite;
-			prerequisitesFactSet.addFact(new Fact(
-					"FinishedLearningUnitMeasurableInformation",
-					FactOperator.IS, prerequisiteLearningUnit.getID()));
+			// check if prerequisite has alternative presentations
+			if (prerequisiteLearningUnit.hasAlternatives()) {
+				// create fact set for alternative prerequisite representations
+				FactSet alternativePrerequisitesFactSets = new FactSet();
+				// add the prerequisite learning unit to the fact set
+				alternativePrerequisitesFactSets.addFact(new Fact(
+						"FinishedLearningUnitMeasurableInformation",
+						FactOperator.IS, prerequisiteLearningUnit.getID()), LogicalOperator.OR);
+				// iterate over the alternative representations
+				int j = 0;
+				for (WrappedIndividual wrappedIndividual : prerequisiteLearningUnit.getAlternatives()) {
+					MyLearningUnit alternativePrerequisiteLearningUnit = (MyLearningUnit) wrappedIndividual;
+					// add the prerequisite learning unit to the fact set
+					alternativePrerequisitesFactSets.addFact(new Fact(
+							"FinishedLearningUnitMeasurableInformation",
+							FactOperator.IS, alternativePrerequisiteLearningUnit.getID()));
+					if (j < prerequisiteLearningUnit.getAlternativesCount() - 1)
+						alternativePrerequisitesFactSets.addLogicalOperator(LogicalOperator.OR);
+					j++;
+				}
+				prerequisitesFactSet.addFactSet(alternativePrerequisitesFactSets);
+			} else {
+				// add the prerequisite learning unit to the fact set
+				prerequisitesFactSet.addFact(new Fact(
+						"FinishedLearningUnitMeasurableInformation",
+						FactOperator.IS, prerequisiteLearningUnit.getID()));
+			}
 			if (i < prerequisites.size() - 1)
 				prerequisitesFactSet.addLogicalOperator(LogicalOperator.AND);
 			i++;
