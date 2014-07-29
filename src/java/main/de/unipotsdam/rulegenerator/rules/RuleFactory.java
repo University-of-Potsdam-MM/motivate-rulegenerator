@@ -80,7 +80,9 @@ public class RuleFactory {
 						AdaptationRule showRequestedAlternativeRule = new AdaptationRule(
 								"ShowRequestedAlternativeRule["
 										+ currentLearningUnit.getID() + ":"
-										+ alternativeLearningUnit.getID() + "]");
+										+ alternativeLearningUnit.getID() + "]",
+								LocalActionOperator.SHOW,
+								alternativeLearningUnit.getID());
 						showRequestedAlternativeRule.setTrigger(new Trigger(
 								TriggeringMode.ON_ENTRY));
 						// create the situation for the rule
@@ -109,10 +111,6 @@ public class RuleFactory {
 						// add the situation to the rule
 						showRequestedAlternativeRule
 								.setSituation(showRequestedAlternativeRuleSituation);
-						// create the action for the rule
-						showRequestedAlternativeRule.setAction(new LocalAction(
-								LocalActionOperator.SHOW,
-								alternativeLearningUnit.getID()));
 						ruleList.addAdaptationRule(showRequestedAlternativeRule);
 					}
 				}
@@ -145,7 +143,7 @@ public class RuleFactory {
 						ruleList.addAdaptationRule(new PreloadAdaptationRule(
 								currentLearningUnit, helpLearningUnit));
 
-						/** SUGGEST HELP WHEN USER CONFUSED **/
+						/** SUGGEST HELP WHEN THE USER IS CONFUSED **/
 
 						// create a suggestion rule for when the user seems to
 						// be confused

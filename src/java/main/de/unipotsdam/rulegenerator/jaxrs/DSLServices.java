@@ -1,6 +1,7 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.File;
+import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Scanner;
@@ -13,17 +14,29 @@ import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.ErrorListener;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 
 @Path("/dsl")
-public class DSLServices extends Services {
+public class DSLServices extends Services implements ErrorListener,
+		ErrorHandler {
 
 	@GET
 	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
@@ -32,14 +45,16 @@ public class DSLServices extends Services {
 			@PathParam("ontologyId") String ontologyId)
 			throws TransformerFactoryConfigurationError, Exception {
 		// Write received ontology to file system
-		
-		//String ontologyFileName = ontologyId + ".owl";
-		//PrintWriter writer = new PrintWriter("src/" + ontologyFileName, "UTF-8");
-		//writer.println(ABox);
-		//writer.close();
-		
+
+		// String ontologyFileName = ontologyId + ".owl";
+		// PrintWriter writer = new PrintWriter("src/" + ontologyFileName,
+		// "UTF-8");
+		// writer.println(ABox);
+		// writer.close();
+
 		// generate rules
-		AdaptationRuleList adaptationRuleList = RuleGeneratorService.generateAdaptationRules();
+		AdaptationRuleList adaptationRuleList = RuleGeneratorService
+				.generateAdaptationRules();
 
 		String xml;
 		StringWriter stringWriter = new StringWriter();
@@ -56,16 +71,65 @@ public class DSLServices extends Services {
 		String xslt = new Scanner(new File("resources/noolsDSL.xslt"))
 				.useDelimiter("\\Z").next();
 
-		StringWriter xmlResultResource = new StringWriter();
+		System.setProperty("javax.xml.transform.TransformerFactory",
+				"net.sf.saxon.TransformerFactoryImpl");
 
-		Transformer xmlTransformer = TransformerFactory.newInstance()
-				.newTransformer(new StreamSource(new StringReader(xslt)));
+		SAXParserFactory parserFactory = SAXParserFactory.newInstance();
+		SAXParser parser = parserFactory.newSAXParser();
+		parser.getXMLReader().setErrorHandler(this);
+		SAXSource xmlInput = new SAXSource(parser.getXMLReader(),
+				new InputSource(new StringReader(xml)));
 
-		xmlTransformer.transform(new StreamSource(new StringReader(xml)),
-				new StreamResult(xmlResultResource));
+		stringWriter = new StringWriter();
+		StreamResult xmlOutput = new StreamResult(stringWriter);
+		TransformerFactory transformerFactory = TransformerFactory
+				.newInstance();
 
-		// System.out.println(xmlResultResource.getBuffer().toString());
+		StreamSource source = new StreamSource(new StringReader(xslt));
+		// source.setSystemId("resources/noolsDSL.xslt");
+		Transformer transformer = transformerFactory.newTransformer(source);
+		transformer.setErrorListener(this);
+		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+		transformer.transform(xmlInput, xmlOutput);
 
-		return xmlResultResource.getBuffer().toString();
+		return xmlOutput.getWriter().toString();
+	}
+
+	@Override
+	public void error(TransformerException arg0) throws TransformerException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void fatalError(TransformerException arg0)
+			throws TransformerException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void warning(TransformerException arg0) throws TransformerException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void error(SAXParseException arg0) throws SAXException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void fatalError(SAXParseException arg0) throws SAXException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void warning(SAXParseException arg0) throws SAXException {
+		// TODO Auto-generated method stub
+
 	}
 }

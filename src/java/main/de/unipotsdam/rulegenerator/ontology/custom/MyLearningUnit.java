@@ -200,7 +200,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		int i = 0;
 		for (MyMeasurableContextInformation contextInformation : this.getContextInformation()) {
 			Fact learningUnitFact = new Fact();
-			learningUnitFact.setContextInformation(contextInformation.getIRIShort());
+			learningUnitFact.setContextInformation(contextInformation.getSpecificContextInformationType());
 			learningUnitFact.setValue(contextInformation.getValue().toString());
 			learningUnitFact.setOperator(FactOperator.valueOf(contextInformation.getValueOperator()));
 			learningUnitFacts.addFact(learningUnitFact);

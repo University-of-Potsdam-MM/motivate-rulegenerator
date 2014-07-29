@@ -81,7 +81,9 @@
 					select="foo:gatherAliases($facts, $newFactAliases, $newFactContextInformation, $index + 1)" />
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:sequence select="distinct-values($factContextInformation)" />
+				<xsl:for-each select="distinct-values($factContextInformation)">
+					<xsl:sequence select="." />
+				</xsl:for-each>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
