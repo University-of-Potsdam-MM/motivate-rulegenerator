@@ -3,7 +3,7 @@ package de.unipotsdam.rulegenerator.rules;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
+import de.unipotsdam.rulegenerator.enums.ActionOperator;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -38,9 +38,9 @@ public class AdaptationRule {
 		this.setId(id);
 	}
 	
-	public AdaptationRule(String id, LocalActionOperator operator, String tragetLearningUnitId) {
+	public AdaptationRule(String id, ActionOperator operator, String tragetLearningUnitId) {
 		this.setId(id);
-		this.setAction(new LocalAction(operator, tragetLearningUnitId));
+		this.setAction(new Action(operator, tragetLearningUnitId));
 	}
 	
 	public String getId() {

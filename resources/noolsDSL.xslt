@@ -119,18 +119,13 @@
 			<!-- Action -->
 			<xsl:text> } then { </xsl:text>
 			<xsl:choose>
-				<xsl:when test="action/operator = 'SHOW'">
-					<xsl:text>show(</xsl:text>
+				<xsl:when test="action/operator = 'SELECT'">
+					<xsl:text>select(</xsl:text>
 					<xsl:value-of select="action/learningUnitId" />
 					<xsl:text>);</xsl:text>
 				</xsl:when>
 				<xsl:when test="action/operator = 'PRELOAD'">
 					<xsl:text>preload(</xsl:text>
-					<xsl:value-of select="action/learningUnitId" />
-					<xsl:text>);</xsl:text>
-				</xsl:when>
-				<xsl:when test="action/operator = 'SUGGEST'">
-					<xsl:text>suggest(</xsl:text>
 					<xsl:value-of select="action/learningUnitId" />
 					<xsl:text>);</xsl:text>
 				</xsl:when>

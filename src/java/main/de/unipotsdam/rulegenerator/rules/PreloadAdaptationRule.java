@@ -1,6 +1,6 @@
 package de.unipotsdam.rulegenerator.rules;
 
-import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
+import de.unipotsdam.rulegenerator.enums.ActionOperator;
 import de.unipotsdam.rulegenerator.enums.SituationTemplate;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
@@ -22,7 +22,7 @@ public class PreloadAdaptationRule extends AdaptationRule {
 		// add the situation to the rule
 		this.setSituation(preloadLearningUnitRuleSituation);
 		// create the action for the rule
-		this.setAction(new LocalAction(LocalActionOperator.PRELOAD,
+		this.setAction(new Action(ActionOperator.PRELOAD,
 				preloadLearningUnit.getID()));
 	}
 }

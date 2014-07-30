@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factoryRules>
+	<factoryRule>
+		<dynamicPrerequisites>
+			<prerequsite>USER_FACTS_SATISFIED</prerequsite>
+			<prerequsite>PREREQUISITES_SATISFIED</prerequsite>
+		</dynamicPrerequisites>
+		<namePattern>
+			<pattern>ShowRule[%s]</pattern>
+			<params>
+				<param>CURRENT_LEARNING_UNIT_ID</param>
+			</params>
+		</namePattern>
+		<situation/>
+		<action>
+			<operator>SHOW</operator>
+			<target>CURRENT_LEARNING_UNIT</target>
+		</action>
+	</factoryRule>
+	<!-- Relations -->
+		
+	<!-- Help -->
+	<factoryRule>
+		<dynamicPrerequisites>
+			<prerequsite>HAS_HELP_RELATION</prerequsite>
+			<prerequsite>TARGET_PREREQUISITES_SATISFIED</prerequsite>
+			<prerequsite>USER_FACTS_SATISFIED</prerequsite>
+		</dynamicPrerequisites>
+		<namePattern>
+			<pattern>SuggestHelpWhenConfusedRule[%s:%s]</pattern>
+			<params>
+				<param>CURRENT_LEARNING_UNIT_ID</param>
+				<param>TARGET_LEARNING_UNIT_ID</param>
+			</params>
+		</namePattern>
+		<situation>
+			<constraints>
+				<fact>
+					<contextInformation>CurrentLearningUnitMeasurableInformation</contextInformation>
+					<factOperator>IS</factOperator>
+					<value>CURRENT_LEARNING_UNIT_ID</value>
+				</fact>
+				<logicalOperator>AND</logicalOperator>
+				<fact>
+					<contextInformation>UserStateOfMindConfusionMeasurableInformation</contextInformation>
+					<factOperator>GREATER_THEN</factOperator>
+					<value>2</value>
+				</fact>
+			</constraints>
+		</situation>
+		<action>
+			<operator>SUGGEST</operator>
+			<target>TARGET_LEARNING_UNIT</target>
+		</action>
+	</factoryRule>
+</factoryRules>

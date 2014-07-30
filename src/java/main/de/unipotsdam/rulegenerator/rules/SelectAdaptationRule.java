@@ -1,12 +1,12 @@
 package de.unipotsdam.rulegenerator.rules;
 
-import de.unipotsdam.rulegenerator.enums.LocalActionOperator;
+import de.unipotsdam.rulegenerator.enums.ActionOperator;
 import de.unipotsdam.rulegenerator.enums.SituationTemplate;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 
-public class ShowAdaptationRule extends AdaptationRule {
-	public ShowAdaptationRule(MyLearningUnit currentLearningUnit) throws Exception {
+public class SelectAdaptationRule extends AdaptationRule {
+	public SelectAdaptationRule(MyLearningUnit currentLearningUnit) throws Exception {
 		// TODO: find id pattern
 		this.setId("ShowRule["+currentLearningUnit.getID()+"]");
 		// create trigger for the rule
@@ -20,7 +20,7 @@ public class ShowAdaptationRule extends AdaptationRule {
 		// add the situation to the rule
 		this.setSituation(showLearningUnitRuleSituation);
 		// create the action for the rule
-		this.setAction(new LocalAction(LocalActionOperator.SHOW,
+		this.setAction(new Action(ActionOperator.SELECT,
 				currentLearningUnit.getID()));
 	}
 }
