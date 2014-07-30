@@ -9,7 +9,7 @@ public class PreloadAdaptationRule extends AdaptationRule {
 	public PreloadAdaptationRule(MyLearningUnit currentLearningUnit,
 			MyLearningUnit preloadLearningUnit) throws Exception {
 		// TODO: find id pattern
-		this.setId("PreloadRule["+preloadLearningUnit.getID()+"]");
+		this.setId("PreloadLearningUnit["+preloadLearningUnit.getID()+"]");
 		// create trigger for the rule
 		this.setTrigger(new Trigger(TriggeringMode.ON_ENTRY));
 		// create the situation for the rule
