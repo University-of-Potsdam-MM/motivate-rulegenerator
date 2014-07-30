@@ -9,11 +9,12 @@
 	<xsl:function name="foo:exploreFactSetElement">
 		<xsl:param name="factSetElement" />
 		<xsl:param name="facts" />
+		<xsl:param name="contextInformation" />
+		
 		<xsl:variable name="currentElementName" select="name($factSetElement)" />
 		<xsl:choose>
 			<xsl:when test="$currentElementName = 'fact'">
-				<xsl:variable name="i" select="index-of($facts, $factSetElement)" />
-				<xsl:variable name="alias" select="concat('c', $i)" />
+				<xsl:variable name="alias" select="foo:getAliasForContextInformation($contextInformation, concat($factSetElement/contextInformation, $factSetElement/value))" />
 				<xsl:text>(</xsl:text>
 				<xsl:value-of select="$alias" />
 				<xsl:text>.id = </xsl:text>
@@ -46,7 +47,7 @@
 			<xsl:when test="$currentElementName = 'factSet'">
 				<xsl:text>(</xsl:text>
 				<xsl:for-each select="$factSetElement/*">
-					<xsl:value-of select="foo:exploreFactSetElement(current(), $facts)" />
+					<xsl:value-of select="foo:exploreFactSetElement(current(), $facts, $contextInformation)" />
 				</xsl:for-each>
 				<xsl:text>)</xsl:text>
 			</xsl:when>
@@ -65,20 +66,17 @@
 
 	<xsl:function name="foo:gatherAliases">
 		<xsl:param name="facts" />
-		<xsl:param name="factAliases" />
 		<xsl:param name="factContextInformation" />
 		<xsl:param name="index" />
 
 		<xsl:variable name="alias" select="concat('c', $index)" />
-		<xsl:variable name="newFactAliases"
-			select="insert-before($factAliases, $index, concat('c', $index))" />
 		<xsl:variable name="newFactContextInformation"
-			select="insert-before($factContextInformation, $index, $facts[$index]/contextInformation)" />
+			select="insert-before($factContextInformation, $index, concat($facts[$index]/contextInformation, $facts[$index]/value))" />
 
 		<xsl:choose>
 			<xsl:when test="$index &lt;= count($facts)">
-				<xsl:value-of
-					select="foo:gatherAliases($facts, $newFactAliases, $newFactContextInformation, $index + 1)" />
+				<xsl:sequence
+					select="foo:gatherAliases($facts, $newFactContextInformation, $index + 1)" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:for-each select="distinct-values($factContextInformation)">
@@ -87,6 +85,13 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
+	
+	<xsl:function name="foo:getAliasForContextInformation">
+		<xsl:param name="contextInformationSequence" />
+		<xsl:param name="contextInformation" />
+		
+		<xsl:sequence select="concat('c', index-of($contextInformationSequence, $contextInformation))" />
+	</xsl:function>
 
 	<xsl:template match="/">
 		<xsl:for-each select="adaptationRules/adaptationRule">
@@ -94,8 +99,8 @@
 			<xsl:value-of select="id" />
 			<xsl:text> { </xsl:text>
 			<!-- Gather all facts -->
-			<xsl:variable name="contextInformation" select="foo:gatherAliases(situation//fact, (), (), 1)" />
-			<xsl:value-of select="$contextInformation" />
+			<xsl:variable name="contextInformation"
+				select="foo:gatherAliases(situation//fact, (), 1)" />
 			<xsl:for-each select="$contextInformation">
 				<xsl:value-of select="concat('c', position())" />
 				<xsl:text> ContextInformation; </xsl:text>
@@ -104,7 +109,7 @@
 			<!-- Constraints -->
 			<xsl:for-each select="situation/constraints/*">
 				<xsl:value-of
-					select="foo:exploreFactSetElement(current(), situation/constraints//fact)" />
+					select="foo:exploreFactSetElement(current(), situation/constraints//fact, $contextInformation)" />
 			</xsl:for-each>
 			<xsl:if
 				test="count(situation/constraints/*) > 0 and count(situation/userFacts/*) > 0">
@@ -113,7 +118,7 @@
 			<!-- User Facts -->
 			<xsl:for-each select="situation/userFacts/*">
 				<xsl:value-of
-					select="foo:exploreFactSetElement(current(), situation/userFacts//fact)" />
+					select="foo:exploreFactSetElement(current(), situation/userFacts//fact, $contextInformation)" />
 			</xsl:for-each>
 			<xsl:text>;</xsl:text>
 			<!-- Action -->
