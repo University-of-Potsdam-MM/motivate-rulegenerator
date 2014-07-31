@@ -1,7 +1,6 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.File;
-import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Scanner;

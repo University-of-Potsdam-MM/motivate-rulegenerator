@@ -1,4 +1,5 @@
 package de.unipotsdam.rulegenerator.debugging;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,15 +9,10 @@ import java.util.List;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLAxiom;
-import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLDataProperty;
-import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
-import org.semanticweb.owlapi.model.PrefixManager;
-import org.semanticweb.owlapi.util.DefaultPrefixManager;
 import org.semanticweb.owlapi.util.InferredAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredClassAssertionAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredOntologyGenerator;
@@ -26,7 +22,6 @@ import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
 import com.clarkparsia.pellet.owlapiv3.PelletReasoner;
 import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 
-import de.unipotsdam.rulegenerator.ontology.ConstraintHead;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
 import de.unipotsdam.rulegenerator.ontology.MyFactory;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
@@ -34,7 +29,6 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 public class PelletTest {
 
 	private PelletReasoner reasoner;
-	private OWLDataFactory dataFactory;
 	private OWLOntologyManager manager;
 	private OWLOntology ontology;
 
@@ -47,7 +41,6 @@ public class PelletTest {
 		manager = OWLManager.createOWLOntologyManager();
 		ontology = manager.loadOntologyFromOntologyDocument(new File(
 				"knowledge.owl"));
-		dataFactory = manager.getOWLDataFactory();
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);
 		manager.addOntologyChangeListener(reasoner);
@@ -70,7 +63,7 @@ public class PelletTest {
 		// is nothing stopping us stuffing them back into the original asserted
 		// ontology
 		// if we wanted to do this.
-		OWLOntology inferredOntology = manager.createOntology();
+		//OWLOntology inferredOntology = manager.createOntology();
 
 		// Now get the inferred ontology generator to generate some inferred
 		// axioms
@@ -96,9 +89,5 @@ public class PelletTest {
 			myLearningUnit.description(1);
 		}
 		System.out.println("</LearningUnits>");
-
-		Collection<? extends ConstraintHead> heads = factory
-				.getAllConstraintHeadInstances();
-		// System.out.println(heads);
 	}
 }
