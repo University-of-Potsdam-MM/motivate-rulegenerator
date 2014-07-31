@@ -3,28 +3,27 @@
 	xmlns="http://www.w3.org/1999/xhtml">
 	<xsl:output method="text" encoding="UTF-8" indent="no" />
 
-	<xsl:variable name="factAliases" />
-	<xsl:variable name="aliasContextInformation" />
-
 	<xsl:function name="foo:exploreFactSetElement">
 		<xsl:param name="factSetElement" />
 		<xsl:param name="facts" />
 		<xsl:param name="contextInformation" />
-		
+
 		<xsl:variable name="currentElementName" select="name($factSetElement)" />
 		<xsl:choose>
 			<xsl:when test="$currentElementName = 'fact'">
-				<xsl:variable name="alias" select="foo:getAliasForContextInformation($contextInformation, concat($factSetElement/contextInformation, $factSetElement/value))" />
+				<xsl:variable name="alias"
+					select="foo:getAliasForContextInformation($contextInformation, concat($factSetElement/contextInformation, $factSetElement/value))" />
 				<xsl:text>(</xsl:text>
 				<xsl:value-of select="$alias" />
-				<xsl:text>.id = </xsl:text>
+				<xsl:text>.id = '</xsl:text>
 				<xsl:value-of select="$factSetElement/contextInformation" />
+				<xsl:text>'</xsl:text>
 				<xsl:text> &amp;&amp; </xsl:text>
 				<xsl:value-of select="$alias" />
 				<xsl:text>.value</xsl:text>
 				<xsl:choose>
 					<xsl:when test="$factSetElement/operator = 'IS'">
-						<xsl:text> = </xsl:text>
+						<xsl:text> == </xsl:text>
 					</xsl:when>
 					<xsl:when test="$factSetElement/operator = 'IS_NOT'">
 						<xsl:text> != </xsl:text>
@@ -47,7 +46,8 @@
 			<xsl:when test="$currentElementName = 'factSet'">
 				<xsl:text>(</xsl:text>
 				<xsl:for-each select="$factSetElement/*">
-					<xsl:value-of select="foo:exploreFactSetElement(current(), $facts, $contextInformation)" />
+					<xsl:value-of
+						select="foo:exploreFactSetElement(current(), $facts, $contextInformation)" />
 				</xsl:for-each>
 				<xsl:text>)</xsl:text>
 			</xsl:when>
@@ -85,28 +85,42 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:function>
-	
+
 	<xsl:function name="foo:getAliasForContextInformation">
 		<xsl:param name="contextInformationSequence" />
 		<xsl:param name="contextInformation" />
-		
-		<xsl:sequence select="concat('c', index-of($contextInformationSequence, $contextInformation))" />
+
+		<xsl:sequence
+			select="concat('c', index-of($contextInformationSequence, $contextInformation))" />
 	</xsl:function>
 
 	<xsl:template match="/">
+		<xsl:text>define ContextInformation {&#xa;</xsl:text>
+		<xsl:text>&#x9;id : '',&#xa;</xsl:text>
+		<xsl:text>&#x9;value : 'NO_VALUE',&#xa;</xsl:text>
+		<xsl:text>&#x9;constructor : function(id, value) {&#xa;</xsl:text>
+		<xsl:text>&#x9;&#x9;this.id = id;&#xa;</xsl:text>
+		<xsl:text>&#x9;&#x9;this.value = value;&#xa;</xsl:text>
+		<xsl:text>&#x9;}&#xa;</xsl:text>
+		<xsl:text>}</xsl:text>
+		<xsl:text>&#xa;&#xa;</xsl:text>
+
 		<xsl:for-each select="adaptationRules/adaptationRule">
 			<xsl:text>rule </xsl:text>
 			<xsl:value-of select="id" />
-			<xsl:text> { </xsl:text>
+			<xsl:text> { &#xa;</xsl:text>
+			<xsl:text>&#x9;when {&#xa;</xsl:text>
 			<!-- Gather all facts -->
 			<xsl:variable name="contextInformation"
 				select="foo:gatherAliases(situation//fact, (), 1)" />
 			<xsl:for-each select="$contextInformation">
+				<xsl:text>&#x9;&#x9;</xsl:text>
 				<xsl:value-of select="concat('c', position())" />
-				<xsl:text> ContextInformation; </xsl:text>
+				<xsl:text> ContextInformation;&#xa;</xsl:text>
 			</xsl:for-each>
 			<!-- Phrase the rule -->
 			<!-- Constraints -->
+			<xsl:text>&#x9;&#x9;</xsl:text>
 			<xsl:for-each select="situation/constraints/*">
 				<xsl:value-of
 					select="foo:exploreFactSetElement(current(), situation/constraints//fact, $contextInformation)" />
@@ -122,7 +136,9 @@
 			</xsl:for-each>
 			<xsl:text>;</xsl:text>
 			<!-- Action -->
-			<xsl:text> } then { </xsl:text>
+			<xsl:text>&#xa;</xsl:text>
+			<xsl:text>&#x9;} then {&#xa;</xsl:text>
+			<xsl:text>&#x9;&#x9;</xsl:text>
 			<xsl:choose>
 				<xsl:when test="action/operator = 'SELECT'">
 					<xsl:text>select(</xsl:text>
@@ -135,7 +151,10 @@
 					<xsl:text>);</xsl:text>
 				</xsl:when>
 			</xsl:choose>
-			<xsl:text> } </xsl:text>
+			<xsl:text>&#xa;</xsl:text>
+			<xsl:text>&#x9;}&#xa;</xsl:text>
+			<xsl:text>}</xsl:text>
+			<xsl:text>&#xa;&#xa;</xsl:text>
 
 			<!-- <xsl:for-each select="situation//fact"> <xsl:variable name="alias" 
 				select="concat('c', position())" /> <xsl:value-of select="$alias" /> <xsl:text> 
