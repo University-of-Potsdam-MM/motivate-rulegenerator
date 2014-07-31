@@ -1,7 +1,8 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.File;
-import java.io.InputStream;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Scanner;
@@ -92,7 +93,11 @@ public class DSLServices extends Services implements ErrorListener,
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
 		transformer.transform(xmlInput, xmlOutput);
-
+		
+		OutputStreamWriter outputWriter = new OutputStreamWriter(new FileOutputStream("resources/noolsDSLOutput.nools"), "UTF-8");
+		outputWriter.write(xmlOutput.getWriter().toString());
+		outputWriter.close();
+		
 		return xmlOutput.getWriter().toString();
 	}
 
