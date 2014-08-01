@@ -27,91 +27,10 @@
         <Literal datatypeIRI="&xsd;float">1.0.2</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#LearningUnit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PrinterAvailableMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PrintingInkContextParameter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RestrictLocationTrackingConstraintHead"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RestrictNavigationTypeConstraintHead"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#AppointmentDetailContextParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ConstraintHead"/>
@@ -141,6 +60,9 @@
         <Class IRI="#CurrentHumidityMeasurableInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CurrentLuminosityMeasurableInformation"/>
     </Declaration>
     <Declaration>
@@ -162,7 +84,19 @@
         <Class IRI="#DeviceTypeMeasurableInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DistanceUnitContextParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
@@ -175,6 +109,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#LatitudeContextParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningUnit"/>
     </Declaration>
     <Declaration>
         <Class IRI="#LearningUnitIDContextParameter"/>
@@ -192,6 +129,9 @@
         <Class IRI="#MeasurableContextInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MixedContextInformation"/>
     </Declaration>
     <Declaration>
@@ -207,6 +147,9 @@
         <Class IRI="#PersonalContextInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#PhysicalContext"/>
     </Declaration>
     <Declaration>
@@ -214,6 +157,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#PressureUnitContextParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrinterAvailableMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrintingInkContextParameter"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RankingConstraintTail"/>
@@ -226,6 +175,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#RestrictDataCaptureConstraintHead"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RestrictLocationTrackingConstraintHead"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RestrictNavigationTypeConstraintHead"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RestrictRelationsConstraintHead"/>
@@ -270,6 +225,18 @@
         <Class IRI="#TimeUntilTimestampMeasurableInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#UserDestinationMeasurableInformation"/>
     </Declaration>
     <Declaration>
@@ -312,7 +279,40 @@
         <Class IRI="#UserRoleMeasurableInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VelocityUnitContextParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasAlternative"/>
@@ -321,13 +321,25 @@
         <ObjectProperty IRI="#hasBasis"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasConstraintTail"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContextClass"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasContextInformation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasExtension"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasHelp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPrerequisite"/>
@@ -348,7 +360,13 @@
         <ObjectProperty IRI="#isConstraintTailOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isContextClassOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isContextInformationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isContextInformationParameterOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isExtensionOf"/>
@@ -369,22 +387,7 @@
         <ObjectProperty IRI="#isVersionOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasConstraintTail"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasContextClass"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isContextClassOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isContextInformationParameterOf"/>
+        <DataProperty IRI="#hasAcquisitionDate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasAuthor"/>
@@ -399,7 +402,16 @@
         <DataProperty IRI="#hasContextInformationParameterValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasDataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasDifficulty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEndTime"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasIdentifier"/>
@@ -426,10 +438,19 @@
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStartingTime"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasSubject"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasTrigger"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasValueOperator"/>
@@ -438,46 +459,7 @@
         <DataProperty IRI="#hasVersionDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasAcquisitionDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDataType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDescription"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasEndTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasStartingTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasValue"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#isRequired"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-D"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-E"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-F"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Test"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-ConstraintRestrictUsageHead"/>
@@ -504,7 +486,22 @@
         <NamedIndividual IRI="#Example-LearningUnit-C"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnit-D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnit-G"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
@@ -514,6 +511,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LocationContext"/>
@@ -529,6 +529,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TechnicalContext"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Test"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#LocationContextInformation"/>
@@ -639,1041 +642,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#ScenarioContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#ScenarioContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextInformationParameter"/>
-            <Class IRI="#LearningUnitIDContextParameter"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasContextInformationParameter"/>
-            <Class IRI="#LearningUnitIDContextParameter"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#LearningUnit"/>
-        <ObjectIntersectionOf>
-            <DataAllValuesFrom>
-                <DataProperty IRI="#hasLogicalOperator"/>
-                <DataOneOf>
-                    <Literal datatypeIRI="&rdf;PlainLiteral">AND</Literal>
-                    <Literal datatypeIRI="&rdf;PlainLiteral">OR</Literal>
-                </DataOneOf>
-            </DataAllValuesFrom>
-            <DataExactCardinality cardinality="1">
-                <DataProperty IRI="#hasLogicalOperator"/>
-            </DataExactCardinality>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#LearningUnit"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasContextInformation"/>
-            <Class IRI="#MeasurableContextInformation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PrinterAvailableMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PrinterAvailableMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PrinterAvailableMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextInformationParameter"/>
-            <Class IRI="#PrintingInkContextParameter"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PrinterAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PrinterAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PrintingInkContextParameter"/>
-        <Class IRI="#ContextInformationParameter"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PrintingInkContextParameter"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">ANY</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">BLACK</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">COLOR</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RestrictLocationTrackingConstraintHead"/>
-        <Class IRI="#ConstraintHead"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RestrictNavigationTypeConstraintHead"/>
-        <Class IRI="#ConstraintHead"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">11</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PersonalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;minInclusive">
-                    <Literal datatypeIRI="&xsd;integer">0</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-                <FacetRestriction facet="&xsd;maxInclusive">
-                    <Literal datatypeIRI="&xsd;integer">5</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#TechnicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#AppointmentDetailContextParameter"/>
         <Class IRI="#ContextInformationParameter"/>
     </SubClassOf>
@@ -1687,6 +655,35 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NOTES</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">TIME</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">TITLE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
@@ -1756,6 +753,13 @@
     <SubClassOf>
         <Class IRI="#CurrentAirPressureMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentAirPressureMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -1764,13 +768,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentAirPressureMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1787,6 +784,13 @@
     <SubClassOf>
         <Class IRI="#CurrentAmbientNoiseMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentAmbientNoiseMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -1795,13 +799,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentAmbientNoiseMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1832,6 +829,13 @@
     <SubClassOf>
         <Class IRI="#CurrentAppointmentMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentAppointmentMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
@@ -1842,41 +846,64 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CurrentAppointmentMeasurableInformation"/>
+        <Class IRI="#CurrentHumidityMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentHumidityMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PhysicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentHumidityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentHumidityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#ScenarioContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hasValue"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CurrentHumidityMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentHumidityMeasurableInformation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#PhysicalContext"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentHumidityMeasurableInformation"/>
+        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentHumidityMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1893,6 +920,13 @@
     <SubClassOf>
         <Class IRI="#CurrentLuminosityMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentLuminosityMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -1901,13 +935,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentLuminosityMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1945,6 +972,13 @@
     <SubClassOf>
         <Class IRI="#CurrentTemperatureMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentTemperatureMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -1953,13 +987,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentTemperatureMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1990,6 +1017,13 @@
     <SubClassOf>
         <Class IRI="#CurrentTimeMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentTimeMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -2001,13 +1035,6 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CurrentTimeMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#CurrentlyRainingMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -2021,19 +1048,19 @@
     <SubClassOf>
         <Class IRI="#CurrentlyRainingMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentlyRainingMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentlyRainingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2050,19 +1077,19 @@
     <SubClassOf>
         <Class IRI="#CurrentlySunnyMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CurrentlySunnyMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurrentlySunnyMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2090,6 +1117,13 @@
     <SubClassOf>
         <Class IRI="#DeviceTypeMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeviceTypeMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
@@ -2100,10 +1134,65 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DeviceTypeMeasurableInformation"/>
+        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2121,6 +1210,80 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#ScenarioContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextInformationParameter"/>
+            <Class IRI="#LearningUnitIDContextParameter"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasContextInformationParameter"/>
+            <Class IRI="#LearningUnitIDContextParameter"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -2134,19 +1297,19 @@
     <SubClassOf>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2163,19 +1326,19 @@
     <SubClassOf>
         <Class IRI="#HasScreenReaderFunctionalityMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HasScreenReaderFunctionalityMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#HasScreenReaderFunctionalityMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2206,6 +1369,28 @@
             <DataProperty IRI="#hasValue"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningUnit"/>
+        <ObjectIntersectionOf>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasLogicalOperator"/>
+                <DataOneOf>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">AND</Literal>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">OR</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasLogicalOperator"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningUnit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasContextInformation"/>
+            <Class IRI="#MeasurableContextInformation"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnitIDContextParameter"/>
@@ -2247,14 +1432,43 @@
     <SubClassOf>
         <Class IRI="#MeasurableContextInformation"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasValueOperator"/>
+            <DataProperty IRI="#hasValue"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MeasurableContextInformation"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasValue"/>
+            <DataProperty IRI="#hasValueOperator"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NextAppointmentMeasurableInformation"/>
@@ -2284,6 +1498,13 @@
     <SubClassOf>
         <Class IRI="#NextAppointmentMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NextAppointmentMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
@@ -2294,15 +1515,37 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#NextAppointmentMeasurableInformation"/>
+        <Class IRI="#PersonalContext"/>
+        <Class IRI="#ContextClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PersonalContext"/>
-        <Class IRI="#ContextClass"/>
+        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhysicalContext"/>
@@ -2321,6 +1564,57 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">MILLIMETER_OF_MERCURY</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">PASCAL</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">TORR</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinterAvailableMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinterAvailableMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinterAvailableMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextInformationParameter"/>
+            <Class IRI="#PrintingInkContextParameter"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinterAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrinterAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrintingInkContextParameter"/>
+        <Class IRI="#ContextInformationParameter"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrintingInkContextParameter"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">ANY</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">BLACK</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">COLOR</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
@@ -2362,6 +1656,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RestrictDataCaptureConstraintHead"/>
+        <Class IRI="#ConstraintHead"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RestrictLocationTrackingConstraintHead"/>
+        <Class IRI="#ConstraintHead"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RestrictNavigationTypeConstraintHead"/>
         <Class IRI="#ConstraintHead"/>
     </SubClassOf>
     <SubClassOf>
@@ -2462,6 +1764,13 @@
     <SubClassOf>
         <Class IRI="#TimeUntilTimestampMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TimeUntilTimestampMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -2473,10 +1782,195 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TimeUntilTimestampMeasurableInformation"/>
+        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">-11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">11</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2517,19 +2011,19 @@
     <SubClassOf>
         <Class IRI="#UserDestinationMeasurableInformation"/>
         <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserDestinationMeasurableInformation"/>
         <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2570,19 +2064,19 @@
     <SubClassOf>
         <Class IRI="#UserDidArriveAtLocationMeasurableInformation"/>
         <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserDidArriveAtLocationMeasurableInformation"/>
         <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2623,19 +2117,19 @@
     <SubClassOf>
         <Class IRI="#UserDidLeaveLocationMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserDidLeaveLocationMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserDidLeaveLocationMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2676,22 +2170,22 @@
     <SubClassOf>
         <Class IRI="#UserIsAtLocationMeasurableInformation"/>
         <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserIsAtLocationMeasurableInformation"/>
-        <DataAllValuesFrom>
             <DataProperty IRI="#hasValue"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#UserIsAtLocationMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#UserLocationAddressMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -2701,6 +2195,13 @@
             <ObjectProperty IRI="#hasContextClass"/>
             <Class IRI="#LocationContext"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserLocationAddressMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserLocationAddressMeasurableInformation"/>
@@ -2715,13 +2216,6 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#UserLocationAddressMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#UserLocationBuildingMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -2735,6 +2229,13 @@
     <SubClassOf>
         <Class IRI="#UserLocationBuildingMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserLocationBuildingMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
@@ -2742,13 +2243,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserLocationBuildingMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2765,6 +2259,13 @@
     <SubClassOf>
         <Class IRI="#UserLocationCountryMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserLocationCountryMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
@@ -2772,13 +2273,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserLocationCountryMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2834,6 +2328,13 @@
     <SubClassOf>
         <Class IRI="#UserLocationDistanceMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserLocationDistanceMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -2842,13 +2343,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserLocationDistanceMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2861,19 +2355,6 @@
             <ObjectProperty IRI="#hasContextClass"/>
             <Class IRI="#LocationContext"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserLocationLatitudeMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
-            <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
-            </DataOneOf>
-        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserLocationLatitudeMeasurableInformation"/>
@@ -2900,18 +2381,7 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
-        <Class IRI="#MeasurableContextInformation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasContextClass"/>
-            <Class IRI="#LocationContext"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
+        <Class IRI="#UserLocationLatitudeMeasurableInformation"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
@@ -2922,6 +2392,17 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#LocationContext"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
@@ -2948,6 +2429,19 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#UserLocationRegionMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -2957,6 +2451,13 @@
             <ObjectProperty IRI="#hasContextClass"/>
             <Class IRI="#LocationContext"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserLocationRegionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserLocationRegionMeasurableInformation"/>
@@ -2971,13 +2472,6 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#UserLocationRegionMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#UserMeansOfTransportationMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -2991,22 +2485,22 @@
     <SubClassOf>
         <Class IRI="#UserMeansOfTransportationMeasurableInformation"/>
         <DataAllValuesFrom>
-            <DataProperty IRI="#hasValueOperator"/>
+            <DataProperty IRI="#hasValue"/>
             <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">AFOOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">BY_BIKE</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">TRANSPORTATION</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserMeansOfTransportationMeasurableInformation"/>
         <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
+            <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
-                <Literal datatypeIRI="&rdf;PlainLiteral">AFOOT</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">BY_BIKE</Literal>
-                <Literal datatypeIRI="&rdf;PlainLiteral">TRANSPORTATION</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
@@ -3031,6 +2525,13 @@
     <SubClassOf>
         <Class IRI="#UserMovementSpeedMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
@@ -3039,13 +2540,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
-        </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
-        <DataAllValuesFrom>
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3062,6 +2556,13 @@
     <SubClassOf>
         <Class IRI="#UserRoleMeasurableInformation"/>
         <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserRoleMeasurableInformation"/>
+        <DataAllValuesFrom>
             <DataProperty IRI="#hasValueOperator"/>
             <DataOneOf>
                 <Literal datatypeIRI="&rdf;PlainLiteral">CONTAINS</Literal>
@@ -3072,10 +2573,483 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#UserRoleMeasurableInformation"/>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
         <DataAllValuesFrom>
             <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindAngerMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindBoredomMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConcentrationMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindConfusionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindCuriosityMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindDistractionMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindHappinessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindOptimismMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindSadnessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;minInclusive">
+                    <Literal datatypeIRI="&xsd;integer">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="&xsd;maxInclusive">
+                    <Literal datatypeIRI="&xsd;integer">5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserStateOfMindTirednessMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3092,35 +3066,76 @@
             </DataOneOf>
         </DataAllValuesFrom>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#TechnicalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AppointmentDetailContextParameter"/>
+        <Class IRI="#DateFormatContextParameter"/>
+        <Class IRI="#DistanceUnitContextParameter"/>
+        <Class IRI="#LatitudeContextParameter"/>
+        <Class IRI="#LearningUnitIDContextParameter"/>
+        <Class IRI="#LongitudeContextParameter"/>
+        <Class IRI="#PressureUnitContextParameter"/>
+        <Class IRI="#PrintingInkContextParameter"/>
+        <Class IRI="#TargetTimestampContextParameter"/>
+        <Class IRI="#TemperatureScaleContextParameter"/>
+        <Class IRI="#VelocityUnitContextParameter"/>
+    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
-        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
-        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
-        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
-        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
-        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
-        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
-        <Class IRI="#PrinterAvailableMeasurableInformation"/>
-        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
-        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
-        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
         <Class IRI="#CurrentAirPressureMeasurableInformation"/>
         <Class IRI="#CurrentAmbientNoiseMeasurableInformation"/>
         <Class IRI="#CurrentAppointmentMeasurableInformation"/>
         <Class IRI="#CurrentHumidityMeasurableInformation"/>
+        <Class IRI="#CurrentLearningUnitMeasurableInformation"/>
         <Class IRI="#CurrentLuminosityMeasurableInformation"/>
         <Class IRI="#CurrentTemperatureMeasurableInformation"/>
         <Class IRI="#CurrentTimeMeasurableInformation"/>
         <Class IRI="#CurrentlyRainingMeasurableInformation"/>
         <Class IRI="#CurrentlySunnyMeasurableInformation"/>
         <Class IRI="#DeviceTypeMeasurableInformation"/>
+        <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
+        <Class IRI="#DisplayVerticalResolutionMeasurableInformation"/>
+        <Class IRI="#ExpectedTimeNeededForCompletionMeasurableInformation"/>
+        <Class IRI="#ExternalDisplayAvailableMeasurableInformation"/>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
         <Class IRI="#HasScreenReaderFunctionalityMeasurableInformation"/>
+        <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
         <Class IRI="#NextAppointmentMeasurableInformation"/>
+        <Class IRI="#PhotoCameraAvailableMeasurableInformation"/>
+        <Class IRI="#PrinterAvailableMeasurableInformation"/>
         <Class IRI="#TimeUntilTimestampMeasurableInformation"/>
+        <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <Class IRI="#UserCurrentLearningStyleProcessingMeasurableInformation"/>
+        <Class IRI="#UserCurrentLearningStyleUnderstandingMeasurableInformation"/>
         <Class IRI="#UserDestinationMeasurableInformation"/>
         <Class IRI="#UserDidArriveAtLocationMeasurableInformation"/>
         <Class IRI="#UserDidLeaveLocationMeasurableInformation"/>
@@ -3135,19 +3150,7 @@
         <Class IRI="#UserMeansOfTransportationMeasurableInformation"/>
         <Class IRI="#UserMovementSpeedMeasurableInformation"/>
         <Class IRI="#UserRoleMeasurableInformation"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#PrintingInkContextParameter"/>
-        <Class IRI="#AppointmentDetailContextParameter"/>
-        <Class IRI="#DateFormatContextParameter"/>
-        <Class IRI="#DistanceUnitContextParameter"/>
-        <Class IRI="#LatitudeContextParameter"/>
-        <Class IRI="#LearningUnitIDContextParameter"/>
-        <Class IRI="#LongitudeContextParameter"/>
-        <Class IRI="#PressureUnitContextParameter"/>
-        <Class IRI="#TargetTimestampContextParameter"/>
-        <Class IRI="#TemperatureScaleContextParameter"/>
-        <Class IRI="#VelocityUnitContextParameter"/>
+        <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#PersonalContext"/>
@@ -3161,30 +3164,6 @@
         <Class IRI="#SituationalContextInformation"/>
         <Class IRI="#TechnicalContextInformation"/>
     </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-D"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-E"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-F"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#TemperatureScaleContextParameter"/>
-        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <NamedIndividual IRI="#Test"/>
-    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#RestrictUsageConstraintHead"/>
         <NamedIndividual IRI="#Example-ConstraintRestrictUsageHead"/>
@@ -3218,8 +3197,28 @@
         <NamedIndividual IRI="#Example-LearningUnit-C"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#LearningUnit"/>
+        <NamedIndividual IRI="#Example-LearningUnit-D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningUnit"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningUnit"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningUnit"/>
+        <NamedIndividual IRI="#Example-LearningUnit-G"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#LongitudeContextParameter"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TemperatureScaleContextParameter"/>
+        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#UserDidArriveAtLocationMeasurableInformation"/>
@@ -3232,6 +3231,10 @@
     <ClassAssertion>
         <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#LocationContext"/>
@@ -3253,21 +3256,10 @@
         <Class IRI="#TechnicalContext"/>
         <NamedIndividual IRI="#TechnicalContext"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAlternative"/>
-        <NamedIndividual IRI="#Example-LearningUnit-E"/>
-        <NamedIndividual IRI="#Example-LearningUnit-C"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasHelp"/>
-        <NamedIndividual IRI="#Example-LearningUnit-E"/>
-        <NamedIndividual IRI="#Example-LearningUnit-F"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-F"/>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-    </ObjectPropertyAssertion>
+    <ClassAssertion>
+        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
+        <NamedIndividual IRI="#Test"/>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintTail"/>
         <NamedIndividual IRI="#Example-ConstraintRestrictUsageHead"/>
@@ -3289,9 +3281,19 @@
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <NamedIndividual IRI="#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <NamedIndividual IRI="#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrerequisite"/>
         <NamedIndividual IRI="#Example-LearningUnit-B"/>
-        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+        <NamedIndividual IRI="#Example-LearningUnit-A"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrerequisite"/>
@@ -3301,17 +3303,27 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrerequisite"/>
         <NamedIndividual IRI="#Example-LearningUnit-B"/>
-        <NamedIndividual IRI="#Example-LearningUnit-A"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAlternative"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+        <NamedIndividual IRI="#Example-LearningUnit-C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHelp"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-B"/>
-        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-B"/>
-        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
+        <NamedIndividual IRI="#Example-LearningUnit-G"/>
+        <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasContextInformationParameter"/>
@@ -3323,41 +3335,6 @@
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-D"/>
-        <Literal datatypeIRI="&xsd;string">127</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-E"/>
-        <Literal datatypeIRI="&xsd;string">128</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-F"/>
-        <Literal datatypeIRI="&xsd;string">129</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasContextInformationParameterValue"/>
-        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-        <Literal datatypeIRI="&xsd;string">FAHRENHEIT</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
-        <Literal datatypeIRI="&xsd;integer">10</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Test"/>
-        <Literal datatypeIRI="&xsd;string">IS</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Test"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
-    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
         <NamedIndividual IRI="#Example-ConstraintRestrictUsageHead"/>
@@ -3379,7 +3356,7 @@
         <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
+        <DataProperty IRI="#hasContextInformationParameterValue"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">52.42357</Literal>
     </DataPropertyAssertion>
@@ -3404,14 +3381,44 @@
         <Literal datatypeIRI="&xsd;string">125</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
+        <DataProperty IRI="#hasLID"/>
+        <NamedIndividual IRI="#Example-LearningUnit-D"/>
+        <Literal datatypeIRI="&xsd;string">127</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLID"/>
+        <NamedIndividual IRI="#Example-LearningUnit-E"/>
+        <Literal datatypeIRI="&xsd;string">128</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLID"/>
+        <NamedIndividual IRI="#Example-LearningUnit-F"/>
+        <Literal datatypeIRI="&xsd;string">129</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLID"/>
+        <NamedIndividual IRI="#Example-LearningUnit-G"/>
+        <Literal datatypeIRI="&xsd;string">130</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasContextInformationParameterValue"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">14.2345</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
+        <DataProperty IRI="#hasContextInformationParameterValue"/>
+        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
+        <Literal datatypeIRI="&xsd;string">FAHRENHEIT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMeasurableContextInformationValue"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
+        <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
@@ -3431,6 +3438,21 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
+        <Literal datatypeIRI="&xsd;string">IS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
+        <Literal datatypeIRI="&xsd;integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Test"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="#Test"/>
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
@@ -3490,8 +3512,20 @@
         <ObjectProperty IRI="#hasBasis"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasConstraintTail"/>
+        <ObjectProperty IRI="#isConstraintTailOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isContextClassOf"/>
+        <ObjectProperty IRI="#hasContextClass"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#isContextInformationOf"/>
         <ObjectProperty IRI="#hasContextInformation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
+        <ObjectProperty IRI="#isContextInformationParameterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
@@ -3500,6 +3534,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#isHelpOf"/>
         <ObjectProperty IRI="#hasHelp"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isPrerequisiteOf"/>
@@ -3512,22 +3550,6 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasVersion"/>
         <ObjectProperty IRI="#isVersionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasConstraintTail"/>
-        <ObjectProperty IRI="#isConstraintTailOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#isContextClassOf"/>
-        <ObjectProperty IRI="#hasContextClass"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
-        <ObjectProperty IRI="#isContextInformationParameterOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasVersion"/>
@@ -3557,6 +3579,9 @@
         <ObjectProperty IRI="#hasHelp"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
         <ObjectProperty IRI="#hasPrerequisite"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
@@ -3579,9 +3604,6 @@
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#isVersionOf"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </AsymmetricObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#hasAlternative"/>
@@ -3599,6 +3621,9 @@
         <ObjectProperty IRI="#hasHelp"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#hasPrerequisite"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
@@ -3622,19 +3647,12 @@
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#isVersionOf"/>
     </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-    </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAlternative"/>
         <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContextInformation"/>
-        <Class IRI="#LearningUnit"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPrerequisite"/>
         <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -3645,10 +3663,10 @@
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
         <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasRelation"/>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrerequisite"/>
         <Class IRI="#LearningUnit"/>
-    </ObjectPropertyRange>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasContextInformationParameter"/>
         <Class IRI="#ContextInformationParameter"/>
@@ -3656,6 +3674,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#LearningUnit"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
@@ -3666,14 +3688,6 @@
         <DataProperty IRI="#hasValue"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
-        <DataProperty IRI="#hasLogicalOperator"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasMeasurableContextInformationValue"/>
-        <DataProperty IRI="#hasValue"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#hasDataType"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -3681,8 +3695,22 @@
         <DataProperty IRI="#hasDescription"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
+        <DataProperty IRI="#hasLogicalOperator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMeasurableContextInformationValue"/>
+        <DataProperty IRI="#hasValue"/>
+    </SubDataPropertyOf>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDataType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDescription"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasIdentifier"/>
@@ -3697,16 +3725,10 @@
         <DataProperty IRI="#hasLogicalOperator"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#hasVersionDate"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#hasDataType"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#hasDescription"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty IRI="#hasName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasVersionDate"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#isRequired"/>
@@ -3780,6 +3802,14 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasDataType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasDifficulty"/>
         <Datatype abbreviatedIRI="xsd:decimal"/>
     </DataPropertyRange>
@@ -3811,6 +3841,10 @@
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasSubject"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -3832,18 +3866,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasVersionDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasDataType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasDescription"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#isRequired"/>
