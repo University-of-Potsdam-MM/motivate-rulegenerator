@@ -18,6 +18,16 @@
 				<xsl:text>.id = '</xsl:text>
 				<xsl:value-of select="$factSetElement/contextInformation" />
 				<xsl:text>'</xsl:text>
+				<xsl:if test="count($factSetElement/factParameters/factParameter) > 0">
+					<xsl:for-each select="$factSetElement/factParameters/factParameter">
+						<xsl:text> &amp;&amp; </xsl:text>
+						<xsl:value-of select="$alias" />
+						<xsl:text>.parameters['</xsl:text>
+						<xsl:value-of select="current()/contextInformation" />
+						<xsl:text>'] == </xsl:text>
+						<xsl:value-of select="current()/value" />
+					</xsl:for-each>
+				</xsl:if>
 				<xsl:text> &amp;&amp; </xsl:text>
 				<xsl:value-of select="$alias" />
 				<xsl:text>.value</xsl:text>
@@ -98,9 +108,11 @@
 		<xsl:text>define ContextInformation {&#xa;</xsl:text>
 		<xsl:text>&#x9;id : '',&#xa;</xsl:text>
 		<xsl:text>&#x9;value : 'NO_VALUE',&#xa;</xsl:text>
-		<xsl:text>&#x9;constructor : function(id, value) {&#xa;</xsl:text>
+		<xsl:text>&#x9;this.parameters = { };&#xa;</xsl:text>
+		<xsl:text>&#x9;constructor : function(id, value, parameters) {&#xa;</xsl:text>
 		<xsl:text>&#x9;&#x9;this.id = id;&#xa;</xsl:text>
 		<xsl:text>&#x9;&#x9;this.value = value;&#xa;</xsl:text>
+		<xsl:text>&#x9;&#x9;this.parameters = parameters;&#xa;</xsl:text>
 		<xsl:text>&#x9;}&#xa;</xsl:text>
 		<xsl:text>}</xsl:text>
 		<xsl:text>&#xa;&#xa;</xsl:text>

@@ -53,6 +53,8 @@ public class MyMeasurableContextInformation extends
 				+ "</Value>");
 	}
 
+	// IRI
+	
 	public String getIRIShort() {
 		return this.getOwlIndividual().getIRI().getFragment();
 	}
@@ -72,10 +74,24 @@ public class MyMeasurableContextInformation extends
 		return "NO_VALUE";
 	}
 
+	// Parameters
+	
+	public Boolean hasContextInformationParameters() {
+		return this.getContextInformationParameterCount() > 0;
+	}
+	
 	public Integer getContextInformationParameterCount() {
 		return this.getContextInformationParameters().toArray().length;
 	}
+	
+	public Collection<MyContextInformationParameter> getContextInformationParameters() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASCONTEXTINFORMATIONPARAMETER,
+				MyContextInformationParameter.class);
+	}
 
+	// Value Operator
+	
 	public String getValueOperator() {
 		Object[] valuesOperators = this.getHasValueOperator()
 				.toArray();
@@ -85,6 +101,8 @@ public class MyMeasurableContextInformation extends
 			return "NO_VALUE";
 	}
 	
+	// Value
+	
 	public Object getValue() {
 		Object[] values = this.getHasMeasurableContextInformationValue()
 				.toArray();
@@ -92,11 +110,5 @@ public class MyMeasurableContextInformation extends
 			return values[0];
 		else
 			return "NO_VALUE";
-	}
-
-	public Collection<MyContextInformationParameter> getContextInformationParameters() {
-		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASCONTEXTINFORMATIONPARAMETER,
-				MyContextInformationParameter.class);
 	}
 }

@@ -1,26 +1,31 @@
 package de.unipotsdam.rulegenerator.rules;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import de.unipotsdam.rulegenerator.enums.DescriptionType;
 import de.unipotsdam.rulegenerator.enums.FactOperator;
-import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class Fact.
  */
-@XmlRootElement(name="fact")
+@XmlRootElement(name = "fact")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Fact implements FactSetElement {
 
 	/** The context information. */
 	private String contextInformation;
+
+	@XmlElementWrapper(name = "factParameters")
+	@XmlElement(name = "factParameter")
+	private List<FactParameter> factParameters = new ArrayList<FactParameter>();
 
 	/** The operator. */
 	private FactOperator operator;
@@ -28,23 +33,11 @@ public class Fact implements FactSetElement {
 	/** The value. */
 	private String value;
 
-	/** The logical operator. */
-	private LogicalOperator logicalOperator;
-
-	/** The left paranthesis. */
-	@XmlTransient
-	@JsonIgnore
-	private Boolean leftParanthesis = false;
-
-	/** The right paranthesis. */
-	@XmlTransient
-	@JsonIgnore
-	private Boolean rightParanthesis = false;
-
 	/**
 	 * Instantiates a new fact.
 	 */
-	public Fact() { }
+	public Fact() {
+	}
 
 	/**
 	 * Instantiates a new fact.
@@ -61,64 +54,6 @@ public class Fact implements FactSetElement {
 		this.setContextInformation(contextInformation);
 		this.setOperator(operator);
 		this.setValue(value);
-	}
-
-	/**
-	 * Instantiates a new fact.
-	 * 
-	 * @param contextInformation
-	 *            the context information
-	 * @param operator
-	 *            the operator
-	 * @param value
-	 *            the value
-	 * @param logicalOperator
-	 *            the logical operator
-	 */
-	public Fact(String contextInformation, FactOperator operator, String value,
-			LogicalOperator logicalOperator) {
-		super();
-		this.setContextInformation(contextInformation);
-		this.setOperator(operator);
-		this.setValue(value);
-		this.setLogicalOperator(logicalOperator);
-	}
-
-	public String description() {
-		return this.description(DescriptionType.PLAIN_TEXT);
-	}
-
-	@JsonIgnore
-	public String description(DescriptionType descriptionType) {
-		String description = new String();
-		switch (descriptionType) {
-		case NOOLS_DSL:
-			// Alias
-			description += this.getContextInformation();
-			// Type
-			description += " : ContextInformation ";
-			// Pattern
-			description += this.getContextInformation() + ".value " + this.getOperator(descriptionType) + " " + this.getValue();
-			break;
-		case NOOLS_JSON:
-
-			break;
-		default:
-			if (this.leftParanthesis)
-				description += "(";
-			description += this.getContextInformation() + " "
-					+ this.getOperator().name().replace("_", " ") + " "
-					+ this.getValue();
-			if (this.rightParanthesis)
-				description += ")";
-			if (this.logicalOperator != null) {
-				description += " "
-						+ this.logicalOperator.name().replace("_", " ");
-
-			}
-			break;
-		}
-		return description;
 	}
 
 	/**
@@ -140,6 +75,22 @@ public class Fact implements FactSetElement {
 		this.contextInformation = contextInformation;
 	}
 
+	// Fact Parameters
+
+	public List<FactParameter> getFactParameters() {
+		return factParameters;
+	}
+
+	public void setFactParameters(List<FactParameter> factParameters) {
+		this.factParameters = factParameters;
+	}
+
+	public void addFactParameter(FactParameter factParameter) {
+		this.factParameters.add(factParameter);
+	}
+
+	// Fact Operator
+
 	/**
 	 * Gets the operator.
 	 * 
@@ -160,7 +111,7 @@ public class Fact implements FactSetElement {
 				operator = "<";
 			}
 		} else if (descriptionType == DescriptionType.NOOLS_JSON) {
-			
+
 		} else {
 			operator = this.getOperator().name().replace("_", " ");
 		}
@@ -194,62 +145,5 @@ public class Fact implements FactSetElement {
 	 */
 	public void setValue(String value) {
 		this.value = value;
-	}
-
-	/**
-	 * Gets the logical operator.
-	 * 
-	 * @return the logical operator
-	 */
-	public LogicalOperator getLogicalOperator() {
-		return logicalOperator;
-	}
-
-	/**
-	 * Sets the logical operator.
-	 * 
-	 * @param logicalOperator
-	 *            the new logical operator
-	 */
-	public void setLogicalOperator(LogicalOperator logicalOperator) {
-		this.logicalOperator = logicalOperator;
-	}
-
-	/**
-	 * Gets the left paranthesis.
-	 * 
-	 * @return the left paranthesis
-	 */
-	public Boolean getLeftParanthesis() {
-		return leftParanthesis;
-	}
-
-	/**
-	 * Sets the left paranthesis.
-	 * 
-	 * @param leftParanthesis
-	 *            the new left paranthesis
-	 */
-	public void setLeftParanthesis(Boolean leftParanthesis) {
-		this.leftParanthesis = leftParanthesis;
-	}
-
-	/**
-	 * Gets the right paranthesis.
-	 * 
-	 * @return the right paranthesis
-	 */
-	public Boolean getRightParanthesis() {
-		return rightParanthesis;
-	}
-
-	/**
-	 * Sets the right paranthesis.
-	 * 
-	 * @param rightParanthesis
-	 *            the new right paranthesis
-	 */
-	public void setRightParanthesis(Boolean rightParanthesis) {
-		this.rightParanthesis = rightParanthesis;
 	}
 }

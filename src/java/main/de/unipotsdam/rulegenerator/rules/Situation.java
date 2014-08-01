@@ -151,8 +151,11 @@ public class Situation {
 					FactOperator.IS, currentLearningUnit.getID()));
 			break;
 		case PREREQUISITES:
-			if (currentLearningUnit.hasPrerequisites())
+			if (currentLearningUnit.hasPrerequisites()) {
+				if (this.constraints.size() > 0)
+					this.constraints.addLogicalOperator(LogicalOperator.AND);
 				this.addPrerequisites(currentLearningUnit.getPrerequisites());
+			}
 			break;
 		case CURRENT_LEARNING_UNIT_FACTS_AND_PREREQUISITES:
 			this.applyTemplate(SituationTemplate.CURRENT_LEARNING_UNIT_FACTS,

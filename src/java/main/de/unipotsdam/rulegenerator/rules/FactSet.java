@@ -28,10 +28,12 @@ public class FactSet implements FactSetElement {
 
 	public void addFactSet(FactSet factSet) throws Exception {
 		if (this.children.size() > 0
-				&& this.getLastObject().getClass() != LogicalOperator.class)
+				&& this.getLastObject().getClass() != LogicalOperator.class) {
 			throw new Exception(
-					"A fact set must not be preceded by another fact or fact set without an intermediate logical operator.");
-		this.children.add(factSet);
+					"A fact set must not be preceded by another fact or fact set without an intermediate logical operator. Last Object Class: "+this.getLastObject().getClass());
+		} else {
+			this.children.add(factSet);
+		}
 	}
 
 	public Object getLastObject() {

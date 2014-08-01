@@ -14,6 +14,7 @@ import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInformation;
 import de.unipotsdam.rulegenerator.rules.Fact;
+import de.unipotsdam.rulegenerator.rules.FactParameter;
 import de.unipotsdam.rulegenerator.rules.FactSet;
 
 public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit {
@@ -270,6 +271,12 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 			learningUnitFact.setValue(contextInformation.getValue().toString());
 			learningUnitFact.setOperator(FactOperator
 					.valueOf(contextInformation.getValueOperator()));
+			if (contextInformation.hasContextInformationParameters()) {
+				for (MyContextInformationParameter contextInformationParameter : contextInformation.getContextInformationParameters()) {
+					FactParameter factParameter = new FactParameter(contextInformationParameter.getSpecificParameterType(), FactOperator.IS, contextInformationParameter.getValue().toString());
+					learningUnitFact.addFactParameter(factParameter);
+				}
+			}
 			learningUnitFacts.addFact(learningUnitFact);
 			if (i < this.getContextInformationCount() - 1)
 				learningUnitFacts.addLogicalOperator(LogicalOperator

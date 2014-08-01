@@ -1,10 +1,13 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 import javax.ws.rs.GET;
@@ -15,11 +18,13 @@ import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.ErrorListener;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
@@ -44,7 +49,8 @@ public class DSLServices extends Services implements ErrorListener,
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getAdaptationRules(@PathParam("ontologyABox") String ABox,
 			@PathParam("ontologyId") String ontologyId)
-			throws TransformerFactoryConfigurationError, Exception {
+			throws TransformerFactoryConfigurationError, ParserConfigurationException, SAXException,
+			TransformerException, IOException {
 		// Write received ontology to file system
 
 		// String ontologyFileName = ontologyId + ".owl";
@@ -54,8 +60,12 @@ public class DSLServices extends Services implements ErrorListener,
 		// writer.close();
 
 		// generate rules
-		AdaptationRuleList adaptationRuleList = RuleGeneratorService
-				.generateAdaptationRules();
+		AdaptationRuleList adaptationRuleList;
+		try {
+			adaptationRuleList = RuleGeneratorService.generateAdaptationRules();
+		} catch (Exception e) {
+			return e.getLocalizedMessage();
+		}
 
 		String xml;
 		StringWriter stringWriter = new StringWriter();
@@ -93,11 +103,12 @@ public class DSLServices extends Services implements ErrorListener,
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
 		transformer.transform(xmlInput, xmlOutput);
-		
-		OutputStreamWriter outputWriter = new OutputStreamWriter(new FileOutputStream("resources/noolsDSLOutput.nools"), "UTF-8");
+
+		OutputStreamWriter outputWriter = new OutputStreamWriter(
+				new FileOutputStream("resources/noolsDSLOutput.nools"), "UTF-8");
 		outputWriter.write(xmlOutput.getWriter().toString());
 		outputWriter.close();
-		
+
 		return xmlOutput.getWriter().toString();
 	}
 
