@@ -1,7 +1,6 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
-import java.util.List;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
@@ -54,7 +53,8 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 						+ "<ContextInformation/>");
 			}
 			if (this.hasRelations()) {
-				System.out.println(this.getIndentSpace(indent + 1) + "<Relations>");
+				System.out.println(this.getIndentSpace(indent + 1)
+						+ "<Relations>");
 				if (this.hasAlternatives()) {
 					System.out.println(this.getIndentSpace(indent + 2)
 							+ "<Alternatives>");
@@ -71,7 +71,8 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 				if (this.hasPrerequisites()) {
 					System.out.println(this.getIndentSpace(indent + 2)
 							+ "<Prerequisites>");
-					for (WrappedIndividual prerequisite : this.getPrerequisites()) {
+					for (WrappedIndividual prerequisite : this
+							.getPrerequisites()) {
 						MyLearningUnit learningUnit = (MyLearningUnit) prerequisite;
 						learningUnit.description(indent + 3, false);
 					}
@@ -81,11 +82,11 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 					System.out.println(this.getIndentSpace(indent + 2)
 							+ "<Prerequisites/>");
 				}
-				System.out
-						.println(this.getIndentSpace(indent + 1) + "</Relations>");
+				System.out.println(this.getIndentSpace(indent + 1)
+						+ "</Relations>");
 			} else {
-				System.out
-						.println(this.getIndentSpace(indent + 1) + "<Relations/>");
+				System.out.println(this.getIndentSpace(indent + 1)
+						+ "<Relations/>");
 			}
 		}
 	}
@@ -141,7 +142,9 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 	// Relations
 
 	public Boolean hasRelations() {
-		return this.hasAlternatives() || this.hasPrerequisites() || this.hasHelp();
+		return this.hasAlternatives() || this.hasPrerequisites()
+				|| this.hasHelp() || this.hasVersions() || this.hasBases()
+				|| this.hasReferences() || this.hasExtensions();
 	}
 
 	// Alternatives
@@ -155,13 +158,14 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 	}
 
 	public Collection<? extends WrappedIndividual> getAlternatives() {
-		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASALTERNATIVE,
-				MyLearningUnit.class);
+		return getDelegate()
+				.getPropertyValues(getOwlIndividual(),
+						Vocabulary.OBJECT_PROPERTY_HASALTERNATIVE,
+						MyLearningUnit.class);
 	}
-	
+
 	// Prerequisite
-	
+
 	public Boolean hasPrerequisites() {
 		return this.getPrerequisiteCount() > 0;
 	}
@@ -169,42 +173,107 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 	public Integer getPrerequisiteCount() {
 		return this.getPrerequisites().toArray().length;
 	}
-	
+
 	public Collection<? extends WrappedIndividual> getPrerequisites() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASPREREQUISITE,
 				MyLearningUnit.class);
 	}
-	
+
 	// Help
 
 	public boolean hasHelp() {
 		return this.getHelpCount() > 0;
 	}
-	
+
 	public Integer getHelpCount() {
 		return this.getHelp().toArray().length;
 	}
-	
+
 	public Collection<? extends WrappedIndividual> getHelp() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASHELP,
-				MyLearningUnit.class);
+				Vocabulary.OBJECT_PROPERTY_HASHELP, MyLearningUnit.class);
 	}
-	
+
+	// Version
+
+	public boolean hasVersions() {
+		return this.getVersionsCount() > 0;
+	}
+
+	public Integer getVersionsCount() {
+		return this.getVersions().toArray().length;
+	}
+
+	public Collection<? extends WrappedIndividual> getVersions() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASVERSION, MyLearningUnit.class);
+	}
+
+	// Bases
+
+	public boolean hasBases() {
+		return this.getBasesCount() > 0;
+	}
+
+	public Integer getBasesCount() {
+		return this.getBases().toArray().length;
+	}
+
+	public Collection<? extends WrappedIndividual> getBases() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASBASIS, MyLearningUnit.class);
+	}
+
+	// References
+
+	public boolean hasReferences() {
+		return this.getReferencesCount() > 0;
+	}
+
+	public Integer getReferencesCount() {
+		return this.getReferences().toArray().length;
+	}
+
+	public Collection<? extends WrappedIndividual> getReferences() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASREFERENCE, MyLearningUnit.class);
+	}
+
+	// Extensions
+
+	public boolean hasExtensions() {
+		return this.getExtensionsCount() > 0;
+	}
+
+	public Integer getExtensionsCount() {
+		return this.getExtensions().toArray().length;
+	}
+
+	public Collection<? extends WrappedIndividual> getExtensions() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASEXTENSION, MyLearningUnit.class);
+	}
+
 	// Facts
-	
+
 	public FactSet getFacts() throws Exception {
 		FactSet learningUnitFacts = new FactSet();
-		// create facts for the context information associated to the learning unit
+		// create facts for the context information associated to the learning
+		// unit
 		int i = 0;
-		for (MyMeasurableContextInformation contextInformation : this.getContextInformation()) {
+		for (MyMeasurableContextInformation contextInformation : this
+				.getContextInformation()) {
 			Fact learningUnitFact = new Fact();
-			learningUnitFact.setContextInformation(contextInformation.getSpecificContextInformationType());
+			learningUnitFact.setContextInformation(contextInformation
+					.getSpecificContextInformationType());
 			learningUnitFact.setValue(contextInformation.getValue().toString());
-			learningUnitFact.setOperator(FactOperator.valueOf(contextInformation.getValueOperator()));
+			learningUnitFact.setOperator(FactOperator
+					.valueOf(contextInformation.getValueOperator()));
 			learningUnitFacts.addFact(learningUnitFact);
-			if (i < this.getContextInformationCount() - 1) learningUnitFacts.addLogicalOperator(LogicalOperator.valueOf(this.getLogicalOperator()));
+			if (i < this.getContextInformationCount() - 1)
+				learningUnitFacts.addLogicalOperator(LogicalOperator
+						.valueOf(this.getLogicalOperator()));
 			i++;
 		}
 		return learningUnitFacts;
