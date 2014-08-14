@@ -1,5 +1,9 @@
 package de.unipotsdam.rulegenerator.ontology;
 
+import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintHead;
+import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
+import de.unipotsdam.rulegenerator.ontology.impl.*;
+
 import java.util.Collection;
 
 import org.protege.owl.codegeneration.CodeGenerationFactory;
@@ -12,111 +16,13 @@ import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 
-import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultAppointmentDetailContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultAudioOutputAvailableMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultConstraintTail;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultContextClass;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultContextInformationParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentAirPressureMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentAmbientNoiseMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentAppointmentMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentHumidityMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentLearningUnitMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentLuminosityMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentTemperatureMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentTimeMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentlyRainingMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultCurrentlySunnyMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultDateFormatContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultDeviceTypeMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultDisplayHorizontalResolutionMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultDisplayVerticalResolutionMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultDistanceUnitContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultExpectedTimeNeededForCompletionMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultExternalDisplayAvailableMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultFinishedLearningUnitMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultHasScreenReaderFunctionalityMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultIntervalConstraintTail;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLatitudeContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnitIDContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLocationContext;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLocationContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLongitudeContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultMicrophoneAvailableMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultMixedContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultNextAppointmentMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultParameterizedContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPersonalContext;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPersonalContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPhotoCameraAvailableMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPhysicalContext;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPhysicalContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPressureUnitContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPrinterAvailableMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultPrintingInkContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRankingConstraintTail;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictAudioPlaybackConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictContentConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictDataCaptureConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictLocationTrackingConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictNavigationTypeConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictRelationsConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictUsageConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictVideoPlaybackConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultScenarioContext;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultScenarioContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultSituationalContext;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultSituationalContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultTargetLatitudeContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultTargetLongitudeContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultTargetTimestampContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultTechnicalContext;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultTechnicalContextInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultTemperatureScaleContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultTimeUntilTimestampMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserCurrentLearningStyleInputMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserCurrentLearningStylePerceptionMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserCurrentLearningStyleProcessingMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserCurrentLearningStyleUnderstandingMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserDestinationMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserDidArriveAtLocationMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserDidLeaveLocationMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserIsAtLocationMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserLocationAddressMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserLocationBuildingMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserLocationCountryMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserLocationDistanceMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserLocationLatitudeMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserLocationLongitudeMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserLocationRegionMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserMeansOfTransportationMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserMovementSpeedMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserRoleMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindAngerMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindBoredomMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindConcentrationMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindConfusionMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindCuriosityMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindDistractionMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindHappinessMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindOptimismMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindSadnessMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultUserStateOfMindTirednessMeasurableInformation;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultVelocityUnitContextParameter;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultVideoCameraAvailableMeasurableInformation;
-
 /**
  * A class that serves as the entry point to the generated code providing access
  * to existing individuals in the ontology and the ability to create new individuals in the ontology.<p>
  * 
  * Generated by Protege (http://protege.stanford.edu).<br>
  * Source Class: MyFactory<br>
- * @version generated on Fri Jul 25 16:06:55 CEST 2014 by tobias
+ * @version generated on Wed Aug 13 14:30:39 CEST 2014 by tobias
  */
 public class MyFactory implements CodeGenerationFactory {
     private OWLOntology ontology;
@@ -256,7 +162,7 @@ public class MyFactory implements CodeGenerationFactory {
      * Gets all instances of ConstraintHead from the ontology.
      */
     public Collection<? extends ConstraintHead> getAllConstraintHeadInstances() {
-		return delegate.getWrappedIndividuals(Vocabulary.CLASS_CONSTRAINTHEAD, DefaultConstraintHead.class);
+		return delegate.getWrappedIndividuals(Vocabulary.CLASS_CONSTRAINTHEAD, MyConstraintHead.class);
     }
 
 
@@ -350,6 +256,37 @@ public class MyFactory implements CodeGenerationFactory {
      */
     public Collection<? extends ContextInformation> getAllContextInformationInstances() {
 		return delegate.getWrappedIndividuals(Vocabulary.CLASS_CONTEXTINFORMATION, DefaultContextInformation.class);
+    }
+
+
+    /* ***************************************************
+     * Class http://www.motivate-project.de/ontologies/knowledge#ContextInformationConstraintTail
+     */
+
+    {
+        javaMapping.add("http://www.motivate-project.de/ontologies/knowledge#ContextInformationConstraintTail", ContextInformationConstraintTail.class, DefaultContextInformationConstraintTail.class);
+    }
+
+    /**
+     * Creates an instance of type ContextInformationConstraintTail.  Modifies the underlying ontology.
+     */
+    public ContextInformationConstraintTail createContextInformationConstraintTail(String name) {
+		return delegate.createWrappedIndividual(name, Vocabulary.CLASS_CONTEXTINFORMATIONCONSTRAINTTAIL, DefaultContextInformationConstraintTail.class);
+    }
+
+    /**
+     * Gets an instance of type ContextInformationConstraintTail with the given name.  Does not modify the underlying ontology.
+     * @param name the name of the OWL named individual to be retrieved.
+     */
+    public ContextInformationConstraintTail getContextInformationConstraintTail(String name) {
+		return delegate.getWrappedIndividual(name, Vocabulary.CLASS_CONTEXTINFORMATIONCONSTRAINTTAIL, DefaultContextInformationConstraintTail.class);
+    }
+
+    /**
+     * Gets all instances of ContextInformationConstraintTail from the ontology.
+     */
+    public Collection<? extends ContextInformationConstraintTail> getAllContextInformationConstraintTailInstances() {
+		return delegate.getWrappedIndividuals(Vocabulary.CLASS_CONTEXTINFORMATIONCONSTRAINTTAIL, DefaultContextInformationConstraintTail.class);
     }
 
 
@@ -1621,6 +1558,37 @@ public class MyFactory implements CodeGenerationFactory {
      */
     public Collection<? extends RankingConstraintTail> getAllRankingConstraintTailInstances() {
 		return delegate.getWrappedIndividuals(Vocabulary.CLASS_RANKINGCONSTRAINTTAIL, DefaultRankingConstraintTail.class);
+    }
+
+
+    /* ***************************************************
+     * Class http://www.motivate-project.de/ontologies/knowledge#RestrictAudioContentConstraintHead
+     */
+
+    {
+        javaMapping.add("http://www.motivate-project.de/ontologies/knowledge#RestrictAudioContentConstraintHead", RestrictAudioContentConstraintHead.class, DefaultRestrictAudioContentConstraintHead.class);
+    }
+
+    /**
+     * Creates an instance of type RestrictAudioContentConstraintHead.  Modifies the underlying ontology.
+     */
+    public RestrictAudioContentConstraintHead createRestrictAudioContentConstraintHead(String name) {
+		return delegate.createWrappedIndividual(name, Vocabulary.CLASS_RESTRICTAUDIOCONTENTCONSTRAINTHEAD, DefaultRestrictAudioContentConstraintHead.class);
+    }
+
+    /**
+     * Gets an instance of type RestrictAudioContentConstraintHead with the given name.  Does not modify the underlying ontology.
+     * @param name the name of the OWL named individual to be retrieved.
+     */
+    public RestrictAudioContentConstraintHead getRestrictAudioContentConstraintHead(String name) {
+		return delegate.getWrappedIndividual(name, Vocabulary.CLASS_RESTRICTAUDIOCONTENTCONSTRAINTHEAD, DefaultRestrictAudioContentConstraintHead.class);
+    }
+
+    /**
+     * Gets all instances of RestrictAudioContentConstraintHead from the ontology.
+     */
+    public Collection<? extends RestrictAudioContentConstraintHead> getAllRestrictAudioContentConstraintHeadInstances() {
+		return delegate.getWrappedIndividuals(Vocabulary.CLASS_RESTRICTAUDIOCONTENTCONSTRAINTHEAD, DefaultRestrictAudioContentConstraintHead.class);
     }
 
 

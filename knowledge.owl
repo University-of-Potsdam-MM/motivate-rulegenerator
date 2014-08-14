@@ -45,6 +45,9 @@
         <Class IRI="#ContextInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ContextInformationConstraintTail"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ContextInformationParameter"/>
     </Declaration>
     <Declaration>
@@ -166,6 +169,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#RankingConstraintTail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RestrictAudioContentConstraintHead"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RestrictAudioPlaybackConstraintHead"/>
@@ -333,10 +339,16 @@
         <ObjectProperty IRI="#hasContextInformationParameter"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasContextTailMeasurableContextInformation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasExtension"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasHelp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
@@ -471,7 +483,13 @@
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-ContextInformationConstraintTail"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-IntervalConstraintTail"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
@@ -691,14 +709,14 @@
         <Class IRI="#ConstraintHead"/>
         <ObjectIntersectionOf>
             <DataAllValuesFrom>
-                <DataProperty IRI="#hasLogicalOperator"/>
+                <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
                 <DataOneOf>
                     <Literal datatypeIRI="&rdf;PlainLiteral">AND</Literal>
                     <Literal datatypeIRI="&rdf;PlainLiteral">OR</Literal>
                 </DataOneOf>
             </DataAllValuesFrom>
             <DataExactCardinality cardinality="1">
-                <DataProperty IRI="#hasLogicalOperator"/>
+                <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
             </DataExactCardinality>
         </ObjectIntersectionOf>
     </SubClassOf>
@@ -706,11 +724,12 @@
         <Class IRI="#ConstraintHead"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#hasConstraintTail"/>
-            <ObjectUnionOf>
-                <Class IRI="#ConstraintTail"/>
-                <Class IRI="#MeasurableContextInformation"/>
-            </ObjectUnionOf>
+            <Class IRI="#ConstraintTail"/>
         </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContextInformationConstraintTail"/>
+        <Class IRI="#ConstraintTail"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ContextInformationParameter"/>
@@ -1388,7 +1407,7 @@
     <SubClassOf>
         <Class IRI="#LearningUnit"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasContextInformation"/>
+            <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
             <Class IRI="#MeasurableContextInformation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1631,6 +1650,10 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">LOW</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RestrictAudioContentConstraintHead"/>
+        <Class IRI="#ConstraintHead"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RestrictAudioPlaybackConstraintHead"/>
@@ -3177,8 +3200,16 @@
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#ContextInformationConstraintTail"/>
+        <NamedIndividual IRI="#Example-ContextInformationConstraintTail"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#CurrentTemperatureMeasurableInformation"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntervalConstraintTail"/>
+        <NamedIndividual IRI="#Example-IntervalConstraintTail"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#LatitudeContextParameter"/>
@@ -3263,6 +3294,16 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintTail"/>
         <NamedIndividual IRI="#Example-ConstraintRestrictUsageHead"/>
+        <NamedIndividual IRI="#Example-ContextInformationConstraintTail"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraintTail"/>
+        <NamedIndividual IRI="#Example-ConstraintRestrictUsageHead"/>
+        <NamedIndividual IRI="#Example-IntervalConstraintTail"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasContextTailMeasurableContextInformation"/>
+        <NamedIndividual IRI="#Example-ContextInformationConstraintTail"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -3276,17 +3317,17 @@
         <NamedIndividual IRI="#Example-LearningUnit-C"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-A"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-B"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-B"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
     </ObjectPropertyAssertion>
@@ -3316,12 +3357,12 @@
         <NamedIndividual IRI="#Example-LearningUnit-F"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-F"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-G"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
@@ -3338,12 +3379,17 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasConstraintHeadLogicalOperator"/>
         <NamedIndividual IRI="#Example-ConstraintRestrictUsageHead"/>
-        <Literal datatypeIRI="&xsd;string">AND</Literal>
+        <Literal datatypeIRI="&xsd;string">OR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
+        <DataProperty IRI="#hasMeasurableContextInformationValue"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
         <Literal datatypeIRI="&xsd;string">Student</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
+        <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
@@ -3354,6 +3400,16 @@
         <DataProperty IRI="#hasValueOperator"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEndTime"/>
+        <NamedIndividual IRI="#Example-IntervalConstraintTail"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">16:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStartingTime"/>
+        <NamedIndividual IRI="#Example-IntervalConstraintTail"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">09:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasContextInformationParameterValue"/>
@@ -3464,12 +3520,20 @@
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContextTailMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasExtension"/>
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasHelp"/>
         <ObjectProperty IRI="#hasRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPrerequisite"/>
@@ -3524,8 +3588,8 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
         <ObjectProperty IRI="#isContextInformationParameterOf"/>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
@@ -3573,10 +3637,16 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasContextTailMeasurableContextInformation"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
         <ObjectProperty IRI="#hasExtension"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#hasHelp"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
@@ -3615,10 +3685,16 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasContextTailMeasurableContextInformation"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#hasExtension"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#hasHelp"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
@@ -3652,6 +3728,10 @@
         <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConstraintTail"/>
+        <Class IRI="#ConstraintHead"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContextInformation"/>
         <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
@@ -3660,7 +3740,11 @@
         <Class IRI="#ContextInformation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasContextTailMeasurableContextInformation"/>
+        <Class IRI="#ConstraintTail"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
         <Class IRI="#LearningUnit"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -3672,7 +3756,11 @@
         <Class IRI="#ContextInformationParameter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#hasContextTailMeasurableContextInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLearningUnitMeasurableContextInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
