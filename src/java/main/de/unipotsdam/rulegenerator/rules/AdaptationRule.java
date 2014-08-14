@@ -10,7 +10,7 @@ import de.unipotsdam.rulegenerator.enums.ActionOperator;
  * The Class AdaptationRule.
  */
 @XmlRootElement
-@XmlType(name = "", propOrder = { "id", "trigger", "situation", "action" })
+@XmlType(name = "", propOrder = { "id", "trigger", "situation", "action", "negation" })
 public class AdaptationRule {
 
 	private String id;
@@ -23,6 +23,8 @@ public class AdaptationRule {
 	
 	/** The action. */
 	private Action action;
+	
+	private Boolean negation = false;
 	
 	/**
 	 * Instantiates a new adaptation rule.
@@ -38,9 +40,9 @@ public class AdaptationRule {
 		this.setId(id);
 	}
 	
-	public AdaptationRule(String id, ActionOperator operator, String tragetLearningUnitId) {
+	public AdaptationRule(String id, ActionOperator operator, String targetLearningUnitId) {
 		this.setId(id);
-		this.setAction(new Action(operator, tragetLearningUnitId));
+		this.setAction(new Action(operator, targetLearningUnitId));
 	}
 	
 	public String getId() {
@@ -105,7 +107,16 @@ public class AdaptationRule {
 	public void setAction(Action action) {
 		this.action = action;
 	}
-	
+
+	public Boolean getNegation() {
+		return negation;
+	}
+
+	public void setNegation(Boolean negation) {
+		this.negation = negation;
+	}
+
+	@Deprecated
 	public Boolean checkIntegrity() {
 		return false;
 	}

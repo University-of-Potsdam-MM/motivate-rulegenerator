@@ -3,16 +3,32 @@ package de.unipotsdam.rulegenerator.rules;
 import java.util.Collection;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
+import org.semanticweb.owlapi.model.OWLOntology;
 
+import de.unipotsdam.rulegenerator.enums.ActionOperator;
+import de.unipotsdam.rulegenerator.enums.LogicalOperator;
+import de.unipotsdam.rulegenerator.enums.TriggeringMode;
+import de.unipotsdam.rulegenerator.ontology.ConstraintHead;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
+import de.unipotsdam.rulegenerator.ontology.MyFactory;
+import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintHead;
+import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintTail;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 
 public class RuleFactory {
+	private OWLOntology ontology;
 	private Collection<? extends LearningUnit> learningUnits;
+	private Collection<? extends ConstraintHead> constraints;
 
-	public RuleFactory(Collection<? extends LearningUnit> learningUnits) {
+	public RuleFactory(OWLOntology ontology) {
 		super();
-		this.learningUnits = learningUnits;
+
+		this.ontology = ontology;
+		// create ORM object factory
+		MyFactory factory = new MyFactory(ontology);
+		// get all learning unit individuals from ontology
+		this.learningUnits = factory.getAllLearningUnitInstances();
+		this.constraints = factory.getAllConstraintHeadInstances();
 	}
 
 	public Collection<? extends LearningUnit> getLearningUnits() {
@@ -27,6 +43,46 @@ public class RuleFactory {
 	public AdaptationRuleList generateRules() throws Exception {
 		// delete existing rules?
 		AdaptationRuleList ruleList = new AdaptationRuleList();
+		
+		long timestamp = System.currentTimeMillis() / 1000;
+
+		// constraints
+		for (ConstraintHead constraint : this.constraints) {
+			MyConstraintHead currentConstraint = (MyConstraintHead) constraint;
+
+			System.out.println(currentConstraint.getSpecificConstraintType());
+
+			// global constraints
+
+			if (currentConstraint.getSpecificConstraintType().equals(
+					"RestrictUsageConstraintHead")) {
+				AdaptationRule restrictUsageRule = new AdaptationRule(
+						"RestrictUsageRule["+timestamp+"]", ActionOperator.RESTRICT,
+						null);
+				restrictUsageRule.setNegation(true);
+				restrictUsageRule.setTrigger(new Trigger(
+						TriggeringMode.ON_ENTRY));
+				Situation restrictUsageRuleSituation = new Situation();
+				FactSet factSet = new FactSet();
+				int i = 0;
+				for (MyConstraintTail constraintTail : currentConstraint
+						.getConstraintTails()) {
+					Fact restrictUsageRuleFact = Fact
+							.FactFromConstraintTail(constraintTail);
+					factSet.addFact(restrictUsageRuleFact);
+					if (i < currentConstraint.getConstraintTailCount() - 1) factSet.addLogicalOperator(LogicalOperator.valueOf(currentConstraint.getHasConstraintHeadLogicalOperator().toArray()[0].toString()));
+						i++;
+				}
+				restrictUsageRuleSituation.addConstraint(factSet);
+				restrictUsageRule.setSituation(restrictUsageRuleSituation);
+				ruleList.addAdaptationRule(restrictUsageRule);
+
+			}
+
+			// per rule constraints
+
+			timestamp++;
+		}
 
 		for (LearningUnit learningUnit : learningUnits) {
 			MyLearningUnit currentLearningUnit = (MyLearningUnit) learningUnit;

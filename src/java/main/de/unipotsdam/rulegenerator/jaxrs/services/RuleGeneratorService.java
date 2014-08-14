@@ -2,7 +2,6 @@ package de.unipotsdam.rulegenerator.jaxrs.services;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -19,8 +18,6 @@ import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
 import com.clarkparsia.pellet.owlapiv3.PelletReasoner;
 import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 
-import de.unipotsdam.rulegenerator.ontology.LearningUnit;
-import de.unipotsdam.rulegenerator.ontology.MyFactory;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 import de.unipotsdam.rulegenerator.rules.RuleFactory;
 
@@ -61,13 +58,8 @@ public class RuleGeneratorService {
 		InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner);
 		// fill inferred ontology into the existing one
 		iog.fillOntology(manager, ontology);
-		// create ORM object factory
-		MyFactory factory = new MyFactory(ontology);
-		// get all learning unit individuals from ontology
-		Collection<? extends LearningUnit> learningUnits = factory
-				.getAllLearningUnitInstances();
 		// create rule factory
-		RuleFactory ruleFactory = new RuleFactory(learningUnits);
+		RuleFactory ruleFactory = new RuleFactory(ontology);
 		// generate rules
 		AdaptationRuleList adaptationRuleList = ruleFactory.generateRules();
 		

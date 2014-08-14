@@ -45,7 +45,7 @@
 						<xsl:text> &gt; </xsl:text>
 					</xsl:when>
 					<xsl:when test="$factSetElement/operator = 'NO_VALUE'">
-						<xsl:text> = null</xsl:text>
+						<xsl:text> == null</xsl:text>
 					</xsl:when>
 				</xsl:choose>
 				<xsl:if test="$factSetElement/operator != 'NO_VALUE'">
@@ -131,8 +131,12 @@
 				<xsl:text> ContextInformation;&#xa;</xsl:text>
 			</xsl:for-each>
 			<!-- Phrase the rule -->
-			<!-- Constraints -->
 			<xsl:text>&#x9;&#x9;</xsl:text>
+			<!-- Negation -->
+			<xsl:if test="current()/negation = 'true'">
+				<xsl:text>not(</xsl:text>
+			</xsl:if>
+			<!-- Constraints -->
 			<xsl:for-each select="situation/constraints/*">
 				<xsl:value-of
 					select="foo:exploreFactSetElement(current(), situation/constraints//fact, $contextInformation)" />
@@ -146,6 +150,9 @@
 				<xsl:value-of
 					select="foo:exploreFactSetElement(current(), situation/userFacts//fact, $contextInformation)" />
 			</xsl:for-each>
+			<xsl:if test="current()/negation = 'true'">
+				<xsl:text>)</xsl:text>
+			</xsl:if>
 			<xsl:text>;</xsl:text>
 			<!-- Action -->
 			<xsl:text>&#xa;</xsl:text>
@@ -162,27 +169,14 @@
 					<xsl:value-of select="action/learningUnitId" />
 					<xsl:text>);</xsl:text>
 				</xsl:when>
+				<xsl:when test="action/operator = 'RESTRICT'">
+					<xsl:text>restrictUsage(true);</xsl:text>
+				</xsl:when>
 			</xsl:choose>
 			<xsl:text>&#xa;</xsl:text>
 			<xsl:text>&#x9;}&#xa;</xsl:text>
 			<xsl:text>}</xsl:text>
 			<xsl:text>&#xa;&#xa;</xsl:text>
-
-			<!-- <xsl:for-each select="situation//fact"> <xsl:variable name="alias" 
-				select="concat('c', position())" /> <xsl:value-of select="$alias" /> <xsl:text> 
-				ContextInformation : </xsl:text> <xsl:value-of select="$alias" /> <xsl:text>.id 
-				= </xsl:text> <xsl:value-of select="contextInformation" /> <xsl:text> and 
-				</xsl:text> <xsl:value-of select="$alias" /><xsl:text>.value </xsl:text> 
-				<xsl:choose> <xsl:when test="operator = 'IS'"> <xsl:text>=</xsl:text> </xsl:when> 
-				<xsl:when test="operator = 'IS_NOT'"> <xsl:text>!=</xsl:text> </xsl:when> 
-				<xsl:when test="operator = 'LESS_THEN'"> <xsl:text>&lt;</xsl:text> </xsl:when> 
-				<xsl:when test="operator = 'GREATER_THEN'"> <xsl:text>&gt;</xsl:text> </xsl:when> 
-				</xsl:choose> <xsl:text> </xsl:text> <xsl:value-of select="value" /> <xsl:choose> 
-				<xsl:when test="../logicalOperator = 'OR' and following-sibling::fact"> <xsl:text>, 
-				</xsl:text> </xsl:when> <xsl:when test="../logicalOperator = 'OR' and not(following-sibling::fact)"> 
-				<xsl:text>) </xsl:text> </xsl:when> <xsl:otherwise> <xsl:text>; </xsl:text> 
-				</xsl:otherwise> </xsl:choose> </xsl:for-each> <xsl:text>} then { </xsl:text> 
-				<xsl:text>here be JavaScript</xsl:text> <xsl:text> } </xsl:text> -->
 		</xsl:for-each>
 	</xsl:template>
 </xsl:stylesheet>
