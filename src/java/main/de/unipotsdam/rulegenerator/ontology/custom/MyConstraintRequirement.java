@@ -8,14 +8,14 @@ import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 
 import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
-import de.unipotsdam.rulegenerator.ontology.ConstraintTail;
+import de.unipotsdam.rulegenerator.ontology.ConstraintRequirement;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultConstraintTail;
+import de.unipotsdam.rulegenerator.ontology.impl.DefaultConstraintRequirement;
 
-public class MyConstraintTail extends DefaultConstraintTail implements
-		ConstraintTail {
+public class MyConstraintRequirement extends DefaultConstraintRequirement implements
+		ConstraintRequirement {
 
-	public MyConstraintTail(CodeGenerationInference inference, IRI iri) {
+	public MyConstraintRequirement(CodeGenerationInference inference, IRI iri) {
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
 	}
@@ -37,9 +37,9 @@ public class MyConstraintTail extends DefaultConstraintTail implements
 
 		return "NO_VALUE";
 	}
-	
+
 	// ContextInformation
-	
+
 	public Boolean hasContextInformation() {
 		return this.getContextInformationCount() > 0;
 	}
@@ -47,10 +47,34 @@ public class MyConstraintTail extends DefaultConstraintTail implements
 	public Integer getContextInformationCount() {
 		return this.getContextInformation().toArray().length;
 	}
-	
+
 	public Collection<MyMeasurableContextInformation> getContextInformation() {
-		return getDelegate().getPropertyValues(getOwlIndividual(),
-                Vocabulary.OBJECT_PROPERTY_HASCONTEXTTAILMEASURABLECONTEXTINFORMATION,
-                MyMeasurableContextInformation.class);
+		return getDelegate()
+				.getPropertyValues(
+						getOwlIndividual(),
+						Vocabulary.OBJECT_PROPERTY_HASCONTEXTREQUIREMENTMEASURABLECONTEXTINFORMATION,
+						MyMeasurableContextInformation.class);
+	}
+
+	// Starting Time
+
+	public String getStartTime() {
+		if (this.hasHasStartingTime()) {
+			return getDelegate().getPropertyValues(getOwlIndividual(),
+					Vocabulary.DATA_PROPERTY_HASSTARTINGTIME, Object.class).toArray()[0].toString();
+		} else {
+			return null;
+		}
+	}
+	
+	// End Time
+
+	public String getEndTime() {
+		if (this.hasHasEndTime()) {
+			return getDelegate().getPropertyValues(getOwlIndividual(),
+					Vocabulary.DATA_PROPERTY_HASENDTIME, Object.class).toArray()[0].toString();
+		} else {
+			return null;
+		}
 	}
 }
