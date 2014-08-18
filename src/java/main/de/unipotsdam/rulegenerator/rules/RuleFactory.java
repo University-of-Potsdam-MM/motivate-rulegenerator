@@ -9,7 +9,6 @@ import org.protege.owl.codegeneration.WrappedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
 
 import de.unipotsdam.rulegenerator.enums.ActionOperator;
-import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
 import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
@@ -17,13 +16,14 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
 import de.unipotsdam.rulegenerator.ontology.custom.MyFeatureConstraint;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitConstraint;
+import de.unipotsdam.rulegenerator.ontology.custom.MyMetaData;
 
 public class RuleFactory {
 	private OWLOntology ontology;
 	private Collection<? extends MyLearningUnit> learningUnits;
 	private Collection<? extends MyFeatureConstraint> featureConstraints;
 	private Collection<? extends MyLearningUnitConstraint> learningUnitConstraints;
-	private Map<String, List<FactSet>> metaDataFactSets = new HashMap<String, List<FactSet>>();
+	private Map<MyMetaData, List<FactSet>> metaDataFactSets = new HashMap<MyMetaData, List<FactSet>>();
 	
 	public RuleFactory(OWLOntology ontology) {
 		super();
@@ -82,7 +82,9 @@ public class RuleFactory {
 		// constraints based on meta data
 		
 		for (MyLearningUnitConstraint learningUnitConstraint : this.learningUnitConstraints) {
-			
+			for (MyMetaData metaData : learningUnitConstraint.getMetaData()) {
+				System.out.println(metaData.getValue());
+			}
 			
 			timestamp++;
 		}
