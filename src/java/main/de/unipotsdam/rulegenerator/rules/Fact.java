@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import de.unipotsdam.rulegenerator.enums.DescriptionType;
 import de.unipotsdam.rulegenerator.enums.FactOperator;
-import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintTail;
-import de.unipotsdam.rulegenerator.ontology.custom.MyMeasurableContextInformation;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -56,15 +54,6 @@ public class Fact implements FactSetElement {
 		this.setContextInformation(contextInformation);
 		this.setOperator(operator);
 		this.setValue(value);
-	}
-
-	static public Fact FactFromConstraintTail(MyConstraintTail tail) {
-		if (tail.getSpecificTailType().equals("ContextInformationConstraintTail") && tail.hasContextInformation()) {
-			MyMeasurableContextInformation measurableInformation = (MyMeasurableContextInformation) tail.getContextInformation().toArray()[0];
-			return new Fact(measurableInformation.getSpecificContextInformationType(), FactOperator.valueOf(measurableInformation.getValueOperator()), measurableInformation.getValue().toString());
-		}
-		
-		return null;
 	}
 	
 	/**

@@ -1,5 +1,5 @@
 package de.unipotsdam.rulegenerator.enums;
 
 public enum ActionOperator {
-	SELECT, PRELOAD, RESTRICT
+	SELECT, PRELOAD, RESTRICT_FEATURE
 }

@@ -23,7 +23,7 @@ import com.clarkparsia.pellet.owlapiv3.PelletReasoner;
 import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
-import de.unipotsdam.rulegenerator.ontology.MyFactory;
+import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 
 public class PelletTest {

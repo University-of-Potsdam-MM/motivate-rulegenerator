@@ -9,7 +9,10 @@ import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
+import de.unipotsdam.rulegenerator.enums.FactOperator;
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
+import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
+import de.unipotsdam.rulegenerator.ontology.custom.MyMeasurableContextInformation;
 
 @XmlRootElement(name="factSet")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -18,6 +21,30 @@ public class FactSet implements FactSetElement {
 	@XmlAnyElement
 	private List<FactSetElement> children = new ArrayList<FactSetElement>();
 
+	static public FactSet FactSetFromConstraintRequirement(MyConstraintRequirement requirement) throws Exception {
+		FactSet factSet = new FactSet();
+		
+		if (requirement.getSpecificTailType().equals("ContextInformationConstraintRequirement") && requirement.hasContextInformation()) {
+			MyMeasurableContextInformation measurableInformation = (MyMeasurableContextInformation) requirement.getContextInformation().toArray()[0];
+			factSet.addFact(new Fact(measurableInformation.getSpecificContextInformationType(), FactOperator.valueOf(measurableInformation.getValueOperator()), measurableInformation.getValue().toString()));
+		} else if (requirement.getSpecificTailType().equals("IntervalConstraintRequirement") && requirement.hasHasStartingTime() && requirement.hasHasEndTime()) {
+			String startingTime = requirement.getStartTime();
+			String endTime = requirement.getEndTime();
+			
+			Fact startingTimeFact = new Fact("CurrentTimeMeasurableInformation", FactOperator.GREATER_THEN, startingTime);
+			Fact endTimeFact = new Fact("CurrentTimeMeasurableInformation", FactOperator.LESS_THEN, endTime);
+			
+			factSet.addFact(startingTimeFact, LogicalOperator.AND, endTimeFact);
+		} else if (requirement.getSpecificTailType().equals("RankingConstraintRequirement")) {
+			
+		} else if (requirement.getSpecificTailType().equals("MetaDataConstraintRequirement")) {
+			
+		}
+		
+		return factSet;
+	}
+
+	
 	public List<FactSetElement> getChildren() {
 		return children;
 	}
@@ -58,6 +85,13 @@ public class FactSet implements FactSetElement {
 			throws Exception {
 		this.addFact(fact);
 		this.addLogicalOperator(logicalOperator);
+	}
+	
+	public void addFact(Fact firstFact, LogicalOperator logicalOperator, Fact secondFact)
+			throws Exception {
+		this.addFact(firstFact);
+		this.addLogicalOperator(logicalOperator);
+		this.addFact(secondFact);
 	}
 
 	public void addLogicalOperator(LogicalOperator logicalOperator)

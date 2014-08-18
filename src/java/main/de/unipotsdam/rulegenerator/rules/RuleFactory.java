@@ -1,6 +1,9 @@
 package de.unipotsdam.rulegenerator.rules;
 
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -8,18 +11,20 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import de.unipotsdam.rulegenerator.enums.ActionOperator;
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
-import de.unipotsdam.rulegenerator.ontology.ConstraintHead;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
-import de.unipotsdam.rulegenerator.ontology.MyFactory;
-import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintHead;
-import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintTail;
+import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
+import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
+import de.unipotsdam.rulegenerator.ontology.custom.MyFeatureConstraint;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
+import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitConstraint;
 
 public class RuleFactory {
 	private OWLOntology ontology;
-	private Collection<? extends LearningUnit> learningUnits;
-	private Collection<? extends ConstraintHead> constraints;
-
+	private Collection<? extends MyLearningUnit> learningUnits;
+	private Collection<? extends MyFeatureConstraint> featureConstraints;
+	private Collection<? extends MyLearningUnitConstraint> learningUnitConstraints;
+	private Map<String, List<FactSet>> metaDataFactSets = new HashMap<String, List<FactSet>>();
+	
 	public RuleFactory(OWLOntology ontology) {
 		super();
 
@@ -28,7 +33,9 @@ public class RuleFactory {
 		MyFactory factory = new MyFactory(ontology);
 		// get all learning unit individuals from ontology
 		this.learningUnits = factory.getAllLearningUnitInstances();
-		this.constraints = factory.getAllConstraintHeadInstances();
+		this.featureConstraints = factory.getAllFeatureConstraintInstances();
+		this.learningUnitConstraints = factory
+				.getAllLearningUnitConstraintInstances();
 	}
 
 	public Collection<? extends LearningUnit> getLearningUnits() {
@@ -36,54 +43,50 @@ public class RuleFactory {
 	}
 
 	public void setLearningUnits(
-			Collection<? extends LearningUnit> learningUnits) {
+			Collection<? extends MyLearningUnit> learningUnits) {
 		this.learningUnits = learningUnits;
 	}
 
 	public AdaptationRuleList generateRules() throws Exception {
 		// delete existing rules?
 		AdaptationRuleList ruleList = new AdaptationRuleList();
-		
+
 		long timestamp = System.currentTimeMillis() / 1000;
 
 		// constraints
-		for (ConstraintHead constraint : this.constraints) {
-			MyConstraintHead currentConstraint = (MyConstraintHead) constraint;
 
-			System.out.println(currentConstraint.getSpecificConstraintType());
+		// feature constraints
 
-			// global constraints
-
-			if (currentConstraint.getSpecificConstraintType().equals(
-					"RestrictUsageConstraintHead")) {
-				AdaptationRule restrictUsageRule = new AdaptationRule(
-						"RestrictUsageRule["+timestamp+"]", ActionOperator.RESTRICT,
-						null);
-				restrictUsageRule.setNegation(true);
-				restrictUsageRule.setTrigger(new Trigger(
-						TriggeringMode.ON_ENTRY));
-				Situation restrictUsageRuleSituation = new Situation();
-				FactSet factSet = new FactSet();
-				int i = 0;
-				for (MyConstraintTail constraintTail : currentConstraint
-						.getConstraintTails()) {
-					Fact restrictUsageRuleFact = Fact
-							.FactFromConstraintTail(constraintTail);
-					factSet.addFact(restrictUsageRuleFact);
-					if (i < currentConstraint.getConstraintTailCount() - 1) factSet.addLogicalOperator(LogicalOperator.valueOf(currentConstraint.getHasConstraintHeadLogicalOperator().toArray()[0].toString()));
-						i++;
-				}
-				restrictUsageRuleSituation.addConstraint(factSet);
-				restrictUsageRule.setSituation(restrictUsageRuleSituation);
-				ruleList.addAdaptationRule(restrictUsageRule);
-
+		for (MyFeatureConstraint featureConstraint : this.featureConstraints) {
+			AdaptationRule featureConstraintRule = new AdaptationRule(
+					"FeatureConstraintRule[" + timestamp + "]",
+					ActionOperator.RESTRICT_FEATURE, featureConstraint.getFeature().getIRIShort());
+			featureConstraintRule.setNegation(true);
+			featureConstraintRule.setTrigger(new Trigger(TriggeringMode.ON_ENTRY));
+			Situation featureConstraintRuleSituation = new Situation();
+			int i = 0;
+			for (MyConstraintRequirement constraintRequirement : featureConstraint
+					.getConstraintRequirements()) {
+				featureConstraintRuleSituation.addConstraint(FactSet
+						.FactSetFromConstraintRequirement(constraintRequirement));
+				if (i < featureConstraint.getConstraintRequirementsCount() - 1)
+					featureConstraintRuleSituation.addConstraint(featureConstraint.getLogicalOperator());
+				i++;
 			}
-
-			// per rule constraints
+			featureConstraintRule.setSituation(featureConstraintRuleSituation);
+			ruleList.addAdaptationRule(featureConstraintRule);
 
 			timestamp++;
 		}
-
+		
+		// constraints based on meta data
+		
+		for (MyLearningUnitConstraint learningUnitConstraint : this.learningUnitConstraints) {
+			
+			
+			timestamp++;
+		}
+		
 		for (LearningUnit learningUnit : learningUnits) {
 			MyLearningUnit currentLearningUnit = (MyLearningUnit) learningUnit;
 
