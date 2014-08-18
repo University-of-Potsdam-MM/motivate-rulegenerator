@@ -172,6 +172,11 @@
 				<xsl:when test="action/operator = 'RESTRICT'">
 					<xsl:text>restrictUsage(true);</xsl:text>
 				</xsl:when>
+				<xsl:when test="action/operator = 'RESTRICT_FEATURE'">
+					<xsl:text>restrictFeature("</xsl:text>
+					<xsl:value-of select="action/learningUnitId" />
+					<xsl:text>");</xsl:text>
+				</xsl:when>
 			</xsl:choose>
 			<xsl:text>&#xa;</xsl:text>
 			<xsl:text>&#x9;}&#xa;</xsl:text>
