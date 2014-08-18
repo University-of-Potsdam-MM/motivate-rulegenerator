@@ -378,7 +378,7 @@
         <ObjectProperty IRI="#isBasisOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isConstraintTailOf"/>
+        <ObjectProperty IRI="#isConstraintRequirementOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isContextClassOf"/>
@@ -448,6 +448,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
@@ -752,10 +758,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Constraint"/>
-        <ObjectAllValuesFrom>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasConstraintRequirement"/>
             <Class IRI="#ConstraintRequirement"/>
-        </ObjectAllValuesFrom>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ContentTypeMetaData"/>
@@ -1460,7 +1466,7 @@
     <SubClassOf>
         <Class IRI="#LearningUnitConstraint"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasLearningUnitMetaData"/>
+            <ObjectProperty IRI="#hasConstraintMetaData"/>
             <Class IRI="#MetaData"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -3502,6 +3508,11 @@
         <Literal datatypeIRI="&xsd;string">130</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstraintLogicalOperator"/>
+        <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
+        <Literal datatypeIRI="&xsd;string">OR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasContextInformationParameterValue"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">14.2345</Literal>
@@ -3644,7 +3655,7 @@
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <ObjectProperty IRI="#isConstraintTailOf"/>
+        <ObjectProperty IRI="#isConstraintRequirementOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isContextClassOf"/>
@@ -3859,6 +3870,14 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
+        <DataProperty IRI="#hasLogicalOperator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
+        <DataProperty IRI="#hasLogicalOperator"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
         <DataProperty IRI="#hasLogicalOperator"/>
     </SubDataPropertyOf>
@@ -3880,6 +3899,12 @@
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasLID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
@@ -3935,6 +3960,14 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasLanguage"/>
         <Class IRI="#LearningUnit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
+        <Class IRI="#LearningUnitConstraint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
+        <Class IRI="#LearningUnitConstraint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
