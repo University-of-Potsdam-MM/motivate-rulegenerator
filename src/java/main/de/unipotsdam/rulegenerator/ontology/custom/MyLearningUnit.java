@@ -92,12 +92,6 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		}
 	}
 
-	// IRI
-
-	public String getIRIShort() {
-		return this.getOwlIndividual().getIRI().getFragment();
-	}
-
 	// ID
 
 	public String getID() {

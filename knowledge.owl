@@ -438,9 +438,6 @@
         <DataProperty IRI="#hasIdentifier"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasImageContentMetaData"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasInteractivity"/>
     </Declaration>
     <Declaration>
@@ -462,9 +459,6 @@
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasMetaData"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasName"/>
     </Declaration>
     <Declaration>
@@ -472,9 +466,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasSubject"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasTextualContentMetaData"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasTrigger"/>
@@ -487,9 +478,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasVersionDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasVideoContentMetaData"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#isRequired"/>
@@ -3426,7 +3414,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasConstraintLogicalOperator"/>
         <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
-        <Literal datatypeIRI="&xsd;string">OR</Literal>
+        <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasConstraintLogicalOperator"/>
@@ -3871,24 +3859,12 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#hasImageContentMetaData"/>
-        <DataProperty IRI="#hasMetaData"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#hasLearningUnitLogicalOperator"/>
         <DataProperty IRI="#hasLogicalOperator"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasMeasurableContextInformationValue"/>
         <DataProperty IRI="#hasValue"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasTextualContentMetaData"/>
-        <DataProperty IRI="#hasMetaData"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasVideoContentMetaData"/>
-        <DataProperty IRI="#hasMetaData"/>
     </SubDataPropertyOf>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasConstraintLogicalOperator"/>
@@ -3925,6 +3901,10 @@
         <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasConstraintLogicalOperator"/>
+        <Class IRI="#Constraint"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasContentType"/>
         <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
@@ -3939,10 +3919,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasEndTime"/>
         <Class IRI="#ConstraintRequirement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasImageContentMetaData"/>
-        <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasInteractivity"/>
@@ -3969,19 +3945,11 @@
         <Class IRI="#MeasurableContextInformation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasMetaData"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasStartingTime"/>
         <Class IRI="#ConstraintRequirement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasSubject"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasTextualContentMetaData"/>
         <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -3994,10 +3962,6 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasVersionDate"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasVideoContentMetaData"/>
         <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyRange>
@@ -4023,10 +3987,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasIdentifier"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasImageContentMetaData"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasInteractivity"/>
@@ -4060,10 +4020,6 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasTextualContentMetaData"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#hasTrigger"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
@@ -4081,10 +4037,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasVersionDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasVideoContentMetaData"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#isRequired"/>

@@ -5,16 +5,10 @@ import java.util.Collection;
 import org.protege.owl.codegeneration.impl.FactoryHelper;
 import org.semanticweb.owlapi.model.OWLOntology;
 
-import de.unipotsdam.rulegenerator.ontology.FeatureConstraint;
 import de.unipotsdam.rulegenerator.ontology.GeneratedFactory;
-import de.unipotsdam.rulegenerator.ontology.LearningUnitConstraint;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultFeatureConstraint;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnitConstraint;
 
 public class MyFactory extends GeneratedFactory {
-	private FactoryHelper delegate;
-	
 	public MyFactory(OWLOntology ontology) {
 		super(ontology);
 		// TODO Auto-generated constructor stub

@@ -53,15 +53,7 @@ public class MyMeasurableContextInformation extends
 				+ "</Value>");
 	}
 
-	// IRI
-	
-	public String getIRIShort() {
-		return this.getOwlIndividual().getIRI().getFragment();
-	}
-
-	public Set<OWLClassExpression> getTypes() {
-		return this.getOwlIndividual().getTypes(this.getOwlOntology());
-	}
+	// Types
 
 	public String getSpecificContextInformationType() {
 		for (OWLClassExpression type : this.getTypes()) {

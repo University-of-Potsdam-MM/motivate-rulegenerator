@@ -1,7 +1,6 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
-import java.util.Set;
 
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
@@ -22,16 +21,12 @@ public class MyConstraintRequirement extends DefaultConstraintRequirement implem
 
 	// Type
 
-	public Set<OWLClassExpression> getTypes() {
-		return this.getOwlIndividual().getTypes(this.getOwlOntology());
-	}
-
 	public String getSpecificTailType() {
 		for (OWLClassExpression type : this.getTypes()) {
 			OWLClassImpl impl = (OWLClassImpl) type;
 			String iriFragment = impl.getIRI().getFragment();
-			if (!iriFragment.equals("ConstraintTail")
-					&& iriFragment.contains("ConstraintTail"))
+			if (!iriFragment.equals("ConstraintRequirement")
+					&& iriFragment.contains("ConstraintRequirement"))
 				return iriFragment;
 		}
 
