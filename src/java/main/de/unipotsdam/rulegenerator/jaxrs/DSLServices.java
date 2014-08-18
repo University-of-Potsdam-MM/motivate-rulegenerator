@@ -1,13 +1,11 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 import javax.ws.rs.GET;
@@ -24,7 +22,6 @@ import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.ErrorListener;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
@@ -43,7 +40,7 @@ import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 @Path("/dsl")
 public class DSLServices extends Services implements ErrorListener,
 		ErrorHandler {
-
+	
 	@GET
 	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -64,7 +61,7 @@ public class DSLServices extends Services implements ErrorListener,
 		try {
 			adaptationRuleList = RuleGeneratorService.generateAdaptationRules();
 		} catch (Exception e) {
-			return e.getLocalizedMessage();
+			return e.getLocalizedMessage() + "\n\n" + this.stackTraceToString(e);
 		}
 
 		String xml;
