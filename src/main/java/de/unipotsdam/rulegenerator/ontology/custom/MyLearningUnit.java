@@ -104,12 +104,17 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 
 	// Logical Operator
 
-	public String getLogicalOperator() {
-		Object[] operators = this.getHasLearningUnitLogicalOperator().toArray();
-		if (operators.length > 0)
-			return (String) operators[0];
+	public LogicalOperator getLogicalOperator() {
+		if (this.getLogicalOperators().toArray().length > 0)
+			return LogicalOperator.valueOf(getLogicalOperators().toArray()[0]
+					.toString());
 		else
-			return "NO_VALUE";
+			return LogicalOperator.NO_VALUE;
+	}
+
+	public Collection<? extends Object> getLogicalOperators() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.DATA_PROPERTY_HASLOGICALOPERATOR, Object.class);
 	}
 
 	// Context Information
@@ -122,16 +127,10 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		return this.getContextInformation().toArray().length;
 	}
 
-	public Collection<MyMeasurableContextInformation> getContextInformation() {
+	public Collection<? extends MyMeasurableContextInformation> getContextInformation() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASMEASURABLECONTEXTINFORMATION,
 				MyMeasurableContextInformation.class);
-	}
-
-	public Collection<? extends MeasurableContextInformation> getHasMeasurableContextInformation() {
-		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASMEASURABLECONTEXTINFORMATION,
-				DefaultMeasurableContextInformation.class);
 	}
 
 	// Relations
@@ -266,17 +265,28 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 			learningUnitFact.setOperator(FactOperator
 					.valueOf(contextInformation.getValueOperator()));
 			if (contextInformation.hasContextInformationParameters()) {
-				for (MyContextInformationParameter contextInformationParameter : contextInformation.getContextInformationParameters()) {
-					FactParameter factParameter = new FactParameter(contextInformationParameter.getSpecificParameterType(), FactOperator.IS, contextInformationParameter.getValue().toString());
+				for (MyContextInformationParameter contextInformationParameter : contextInformation
+						.getContextInformationParameters()) {
+					FactParameter factParameter = new FactParameter(
+							contextInformationParameter
+									.getSpecificParameterType(),
+							FactOperator.IS, contextInformationParameter
+									.getValue().toString());
 					learningUnitFact.addFactParameter(factParameter);
 				}
 			}
 			learningUnitFacts.addFact(learningUnitFact);
 			if (i < this.getContextInformationCount() - 1)
-				learningUnitFacts.addLogicalOperator(LogicalOperator
-						.valueOf(this.getLogicalOperator()));
+				learningUnitFacts.addLogicalOperator(this.getLogicalOperator());
 			i++;
 		}
 		return learningUnitFacts;
+	}
+
+	// Meta Data
+
+	public Collection<? extends MyMetaData> getMetaData() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASMETADATA, MyMetaData.class);
 	}
 }

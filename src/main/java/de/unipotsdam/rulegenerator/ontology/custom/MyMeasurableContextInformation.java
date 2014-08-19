@@ -94,13 +94,16 @@ public class MyMeasurableContextInformation extends
 	}
 	
 	// Value
-	
+
 	public Object getValue() {
-		Object[] values = this.getHasMeasurableContextInformationValue()
-				.toArray();
-		if (values.length > 0)
-			return values[0];
+		if (this.getValues().toArray().length > 0)
+			return getValues().toArray()[0];
 		else
 			return "NO_VALUE";
+	}
+
+	public Collection<? extends Object> getValues() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.DATA_PROPERTY_HASVALUE, Object.class);
 	}
 }

@@ -39,8 +39,15 @@ public class MyFeatureConstraint extends DefaultFeatureConstraint implements
 	// Logical Operator
 
 	public LogicalOperator getLogicalOperator() {
-		return LogicalOperator.valueOf(this.getHasConstraintLogicalOperator()
-				.toArray()[0].toString());
+		if (this.getLogicalOperators().toArray().length > 0)
+			return LogicalOperator.valueOf(getLogicalOperators().toArray()[0].toString());
+		else
+			return LogicalOperator.NO_VALUE;
+	}
+
+	public Collection<? extends Object> getLogicalOperators() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.DATA_PROPERTY_HASLOGICALOPERATOR, Object.class);
 	}
 
 	// Feature

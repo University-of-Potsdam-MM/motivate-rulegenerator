@@ -18,11 +18,10 @@ public class MyLearningUnitConstraint extends DefaultLearningUnitConstraint
 	}
 	
 	// Meta Data
-
+	
 	public Collection<? extends MyMetaData> getMetaData() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASCONSTRAINTMETADATA,
+				Vocabulary.OBJECT_PROPERTY_HASMETADATA,
 				MyMetaData.class);
 	}
-
 }
