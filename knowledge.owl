@@ -129,6 +129,9 @@
         <Class IRI="#LearningUnit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#LearningUnitClass"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#LearningUnitConstraint"/>
     </Declaration>
     <Declaration>
@@ -345,6 +348,9 @@
         <ObjectProperty IRI="#hasHelp"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasLearningUnitClass"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </Declaration>
     <Declaration>
@@ -385,6 +391,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isHelpOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLearningUnitClassOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
@@ -511,6 +520,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-LearningUnit-G"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-LearningUnitClass"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
@@ -1442,15 +1454,40 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#LearningUnitClass"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasLogicalOperator"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasLogicalOperator"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningUnitClass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMetaData"/>
+            <Class IRI="#MetaData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#LearningUnitConstraint"/>
         <Class IRI="#Constraint"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnitConstraint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMetaData"/>
-            <Class IRI="#MetaData"/>
-        </ObjectSomeValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasLearningUnitClass"/>
+                <Class IRI="#LearningUnitClass"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasLearningUnitClass"/>
+                <Class IRI="#LearningUnitClass"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnitIDContextParameter"/>
@@ -3217,6 +3254,10 @@
         <NamedIndividual IRI="#Example-LearningUnit-G"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#LearningUnitClass"/>
+        <NamedIndividual IRI="#Example-LearningUnitClass"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#LearningUnitConstraint"/>
         <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
     </ClassAssertion>
@@ -3360,14 +3401,19 @@
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMetaData"/>
+        <NamedIndividual IRI="#Example-LearningUnitClass"/>
+        <NamedIndividual IRI="#Example-ContentTypeMetaData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMetaData"/>
+        <ObjectProperty IRI="#hasLearningUnitClass"/>
         <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
-        <NamedIndividual IRI="#Example-ContentTypeMetaData"/>
+        <NamedIndividual IRI="#Example-LearningUnitClass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
@@ -3473,6 +3519,11 @@
         <DataProperty IRI="#hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-G"/>
         <Literal datatypeIRI="&xsd;string">130</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLogicalOperator"/>
+        <NamedIndividual IRI="#Example-LearningUnitClass"/>
+        <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLogicalOperator"/>
@@ -3631,6 +3682,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#isHelpOf"/>
         <ObjectProperty IRI="#hasHelp"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasLearningUnitClass"/>
+        <ObjectProperty IRI="#isLearningUnitClassOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isMeasurableContextInformationOf"/>

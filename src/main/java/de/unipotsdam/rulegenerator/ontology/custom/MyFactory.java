@@ -2,7 +2,6 @@ package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
 
-import org.protege.owl.codegeneration.impl.FactoryHelper;
 import org.semanticweb.owlapi.model.OWLOntology;
 
 import de.unipotsdam.rulegenerator.ontology.GeneratedFactory;
