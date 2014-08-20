@@ -21,7 +21,7 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
  */
 @XmlRootElement(name = "situation")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "userFactsOperator", "constraints",
+@XmlType(name = "", propOrder = { "userFactsLogicalOperator", "constraints",
 		"userFacts" })
 public class Situation {
 	@XmlTransient
@@ -30,7 +30,7 @@ public class Situation {
 	protected FactSet constraints = new FactSet();
 	protected FactSet userFacts = new FactSet();
 
-	private LogicalOperator userFactsOperator;
+	private LogicalOperator userFactsLogicalOperator;
 
 	/**
 	 * Instantiates a new situation.
@@ -42,7 +42,7 @@ public class Situation {
 	}
 
 	public Situation(LogicalOperator logicalOperator) throws Exception {
-		this.userFactsOperator = logicalOperator;
+		this.userFactsLogicalOperator = logicalOperator;
 		this.factSets.addFactSet(this.constraints, LogicalOperator.AND);
 		this.factSets.addFactSet(this.userFacts);
 	}
@@ -74,12 +74,12 @@ public class Situation {
 		this.userFacts.addLogicalOperator(userFact);
 	}
 
-	public LogicalOperator getUserFactsOperator() {
-		return userFactsOperator;
+	public LogicalOperator getUserFactsLogicalOperator() {
+		return userFactsLogicalOperator;
 	}
 
-	public void setUserFactsOperator(LogicalOperator userFactsOperator) {
-		this.userFactsOperator = userFactsOperator;
+	public void setUserFactsLogicalOperator(LogicalOperator userFactsLogicalOperator) {
+		this.userFactsLogicalOperator = userFactsLogicalOperator;
 	}
 
 	public void addPrerequisites(
@@ -180,6 +180,12 @@ public class Situation {
 			break;
 		default:
 			break;
+		}
+	}
+
+	public void optimize() throws Exception {
+		for (FactSetElement factSetElement : this.factSets.getChildren()) {
+			factSetElement.optimize();
 		}
 	}
 }

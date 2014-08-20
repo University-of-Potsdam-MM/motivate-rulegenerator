@@ -1,9 +1,6 @@
 package de.unipotsdam.rulegenerator.rules;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -15,16 +12,16 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
 import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
 import de.unipotsdam.rulegenerator.ontology.custom.MyFeatureConstraint;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
+import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitClass;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitConstraint;
-import de.unipotsdam.rulegenerator.ontology.custom.MyMetaData;
 
 public class RuleFactory {
 	private OWLOntology ontology;
 	private Collection<? extends MyLearningUnit> learningUnits;
 	private Collection<? extends MyFeatureConstraint> featureConstraints;
 	private Collection<? extends MyLearningUnitConstraint> learningUnitConstraints;
-	private Map<MyMetaData, List<FactSet>> metaDataFactSets = new HashMap<MyMetaData, List<FactSet>>();
-	
+	private LearningUnitClassFactSet learningUnitClassFactSet = new LearningUnitClassFactSet();
+
 	public RuleFactory(OWLOntology ontology) {
 		super();
 
@@ -60,17 +57,22 @@ public class RuleFactory {
 		for (MyFeatureConstraint featureConstraint : this.featureConstraints) {
 			AdaptationRule featureConstraintRule = new AdaptationRule(
 					"FeatureConstraintRule[" + timestamp + "]",
-					ActionOperator.RESTRICT_FEATURE, featureConstraint.getFeature().getIRIShort());
+					ActionOperator.RESTRICT_FEATURE, featureConstraint
+							.getFeature().getIRIShort());
 			featureConstraintRule.setNegation(true);
-			featureConstraintRule.setTrigger(new Trigger(TriggeringMode.ON_ENTRY));
+			featureConstraintRule.setTrigger(new Trigger(
+					TriggeringMode.ON_ENTRY));
 			Situation featureConstraintRuleSituation = new Situation();
 			int i = 0;
 			for (MyConstraintRequirement constraintRequirement : featureConstraint
 					.getConstraintRequirements()) {
-				featureConstraintRuleSituation.addConstraint(FactSet
-						.FactSetFromConstraintRequirement(constraintRequirement));
+				featureConstraintRuleSituation
+						.addConstraint(FactSet
+								.FactSetFromConstraintRequirement(constraintRequirement));
 				if (i < featureConstraint.getConstraintRequirementsCount() - 1)
-					featureConstraintRuleSituation.addConstraint(featureConstraint.getLogicalOperator());
+					featureConstraintRuleSituation
+							.addConstraint(featureConstraint
+									.getLogicalOperator());
 				i++;
 			}
 			featureConstraintRule.setSituation(featureConstraintRuleSituation);
@@ -78,17 +80,17 @@ public class RuleFactory {
 
 			timestamp++;
 		}
-		
+
 		// constraints based on meta data
-		
+
 		for (MyLearningUnitConstraint learningUnitConstraint : this.learningUnitConstraints) {
-			for (MyMetaData metaData : learningUnitConstraint.getMetaData()) {
-				System.out.println(metaData.getValue());
-			}
-			
-			timestamp++;
+			MyLearningUnitClass learningUnitClass = learningUnitConstraint
+					.getLearningUnitClass();
+			learningUnitClassFactSet.put(learningUnitClass, learningUnitConstraint.getFactSet());
 		}
 		
+		System.out.println(learningUnitClassFactSet.toString());
+
 		for (LearningUnit learningUnit : learningUnits) {
 			MyLearningUnit currentLearningUnit = (MyLearningUnit) learningUnit;
 
@@ -98,8 +100,8 @@ public class RuleFactory {
 			// information are present
 			if (currentLearningUnit.getContextInformationCount() > 0)
 				ruleList.addAdaptationRule(new SelectAdaptationRule(
-						currentLearningUnit));
-
+						currentLearningUnit, learningUnitClassFactSet));
+			
 			/** RELATIONS **/
 
 			// check for relations
@@ -154,6 +156,12 @@ public class RuleFactory {
 				}
 
 			}
+		}
+		
+		// optimize rules
+		
+		for (AdaptationRule rule : ruleList.getList()) {
+			rule.optimize();
 		}
 
 		return ruleList;

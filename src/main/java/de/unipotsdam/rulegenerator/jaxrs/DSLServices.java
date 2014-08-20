@@ -61,7 +61,7 @@ public class DSLServices extends Services implements ErrorListener,
 		try {
 			adaptationRuleList = RuleGeneratorService.generateAdaptationRules();
 		} catch (Exception e) {
-			return e.getLocalizedMessage() + "\n\n" + this.stackTraceToString(e);
+			return e.getClass() + " " + e.getMessage() + "\n\n" + this.stackTraceToString(e);
 		}
 
 		String xml;

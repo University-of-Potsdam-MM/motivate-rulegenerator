@@ -489,7 +489,10 @@
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-ContentTypeMetaData"/>
+        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
@@ -550,6 +553,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
@@ -1445,6 +1451,13 @@
                 <DataProperty IRI="#hasLogicalOperator"/>
             </DataExactCardinality>
         </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LearningUnit"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLearningUnitClass"/>
+            <Class IRI="#LearningUnitClass"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnit"/>
@@ -3211,7 +3224,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ContentTypeMetaData"/>
-        <NamedIndividual IRI="#Example-ContentTypeMetaData"/>
+        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ContentTypeMetaData"/>
+        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CurrentTemperatureMeasurableInformation"/>
@@ -3294,6 +3311,10 @@
         <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#VelocityUnitContextParameter"/>
+        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
         <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
     </ClassAssertion>
@@ -3356,6 +3377,11 @@
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLearningUnitClass"/>
+        <NamedIndividual IRI="#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="#Example-LearningUnitClass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-B"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
@@ -3403,7 +3429,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMetaData"/>
         <NamedIndividual IRI="#Example-LearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ContentTypeMetaData"/>
+        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMetaData"/>
+        <NamedIndividual IRI="#Example-LearningUnitClass"/>
+        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
@@ -3431,6 +3462,11 @@
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
+        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
@@ -3452,7 +3488,12 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-ContentTypeMetaData"/>
+        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
+        <Literal datatypeIRI="&xsd;string">Images</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
         <Literal datatypeIRI="&xsd;string">Video</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -3523,7 +3564,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-LearningUnitClass"/>
-        <Literal datatypeIRI="&xsd;string">AND</Literal>
+        <Literal datatypeIRI="&xsd;string">OR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLogicalOperator"/>
@@ -3579,6 +3620,11 @@
         <DataProperty IRI="#hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
         <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
+        <Literal datatypeIRI="&xsd;string">KILOMETERS_PER_HOUR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
@@ -3668,8 +3714,8 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
         <ObjectProperty IRI="#isContextInformationParameterOf"/>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
@@ -3684,8 +3730,8 @@
         <ObjectProperty IRI="#hasHelp"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasLearningUnitClass"/>
         <ObjectProperty IRI="#isLearningUnitClassOf"/>
+        <ObjectProperty IRI="#hasLearningUnitClass"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isMeasurableContextInformationOf"/>

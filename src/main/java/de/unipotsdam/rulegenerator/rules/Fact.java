@@ -11,6 +11,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import de.unipotsdam.rulegenerator.enums.DescriptionType;
 import de.unipotsdam.rulegenerator.enums.FactOperator;
+import de.unipotsdam.rulegenerator.ontology.custom.MyContextInformationParameter;
+import de.unipotsdam.rulegenerator.ontology.custom.MyMeasurableContextInformation;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -32,6 +34,39 @@ public class Fact implements FactSetElement {
 
 	/** The value. */
 	private String value;
+
+	public static Fact FactFromFactSet(FactSet factSet)
+			throws java.lang.Exception {
+		if (!factSet.hasChildren()
+				|| factSet.getChildrenCount() > 1
+				|| (factSet.hasChildren() && factSet.getLastObject().getClass() != Fact.class)) {
+			throw new java.lang.Exception(
+					"A fact can only be created from a fact set with exactly one fact as a child.");
+		} else {
+			return (Fact) factSet.getLastObject();
+		}
+	}
+	
+	public static Fact FactFromContextInformation(
+			MyMeasurableContextInformation contextInformation) {
+		Fact fact = new Fact();
+		fact.setContextInformation(contextInformation
+				.getSpecificContextInformationType());
+		fact.setValue(contextInformation.getValue().toString());
+		fact.setOperator(FactOperator.valueOf(contextInformation
+				.getValueOperator()));
+		if (contextInformation.hasContextInformationParameters()) {
+			for (MyContextInformationParameter contextInformationParameter : contextInformation
+					.getContextInformationParameters()) {
+				FactParameter factParameter = new FactParameter(
+						contextInformationParameter.getSpecificType(),
+						FactOperator.IS, contextInformationParameter.getValue()
+								.toString());
+				fact.addFactParameter(factParameter);
+			}
+		}
+		return fact;
+	}
 
 	/**
 	 * Instantiates a new fact.
@@ -55,7 +90,7 @@ public class Fact implements FactSetElement {
 		this.setOperator(operator);
 		this.setValue(value);
 	}
-	
+
 	/**
 	 * Gets the context information.
 	 * 
@@ -145,5 +180,10 @@ public class Fact implements FactSetElement {
 	 */
 	public void setValue(String value) {
 		this.value = value;
+	}
+
+	@Override
+	public void optimize() {
+		// nothing to do here, yet
 	}
 }

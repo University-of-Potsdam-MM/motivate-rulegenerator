@@ -2,12 +2,10 @@ package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
 
-import org.protege.owl.codegeneration.impl.WrappedIndividualImpl;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
-import de.unipotsdam.rulegenerator.ontology.Feature;
 import de.unipotsdam.rulegenerator.ontology.FeatureConstraint;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultFeatureConstraint;

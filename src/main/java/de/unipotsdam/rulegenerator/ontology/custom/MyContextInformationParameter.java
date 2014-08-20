@@ -34,7 +34,7 @@ public class MyContextInformationParameter extends
 		System.out.println(this.getIndentSpace(indent + 1) + "<IRI>"
 				+ this.getIRIShort() + "</IRI>");
 		System.out.println(this.getIndentSpace(indent + 1) + "<Class>"
-				+ this.getSpecificParameterType() + "</Class>");
+				+ this.getSpecificType() + "</Class>");
 		System.out.println(this.getIndentSpace(indent + 1) + "<Value>"
 				+ this.getValue() + "</Value>");
 	}
@@ -47,7 +47,9 @@ public class MyContextInformationParameter extends
 		return this.getOwlIndividual().getTypes(this.getOwlOntology());
 	}
 
-	public String getSpecificParameterType() {
+	// Type
+	
+	public String getSpecificType() {
 		for (OWLClassExpression type : this.getTypes()) {
 			OWLClassImpl impl = (OWLClassImpl) type;
 			String iriFragment = impl.getIRI().getFragment();

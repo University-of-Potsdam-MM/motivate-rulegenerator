@@ -1,7 +1,6 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
-import java.util.Set;
 
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;

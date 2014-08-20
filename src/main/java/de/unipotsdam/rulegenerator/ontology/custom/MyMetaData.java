@@ -2,10 +2,11 @@ package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
 
-import org.protege.owl.codegeneration.impl.WrappedIndividualImpl;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClassExpression;
 
+import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
 import de.unipotsdam.rulegenerator.ontology.MetaData;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultMetaData;
@@ -17,9 +18,30 @@ public class MyMetaData extends DefaultMetaData implements MetaData {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String toString() {
-		// TODO
-		return null;
+	// Description
+
+	public String description() {
+		return this.getSpecificType().replace("MetaData", "") + ":"
+				+ this.getValue();
+	}
+
+	// Comparison
+
+	public Boolean equals(MyMetaData theMetaData) {
+		return this.description().equals(theMetaData.description());
+	}
+
+	// Type
+
+	public String getSpecificType() {
+		for (OWLClassExpression type : this.getTypes()) {
+			OWLClassImpl impl = (OWLClassImpl) type;
+			String iriFragment = impl.getIRI().getFragment();
+			if (iriFragment.contains("MetaData"))
+				return iriFragment;
+		}
+
+		return "NO_VALUE";
 	}
 
 	// Value

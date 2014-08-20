@@ -15,5 +15,10 @@ public enum LogicalOperator implements FactSetElement {
 	/** The or. */
 	OR,
 	/** The no value. */
-	NO_VALUE
+	NO_VALUE;
+
+	@Override
+	public void optimize() {
+		// nothing to do here, yet
+	}
 }

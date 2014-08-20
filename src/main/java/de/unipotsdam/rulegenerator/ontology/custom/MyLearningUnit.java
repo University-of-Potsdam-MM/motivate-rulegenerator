@@ -6,15 +6,11 @@ import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 
-import de.unipotsdam.rulegenerator.enums.FactOperator;
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
-import de.unipotsdam.rulegenerator.ontology.MeasurableContextInformation;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInformation;
 import de.unipotsdam.rulegenerator.rules.Fact;
-import de.unipotsdam.rulegenerator.rules.FactParameter;
 import de.unipotsdam.rulegenerator.rules.FactSet;
 
 public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit {
@@ -258,23 +254,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		int i = 0;
 		for (MyMeasurableContextInformation contextInformation : this
 				.getContextInformation()) {
-			Fact learningUnitFact = new Fact();
-			learningUnitFact.setContextInformation(contextInformation
-					.getSpecificContextInformationType());
-			learningUnitFact.setValue(contextInformation.getValue().toString());
-			learningUnitFact.setOperator(FactOperator
-					.valueOf(contextInformation.getValueOperator()));
-			if (contextInformation.hasContextInformationParameters()) {
-				for (MyContextInformationParameter contextInformationParameter : contextInformation
-						.getContextInformationParameters()) {
-					FactParameter factParameter = new FactParameter(
-							contextInformationParameter
-									.getSpecificParameterType(),
-							FactOperator.IS, contextInformationParameter
-									.getValue().toString());
-					learningUnitFact.addFactParameter(factParameter);
-				}
-			}
+			Fact learningUnitFact = Fact.FactFromContextInformation(contextInformation);
 			learningUnitFacts.addFact(learningUnitFact);
 			if (i < this.getContextInformationCount() - 1)
 				learningUnitFacts.addLogicalOperator(this.getLogicalOperator());
@@ -283,10 +263,22 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		return learningUnitFacts;
 	}
 
-	// Meta Data
+	// Learning Unit Class
 
-	public Collection<? extends MyMetaData> getMetaData() {
+	public Boolean hasLearningUnitClass() {
+		return this.getLearningUnitClasses().toArray().length > 0;
+	}
+
+	public MyLearningUnitClass getLearningUnitClass() {
+		if (this.hasLearningUnitClass())
+			return (MyLearningUnitClass) getLearningUnitClasses().toArray()[0];
+		else
+			return null;
+	}
+
+	public Collection<? extends MyLearningUnitClass> getLearningUnitClasses() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASMETADATA, MyMetaData.class);
+				Vocabulary.OBJECT_PROPERTY_HASLEARNINGUNITCLASS,
+				MyLearningUnitClass.class);
 	}
 }
