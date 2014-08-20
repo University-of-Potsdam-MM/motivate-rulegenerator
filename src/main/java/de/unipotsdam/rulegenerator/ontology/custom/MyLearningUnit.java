@@ -263,22 +263,18 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		return learningUnitFacts;
 	}
 
-	// Learning Unit Class
+	// Meta Data
 
-	public Boolean hasLearningUnitClass() {
-		return this.getLearningUnitClasses().toArray().length > 0;
+	public Boolean hasMetaData() {
+		return this.getMetaDataCount() > 0;
+	}
+	
+	public Integer getMetaDataCount() {
+		return this.getMetaData().toArray().length;
 	}
 
-	public MyLearningUnitClass getLearningUnitClass() {
-		if (this.hasLearningUnitClass())
-			return (MyLearningUnitClass) getLearningUnitClasses().toArray()[0];
-		else
-			return null;
-	}
-
-	public Collection<? extends MyLearningUnitClass> getLearningUnitClasses() {
+	public Collection<? extends MyMetaData> getMetaData() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASLEARNINGUNITCLASS,
-				MyLearningUnitClass.class);
+				Vocabulary.OBJECT_PROPERTY_HASMETADATA, MyMetaData.class);
 	}
 }

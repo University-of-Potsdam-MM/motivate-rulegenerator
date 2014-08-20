@@ -134,13 +134,13 @@ public class AdaptationRule {
 
 	// apply potential constraints
 	public void applyLearningUnitConstraints(MyLearningUnit currentLearningUnit, LearningUnitClassFactSet learningUnitFactSet) throws Exception {
-		if (currentLearningUnit.hasLearningUnitClass()) {
-			System.out.println(currentLearningUnit.getID() + " has a learning unit class.");
+		if (currentLearningUnit.hasMetaData()) {
+			System.out.println(currentLearningUnit.getID() + " has meta data.");
 			for (Entry<MyLearningUnitClass, FactSet> entry : learningUnitFactSet.getLearningUnitClassFactSets().entrySet()) {
 				MyLearningUnitClass constraintLearningUnitClass = entry.getKey();
 				FactSet factSet = entry.getValue();
 				
-				if (constraintLearningUnitClass.equals(currentLearningUnit.getLearningUnitClass())) {
+				if (constraintLearningUnitClass.equals(currentLearningUnit.getMetaData())) {
 					this.getSituation().constraints.addLogicalOperator(LogicalOperator.AND);;
 					this.getSituation().constraints.addFactSet(factSet);
 				}

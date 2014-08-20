@@ -25,38 +25,17 @@ public class MyLearningUnitClass extends DefaultLearningUnitClass implements
 	// Description
 
 	public String description() {
-		String description = new String();
-		int i = 0;
-
-		Collection<? extends MyMetaData> theMetaData = this.getMetaData();
-		List<? extends MyMetaData> metaDataList = new ArrayList<MyMetaData>(
-				theMetaData);
-		Collections.sort(metaDataList, new Comparator<MyMetaData>() {
-
-			@Override
-			public int compare(MyMetaData o1, MyMetaData o2) {
-				return o1.description().compareToIgnoreCase(o2.description());
-			}
-
-		});
-
-		for (MyMetaData metaData : metaDataList) {
-			description += metaData.description();
-			if (i < this.getMetaDataCount() - 1)
-				description += "[" + this.getLogicalOperator().toString() + "]";
-			i++;
-		}
-		return description;
+		return MyMetaData.DescriptionFromMetaDataCollection(this.getMetaData());
 	}
 
 	// Comparison
 
-	public Boolean equals(MyLearningUnitClass learningUnitClass) {
-		if (learningUnitClass.getLogicalOperator().equals(LogicalOperator.AND)) {
-			return this.description().equals(learningUnitClass.description());
+	public Boolean equals(Collection<? extends MyMetaData> metaData) {
+		if (this.getLogicalOperator().equals(LogicalOperator.AND)) {
+			return this.description().equals(MyMetaData.DescriptionFromMetaDataCollection(metaData));
 		} else {
-			for (MyMetaData metaData : this.getMetaData()) {
-				if (learningUnitClass.contains(metaData)) return true;
+			for (MyMetaData theMetaData : metaData) {
+				if (this.contains(theMetaData)) return true;
 			}
 			return false;
 		}
@@ -89,6 +68,10 @@ public class MyLearningUnitClass extends DefaultLearningUnitClass implements
 
 	// Meta Data
 
+	public Boolean hasMetaData() {
+		return this.getMetaDataCount() > 0;
+	}
+	
 	public Integer getMetaDataCount() {
 		return this.getMetaData().toArray().length;
 	}

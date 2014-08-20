@@ -1455,15 +1455,15 @@
     <SubClassOf>
         <Class IRI="#LearningUnit"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasLearningUnitClass"/>
-            <Class IRI="#LearningUnitClass"/>
+            <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+            <Class IRI="#MeasurableContextInformation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnit"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-            <Class IRI="#MeasurableContextInformation"/>
+            <ObjectProperty IRI="#hasMetaData"/>
+            <Class IRI="#MetaData"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3377,11 +3377,6 @@
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-LearningUnit-B"/>
-        <NamedIndividual IRI="#Example-LearningUnitClass"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-B"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
@@ -3390,6 +3385,11 @@
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-B"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMetaData"/>
+        <NamedIndividual IRI="#Example-LearningUnit-B"/>
+        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasPrerequisite"/>
