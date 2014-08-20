@@ -1,1 +1,8 @@
-de.unipotsdam.rulegenerator.objects
+de.unipotsdam.rulegenerator.debugging
+de.unipotsdam.rulegenerator.enums
+de.unipotsdam.rulegenerator.jaxrs
+de.unipotsdam.rulegenerator.jaxrs.services
+de.unipotsdam.rulegenerator.ontology
+de.unipotsdam.rulegenerator.ontology.custom
+de.unipotsdam.rulegenerator.ontology.impl
+de.unipotsdam.rulegenerator.rules
