@@ -39,11 +39,11 @@ public class Fact implements FactSetElement {
 			throws java.lang.Exception {
 		if (!factSet.hasChildren()
 				|| factSet.getChildrenCount() > 1
-				|| (factSet.hasChildren() && factSet.getLastObject().getClass() != Fact.class)) {
+				|| (factSet.hasChildren() && factSet.getLastChild().getClass() != Fact.class)) {
 			throw new java.lang.Exception(
 					"A fact can only be created from a fact set with exactly one fact as a child.");
 		} else {
-			return (Fact) factSet.getLastObject();
+			return (Fact) factSet.getLastChild();
 		}
 	}
 	

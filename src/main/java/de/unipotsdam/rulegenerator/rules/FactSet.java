@@ -2,6 +2,7 @@ package de.unipotsdam.rulegenerator.rules;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -81,16 +82,16 @@ public class FactSet implements FactSetElement {
 
 	public void addFactSet(FactSet factSet) throws Exception {
 		if (this.children.size() > 0
-				&& this.getLastObject().getClass() != LogicalOperator.class) {
+				&& this.getLastChild().getClass() != LogicalOperator.class) {
 			throw new Exception(
 					"A fact set must not be preceded by another fact or fact set without an intermediate logical operator. Last Object Class: "
-							+ this.getLastObject().getClass());
+							+ this.getLastChild().getClass());
 		} else {
 			this.children.add(factSet);
 		}
 	}
 
-	public Object getLastObject() {
+	public FactSetElement getLastChild() {
 		return this.children.get(this.children.size() - 1);
 	}
 
@@ -102,7 +103,7 @@ public class FactSet implements FactSetElement {
 
 	public void addFact(Fact fact) throws Exception {
 		if (this.children.size() > 0
-				&& this.getLastObject().getClass() != LogicalOperator.class)
+				&& this.getLastChild().getClass() != LogicalOperator.class)
 			throw new Exception(
 					"A fact must not be preceded by another fact or fact set without an intermediate logical operator.");
 		this.children.add(fact);
@@ -124,7 +125,7 @@ public class FactSet implements FactSetElement {
 	public void addLogicalOperator(LogicalOperator logicalOperator)
 			throws Exception {
 		if (this.children.size() > 0
-				&& this.getLastObject().getClass() == LogicalOperator.class)
+				&& this.getLastChild().getClass() == LogicalOperator.class)
 			throw new Exception(
 					"A logical operator can not be followed by another logical operator.");
 		if (this.children.size() == 0)
@@ -139,13 +140,36 @@ public class FactSet implements FactSetElement {
 
 	@Override
 	public void optimize() throws Exception {
+		// disband all fact sets with only AND operators
+		if (this.getChildrenCount() > 1
+				&& this.getLogicalOperator() == LogicalOperator.AND) {
+			System.out.println(this.getChildrenCount() + " " + this.getLogicalOperator());
+			List<FactSetElement> newChildren = new ArrayList<FactSetElement>();
+			for (FactSetElement factSetElement : this.getChildren()) {
+				if (factSetElement.getClass() == FactSet.class) {
+					for (FactSetElement factSetElementChild : ((FactSet) factSetElement)
+							.getChildren()) {
+						newChildren.add(factSetElementChild);
+					}
+				} else {
+					newChildren.add(factSetElement);
+				}
+			}
+			this.setChildren(newChildren);
+		}
+
 		for (FactSetElement factSetElement : this.getChildren()) {
 			if (factSetElement.getClass() == FactSet.class) {
 				FactSet factSet = (FactSet) factSetElement;
-				if (factSet.getChildrenCount() == 1
-						&& factSet.getLastObject().getClass() == Fact.class) {
-					this.replaceChild(factSetElement,
-							Fact.FactFromFactSet(factSet));
+				if (factSet.getChildrenCount() == 1) {
+					if (factSet.getLastChild().getClass() == Fact.class) {
+						this.replaceChild(factSetElement,
+								Fact.FactFromFactSet(factSet));
+					} else if (factSet.getLastChild().getClass() == FactSet.class) {
+						factSet.optimize();
+						this.replaceChild(factSetElement,
+								factSet.getLastChild());
+					}
 				} else {
 					factSet.optimize();
 				}
@@ -156,8 +180,29 @@ public class FactSet implements FactSetElement {
 
 	}
 
-	private void replaceChild(FactSetElement original,
-			FactSetElement replacement) {
-		this.children.set(this.children.indexOf(original), replacement);
+	private void replaceChild(FactSetElement originalElement,
+			FactSetElement replacementElement) {
+		this.children.set(this.children.indexOf(originalElement),
+				replacementElement);
+	}
+
+	private void addChildAfterChild(FactSetElement originalElement,
+			FactSetElement newElement) {
+		this.children.add(this.children.indexOf(originalElement), newElement);
+	}
+
+	public LogicalOperator getLogicalOperator() {
+		LogicalOperator logicalOperator = LogicalOperator.NO_VALUE;
+		for (FactSetElement factSetElement : this.children) {
+			if (factSetElement.getClass() == LogicalOperator.class) {
+				if (logicalOperator == LogicalOperator.NO_VALUE) {
+					logicalOperator = (LogicalOperator) factSetElement;
+				} else if (logicalOperator != LogicalOperator.NO_VALUE
+						&& logicalOperator != (LogicalOperator) factSetElement) {
+					logicalOperator = LogicalOperator.MIXED;
+				}
+			}
+		}
+		return logicalOperator;
 	}
 }
