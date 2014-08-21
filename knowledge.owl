@@ -153,9 +153,6 @@
         <Class IRI="#MetaData"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MetaDataConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
     </Declaration>
     <Declaration>
@@ -760,13 +757,6 @@
     <SubClassOf>
         <Class IRI="#ContentTypeMetaData"/>
         <Class IRI="#MetaData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ContentTypeMetaData"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ContextInformationConstraintRequirement"/>
@@ -1469,10 +1459,13 @@
     <SubClassOf>
         <Class IRI="#LearningUnitClass"/>
         <ObjectIntersectionOf>
-            <DataSomeValuesFrom>
+            <DataAllValuesFrom>
                 <DataProperty IRI="#hasLogicalOperator"/>
-                <Datatype abbreviatedIRI="xsd:string"/>
-            </DataSomeValuesFrom>
+                <DataOneOf>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">AND</Literal>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">OR</Literal>
+                </DataOneOf>
+            </DataAllValuesFrom>
             <DataExactCardinality cardinality="1">
                 <DataProperty IRI="#hasLogicalOperator"/>
             </DataExactCardinality>
@@ -1552,8 +1545,11 @@
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MetaDataConstraintRequirement"/>
-        <Class IRI="#ConstraintRequirement"/>
+        <Class IRI="#MetaData"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
@@ -3714,8 +3710,8 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isContextInformationParameterOf"/>
         <ObjectProperty IRI="#hasContextInformationParameter"/>
+        <ObjectProperty IRI="#isContextInformationParameterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
