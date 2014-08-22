@@ -108,7 +108,7 @@
 		<xsl:text>define ContextInformation {&#xa;</xsl:text>
 		<xsl:text>&#x9;id : '',&#xa;</xsl:text>
 		<xsl:text>&#x9;value : 'NO_VALUE',&#xa;</xsl:text>
-		<xsl:text>&#x9;this.parameters = { };&#xa;</xsl:text>
+		<xsl:text>&#x9;parameters : { },&#xa;</xsl:text>
 		<xsl:text>&#x9;constructor : function(id, value, parameters) {&#xa;</xsl:text>
 		<xsl:text>&#x9;&#x9;this.id = id;&#xa;</xsl:text>
 		<xsl:text>&#x9;&#x9;this.value = value;&#xa;</xsl:text>
@@ -118,9 +118,9 @@
 		<xsl:text>&#xa;&#xa;</xsl:text>
 
 		<xsl:for-each select="adaptationRules/adaptationRule">
-			<xsl:text>rule </xsl:text>
+			<xsl:text>rule "</xsl:text>
 			<xsl:value-of select="id" />
-			<xsl:text> { &#xa;</xsl:text>
+			<xsl:text>" { &#xa;</xsl:text>
 			<xsl:text>&#x9;when {&#xa;</xsl:text>
 			<!-- Gather all facts -->
 			<xsl:variable name="contextInformation"
@@ -128,10 +128,11 @@
 			<xsl:for-each select="$contextInformation">
 				<xsl:text>&#x9;&#x9;</xsl:text>
 				<xsl:value-of select="concat('c', position())" />
-				<xsl:text> ContextInformation;&#xa;</xsl:text>
+				<xsl:text> : ContextInformation</xsl:text>
+				<xsl:if test="not(position() = last())">;&#xa;</xsl:if>
 			</xsl:for-each>
 			<!-- Phrase the rule -->
-			<xsl:text>&#x9;&#x9;</xsl:text>
+			<xsl:text> </xsl:text>
 			<!-- Negation -->
 			<xsl:if test="current()/negation = 'true'">
 				<xsl:text>not(</xsl:text>
