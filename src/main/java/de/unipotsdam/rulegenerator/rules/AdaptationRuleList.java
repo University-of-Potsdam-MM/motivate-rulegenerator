@@ -28,10 +28,4 @@ public class AdaptationRuleList {
 	public void addAdaptationRule(AdaptationRule adaptationRule) {
 		this.list.add(adaptationRule);
 	}
-
-	public void optimize() throws Exception {
-		for (AdaptationRule rule : this.getList()) {
-			rule.optimize();
-		}
-	}
 }

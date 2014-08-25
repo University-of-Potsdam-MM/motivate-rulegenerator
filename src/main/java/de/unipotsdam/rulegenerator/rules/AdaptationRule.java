@@ -141,14 +141,10 @@ public class AdaptationRule {
 				FactSet factSet = entry.getValue();
 				
 				if (constraintLearningUnitClass.equals(currentLearningUnit.getMetaData())) {
-					this.getSituation().constraints.addLogicalOperator(LogicalOperator.AND);;
+					this.getSituation().constraints.addLogicalOperator(LogicalOperator.AND);
 					this.getSituation().constraints.addFactSet(factSet);
 				}
 			}
 		}
-	}
-	
-	public void optimize() throws Exception {
-		this.getSituation().optimize();
 	}
 }

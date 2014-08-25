@@ -57,13 +57,17 @@ public class Situation {
 			MyLearningUnit targetLearningUnit) throws Exception {
 		this.applyTemplate(template, currentLearningUnit, targetLearningUnit);
 	}
-
+	
 	public void addConstraint(FactSet constraint) throws Exception {
 		this.constraints.addFactSet(constraint);
 	}
 
 	public void addConstraint(LogicalOperator constraint) throws Exception {
 		this.constraints.addLogicalOperator(constraint);
+	}
+	
+	public void addUserFact(FactSetElement fastSetElement) throws Exception {
+		this.userFacts.addFactSetElement(fastSetElement);
 	}
 
 	public void addUserFact(FactSet userFact) throws Exception {
@@ -141,7 +145,7 @@ public class Situation {
 		switch (template) {
 		case CURRENT_LEARNING_UNIT_FACTS:
 			if (currentLearningUnit.getContextInformationCount() > 0)
-				this.userFacts.addFactSet(currentLearningUnit.getFacts());
+				this.userFacts.addFactSetElement(currentLearningUnit.getFacts());
 			break;
 		case CURRENT_LEARNING_UNIT_ID:
 			if (this.constraints.size() > 0)
@@ -180,12 +184,6 @@ public class Situation {
 			break;
 		default:
 			break;
-		}
-	}
-
-	public void optimize() throws Exception {
-		for (FactSetElement factSetElement : this.factSets.getChildren()) {
-			factSetElement.optimize();
 		}
 	}
 }

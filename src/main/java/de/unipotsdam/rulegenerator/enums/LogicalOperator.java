@@ -17,9 +17,4 @@ public enum LogicalOperator implements FactSetElement {
 	/** The no value. */
 	NO_VALUE,
 	MIXED;
-
-	@Override
-	public void optimize() {
-		// nothing to do here, yet
-	}
 }

@@ -88,8 +88,6 @@ public class RuleFactory {
 					.getLearningUnitClass();
 			learningUnitConstraintFactSet.put(learningUnitClass, learningUnitConstraint.getFactSet());
 		}
-		
-		System.out.println(learningUnitConstraintFactSet.toString());
 
 		for (MyLearningUnit currentLearningUnit : learningUnits) {
 
@@ -156,9 +154,6 @@ public class RuleFactory {
 
 			}
 		}
-		
-		// optimize rules
-		ruleList.optimize();
 
 		return ruleList;
 	}
