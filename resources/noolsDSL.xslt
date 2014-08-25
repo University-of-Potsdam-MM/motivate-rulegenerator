@@ -5,7 +5,6 @@
 
 	<xsl:function name="foo:exploreFactSetElement">
 		<xsl:param name="factSetElement" />
-		<xsl:param name="facts" />
 		<xsl:param name="contextInformation" />
 
 		<xsl:variable name="currentElementName" select="name($factSetElement)" />
@@ -57,7 +56,7 @@
 				<xsl:text>(</xsl:text>
 				<xsl:for-each select="$factSetElement/*">
 					<xsl:value-of
-						select="foo:exploreFactSetElement(current(), $facts, $contextInformation)" />
+						select="foo:exploreFactSetElement(current(), $contextInformation)" />
 				</xsl:for-each>
 				<xsl:text>)</xsl:text>
 			</xsl:when>
@@ -140,7 +139,7 @@
 			<!-- Constraints -->
 			<xsl:for-each select="situation/constraints/*">
 				<xsl:value-of
-					select="foo:exploreFactSetElement(current(), situation/constraints//fact, $contextInformation)" />
+					select="foo:exploreFactSetElement(current(), $contextInformation)" />
 			</xsl:for-each>
 			<xsl:if
 				test="count(situation/constraints/*) > 0 and count(situation/userFacts/*) > 0">
@@ -149,7 +148,7 @@
 			<!-- User Facts -->
 			<xsl:for-each select="situation/userFacts/*">
 				<xsl:value-of
-					select="foo:exploreFactSetElement(current(), situation/userFacts//fact, $contextInformation)" />
+					select="foo:exploreFactSetElement(current(), $contextInformation)" />
 			</xsl:for-each>
 			<xsl:if test="current()/negation = 'true'">
 				<xsl:text>)</xsl:text>
