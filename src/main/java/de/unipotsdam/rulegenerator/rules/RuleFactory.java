@@ -91,8 +91,7 @@ public class RuleFactory {
 		
 		System.out.println(learningUnitConstraintFactSet.toString());
 
-		for (LearningUnit learningUnit : learningUnits) {
-			MyLearningUnit currentLearningUnit = (MyLearningUnit) learningUnit;
+		for (MyLearningUnit currentLearningUnit : learningUnits) {
 
 			/** SELECT() **/
 
