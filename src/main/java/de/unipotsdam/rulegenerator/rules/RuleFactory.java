@@ -20,7 +20,7 @@ public class RuleFactory {
 	private Collection<? extends MyLearningUnit> learningUnits;
 	private Collection<? extends MyFeatureConstraint> featureConstraints;
 	private Collection<? extends MyLearningUnitConstraint> learningUnitConstraints;
-	private LearningUnitClassFactSet learningUnitClassFactSet = new LearningUnitClassFactSet();
+	private LearningUnitClassFactSet learningUnitConstraintFactSet = new LearningUnitClassFactSet();
 
 	public RuleFactory(OWLOntology ontology) {
 		super();
@@ -86,10 +86,10 @@ public class RuleFactory {
 		for (MyLearningUnitConstraint learningUnitConstraint : this.learningUnitConstraints) {
 			MyLearningUnitClass learningUnitClass = learningUnitConstraint
 					.getLearningUnitClass();
-			learningUnitClassFactSet.put(learningUnitClass, learningUnitConstraint.getFactSet());
+			learningUnitConstraintFactSet.put(learningUnitClass, learningUnitConstraint.getFactSet());
 		}
 		
-		System.out.println(learningUnitClassFactSet.toString());
+		System.out.println(learningUnitConstraintFactSet.toString());
 
 		for (LearningUnit learningUnit : learningUnits) {
 			MyLearningUnit currentLearningUnit = (MyLearningUnit) learningUnit;
@@ -100,7 +100,7 @@ public class RuleFactory {
 			// information are present
 			if (currentLearningUnit.getContextInformationCount() > 0)
 				ruleList.addAdaptationRule(new SelectAdaptationRule(
-						currentLearningUnit, learningUnitClassFactSet));
+						currentLearningUnit, learningUnitConstraintFactSet));
 			
 			/** RELATIONS **/
 
