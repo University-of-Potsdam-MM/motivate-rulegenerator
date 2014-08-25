@@ -158,10 +158,7 @@ public class RuleFactory {
 		}
 		
 		// optimize rules
-		
-		for (AdaptationRule rule : ruleList.getList()) {
-			rule.optimize();
-		}
+		ruleList.optimize();
 
 		return ruleList;
 	}
