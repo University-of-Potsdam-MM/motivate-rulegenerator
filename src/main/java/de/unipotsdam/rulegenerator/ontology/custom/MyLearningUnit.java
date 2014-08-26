@@ -165,7 +165,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		return this.getPrerequisites().toArray().length;
 	}
 
-	public Collection<? extends WrappedIndividual> getPrerequisites() {
+	public Collection<? extends MyLearningUnit> getPrerequisites() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASPREREQUISITE,
 				MyLearningUnit.class);

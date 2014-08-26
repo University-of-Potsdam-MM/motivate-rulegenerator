@@ -58,24 +58,12 @@ public class Situation {
 		this.applyTemplate(template, currentLearningUnit, targetLearningUnit);
 	}
 	
-	public void addConstraint(FactSet constraint) throws Exception {
-		this.constraints.addFactSet(constraint);
-	}
-
-	public void addConstraint(LogicalOperator constraint) throws Exception {
-		this.constraints.addLogicalOperator(constraint);
+	public void addConstraint(FactSetElement constraint) throws Exception {
+		this.constraints.addFactSetElement(constraint);
 	}
 	
-	public void addUserFact(FactSetElement fastSetElement) throws Exception {
-		this.userFacts.addFactSetElement(fastSetElement);
-	}
-
-	public void addUserFact(FactSet userFact) throws Exception {
-		this.userFacts.addFactSet(userFact);
-	}
-
-	public void addUserFact(LogicalOperator userFact) throws Exception {
-		this.userFacts.addLogicalOperator(userFact);
+	public void addUserFact(FactSetElement userFact) throws Exception {
+		this.userFacts.addFactSetElement(userFact);
 	}
 
 	public LogicalOperator getUserFactsLogicalOperator() {
@@ -87,7 +75,7 @@ public class Situation {
 	}
 
 	public void addPrerequisites(
-			Collection<? extends WrappedIndividual> prerequisites)
+			Collection<? extends MyLearningUnit> prerequisites)
 			throws Exception {
 		// create fact set for prerequisites
 		FactSet prerequisitesFactSet = new FactSet();

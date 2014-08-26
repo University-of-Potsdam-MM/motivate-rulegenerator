@@ -2,7 +2,6 @@ package de.unipotsdam.rulegenerator.rules;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
