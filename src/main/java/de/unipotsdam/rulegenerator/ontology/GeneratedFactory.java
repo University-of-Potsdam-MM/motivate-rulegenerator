@@ -1034,37 +1034,6 @@ public class GeneratedFactory implements CodeGenerationFactory {
 
 
     /* ***************************************************
-     * Class http://www.motivate-project.de/ontologies/knowledge#IntervalConstraintRequirement
-     */
-
-    {
-        javaMapping.add("http://www.motivate-project.de/ontologies/knowledge#IntervalConstraintRequirement", IntervalConstraintRequirement.class, DefaultIntervalConstraintRequirement.class);
-    }
-
-    /**
-     * Creates an instance of type IntervalConstraintRequirement.  Modifies the underlying ontology.
-     */
-    public IntervalConstraintRequirement createIntervalConstraintRequirement(String name) {
-		return delegate.createWrappedIndividual(name, Vocabulary.CLASS_INTERVALCONSTRAINTREQUIREMENT, DefaultIntervalConstraintRequirement.class);
-    }
-
-    /**
-     * Gets an instance of type IntervalConstraintRequirement with the given name.  Does not modify the underlying ontology.
-     * @param name the name of the OWL named individual to be retrieved.
-     */
-    public IntervalConstraintRequirement getIntervalConstraintRequirement(String name) {
-		return delegate.getWrappedIndividual(name, Vocabulary.CLASS_INTERVALCONSTRAINTREQUIREMENT, DefaultIntervalConstraintRequirement.class);
-    }
-
-    /**
-     * Gets all instances of IntervalConstraintRequirement from the ontology.
-     */
-    public Collection<? extends IntervalConstraintRequirement> getAllIntervalConstraintRequirementInstances() {
-		return delegate.getWrappedIndividuals(Vocabulary.CLASS_INTERVALCONSTRAINTREQUIREMENT, DefaultIntervalConstraintRequirement.class);
-    }
-
-
-    /* ***************************************************
      * Class http://www.motivate-project.de/ontologies/knowledge#LatitudeContextParameter
      */
 

@@ -120,9 +120,6 @@
         <Class IRI="#HasScreenReaderFunctionalityMeasurableInformation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IntervalConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#LatitudeContextParameter"/>
     </Declaration>
     <Declaration>
@@ -483,6 +480,12 @@
         <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </Declaration>
     <Declaration>
@@ -493,6 +496,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-IntervalConstraintRequirement"/>
@@ -532,6 +538,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
@@ -1397,24 +1406,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#IntervalConstraintRequirement"/>
-        <Class IRI="#ConstraintRequirement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#IntervalConstraintRequirement"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasEndTime"/>
-            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#IntervalConstraintRequirement"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasStartingTime"/>
-            <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LatitudeContextParameter"/>
@@ -3215,6 +3206,14 @@
         <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CurrentTimeMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CurrentTimeMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#UserRoleMeasurableInformation"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </ClassAssertion>
@@ -3231,8 +3230,8 @@
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IntervalConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-IntervalConstraintRequirement"/>
+        <Class IRI="#ContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#LatitudeContextParameter"/>
@@ -3281,6 +3280,10 @@
     <ClassAssertion>
         <Class IRI="#ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TemperatureScaleContextParameter"/>
@@ -3345,7 +3348,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-IntervalConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
@@ -3361,6 +3369,11 @@
         <ObjectProperty IRI="#hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasAlternative"/>
@@ -3448,6 +3461,11 @@
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
@@ -3471,6 +3489,26 @@
         <DataProperty IRI="#hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
         <Literal datatypeIRI="&xsd;string">AND</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">16:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
+        <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">09:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValueOperator"/>
+        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
+        <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
@@ -3710,8 +3748,8 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
         <ObjectProperty IRI="#isContextInformationParameterOf"/>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
