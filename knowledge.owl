@@ -27,6 +27,9 @@
         <Literal datatypeIRI="&xsd;float">1.1</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="#AgeLimitMetaData"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#AppointmentDetailContextParameter"/>
     </Declaration>
     <Declaration>
@@ -111,9 +114,6 @@
         <Class IRI="#Feature"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FeatureConstraint"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
     </Declaration>
     <Declaration>
@@ -129,7 +129,7 @@
         <Class IRI="#LearningUnitClass"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LearningUnitConstraint"/>
+        <Class IRI="#LearningUnitClassConstraint"/>
     </Declaration>
     <Declaration>
         <Class IRI="#LearningUnitIDContextParameter"/>
@@ -192,10 +192,16 @@
         <Class IRI="#RankingConstraintRequirement"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#RestrictFeatureConstraint"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ScenarioContext"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ScenarioContextInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScreenreadSuitableMetaData"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SituationalContext"/>
@@ -223,6 +229,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TimeUntilTimestampMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UserAgeMeasurableInformation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
@@ -477,7 +486,7 @@
         <NamedIndividual IRI="#AppUsageFeature"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
@@ -531,7 +540,7 @@
         <NamedIndividual IRI="#Example-LearningUnitClass"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
+        <NamedIndividual IRI="#Example-LearningUnitClassConstraint"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
@@ -580,6 +589,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SituationalContext"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SuccestAlternativeFeature"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TechnicalContext"/>
@@ -695,6 +707,23 @@
             </ObjectAllValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AgeLimitMetaData"/>
+        <Class IRI="#MetaData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AgeLimitMetaData"/>
+        <ObjectUnionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasValue"/>
+                <Datatype abbreviatedIRI="xsd:int"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasValue"/>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+            </DataExactCardinality>
+        </ObjectUnionOf>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#AppointmentDetailContextParameter"/>
         <Class IRI="#ContextInformationParameter"/>
@@ -1333,23 +1362,6 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FeatureConstraint"/>
-        <Class IRI="#Constraint"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FeatureConstraint"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasFeature"/>
-                <Class IRI="#Feature"/>
-            </ObjectSomeValuesFrom>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#hasFeature"/>
-                <Class IRI="#Feature"/>
-            </ObjectExactCardinality>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -1470,11 +1482,11 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#LearningUnitConstraint"/>
+        <Class IRI="#LearningUnitClassConstraint"/>
         <Class IRI="#Constraint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#LearningUnitConstraint"/>
+        <Class IRI="#LearningUnitClassConstraint"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#hasLearningUnitClass"/>
@@ -1539,7 +1551,6 @@
         <Class IRI="#MetaData"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -1738,8 +1749,36 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RestrictFeatureConstraint"/>
+        <Class IRI="#Constraint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RestrictFeatureConstraint"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasFeature"/>
+                <Class IRI="#Feature"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasFeature"/>
+                <Class IRI="#Feature"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ScenarioContext"/>
         <Class IRI="#SituationalContext"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScreenreadSuitableMetaData"/>
+        <Class IRI="#MetaData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScreenreadSuitableMetaData"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SituationalContext"/>
@@ -1813,6 +1852,37 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserAgeMeasurableInformation"/>
+        <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserAgeMeasurableInformation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasContextClass"/>
+            <Class IRI="#PersonalContext"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserAgeMeasurableInformation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#hasValueOperator"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">GREATER_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">IS_NOT</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">LESS_THEN</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
+            </DataOneOf>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UserAgeMeasurableInformation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserCurrentLearningStyleInputMeasurableInformation"/>
@@ -3202,8 +3272,8 @@
         <NamedIndividual IRI="#AppUsageFeature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FeatureConstraint"/>
-        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
+        <Class IRI="#RestrictFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CurrentTimeMeasurableInformation"/>
@@ -3270,8 +3340,8 @@
         <NamedIndividual IRI="#Example-LearningUnitClass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#LearningUnitConstraint"/>
-        <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
+        <Class IRI="#LearningUnitClassConstraint"/>
+        <NamedIndividual IRI="#Example-LearningUnitClassConstraint"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#LongitudeContextParameter"/>
@@ -3338,6 +3408,10 @@
         <NamedIndividual IRI="#SituationalContext"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Feature"/>
+        <NamedIndividual IRI="#SuccestAlternativeFeature"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#TechnicalContext"/>
         <NamedIndividual IRI="#TechnicalContext"/>
     </ClassAssertion>
@@ -3347,22 +3421,22 @@
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
         <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasFeature"/>
-        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
         <NamedIndividual IRI="#AppUsageFeature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -3447,12 +3521,12 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
+        <NamedIndividual IRI="#Example-LearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
+        <NamedIndividual IRI="#Example-LearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-LearningUnitClass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -3487,7 +3561,7 @@
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLogicalOperator"/>
-        <NamedIndividual IRI="#Example-AppUsageFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
         <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -3602,7 +3676,7 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasLogicalOperator"/>
-        <NamedIndividual IRI="#Example-LearningUnitConstraint"/>
+        <NamedIndividual IRI="#Example-LearningUnitClassConstraint"/>
         <Literal datatypeIRI="&xsd;string">OR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -3903,7 +3977,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFeature"/>
-        <Class IRI="#FeatureConstraint"/>
+        <Class IRI="#RestrictFeatureConstraint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPrerequisite"/>
@@ -3997,11 +4071,11 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
-        <Class IRI="#LearningUnitConstraint"/>
+        <Class IRI="#LearningUnitClassConstraint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
-        <Class IRI="#LearningUnitConstraint"/>
+        <Class IRI="#LearningUnitClassConstraint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasStartingTime"/>

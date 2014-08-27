@@ -10,16 +10,16 @@ import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
 import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
 import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
-import de.unipotsdam.rulegenerator.ontology.custom.MyFeatureConstraint;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitClass;
-import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitConstraint;
+import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitClassConstraint;
+import de.unipotsdam.rulegenerator.ontology.custom.MyRestrictFeatureConstraint;
 
 public class RuleFactory {
 	private OWLOntology ontology;
 	private Collection<? extends MyLearningUnit> learningUnits;
-	private Collection<? extends MyFeatureConstraint> featureConstraints;
-	private Collection<? extends MyLearningUnitConstraint> learningUnitConstraints;
+	private Collection<? extends MyRestrictFeatureConstraint> featureConstraints;
+	private Collection<? extends MyLearningUnitClassConstraint> learningUnitConstraints;
 	private LearningUnitClassFactSet learningUnitConstraintFactSet = new LearningUnitClassFactSet();
 
 	public RuleFactory(OWLOntology ontology) {
@@ -54,9 +54,9 @@ public class RuleFactory {
 
 		// feature constraints
 
-		for (MyFeatureConstraint featureConstraint : this.featureConstraints) {
+		for (MyRestrictFeatureConstraint featureConstraint : this.featureConstraints) {
 			AdaptationRule featureConstraintRule = new AdaptationRule(
-					"FeatureConstraintRule[" + timestamp + "]",
+					"RestrictFeatureConstraintRule[" + timestamp + "]",
 					ActionOperator.RESTRICT_FEATURE, featureConstraint
 							.getFeature().getIRIShort());
 			featureConstraintRule.setNegation(true);
@@ -83,7 +83,7 @@ public class RuleFactory {
 
 		// constraints based on meta data
 
-		for (MyLearningUnitConstraint learningUnitConstraint : this.learningUnitConstraints) {
+		for (MyLearningUnitClassConstraint learningUnitConstraint : this.learningUnitConstraints) {
 			MyLearningUnitClass learningUnitClass = learningUnitConstraint
 					.getLearningUnitClass();
 			learningUnitConstraintFactSet.put(learningUnitClass, learningUnitConstraint.getFactSet());
