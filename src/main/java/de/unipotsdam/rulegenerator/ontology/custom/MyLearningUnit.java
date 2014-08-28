@@ -12,6 +12,7 @@ import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
 import de.unipotsdam.rulegenerator.rules.Fact;
 import de.unipotsdam.rulegenerator.rules.FactSet;
+import de.unipotsdam.rulegenerator.rules.FactSetElement;
 
 public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit {
 	public MyLearningUnit(CodeGenerationInference inference, IRI iri) {
@@ -164,7 +165,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		return this.getPrerequisites().toArray().length;
 	}
 
-	public Collection<? extends WrappedIndividual> getPrerequisites() {
+	public Collection<? extends MyLearningUnit> getPrerequisites() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASPREREQUISITE,
 				MyLearningUnit.class);
@@ -247,19 +248,26 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 
 	// Facts
 
-	public FactSet getFacts() throws Exception {
-		FactSet learningUnitFacts = new FactSet();
-		// create facts for the context information associated to the learning
-		// unit
-		int i = 0;
-		for (MyMeasurableContextInformation contextInformation : this
-				.getContextInformation()) {
-			Fact learningUnitFact = Fact.FactFromContextInformation(contextInformation);
-			learningUnitFacts.addFact(learningUnitFact);
-			if (i < this.getContextInformationCount() - 1)
-				learningUnitFacts.addLogicalOperator(this.getLogicalOperator());
-			i++;
+	public FactSetElement getFacts() throws Exception {
+		FactSetElement learningUnitFacts;
+		if (this.getContextInformationCount() > 1) {
+			learningUnitFacts = new FactSet();
+			// create facts for the context information associated to the learning
+			// unit
+			int i = 0;
+			for (MyMeasurableContextInformation contextInformation : this
+					.getContextInformation()) {
+				Fact learningUnitFact = Fact.FactFromContextInformation(contextInformation);
+				((FactSet) learningUnitFacts).addFact(learningUnitFact);
+				if (i < this.getContextInformationCount() - 1)
+					((FactSet) learningUnitFacts).addLogicalOperator(this.getLogicalOperator());
+				i++;
+			}
+		} else {
+			learningUnitFacts = Fact.FactFromContextInformation((MyMeasurableContextInformation) this
+					.getContextInformation().toArray()[0]);
 		}
+		
 		return learningUnitFacts;
 	}
 

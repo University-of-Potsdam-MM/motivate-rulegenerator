@@ -181,9 +181,4 @@ public class Fact implements FactSetElement {
 	public void setValue(String value) {
 		this.value = value;
 	}
-
-	@Override
-	public void optimize() {
-		// nothing to do here, yet
-	}
 }

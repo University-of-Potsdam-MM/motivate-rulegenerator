@@ -23,14 +23,14 @@ public class MyFactory extends GeneratedFactory {
     /**
      * Gets all instances of FeatureConstraint from the ontology.
      */
-    public Collection<? extends MyFeatureConstraint> getAllFeatureConstraintInstances() {
-		return delegate.getWrappedIndividuals(Vocabulary.CLASS_FEATURECONSTRAINT, MyFeatureConstraint.class);
+    public Collection<? extends MyRestrictFeatureConstraint> getAllFeatureConstraintInstances() {
+		return delegate.getWrappedIndividuals(Vocabulary.CLASS_RESTRICTFEATURECONSTRAINT, MyRestrictFeatureConstraint.class);
     }
     
     /**
      * Gets all instances of LearningUnitConstraint from the ontology.
      */
-    public Collection<? extends MyLearningUnitConstraint> getAllLearningUnitConstraintInstances() {
-		return delegate.getWrappedIndividuals(Vocabulary.CLASS_LEARNINGUNITCONSTRAINT, MyLearningUnitConstraint.class);
+    public Collection<? extends MyLearningUnitClassConstraint> getAllLearningUnitConstraintInstances() {
+		return delegate.getWrappedIndividuals(Vocabulary.CLASS_LEARNINGUNITCLASSCONSTRAINT, MyLearningUnitClassConstraint.class);
     }
 }

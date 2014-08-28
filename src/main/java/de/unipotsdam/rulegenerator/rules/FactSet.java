@@ -2,7 +2,6 @@ package de.unipotsdam.rulegenerator.rules;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -64,6 +63,23 @@ public class FactSet implements FactSetElement {
 		return factSet;
 	}
 
+	public String description() {
+		String description = new String();
+		int i = 0;
+		for (FactSetElement child : this.getChildren()) {
+			if (child.getClass() == LogicalOperator.class) {
+				description += child;
+			} else {
+				description += child.getClass().getSimpleName();
+			}
+			if (i < this.getChildrenCount() - 1) {
+				description += " ";
+			}
+			i++;
+		}
+		return description;
+	}
+
 	public Boolean hasChildren() {
 		return this.getChildrenCount() > 0;
 	}
@@ -87,7 +103,15 @@ public class FactSet implements FactSetElement {
 					"A fact set must not be preceded by another fact or fact set without an intermediate logical operator. Last Object Class: "
 							+ this.getLastChild().getClass());
 		} else {
-			this.children.add(factSet);
+			if (factSet.getChildrenCount() > 1 && factSet.getLogicalOperator() == LogicalOperator.AND) {
+				for (FactSetElement factSetElement : factSet.getChildren()) {
+					this.children.add(factSetElement);
+				}
+			} else if (factSet.getChildrenCount() == 1) {
+				this.children.add(factSet.getLastChild());
+			} else {
+				this.children.add(factSet);
+			}
 		}
 	}
 
@@ -101,6 +125,16 @@ public class FactSet implements FactSetElement {
 		this.addLogicalOperator(logicalOperator);
 	}
 
+	public void addFactSetElement(FactSetElement factSetElement) throws Exception {
+		if (factSetElement.getClass() == FactSet.class) {
+			this.addFactSet((FactSet) factSetElement);
+		} else if (factSetElement.getClass() == Fact.class) {
+			this.addFact((Fact) factSetElement);
+		} else if (factSetElement.getClass() == LogicalOperator.class) {
+			this.addLogicalOperator((LogicalOperator) factSetElement);
+		}
+	}
+	
 	public void addFact(Fact fact) throws Exception {
 		if (this.children.size() > 0
 				&& this.getLastChild().getClass() != LogicalOperator.class)
@@ -136,59 +170,6 @@ public class FactSet implements FactSetElement {
 
 	public int size() {
 		return this.children.size();
-	}
-
-	@Override
-	public void optimize() throws Exception {
-		// disband all fact sets with only AND operators
-		if (this.getChildrenCount() > 1
-				&& this.getLogicalOperator() == LogicalOperator.AND) {
-			System.out.println(this.getChildrenCount() + " " + this.getLogicalOperator());
-			List<FactSetElement> newChildren = new ArrayList<FactSetElement>();
-			for (FactSetElement factSetElement : this.getChildren()) {
-				if (factSetElement.getClass() == FactSet.class) {
-					for (FactSetElement factSetElementChild : ((FactSet) factSetElement)
-							.getChildren()) {
-						newChildren.add(factSetElementChild);
-					}
-				} else {
-					newChildren.add(factSetElement);
-				}
-			}
-			this.setChildren(newChildren);
-		}
-
-		for (FactSetElement factSetElement : this.getChildren()) {
-			if (factSetElement.getClass() == FactSet.class) {
-				FactSet factSet = (FactSet) factSetElement;
-				if (factSet.getChildrenCount() == 1) {
-					if (factSet.getLastChild().getClass() == Fact.class) {
-						this.replaceChild(factSetElement,
-								Fact.FactFromFactSet(factSet));
-					} else if (factSet.getLastChild().getClass() == FactSet.class) {
-						factSet.optimize();
-						this.replaceChild(factSetElement,
-								factSet.getLastChild());
-					}
-				} else {
-					factSet.optimize();
-				}
-			} else {
-				factSetElement.optimize();
-			}
-		}
-
-	}
-
-	private void replaceChild(FactSetElement originalElement,
-			FactSetElement replacementElement) {
-		this.children.set(this.children.indexOf(originalElement),
-				replacementElement);
-	}
-
-	private void addChildAfterChild(FactSetElement originalElement,
-			FactSetElement newElement) {
-		this.children.add(this.children.indexOf(originalElement), newElement);
 	}
 
 	public LogicalOperator getLogicalOperator() {

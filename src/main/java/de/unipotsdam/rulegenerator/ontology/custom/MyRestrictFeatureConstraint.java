@@ -6,14 +6,14 @@ import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
-import de.unipotsdam.rulegenerator.ontology.FeatureConstraint;
+import de.unipotsdam.rulegenerator.ontology.RestrictFeatureConstraint;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultFeatureConstraint;
+import de.unipotsdam.rulegenerator.ontology.impl.DefaultRestrictFeatureConstraint;
 
-public class MyFeatureConstraint extends DefaultFeatureConstraint implements
-		FeatureConstraint {
+public class MyRestrictFeatureConstraint extends DefaultRestrictFeatureConstraint implements
+		RestrictFeatureConstraint {
 
-	public MyFeatureConstraint(CodeGenerationInference inference, IRI iri) {
+	public MyRestrictFeatureConstraint(CodeGenerationInference inference, IRI iri) {
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
 	}

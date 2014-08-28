@@ -6,15 +6,15 @@ import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
-import de.unipotsdam.rulegenerator.ontology.LearningUnitConstraint;
+import de.unipotsdam.rulegenerator.ontology.LearningUnitClassConstraint;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnitConstraint;
+import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnitClassConstraint;
 import de.unipotsdam.rulegenerator.rules.FactSet;
 
-public class MyLearningUnitConstraint extends DefaultLearningUnitConstraint
-		implements LearningUnitConstraint {
+public class MyLearningUnitClassConstraint extends DefaultLearningUnitClassConstraint
+		implements LearningUnitClassConstraint {
 
-	public MyLearningUnitConstraint(CodeGenerationInference inference, IRI iri) {
+	public MyLearningUnitClassConstraint(CodeGenerationInference inference, IRI iri) {
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
 	}
