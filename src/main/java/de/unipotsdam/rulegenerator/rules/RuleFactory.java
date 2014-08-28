@@ -18,9 +18,10 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyRestrictFeatureConstraint;
 public class RuleFactory {
 	private OWLOntology ontology;
 	private Collection<? extends MyLearningUnit> learningUnits;
-	private Collection<? extends MyRestrictFeatureConstraint> featureConstraints;
-	private Collection<? extends MyLearningUnitClassConstraint> learningUnitConstraints;
-	private LearningUnitClassFactSet learningUnitConstraintFactSet = new LearningUnitClassFactSet();
+	private Collection<? extends MyRestrictFeatureConstraint> restrictFeatureConstraints;
+	private Collection<? extends MyLearningUnitClassConstraint> learningUnitClassConstraints;
+	private LearningUnitClassFactSet hasLearningUnitClassConstraintFactSet = new LearningUnitClassFactSet();
+	private LearningUnitClassFactSet hasNotLearningUnitClassConstraintFactSet = new LearningUnitClassFactSet();
 
 	public RuleFactory(OWLOntology ontology) {
 		super();
@@ -30,8 +31,9 @@ public class RuleFactory {
 		MyFactory factory = new MyFactory(ontology);
 		// get all learning unit individuals from ontology
 		this.learningUnits = factory.getAllLearningUnitInstances();
-		this.featureConstraints = factory.getAllFeatureConstraintInstances();
-		this.learningUnitConstraints = factory
+		this.restrictFeatureConstraints = factory
+				.getAllFeatureConstraintInstances();
+		this.learningUnitClassConstraints = factory
 				.getAllLearningUnitConstraintInstances();
 	}
 
@@ -54,24 +56,25 @@ public class RuleFactory {
 
 		// feature constraints
 
-		for (MyRestrictFeatureConstraint featureConstraint : this.featureConstraints) {
+		for (MyRestrictFeatureConstraint restrictFeatureConstraint : this.restrictFeatureConstraints) {
 			AdaptationRule featureConstraintRule = new AdaptationRule(
 					"RestrictFeatureConstraintRule[" + timestamp + "]",
-					ActionOperator.RESTRICT_FEATURE, featureConstraint
+					ActionOperator.RESTRICT_FEATURE, restrictFeatureConstraint
 							.getFeature().getIRIShort());
 			featureConstraintRule.setNegation(true);
 			featureConstraintRule.setTrigger(new Trigger(
 					TriggeringMode.ON_ENTRY));
 			Situation featureConstraintRuleSituation = new Situation();
 			int i = 0;
-			for (MyConstraintRequirement constraintRequirement : featureConstraint
+			for (MyConstraintRequirement constraintRequirement : restrictFeatureConstraint
 					.getConstraintRequirements()) {
 				featureConstraintRuleSituation
 						.addConstraint(FactSet
 								.FactSetFromConstraintRequirement(constraintRequirement));
-				if (i < featureConstraint.getConstraintRequirementsCount() - 1)
+				if (i < restrictFeatureConstraint
+						.getConstraintRequirementsCount() - 1)
 					featureConstraintRuleSituation
-							.addConstraint(featureConstraint
+							.addConstraint(restrictFeatureConstraint
 									.getLogicalOperator());
 				i++;
 			}
@@ -83,10 +86,19 @@ public class RuleFactory {
 
 		// constraints based on meta data
 
-		for (MyLearningUnitClassConstraint learningUnitConstraint : this.learningUnitConstraints) {
-			MyLearningUnitClass learningUnitClass = learningUnitConstraint
-					.getLearningUnitClass();
-			learningUnitConstraintFactSet.put(learningUnitClass, learningUnitConstraint.getFactSet());
+		for (MyLearningUnitClassConstraint learningUnitClassConstraint : this.learningUnitClassConstraints) {
+			if (learningUnitClassConstraint.hasLearningUnitClass()) {
+				MyLearningUnitClass hasLearningUnitClass = learningUnitClassConstraint
+						.getHasLearningUnitClass();
+				hasLearningUnitClassConstraintFactSet.put(hasLearningUnitClass,
+						learningUnitClassConstraint.getFactSet());
+			} else if (learningUnitClassConstraint.hasNotLearningUnitClass()) {
+				MyLearningUnitClass hasNotLearningUnitClass = learningUnitClassConstraint
+						.getHasNotLearningUnitClass();
+				hasNotLearningUnitClassConstraintFactSet.put(
+						hasNotLearningUnitClass,
+						learningUnitClassConstraint.getFactSet());
+			}
 		}
 
 		for (MyLearningUnit currentLearningUnit : learningUnits) {
@@ -97,8 +109,10 @@ public class RuleFactory {
 			// information are present
 			if (currentLearningUnit.getContextInformationCount() > 0)
 				ruleList.addAdaptationRule(new SelectAdaptationRule(
-						currentLearningUnit, learningUnitConstraintFactSet));
-			
+						currentLearningUnit,
+						hasLearningUnitClassConstraintFactSet,
+						hasNotLearningUnitClassConstraintFactSet));
+
 			/** RELATIONS **/
 
 			// check for relations

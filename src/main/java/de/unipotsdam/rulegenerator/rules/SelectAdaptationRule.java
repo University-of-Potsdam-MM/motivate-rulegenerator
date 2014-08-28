@@ -6,7 +6,7 @@ import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 
 public class SelectAdaptationRule extends AdaptationRule {
-	public SelectAdaptationRule(MyLearningUnit currentLearningUnit, LearningUnitClassFactSet learningUnitFactSet) throws Exception {
+	public SelectAdaptationRule(MyLearningUnit currentLearningUnit, LearningUnitClassFactSet hasLearningUnitClassFactSet, LearningUnitClassFactSet hasNotLearningUnitClassFactSet) throws Exception {
 		// set rule id
 		this.setId("SelectLearningUnit["+currentLearningUnit.getID()+"]");
 		// create trigger for the rule
@@ -24,6 +24,6 @@ public class SelectAdaptationRule extends AdaptationRule {
 		this.setAction(new Action(ActionOperator.SELECT,
 				currentLearningUnit.getID()));
 		
-		this.applyLearningUnitConstraints(currentLearningUnit, learningUnitFactSet);
+		this.applyLearningUnitClassConstraints(currentLearningUnit, hasLearningUnitClassFactSet, hasNotLearningUnitClassFactSet);
 	}
 }

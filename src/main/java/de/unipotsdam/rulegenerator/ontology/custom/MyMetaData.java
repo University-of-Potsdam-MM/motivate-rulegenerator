@@ -51,9 +51,9 @@ public class MyMetaData extends DefaultMetaData implements MetaData {
 
 	// Value
 
-	public String getValue() {
+	public Object getValue() {
 		if (this.getValues().toArray().length > 0)
-			return (String) getValues().toArray()[0];
+			return getValues().toArray()[0];
 		else
 			return null;
 	}
