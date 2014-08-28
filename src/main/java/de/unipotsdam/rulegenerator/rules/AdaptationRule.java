@@ -133,15 +133,39 @@ public class AdaptationRule {
 	}
 
 	// apply potential constraints
-	public void applyLearningUnitConstraints(MyLearningUnit currentLearningUnit, LearningUnitClassFactSet learningUnitFactSet) throws Exception {
+	public void applyLearningUnitClassConstraints(
+			MyLearningUnit currentLearningUnit,
+			LearningUnitClassFactSet hasLearningUnitFactSet,
+			LearningUnitClassFactSet hasNotLearningUnitClassFactSet)
+			throws Exception {
 		if (currentLearningUnit.hasMetaData()) {
 			System.out.println(currentLearningUnit.getID() + " has meta data.");
-			for (Entry<MyLearningUnitClass, FactSet> entry : learningUnitFactSet.getLearningUnitClassFactSets().entrySet()) {
-				MyLearningUnitClass constraintLearningUnitClass = entry.getKey();
+			// apply constraints for facts matching the meta data
+			for (Entry<MyLearningUnitClass, FactSet> entry : hasLearningUnitFactSet
+					.getLearningUnitClassFactSets().entrySet()) {
+				MyLearningUnitClass constraintLearningUnitClass = entry
+						.getKey();
 				FactSet factSet = entry.getValue();
-				
-				if (constraintLearningUnitClass.equals(currentLearningUnit.getMetaData())) {
-					this.getSituation().constraints.addLogicalOperator(LogicalOperator.AND);
+
+				if (constraintLearningUnitClass.equals(currentLearningUnit
+						.getMetaData())) {
+					this.getSituation().constraints
+							.addLogicalOperator(LogicalOperator.AND);
+					this.getSituation().constraints.addFactSet(factSet);
+				}
+			}
+			// apply constraints for facts not matching the meta data
+			for (Entry<MyLearningUnitClass, FactSet> entry : hasNotLearningUnitClassFactSet
+					.getLearningUnitClassFactSets().entrySet()) {
+				MyLearningUnitClass constraintLearningUnitClass = entry
+						.getKey();
+				FactSet factSet = entry.getValue();
+
+				if (!constraintLearningUnitClass.equals(currentLearningUnit
+						.getMetaData())) {
+					if (this.getSituation().constraints.getChildrenCount() > 0)
+						this.getSituation().constraints
+								.addLogicalOperator(LogicalOperator.AND);
 					this.getSituation().constraints.addFactSet(factSet);
 				}
 			}

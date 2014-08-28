@@ -19,22 +19,41 @@ public class MyLearningUnitClassConstraint extends DefaultLearningUnitClassConst
 		// TODO Auto-generated constructor stub
 	}
 
-	// Learning Unit Class
+	// Has Learning Unit Class
 
 	public Boolean hasLearningUnitClass() {
-		return this.getLearningUnitClasses().toArray().length > 0;
+		return this.getHasLearningUnitClasses().toArray().length > 0;
 	}
 
-	public MyLearningUnitClass getLearningUnitClass() {
+	public MyLearningUnitClass getHasLearningUnitClass() {
 		if (this.hasLearningUnitClass())
-			return (MyLearningUnitClass) getLearningUnitClasses().toArray()[0];
+			return (MyLearningUnitClass) getHasLearningUnitClasses().toArray()[0];
 		else
 			return null;
 	}
 
-	public Collection<? extends MyLearningUnitClass> getLearningUnitClasses() {
+	public Collection<? extends MyLearningUnitClass> getHasLearningUnitClasses() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASLEARNINGUNITCLASS,
+				MyLearningUnitClass.class);
+	}
+	
+	// Has Not Learning Unit Class
+
+	public Boolean hasNotLearningUnitClass() {
+		return this.getHasNotLearningUnitClasses().toArray().length > 0;
+	}
+
+	public MyLearningUnitClass getHasNotLearningUnitClass() {
+		if (this.hasNotLearningUnitClass())
+			return (MyLearningUnitClass) getHasNotLearningUnitClasses().toArray()[0];
+		else
+			return null;
+	}
+
+	public Collection<? extends MyLearningUnitClass> getHasNotLearningUnitClasses() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_HASNOTLEARNINGUNITCLASS,
 				MyLearningUnitClass.class);
 	}
 
