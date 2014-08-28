@@ -14,7 +14,7 @@
 					select="foo:getAliasForContextInformation($contextInformation, concat($factSetElement/contextInformation, $factSetElement/value))" />
 				<xsl:text>(</xsl:text>
 				<xsl:value-of select="$alias" />
-				<xsl:text>.id = '</xsl:text>
+				<xsl:text>.id == '</xsl:text>
 				<xsl:value-of select="$factSetElement/contextInformation" />
 				<xsl:text>'</xsl:text>
 				<xsl:if test="count($factSetElement/factParameters/factParameter) > 0">
