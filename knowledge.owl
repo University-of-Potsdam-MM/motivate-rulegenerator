@@ -525,9 +525,6 @@
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-IntervalConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
     </Declaration>
     <Declaration>
@@ -3707,16 +3704,6 @@
         <Literal datatypeIRI="&xsd;string">OR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hasEndTime"/>
-        <NamedIndividual IRI="#Example-IntervalConstraintRequirement"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">16:00:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasStartingTime"/>
-        <NamedIndividual IRI="#Example-IntervalConstraintRequirement"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">09:00:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#hasValue"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">52.42357</Literal>
@@ -3919,8 +3906,8 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
         <ObjectProperty IRI="#isContextInformationParameterOf"/>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
