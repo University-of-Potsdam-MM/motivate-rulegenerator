@@ -124,18 +124,29 @@
 			<!-- Gather all facts -->
 			<xsl:variable name="contextInformation"
 				select="foo:gatherAliases(situation//fact, (), 1)" />
+			<xsl:variable name="negation" select="current()/negation" />
 			<xsl:for-each select="$contextInformation">
 				<xsl:text>&#x9;&#x9;</xsl:text>
-				<xsl:value-of select="concat('c', position())" />
-				<xsl:text> : ContextInformation</xsl:text>
-				<xsl:if test="not(position() = last())">;&#xa;</xsl:if>
+				<xsl:choose>
+					<!-- List ContextInformation -->
+					<xsl:when test="not(position() = last())">
+						<xsl:value-of select="concat('c', position())" />
+						<xsl:text> : ContextInformation;&#xa;</xsl:text>				
+					</xsl:when>
+					<!-- Last ContextInformation and Constraints -->
+					<xsl:otherwise>
+						<!-- Negation -->
+						<xsl:if test="$negation = 'true'">
+							<xsl:text>not(</xsl:text>
+						</xsl:if>
+						<xsl:value-of select="concat('c', position())" />
+						<xsl:text> : ContextInformation </xsl:text>
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:for-each>
+			
 			<!-- Phrase the rule -->
-			<xsl:text> </xsl:text>
-			<!-- Negation -->
-			<xsl:if test="current()/negation = 'true'">
-				<xsl:text>not(</xsl:text>
-			</xsl:if>
+			
 			<!-- Constraints -->
 			<xsl:for-each select="situation/constraints/*">
 				<xsl:value-of
