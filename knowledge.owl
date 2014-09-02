@@ -10,13 +10,12 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.motivate-project.de/ontologies/knowledge"
+     xml:base="http://localhost:9998/owl/get-knowledge-ontology"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://www.motivate-project.de/ontologies/knowledge"
-     versionIRI="http://www.motivate-project.de/ontologies/knowledge/1.1">
+     ontologyIRI="http://localhost:9998/owl/get-knowledge-ontology">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -3228,12 +3227,12 @@
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isBasisOf"/>
         <ObjectProperty IRI="#hasBasis"/>
+        <ObjectProperty IRI="#isBasisOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isConstraintRequirementOf"/>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
+        <ObjectProperty IRI="#isConstraintRequirementOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isContextClassOf"/>
@@ -3248,8 +3247,8 @@
         <ObjectProperty IRI="#hasContextInformationParameter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasExtension"/>
         <ObjectProperty IRI="#isExtensionOf"/>
+        <ObjectProperty IRI="#hasExtension"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasFeature"/>
@@ -3272,12 +3271,12 @@
         <ObjectProperty IRI="#hasMetaData"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isPrerequisiteOf"/>
         <ObjectProperty IRI="#hasPrerequisite"/>
+        <ObjectProperty IRI="#isPrerequisiteOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasReference"/>
         <ObjectProperty IRI="#isReferenceOf"/>
+        <ObjectProperty IRI="#hasReference"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasVersion"/>

@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.AddImport;
+import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.util.InferredAxiomGenerator;
@@ -29,21 +32,25 @@ public class RuleGeneratorService {
 	protected static PelletReasoner reasoner;
 	protected static OWLDataFactory dataFactory;
 	protected static OWLOntologyManager manager;
-	protected static OWLOntology ontology;	
+	protected static OWLOntology ontology;
 
 	/**
 	 * Generate adaptation rules.
 	 * 
 	 * @return the adaptation rule list
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public static AdaptationRuleList generateAdaptationRules() throws Exception {
 		manager = OWLManager.createOWLOntologyManager();
 		// load received ontology
 		ontology = manager.loadOntologyFromOntologyDocument(new File(
-				"knowledge.owl"));
+				"example.owl"));
 		// get data factory
-		dataFactory = manager.getOWLDataFactory();
+				dataFactory = manager.getOWLDataFactory();
+		OWLImportsDeclaration importDeclaraton = dataFactory
+				.getOWLImportsDeclaration(IRI.create(new File(
+						"knowledge.owl")));
+		manager.applyChange(new AddImport(ontology, importDeclaraton));
 		// get Pellet reasoner
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);
@@ -62,7 +69,7 @@ public class RuleGeneratorService {
 		RuleFactory ruleFactory = new RuleFactory(ontology);
 		// generate rules
 		AdaptationRuleList adaptationRuleList = ruleFactory.generateRules();
-		
+
 		return adaptationRuleList;
 	}
 }

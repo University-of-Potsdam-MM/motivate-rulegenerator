@@ -23,8 +23,12 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 							"Basic realm=\"realm\"")
 					.entity("Page requires login.").build());
 
-	/* (non-Javadoc)
-	 * @see com.sun.jersey.spi.container.ContainerRequestFilter#filter(com.sun.jersey.spi.container.ContainerRequest)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.sun.jersey.spi.container.ContainerRequestFilter#filter(com.sun.jersey
+	 * .spi.container.ContainerRequest)
 	 */
 	@Override
 	public ContainerRequest filter(ContainerRequest containerRequest)
@@ -33,7 +37,8 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 		// Automatically allow certain requests.
 		String method = containerRequest.getMethod();
 		String path = containerRequest.getPath(true);
-		if (method.equals("GET") && path.equals("application.wadl"))
+		if (method.equals("GET") && (path.equals("application.wadl")
+				|| path.equals("owl/get-knowledge-ontology")))
 			return containerRequest;
 
 		// Get the authentication passed in HTTP headers parameters

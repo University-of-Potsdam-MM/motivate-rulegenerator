@@ -21,7 +21,8 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>http://www.motivate-project.de/ontologies/knowledge/1.1</Import>
+    <Prefix name="knowledge" IRI="http://localhost:9998/owl/get-knowledge-ontology#"/>
+    <Import>http://localhost:9998/owl/get-knowledge-ontology</Import>
     <Declaration>
         <NamedIndividual IRI="#AppUsageFeature"/>
     </Declaration>
@@ -152,524 +153,524 @@
         <NamedIndividual IRI="#TechnicalContext"/>
     </Declaration>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#Feature"/>
+        <Class abbreviatedIRI="knowledge:Feature"/>
         <NamedIndividual IRI="#AppUsageFeature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#RestrictFeatureConstraint"/>
+        <Class abbreviatedIRI="knowledge:RestrictFeatureConstraint"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#CurrentTimeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:CurrentTimeMeasurableInformation"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#CurrentTimeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:CurrentTimeMeasurableInformation"/>
         <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#UserRoleMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:UserRoleMeasurableInformation"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ContentTypeMetaData"/>
+        <Class abbreviatedIRI="knowledge:ContentTypeMetaData"/>
         <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ContentTypeMetaData"/>
+        <Class abbreviatedIRI="knowledge:ContentTypeMetaData"/>
         <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#CurrentTemperatureMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:CurrentTemperatureMeasurableInformation"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#DeviceTypeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:DeviceTypeMeasurableInformation"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ContextInformationConstraintRequirement"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ContextInformationConstraintRequirement"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnitClassConstraint"/>
+        <Class abbreviatedIRI="knowledge:LearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnitClassConstraint"/>
+        <Class abbreviatedIRI="knowledge:LearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LatitudeContextParameter"/>
+        <Class abbreviatedIRI="knowledge:LatitudeContextParameter"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class abbreviatedIRI="knowledge:LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-124"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class abbreviatedIRI="knowledge:LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-125"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class abbreviatedIRI="knowledge:LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class abbreviatedIRI="knowledge:LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-127"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class abbreviatedIRI="knowledge:LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-128"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class abbreviatedIRI="knowledge:LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-129"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnit"/>
+        <Class abbreviatedIRI="knowledge:LearningUnit"/>
         <NamedIndividual IRI="#Example-LearningUnit-130"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LongitudeContextParameter"/>
+        <Class abbreviatedIRI="knowledge:LongitudeContextParameter"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ContextInformationConstraintRequirement"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ScreenReaderSuitableMetaData"/>
+        <Class abbreviatedIRI="knowledge:ScreenReaderSuitableMetaData"/>
         <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnitClass"/>
+        <Class abbreviatedIRI="knowledge:LearningUnitClass"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ScreenReaderSuitableMetaData"/>
+        <Class abbreviatedIRI="knowledge:ScreenReaderSuitableMetaData"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ContextInformationConstraintRequirement"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#TemperatureScaleContextParameter"/>
+        <Class abbreviatedIRI="knowledge:TemperatureScaleContextParameter"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#UserDidArriveAtLocationMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:UserDidArriveAtLocationMeasurableInformation"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#UserLocationLatitudeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:UserLocationLatitudeMeasurableInformation"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#UserLocationLongitudeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:UserLocationLongitudeMeasurableInformation"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#UserMovementSpeedMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#ContextInformationConstraintRequirement"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#VelocityUnitContextParameter"/>
+        <Class abbreviatedIRI="knowledge:VelocityUnitContextParameter"/>
         <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LearningUnitClass"/>
+        <Class abbreviatedIRI="knowledge:LearningUnitClass"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#UserCurrentLearningStylePerceptionMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:UserCurrentLearningStylePerceptionMeasurableInformation"/>
         <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#LocationContext"/>
+        <Class abbreviatedIRI="knowledge:LocationContext"/>
         <NamedIndividual IRI="#LocationContext"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#Feature"/>
+        <Class abbreviatedIRI="knowledge:Feature"/>
         <NamedIndividual IRI="#LocationTrackingFeature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#PersonalContext"/>
+        <Class abbreviatedIRI="knowledge:PersonalContext"/>
         <NamedIndividual IRI="#PersonalContext"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#PhysicalContext"/>
+        <Class abbreviatedIRI="knowledge:PhysicalContext"/>
         <NamedIndividual IRI="#PhysicalContext"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#SituationalContext"/>
+        <Class abbreviatedIRI="knowledge:SituationalContext"/>
         <NamedIndividual IRI="#SituationalContext"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#Feature"/>
+        <Class abbreviatedIRI="knowledge:Feature"/>
         <NamedIndividual IRI="#SuccestAlternativeFeature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.motivate-project.de/ontologies/knowledge#TechnicalContext"/>
+        <Class abbreviatedIRI="knowledge:TechnicalContext"/>
         <NamedIndividual IRI="#TechnicalContext"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasConstraintRequirement"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
         <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasFeature"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
+        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasFeature"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
         <NamedIndividual IRI="#AppUsageFeature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformationParameter"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasConstraintRequirement"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLearningUnitClass"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasLearningUnitClass"/>
         <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasConstraintRequirement"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasNotLearningUnitClass"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasNotLearningUnitClass"/>
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasAlternative"/>
         <NamedIndividual IRI="#Example-LearningUnit-124"/>
         <NamedIndividual IRI="#Example-LearningUnit-125"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-124"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMetaData"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasPrerequisite"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <NamedIndividual IRI="#Example-LearningUnit-124"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasPrerequisite"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <NamedIndividual IRI="#Example-LearningUnit-128"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasPrerequisite"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasPrerequisite"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <NamedIndividual IRI="#Example-LearningUnit-127"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasAlternative"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasAlternative"/>
         <NamedIndividual IRI="#Example-LearningUnit-128"/>
         <NamedIndividual IRI="#Example-LearningUnit-125"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasHelp"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasHelp"/>
         <NamedIndividual IRI="#Example-LearningUnit-128"/>
         <NamedIndividual IRI="#Example-LearningUnit-129"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-129"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-130"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMetaData"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
         <NamedIndividual IRI="#Example-LearningUnit-130"/>
         <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformationParameter"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformationParameter"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasContextInformationParameter"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
         <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMeasurableContextInformation"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMetaData"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasMetaData"/>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
         <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
+        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
+        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLogicalOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
         <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">16:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
         <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">09:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
         <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
         <Literal datatypeIRI="&xsd;string">Student</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
         <Literal datatypeIRI="&xsd;string">Images</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
         <Literal datatypeIRI="&xsd;string">Video</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <Literal datatypeIRI="&xsd;float">30.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
         <Literal datatypeIRI="&xsd;string">SMARTPHONE</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
         <Literal datatypeIRI="&xsd;string">IS_NOT</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLogicalOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
         <Literal datatypeIRI="&xsd;string">OR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">52.42357</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-124"/>
         <Literal datatypeIRI="&xsd;string">124</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-125"/>
         <Literal datatypeIRI="&xsd;string">125</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <Literal datatypeIRI="&xsd;string">126</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLogicalOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-127"/>
         <Literal datatypeIRI="&xsd;string">127</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-128"/>
         <Literal datatypeIRI="&xsd;string">128</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-129"/>
         <Literal datatypeIRI="&xsd;string">129</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLID"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-130"/>
         <Literal datatypeIRI="&xsd;string">130</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">14.2345</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
         <Literal datatypeIRI="&xsd;boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
         <Literal datatypeIRI="&xsd;string">FAHRENHEIT</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
         <Literal datatypeIRI="&xsd;float">52.12436</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
         <Literal datatypeIRI="&xsd;float">13.34523</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
         <Literal datatypeIRI="&xsd;float">20.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValueOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
         <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
         <Literal datatypeIRI="&xsd;string">KILOMETERS_PER_HOUR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasLogicalOperator"/>
+        <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
         <Literal datatypeIRI="&xsd;string">OR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://www.motivate-project.de/ontologies/knowledge#hasValue"/>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
         <Literal datatypeIRI="&xsd;integer">10</Literal>
     </DataPropertyAssertion>
