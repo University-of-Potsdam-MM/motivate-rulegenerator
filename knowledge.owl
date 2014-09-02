@@ -420,6 +420,9 @@
         <DataProperty IRI="#hasAcquisitionDate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasAgeLimit"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasAuthor"/>
     </Declaration>
     <Declaration>
@@ -453,16 +456,16 @@
         <DataProperty IRI="#hasLanguage"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasLogicalOperator"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasMetaData"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNavigationType"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasStartingTime"/>
@@ -486,136 +489,7 @@
         <DataProperty IRI="#isRequired"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AppUsageFeature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-CurrentTemperature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LatitudeParameter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-124"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-125"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-127"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-128"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-129"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LearningUnit-130"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-LongitudeParameter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#LocationContext"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#LocationTrackingFeature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#PersonalContext"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#PhysicalContext"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SituationalContext"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SuccestAlternativeFeature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#TechnicalContext"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Test"/>
+        <DataProperty IRI="#isScreenReaderSuitable"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#LocationContextInformation"/>
@@ -3297,542 +3171,6 @@
         <Class IRI="#SituationalContextInformation"/>
         <Class IRI="#TechnicalContextInformation"/>
     </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="#Feature"/>
-        <NamedIndividual IRI="#AppUsageFeature"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#RestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CurrentTimeMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CurrentTimeMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserRoleMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ContentTypeMetaData"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ContentTypeMetaData"/>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CurrentTemperatureMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-CurrentTemperature"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#DeviceTypeMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnitClassConstraint"/>
-        <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnitClassConstraint"/>
-        <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LatitudeContextParameter"/>
-        <NamedIndividual IRI="#Example-LatitudeParameter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-124"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-125"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-127"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-128"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-129"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnit"/>
-        <NamedIndividual IRI="#Example-LearningUnit-130"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LongitudeContextParameter"/>
-        <NamedIndividual IRI="#Example-LongitudeParameter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ScreenReaderSuitableMetaData"/>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ScreenReaderSuitableMetaData"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#TemperatureScaleContextParameter"/>
-        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserDidArriveAtLocationMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserLocationLatitudeMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserLocationLongitudeMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#VelocityUnitContextParameter"/>
-        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LearningUnitClass"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#LocationContext"/>
-        <NamedIndividual IRI="#LocationContext"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Feature"/>
-        <NamedIndividual IRI="#LocationTrackingFeature"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#PersonalContext"/>
-        <NamedIndividual IRI="#PersonalContext"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#PhysicalContext"/>
-        <NamedIndividual IRI="#PhysicalContext"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#SituationalContext"/>
-        <NamedIndividual IRI="#SituationalContext"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Feature"/>
-        <NamedIndividual IRI="#SuccestAlternativeFeature"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#TechnicalContext"/>
-        <NamedIndividual IRI="#TechnicalContext"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <NamedIndividual IRI="#Test"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasFeature"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#AppUsageFeature"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
-        <NamedIndividual IRI="#Example-CurrentTemperature"/>
-        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
-        <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasNotLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAlternative"/>
-        <NamedIndividual IRI="#Example-LearningUnit-124"/>
-        <NamedIndividual IRI="#Example-LearningUnit-125"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-124"/>
-        <NamedIndividual IRI="#Example-CurrentTemperature"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMetaData"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrerequisite"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-LearningUnit-128"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrerequisite"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-LearningUnit-127"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPrerequisite"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-LearningUnit-124"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAlternative"/>
-        <NamedIndividual IRI="#Example-LearningUnit-128"/>
-        <NamedIndividual IRI="#Example-LearningUnit-125"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasHelp"/>
-        <NamedIndividual IRI="#Example-LearningUnit-128"/>
-        <NamedIndividual IRI="#Example-LearningUnit-129"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-129"/>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-LearningUnit-130"/>
-        <NamedIndividual IRI="#Example-CurrentTemperature"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMetaData"/>
-        <NamedIndividual IRI="#Example-LearningUnit-130"/>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
-        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <NamedIndividual IRI="#Example-LatitudeParameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <NamedIndividual IRI="#Example-LongitudeParameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
-        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
-        <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMetaData"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasMetaData"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLogicalOperator"/>
-        <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <Literal datatypeIRI="&xsd;string">AND</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">16:00:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
-        <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">09:00:00</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
-        <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
-        <Literal datatypeIRI="&xsd;string">Student</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
-        <Literal datatypeIRI="&xsd;string">IS</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-        <Literal datatypeIRI="&xsd;string">Images</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-        <Literal datatypeIRI="&xsd;string">Video</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-CurrentTemperature"/>
-        <Literal datatypeIRI="&xsd;float">30.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-CurrentTemperature"/>
-        <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
-        <Literal datatypeIRI="&xsd;string">SMARTPHONE</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
-        <Literal datatypeIRI="&xsd;string">IS_NOT</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLogicalOperator"/>
-        <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
-        <Literal datatypeIRI="&xsd;string">OR</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-LatitudeParameter"/>
-        <Literal datatypeIRI="&xsd;float">52.42357</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-124"/>
-        <Literal datatypeIRI="&xsd;string">124</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-125"/>
-        <Literal datatypeIRI="&xsd;string">125</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <Literal datatypeIRI="&xsd;string">126</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLogicalOperator"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <Literal datatypeIRI="&xsd;string">AND</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-127"/>
-        <Literal datatypeIRI="&xsd;string">127</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-128"/>
-        <Literal datatypeIRI="&xsd;string">128</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-129"/>
-        <Literal datatypeIRI="&xsd;string">129</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLID"/>
-        <NamedIndividual IRI="#Example-LearningUnit-130"/>
-        <Literal datatypeIRI="&xsd;string">130</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-LongitudeParameter"/>
-        <Literal datatypeIRI="&xsd;float">14.2345</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-        <Literal datatypeIRI="&xsd;string">FAHRENHEIT</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <Literal datatypeIRI="&xsd;string">IS</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
-        <Literal datatypeIRI="&xsd;float">52.12436</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
-        <Literal datatypeIRI="&xsd;string">IS</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
-        <Literal datatypeIRI="&xsd;float">13.34523</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
-        <Literal datatypeIRI="&xsd;string">IS</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
-        <Literal datatypeIRI="&xsd;float">20.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
-        <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
-        <Literal datatypeIRI="&xsd;string">KILOMETERS_PER_HOUR</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLogicalOperator"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <Literal datatypeIRI="&xsd;string">OR</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
-        <Literal datatypeIRI="&xsd;integer">10</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Test"/>
-        <Literal datatypeIRI="&xsd;boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValueOperator"/>
-        <NamedIndividual IRI="#Test"/>
-        <Literal datatypeIRI="&xsd;string">IS</Literal>
-    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAlternative"/>
         <ObjectProperty IRI="#hasRelation"/>
@@ -4076,20 +3414,72 @@
         <Class IRI="#LearningUnit"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasAcquisitionDate"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAgeLimit"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAuthor"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasContentType"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasDataType"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasDescription"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="#hasMetaData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
-        <DataProperty IRI="#hasLogicalOperator"/>
+        <DataProperty IRI="#hasDifficulty"/>
+        <DataProperty IRI="#hasMetaData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
-        <DataProperty IRI="#hasLogicalOperator"/>
+        <DataProperty IRI="#hasEndTime"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasIdentifier"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasInteractivity"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasKeyword"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLanguage"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasNavigationType"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasStartingTime"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasVersionDate"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isRequired"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isScreenReaderSuitable"/>
+        <DataProperty IRI="#hasMetaData"/>
     </SubDataPropertyOf>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasDataType"/>
@@ -4102,12 +3492,6 @@
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasLID"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasLogicalOperator"/>
@@ -4152,14 +3536,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasLanguage"/>
         <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasLearningUnitConstraintMetaDataLogicalOperator"/>
-        <Class IRI="#LearningUnitClassConstraint"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasLearningUnitConstraintRequirementLogicalOperator"/>
-        <Class IRI="#LearningUnitClassConstraint"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasStartingTime"/>
