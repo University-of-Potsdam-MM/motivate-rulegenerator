@@ -450,6 +450,11 @@
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
+        <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
+        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
@@ -542,7 +547,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
-        <Literal datatypeIRI="&xsd;string">SMARTPHONE</Literal>
+        <Literal datatypeIRI="&xsd;string">FEATURE_PHONE</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
@@ -608,6 +613,11 @@
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
         <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
+        <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
+        <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
