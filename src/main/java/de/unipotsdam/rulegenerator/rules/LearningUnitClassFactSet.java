@@ -7,31 +7,32 @@ import java.util.Map.Entry;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnitClass;
 
 public class LearningUnitClassFactSet {
-	private Map<MyLearningUnitClass, FactSet> learningUnitClassFactSets = new HashMap<MyLearningUnitClass, FactSet>();
+	private Map<MyLearningUnitClass, FactSet> children = new HashMap<MyLearningUnitClass, FactSet>();
 
-	public Map<MyLearningUnitClass, FactSet> getLearningUnitClassFactSets() {
-		return learningUnitClassFactSets;
+	public Map<MyLearningUnitClass, FactSet> getChildren() {
+		return children;
 	}
 
-	public void setLearningUnitClassFactSets(
+	public void setChildren(
 			Map<MyLearningUnitClass, FactSet> learningUnitClassFactSets) {
-		this.learningUnitClassFactSets = learningUnitClassFactSets;
+		this.children = learningUnitClassFactSets;
 	}
 
-	public String description() {
-		return this.learningUnitClassFactSets.toString();
+	public int getCildrenHashCode() {
+		return this.getChildren().hashCode();
 	}
-	
+
 	public void put(MyLearningUnitClass learningUnitClass, FactSet factSet) {
-		for (Entry<MyLearningUnitClass, FactSet> entry : learningUnitClassFactSets
-				.entrySet()) {
+		for (Entry<MyLearningUnitClass, FactSet> entry : children.entrySet()) {
 			// TODO: append fact set if class already exists
-			if (entry.getKey().description()
-					.equals(learningUnitClass.description())) {
-				learningUnitClassFactSets.put(entry.getKey(), factSet);
+			MyLearningUnitClass factSetLearningUnitClass = entry.getKey();
+
+			if (factSetLearningUnitClass.getMetaData().equals(
+					learningUnitClass.getMetaData())) {
+				children.put(factSetLearningUnitClass, factSet);
 				return;
 			}
 		}
-		learningUnitClassFactSets.put(learningUnitClass, factSet);
+		children.put(learningUnitClass, factSet);
 	}
 }

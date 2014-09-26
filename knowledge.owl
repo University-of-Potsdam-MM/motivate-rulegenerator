@@ -26,9 +26,6 @@
         <Literal datatypeIRI="&xsd;float">1.1</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#AgeLimitMetaData"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#AppointmentDetailContextParameter"/>
     </Declaration>
     <Declaration>
@@ -39,9 +36,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ContentTypeMetaData"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ContextClass"/>
@@ -90,9 +84,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DeviceTypeMeasurableInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DifficultyMetaData"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
@@ -146,16 +137,10 @@
         <Class IRI="#MeasurableContextInformation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MetaData"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MixedContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#NavigationTypeMetaData"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NextAppointmentMeasurableInformation"/>
@@ -198,9 +183,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ScenarioContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ScreenReaderSuitableMetaData"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SituationalContext"/>
@@ -356,9 +338,6 @@
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasMetaData"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasNotLearningUnitClass"/>
     </Declaration>
     <Declaration>
@@ -402,9 +381,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isMetaDataOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isPrerequisiteOf"/>
@@ -599,23 +575,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="#AgeLimitMetaData"/>
-        <Class IRI="#MetaData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AgeLimitMetaData"/>
-        <ObjectUnionOf>
-            <DataExactCardinality cardinality="1">
-                <DataProperty IRI="#hasValue"/>
-                <Datatype abbreviatedIRI="xsd:int"/>
-            </DataExactCardinality>
-            <DataExactCardinality cardinality="1">
-                <DataProperty IRI="#hasValue"/>
-                <Datatype abbreviatedIRI="xsd:integer"/>
-            </DataExactCardinality>
-        </ObjectUnionOf>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#AppointmentDetailContextParameter"/>
         <Class IRI="#ContextInformationParameter"/>
     </SubClassOf>
@@ -682,10 +641,6 @@
             <ObjectProperty IRI="#hasConstraintRequirement"/>
             <Class IRI="#ConstraintRequirement"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ContentTypeMetaData"/>
-        <Class IRI="#MetaData"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ContextInformationConstraintRequirement"/>
@@ -1097,10 +1052,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DifficultyMetaData"/>
-        <Class IRI="#MetaData"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DisplayHorizontalResolutionMeasurableInformation"/>
@@ -1345,10 +1296,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnit"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMetaData"/>
-            <Class IRI="#MetaData"/>
-        </ObjectSomeValuesFrom>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMetaData"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnitClass"/>
@@ -1367,10 +1318,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnitClass"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMetaData"/>
-            <Class IRI="#MetaData"/>
-        </ObjectSomeValuesFrom>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMetaData"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnitClassConstraint"/>
@@ -1451,12 +1402,6 @@
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MetaData"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasValue"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#MicrophoneAvailableMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -1484,10 +1429,6 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#NavigationTypeMetaData"/>
-        <Class IRI="#MetaData"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NextAppointmentMeasurableInformation"/>
@@ -1671,17 +1612,6 @@
     <SubClassOf>
         <Class IRI="#ScenarioContext"/>
         <Class IRI="#SituationalContext"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ScreenReaderSuitableMetaData"/>
-        <Class IRI="#MetaData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ScreenReaderSuitableMetaData"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasValue"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SituationalContext"/>
@@ -3187,10 +3117,6 @@
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasMetaData"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPrerequisite"/>
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
@@ -3231,12 +3157,12 @@
         <ObjectProperty IRI="#isBasisOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasConstraintRequirement"/>
         <ObjectProperty IRI="#isConstraintRequirementOf"/>
+        <ObjectProperty IRI="#hasConstraintRequirement"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isContextClassOf"/>
         <ObjectProperty IRI="#hasContextClass"/>
+        <ObjectProperty IRI="#isContextClassOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isContextInformationOf"/>
@@ -3247,8 +3173,8 @@
         <ObjectProperty IRI="#hasContextInformationParameter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isExtensionOf"/>
         <ObjectProperty IRI="#hasExtension"/>
+        <ObjectProperty IRI="#isExtensionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasFeature"/>
@@ -3267,20 +3193,16 @@
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isMetaDataOf"/>
-        <ObjectProperty IRI="#hasMetaData"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasPrerequisite"/>
         <ObjectProperty IRI="#isPrerequisiteOf"/>
+        <ObjectProperty IRI="#hasPrerequisite"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isReferenceOf"/>
         <ObjectProperty IRI="#hasReference"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasVersion"/>
         <ObjectProperty IRI="#isVersionOf"/>
+        <ObjectProperty IRI="#hasVersion"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasVersion"/>
@@ -3505,40 +3427,8 @@
         <DataProperty IRI="#isRequired"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasAuthor"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasContentType"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasDifficulty"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasEndTime"/>
-        <Class IRI="#ConstraintRequirement"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasInteractivity"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasKeyword"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasLID"/>
         <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasLanguage"/>
-        <Class IRI="#LearningUnit"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasStartingTime"/>
-        <Class IRI="#ConstraintRequirement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasSubject"/>
@@ -3551,10 +3441,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasValueOperator"/>
         <Class IRI="#MeasurableContextInformation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasVersionDate"/>
-        <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#hasAuthor"/>

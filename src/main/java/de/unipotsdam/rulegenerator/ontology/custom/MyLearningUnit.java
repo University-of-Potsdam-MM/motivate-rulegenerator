@@ -1,10 +1,15 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLSubDataPropertyOfAxiom;
 
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
@@ -272,17 +277,16 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 	}
 
 	// Meta Data
-
+	
 	public Boolean hasMetaData() {
 		return this.getMetaDataCount() > 0;
 	}
 	
 	public Integer getMetaDataCount() {
-		return this.getMetaData().toArray().length;
+		return this.getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_HASMETADATA, Object.class).toArray().length;
 	}
 
-	public Collection<? extends MyMetaData> getMetaData() {
-		return getDelegate().getPropertyValues(getOwlIndividual(),
-				Vocabulary.OBJECT_PROPERTY_HASMETADATA, MyMetaData.class);
+	public MetaDataMap getMetaData() {
+		return new MetaDataMap(getOwlIndividual(), getOwlOntology(), getDelegate());
 	}
 }

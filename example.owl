@@ -39,12 +39,6 @@
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </Declaration>
     <Declaration>
@@ -93,13 +87,7 @@
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
@@ -173,14 +161,6 @@
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:ContentTypeMetaData"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:ContentTypeMetaData"/>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:CurrentTemperatureMeasurableInformation"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ClassAssertion>
@@ -245,16 +225,8 @@
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:ScreenReaderSuitableMetaData"/>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:LearningUnitClass"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:ScreenReaderSuitableMetaData"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
@@ -400,11 +372,6 @@
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasPrerequisite"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <NamedIndividual IRI="#Example-LearningUnit-124"/>
@@ -440,19 +407,9 @@
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
-        <NamedIndividual IRI="#Example-LearningUnit-130"/>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
@@ -478,16 +435,6 @@
         <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasMetaData"/>
-        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
@@ -523,16 +470,6 @@
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
         <Literal datatypeIRI="&xsd;string">IS</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
-        <NamedIndividual IRI="#Example-ContentTypeImagesMetaData"/>
-        <Literal datatypeIRI="&xsd;string">Images</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
-        <NamedIndividual IRI="#Example-ContentTypeVideoMetaData"/>
-        <Literal datatypeIRI="&xsd;string">Video</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
@@ -575,6 +512,11 @@
         <Literal datatypeIRI="&xsd;string">125</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasContentType"/>
+        <NamedIndividual IRI="#Example-LearningUnit-126"/>
+        <Literal datatypeIRI="&xsd;string">Image</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLID"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <Literal datatypeIRI="&xsd;string">126</Literal>
@@ -605,14 +547,14 @@
         <Literal datatypeIRI="&xsd;string">130</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
-        <NamedIndividual IRI="#Example-LongitudeParameter"/>
-        <Literal datatypeIRI="&xsd;float">14.2345</Literal>
+        <DataProperty abbreviatedIRI="knowledge:isScreenReaderSuitable"/>
+        <NamedIndividual IRI="#Example-LearningUnit-130"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
-        <NamedIndividual IRI="#Example-NoScreenReaderSuitability"/>
-        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        <NamedIndividual IRI="#Example-LongitudeParameter"/>
+        <Literal datatypeIRI="&xsd;float">14.2345</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
@@ -620,8 +562,8 @@
         <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
-        <NamedIndividual IRI="#Example-ScreenReaderSuitableMetaData"/>
+        <DataProperty abbreviatedIRI="knowledge:isScreenReaderSuitable"/>
+        <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -673,6 +615,16 @@
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
         <Literal datatypeIRI="&xsd;string">KILOMETERS_PER_HOUR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasContentType"/>
+        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
+        <Literal datatypeIRI="&xsd;string">Image</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasContentType"/>
+        <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
+        <Literal datatypeIRI="&xsd;string">Video</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>

@@ -100,7 +100,7 @@ public class RuleFactory {
 						learningUnitClassConstraint.getFactSet());
 			}
 		}
-
+		
 		for (MyLearningUnit currentLearningUnit : learningUnits) {
 
 			/** SELECT() **/

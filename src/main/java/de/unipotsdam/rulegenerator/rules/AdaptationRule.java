@@ -139,30 +139,35 @@ public class AdaptationRule {
 			LearningUnitClassFactSet hasNotLearningUnitClassFactSet)
 			throws Exception {
 		if (currentLearningUnit.hasMetaData()) {
-			System.out.println(currentLearningUnit.getID() + " has meta data.");
+			System.out.println(currentLearningUnit.getID() + " has meta data");
 			// apply constraints for facts matching the meta data
+			System.out.println("apply constraints for facts matching the meta data");
 			for (Entry<MyLearningUnitClass, FactSet> entry : hasLearningUnitFactSet
-					.getLearningUnitClassFactSets().entrySet()) {
+					.getChildren().entrySet()) {
 				MyLearningUnitClass constraintLearningUnitClass = entry
 						.getKey();
 				FactSet factSet = entry.getValue();
 
-				if (constraintLearningUnitClass.equals(currentLearningUnit
-						.getMetaData())) {
-					this.getSituation().constraints
-							.addLogicalOperator(LogicalOperator.AND);
+				if (constraintLearningUnitClass.getMetaData().equals(
+						currentLearningUnit.getMetaData(),
+						constraintLearningUnitClass.getLogicalOperator())) {
+					if (this.getSituation().constraints.getChildrenCount() > 0)
+						this.getSituation().constraints
+								.addLogicalOperator(LogicalOperator.AND);
 					this.getSituation().constraints.addFactSet(factSet);
 				}
 			}
 			// apply constraints for facts not matching the meta data
+			System.out.println("apply constraints for facts not matching the meta data");
 			for (Entry<MyLearningUnitClass, FactSet> entry : hasNotLearningUnitClassFactSet
-					.getLearningUnitClassFactSets().entrySet()) {
+					.getChildren().entrySet()) {
 				MyLearningUnitClass constraintLearningUnitClass = entry
 						.getKey();
 				FactSet factSet = entry.getValue();
 
-				if (!constraintLearningUnitClass.equals(currentLearningUnit
-						.getMetaData())) {
+				if (!constraintLearningUnitClass.getMetaData().equals(
+						currentLearningUnit.getMetaData(),
+						constraintLearningUnitClass.getLogicalOperator())) {
 					if (this.getSituation().constraints.getChildrenCount() > 0)
 						this.getSituation().constraints
 								.addLogicalOperator(LogicalOperator.AND);

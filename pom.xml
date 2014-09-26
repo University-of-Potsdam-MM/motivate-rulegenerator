@@ -8,13 +8,6 @@
 	<name>rulegenerator</name>
 	<dependencies>
 		<dependency>
-			<groupId>com.sun</groupId>
-			<artifactId>tools</artifactId>
-			<version>1.7.0_65</version>
-			<scope>system</scope>
-			<systemPath>${JAVA_HOME}\lib\tools.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-grizzly2</artifactId>
 			<version>${jersey-version}</version>
