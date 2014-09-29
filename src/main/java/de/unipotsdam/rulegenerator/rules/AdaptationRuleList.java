@@ -28,4 +28,10 @@ public class AdaptationRuleList {
 	public void addAdaptationRule(AdaptationRule adaptationRule) {
 		this.list.add(adaptationRule);
 	}
+	
+	public void addAdaptationRules(List<AdaptationRule> adaptationRules) {
+		for (AdaptationRule adaptationRule : adaptationRules) {
+			this.addAdaptationRule(adaptationRule);
+		}
+	}
 }
