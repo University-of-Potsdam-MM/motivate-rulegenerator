@@ -171,20 +171,17 @@
 			<xsl:text>&#x9;&#x9;</xsl:text>
 			<xsl:choose>
 				<xsl:when test="action/operator = 'SELECT'">
-					<xsl:text>select(</xsl:text>
+					<xsl:text>emit("selectLearningUnit", "</xsl:text>
 					<xsl:value-of select="action/learningUnitId" />
-					<xsl:text>);</xsl:text>
+					<xsl:text>");</xsl:text>
 				</xsl:when>
 				<xsl:when test="action/operator = 'PRELOAD'">
-					<xsl:text>preload(</xsl:text>
+					<xsl:text>emit("preloadLearningUnit", "</xsl:text>
 					<xsl:value-of select="action/learningUnitId" />
-					<xsl:text>);</xsl:text>
-				</xsl:when>
-				<xsl:when test="action/operator = 'RESTRICT'">
-					<xsl:text>restrictUsage(true);</xsl:text>
+					<xsl:text>");</xsl:text>
 				</xsl:when>
 				<xsl:when test="action/operator = 'RESTRICT_FEATURE'">
-					<xsl:text>restrictFeature("</xsl:text>
+					<xsl:text>emit("restrictFeature", "</xsl:text>
 					<xsl:value-of select="action/learningUnitId" />
 					<xsl:text>");</xsl:text>
 				</xsl:when>
