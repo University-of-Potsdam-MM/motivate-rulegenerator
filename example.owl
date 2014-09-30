@@ -444,7 +444,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">16:00:00</Literal>
+        <Literal datatypeIRI="&xsd;string">16:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
@@ -454,7 +454,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">09:00:00</Literal>
+        <Literal datatypeIRI="&xsd;string">09:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>

@@ -24,7 +24,9 @@
 						<xsl:text>.parameters['</xsl:text>
 						<xsl:value-of select="current()/contextInformation" />
 						<xsl:text>'] == </xsl:text>
+						<xsl:text>'</xsl:text>
 						<xsl:value-of select="current()/value" />
+						<xsl:text>'</xsl:text>
 					</xsl:for-each>
 				</xsl:if>
 				<xsl:text> &amp;&amp; </xsl:text>
@@ -48,7 +50,9 @@
 					</xsl:when>
 				</xsl:choose>
 				<xsl:if test="$factSetElement/operator != 'NO_VALUE'">
+					<xsl:text>'</xsl:text>
 					<xsl:value-of select="$factSetElement/value" />
+					<xsl:text>'</xsl:text>
 				</xsl:if>
 				<xsl:text>)</xsl:text>
 			</xsl:when>
