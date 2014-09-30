@@ -1,7 +1,6 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Scanner;
@@ -20,14 +19,8 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-
-import de.unipotsdam.rulegenerator.jaxrs.services.ContextInformationService;
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
-import de.unipotsdam.rulegenerator.rules.ContextInformation;
-import de.unipotsdam.rulegenerator.rules.ContextInformationList;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -35,46 +28,6 @@ import de.unipotsdam.rulegenerator.rules.ContextInformationList;
  */
 @Path("/json")
 public class JSONServices extends Services {
-
-	/**
-	 * Context information json.
-	 * 
-	 * @return the context information list
-	 * @throws JsonParseException
-	 *             the json parse exception
-	 * @throws JsonMappingException
-	 *             the json mapping exception
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred.
-	 */
-	@GET
-	@Path("/get-context-information")
-	@Produces(MediaType.APPLICATION_JSON)
-	public ContextInformationList getContextInformation()
-			throws JsonParseException, JsonMappingException, IOException {
-		return ContextInformationService.getContextInformation();
-	}
-
-	/**
-	 * Context information json.
-	 * 
-	 * @param id
-	 *            the id
-	 * @return the context information
-	 * @throws JsonParseException
-	 *             the json parse exception
-	 * @throws JsonMappingException
-	 *             the json mapping exception
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred.
-	 */
-	@GET
-	@Path("/get-context-information/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public ContextInformation getContextInformation(@PathParam("id") String id)
-			throws JsonParseException, JsonMappingException, IOException {
-		return ContextInformationService.getContextInformation(id);
-	}
 
 	@GET
 	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
