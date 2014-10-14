@@ -135,7 +135,7 @@
         <NamedIndividual IRI="#SituationalContext"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SuccestAlternativeFeature"/>
+        <NamedIndividual IRI="#SuggestAlternativeFeature"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TechnicalContext"/>
@@ -290,7 +290,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:Feature"/>
-        <NamedIndividual IRI="#SuccestAlternativeFeature"/>
+        <NamedIndividual IRI="#SuggestAlternativeFeature"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:TechnicalContext"/>

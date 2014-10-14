@@ -177,7 +177,7 @@
 				<xsl:when test="action/operator = 'SELECT'">
 					<xsl:text>emit("selectLearningUnit", "</xsl:text>
 					<xsl:value-of select="action/learningUnitId" />
-					<xsl:text>");</xsl:text>
+					<xsl:text>", getFacts());</xsl:text>
 				</xsl:when>
 				<xsl:when test="action/operator = 'PRELOAD'">
 					<xsl:text>emit("preloadLearningUnit", "</xsl:text>
@@ -187,7 +187,7 @@
 				<xsl:when test="action/operator = 'RESTRICT_FEATURE'">
 					<xsl:text>emit("restrictFeature", "</xsl:text>
 					<xsl:value-of select="action/learningUnitId" />
-					<xsl:text>");</xsl:text>
+					<xsl:text>", getFacts());</xsl:text>
 				</xsl:when>
 			</xsl:choose>
 			<xsl:text>&#xa;</xsl:text>
