@@ -647,6 +647,20 @@
         <Class IRI="#ConstraintRequirement"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ContextInformationConstraintRequirement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+            <Class IRI="#MeasurableContextInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContextInformationConstraintRequirement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+            <Class IRI="#MeasurableContextInformation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ContextInformationParameter"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="#hasValue"/>
