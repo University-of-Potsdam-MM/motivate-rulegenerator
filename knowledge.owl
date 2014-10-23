@@ -466,6 +466,15 @@
     <Declaration>
         <DataProperty IRI="#isScreenReaderSuitable"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AppUsageFeature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LocationTrackingFeature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SuggestAlternativeFeature"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="#LocationContextInformation"/>
         <ObjectIntersectionOf>
@@ -3114,6 +3123,18 @@
         <Class IRI="#SituationalContextInformation"/>
         <Class IRI="#TechnicalContextInformation"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Feature"/>
+        <NamedIndividual IRI="#AppUsageFeature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Feature"/>
+        <NamedIndividual IRI="#LocationTrackingFeature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Feature"/>
+        <NamedIndividual IRI="#SuggestAlternativeFeature"/>
+    </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAlternative"/>
         <ObjectProperty IRI="#hasRelation"/>
@@ -3195,8 +3216,8 @@
         <ObjectProperty IRI="#isFeatureOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isHelpOf"/>
         <ObjectProperty IRI="#hasHelp"/>
+        <ObjectProperty IRI="#isHelpOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isLearningUnitClassOf"/>

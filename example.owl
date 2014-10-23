@@ -24,9 +24,6 @@
     <Prefix name="knowledge" IRI="http://localhost:9998/owl/get-knowledge-ontology#"/>
     <Import>http://localhost:9998/owl/get-knowledge-ontology</Import>
     <Declaration>
-        <NamedIndividual IRI="#AppUsageFeature"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
     </Declaration>
     <Declaration>
@@ -123,9 +120,6 @@
         <NamedIndividual IRI="#LocationContext"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LocationTrackingFeature"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#PersonalContext"/>
     </Declaration>
     <Declaration>
@@ -135,15 +129,8 @@
         <NamedIndividual IRI="#SituationalContext"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SuggestAlternativeFeature"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#TechnicalContext"/>
     </Declaration>
-    <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:Feature"/>
-        <NamedIndividual IRI="#AppUsageFeature"/>
-    </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:RestrictFeatureConstraint"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
@@ -273,10 +260,6 @@
         <NamedIndividual IRI="#LocationContext"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:Feature"/>
-        <NamedIndividual IRI="#LocationTrackingFeature"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:PersonalContext"/>
         <NamedIndividual IRI="#PersonalContext"/>
     </ClassAssertion>
@@ -287,10 +270,6 @@
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:SituationalContext"/>
         <NamedIndividual IRI="#SituationalContext"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:Feature"/>
-        <NamedIndividual IRI="#SuggestAlternativeFeature"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:TechnicalContext"/>
@@ -314,7 +293,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasFeature"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#AppUsageFeature"/>
+        <NamedIndividual abbreviatedIRI="knowledge:AppUsageFeature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
