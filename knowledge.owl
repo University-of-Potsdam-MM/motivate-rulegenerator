@@ -11,10 +11,10 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://localhost:9998/owl/get-knowledge-ontology"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://localhost:9998/owl/get-knowledge-ontology">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -661,6 +661,13 @@
             <ObjectProperty IRI="#hasMeasurableContextInformation"/>
             <Class IRI="#MeasurableContextInformation"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContextInformationConstraintRequirement"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+            <Class IRI="#MeasurableContextInformation"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ContextInformationConstraintRequirement"/>
@@ -3192,52 +3199,52 @@
         <ObjectProperty IRI="#isBasisOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isConstraintRequirementOf"/>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
+        <ObjectProperty IRI="#isConstraintRequirementOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextClass"/>
         <ObjectProperty IRI="#isContextClassOf"/>
+        <ObjectProperty IRI="#hasContextClass"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isContextInformationOf"/>
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isContextInformationParameterOf"/>
         <ObjectProperty IRI="#hasContextInformationParameter"/>
+        <ObjectProperty IRI="#isContextInformationParameterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
         <ObjectProperty IRI="#isExtensionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasFeature"/>
         <ObjectProperty IRI="#isFeatureOf"/>
+        <ObjectProperty IRI="#hasFeature"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasHelp"/>
         <ObjectProperty IRI="#isHelpOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isLearningUnitClassOf"/>
         <ObjectProperty IRI="#hasLearningUnitClass"/>
+        <ObjectProperty IRI="#isLearningUnitClassOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isPrerequisiteOf"/>
         <ObjectProperty IRI="#hasPrerequisite"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isReferenceOf"/>
         <ObjectProperty IRI="#hasReference"/>
+        <ObjectProperty IRI="#isReferenceOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isVersionOf"/>
         <ObjectProperty IRI="#hasVersion"/>
+        <ObjectProperty IRI="#isVersionOf"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasVersion"/>
