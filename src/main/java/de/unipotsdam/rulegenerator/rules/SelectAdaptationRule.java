@@ -8,7 +8,8 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 public class SelectAdaptationRule extends AdaptationRule {
 	public SelectAdaptationRule(MyLearningUnit currentLearningUnit, LearningUnitClassFactSet hasLearningUnitClassFactSet, LearningUnitClassFactSet hasNotLearningUnitClassFactSet) throws Exception {
 		// set rule id
-		this.setId("SelectLearningUnit["+currentLearningUnit.getID()+"]");
+		//this.setId("SelectLearningUnit["+currentLearningUnit.getID()+"]");
+		this.setId(java.util.UUID.randomUUID().toString());
 		// create trigger for the rule
 		this.setTrigger(new Trigger(TriggeringMode.ON_ENTRY));
 		// create the situation for the rule

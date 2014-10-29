@@ -8,8 +8,8 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
 public class PreloadAdaptationRule extends AdaptationRule {
 	public PreloadAdaptationRule(MyLearningUnit currentLearningUnit,
 			MyLearningUnit preloadLearningUnit) throws Exception {
-		// TODO: find id pattern
-		this.setId("PreloadLearningUnit["+currentLearningUnit.getID()+":"+preloadLearningUnit.getID()+"]");
+		// set rule id
+		this.setId(java.util.UUID.randomUUID().toString());
 		// create trigger for the rule
 		this.setTrigger(new Trigger(TriggeringMode.ON_ENTRY));
 		// create the situation for the rule

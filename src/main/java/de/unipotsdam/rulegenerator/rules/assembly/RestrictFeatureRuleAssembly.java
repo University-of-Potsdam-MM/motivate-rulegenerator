@@ -37,7 +37,7 @@ public class RestrictFeatureRuleAssembly extends RuleAssembly {
 		
 		for (MyRestrictFeatureConstraint restrictFeatureConstraint : this.restrictFeatureConstraints) {
 			AdaptationRule featureConstraintRule = new AdaptationRule(
-					"RestrictFeatureConstraintRule[" + timestamp + "]",
+					java.util.UUID.randomUUID().toString(),
 					ActionOperator.RESTRICT_FEATURE, restrictFeatureConstraint
 							.getFeature().getIRIShort());
 			featureConstraintRule.setNegation(true);
