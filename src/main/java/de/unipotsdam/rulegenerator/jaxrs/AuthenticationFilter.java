@@ -5,7 +5,7 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import com.sun.jersey.core.util.Base64;
+import org.apache.commons.codec.binary.Base64;
 import com.sun.jersey.spi.container.ContainerRequest;
 import com.sun.jersey.spi.container.ContainerRequestFilter;
 
@@ -47,7 +47,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 			throw unauthorized;
 
 		auth = auth.replaceFirst("[Bb]asic ", "");
-		String userColonPass = Base64.base64Decode(auth);
+		String userColonPass = new String(Base64.decodeBase64(auth));
 
 		if (!userColonPass.equals("admin:8SPAp3uMInbBjBDr"))
 			throw unauthorized;

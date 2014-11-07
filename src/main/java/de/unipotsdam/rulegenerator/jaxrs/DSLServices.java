@@ -8,10 +8,11 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Scanner;
 
-import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -40,14 +41,15 @@ import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 @Path("/dsl")
 public class DSLServices extends Services implements ErrorListener,
 		ErrorHandler {
-	
-	@GET
-	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
+
+	@POST
+	@Path("/get-adaptation-rules")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String getAdaptationRules(@PathParam("ontologyABox") String ABox,
-			@PathParam("ontologyId") String ontologyId)
-			throws TransformerFactoryConfigurationError, ParserConfigurationException, SAXException,
-			TransformerException, IOException {
+	public String getAdaptationRules(@QueryParam("ontologyABox") String aBox,
+			@QueryParam("ontologyId") String ontologyId)
+			throws TransformerFactoryConfigurationError,
+			ParserConfigurationException, SAXException, TransformerException,
+			IOException {
 		// Write received ontology to file system
 
 		// String ontologyFileName = ontologyId + ".owl";
@@ -59,9 +61,11 @@ public class DSLServices extends Services implements ErrorListener,
 		// generate rules
 		AdaptationRuleList adaptationRuleList;
 		try {
-			adaptationRuleList = RuleGeneratorService.generateAdaptationRules();
+			adaptationRuleList = RuleGeneratorService.generateAdaptationRules(
+					aBox, ontologyId);
 		} catch (Exception e) {
-			return e.getClass() + " " + e.getMessage() + "\n\n" + this.stackTraceToString(e);
+			return e.getClass() + " " + e.getMessage() + "\n\n"
+					+ this.stackTraceToString(e);
 		}
 
 		String xml;

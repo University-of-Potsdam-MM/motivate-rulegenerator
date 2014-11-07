@@ -12,4 +12,10 @@ public class MyFeature extends DefaultFeature implements Feature {
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
 	}
+	
+	// IRI
+	
+	public String getIRIShort() {
+		return this.getOwlIndividual().getIRI().getFragment();
+	}
 }

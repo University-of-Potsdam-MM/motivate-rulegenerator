@@ -33,7 +33,7 @@ public class JSONServices extends Services {
 	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getAdaptationRules(
-			@PathParam("ontologyABox") String ABox,
+			@PathParam("ontologyABox") String aBox,
 			@PathParam("ontologyId") String ontologyId)
 			throws TransformerFactoryConfigurationError, Exception {
 		// Write received ontology to file system
@@ -44,7 +44,7 @@ public class JSONServices extends Services {
 		//writer.close();
 		
 		// generate rules
-		AdaptationRuleList adaptationRuleList = RuleGeneratorService.generateAdaptationRules();
+		AdaptationRuleList adaptationRuleList = RuleGeneratorService.generateAdaptationRules(aBox, ontologyId);
 
 		String xml;
 		StringWriter stringWriter = new StringWriter();

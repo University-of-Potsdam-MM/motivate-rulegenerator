@@ -86,7 +86,6 @@ public class PelletTest {
 		System.out.println("<LearningUnits>");
 		for (LearningUnit learningUnit : learningUnits) {
 			MyLearningUnit myLearningUnit = (MyLearningUnit) learningUnit;
-			myLearningUnit.description(1);
 		}
 		System.out.println("</LearningUnits>");
 	}

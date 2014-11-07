@@ -21,28 +21,15 @@ public class MyContextInformationParameter extends
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
 	}
-
-	public void description() {
-		this.description(0);
-	}
 	
-	public void description(Integer indent) {
-		this.description(indent, true);
-	}
-
-	public void description(Integer indent, Boolean deep) {
-		System.out.println(this.getIndentSpace(indent + 1) + "<IRI>"
-				+ this.getIRIShort() + "</IRI>");
-		System.out.println(this.getIndentSpace(indent + 1) + "<Class>"
-				+ this.getSpecificType() + "</Class>");
-		System.out.println(this.getIndentSpace(indent + 1) + "<Value>"
-				+ this.getValue() + "</Value>");
-	}
+	// IRI
 
 	public String getIRIShort() {
 		return this.getOwlIndividual().getIRI().getFragment();
 	}
 
+	// Type
+	
 	public Set<OWLClassExpression> getTypes() {
 		return this.getOwlIndividual().getTypes(this.getOwlOntology());
 	}

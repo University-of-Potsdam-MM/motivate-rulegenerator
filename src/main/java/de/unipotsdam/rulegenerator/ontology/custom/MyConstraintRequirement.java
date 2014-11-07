@@ -1,6 +1,7 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
+import java.util.Set;
 
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
@@ -19,6 +20,10 @@ public class MyConstraintRequirement extends DefaultConstraintRequirement implem
 		// TODO Auto-generated constructor stub
 	}
 
+	public Set<OWLClassExpression> getTypes() {
+		return this.getOwlIndividual().getTypes(this.getOwlOntology());
+	}
+	
 	// Type
 
 	public String getSpecificTailType() {
@@ -47,27 +52,5 @@ public class MyConstraintRequirement extends DefaultConstraintRequirement implem
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASMEASURABLECONTEXTINFORMATION,
 				MyMeasurableContextInformation.class);
-	}
-
-	// Starting Time
-
-	public String getStartTime() {
-		if (this.hasHasStartingTime()) {
-			return getDelegate().getPropertyValues(getOwlIndividual(),
-					Vocabulary.DATA_PROPERTY_HASSTARTINGTIME, Object.class).toArray()[0].toString();
-		} else {
-			return null;
-		}
-	}
-	
-	// End Time
-
-	public String getEndTime() {
-		if (this.hasHasEndTime()) {
-			return getDelegate().getPropertyValues(getOwlIndividual(),
-					Vocabulary.DATA_PROPERTY_HASENDTIME, Object.class).toArray()[0].toString();
-		} else {
-			return null;
-		}
 	}
 }

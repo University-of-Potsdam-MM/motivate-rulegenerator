@@ -1,6 +1,7 @@
 package de.unipotsdam.rulegenerator.jaxrs.services;
 
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,17 +41,14 @@ public class RuleGeneratorService {
 	 * @return the adaptation rule list
 	 * @throws Exception
 	 */
-	public static AdaptationRuleList generateAdaptationRules() throws Exception {
+	public static AdaptationRuleList generateAdaptationRules(String aBox, String ontologyId) throws Exception {
+		System.out.println(aBox);
+		
 		manager = OWLManager.createOWLOntologyManager();
 		// load received ontology
 		ontology = manager.loadOntologyFromOntologyDocument(new File(
 				"example.owl"));
-		// get data factory
-				dataFactory = manager.getOWLDataFactory();
-		OWLImportsDeclaration importDeclaraton = dataFactory
-				.getOWLImportsDeclaration(IRI.create(new File(
-						"knowledge.owl")));
-		manager.applyChange(new AddImport(ontology, importDeclaraton));
+		//ontology = manager.loadOntologyFromOntologyDocument(new ByteArrayInputStream(aBox.getBytes(StandardCharsets.UTF_8)));
 		// get Pellet reasoner
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);

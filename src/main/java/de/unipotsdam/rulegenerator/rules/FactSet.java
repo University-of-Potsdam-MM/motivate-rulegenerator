@@ -33,20 +33,6 @@ public class FactSet implements FactSetElement {
 			factSet.addFact(Fact
 					.FactFromContextInformation(measurableInformation));
 		} else if (requirement.getSpecificTailType().equals(
-				"IntervalConstraintRequirement")
-				&& requirement.hasHasStartingTime()
-				&& requirement.hasHasEndTime()) {
-			String startingTime = requirement.getStartTime();
-			String endTime = requirement.getEndTime();
-
-			Fact startingTimeFact = new Fact(
-					"CurrentTimeMeasurableInformation",
-					FactOperator.GREATER_THEN, startingTime);
-			Fact endTimeFact = new Fact("CurrentTimeMeasurableInformation",
-					FactOperator.LESS_THEN, endTime);
-
-			factSet.addFact(startingTimeFact, LogicalOperator.AND, endTimeFact);
-		} else if (requirement.getSpecificTailType().equals(
 				"RankingConstraintRequirement")) {
 
 		} else if (requirement.getSpecificTailType().equals(

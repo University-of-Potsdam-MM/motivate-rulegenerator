@@ -1,6 +1,7 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
+import java.util.Set;
 
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
@@ -20,40 +21,12 @@ public class MyMeasurableContextInformation extends
 		// TODO Auto-generated constructor stub
 	}
 
-	public void description() {
-		this.description(0);
+	// Type
+
+	public Set<OWLClassExpression> getTypes() {
+		return this.getOwlIndividual().getTypes(this.getOwlOntology());
 	}
 	
-	public void description(Integer indent) {
-		this.description(indent, true);
-	}
-
-	public void description(Integer indent, Boolean deep) {
-		System.out.println(this.getIndentSpace(indent+1) + "<IRI>" + this.getIRIShort()
-				+ "</IRI>");
-		System.out.println(this.getIndentSpace(indent+1) + "<Class>"
-				+ this.getSpecificContextInformationType() + "</Class>");
-		if (this.getContextInformationParameterCount() > 0) {
-			System.out.println(this.getIndentSpace(indent+1) + "<Parameters>");
-			int i = 0;
-			for (MyContextInformationParameter parameter : this
-					.getContextInformationParameters()) {
-				parameter.description(indent + 2);
-				if (i != this.getContextInformationParameterCount() - 1)
-					System.out.println();
-				i++;
-			}
-			System.out.println(this.getIndentSpace(indent+1) + "</Parameters>");
-		} else {
-			System.out.println(this.getIndentSpace(indent+1) + "<Parameters/>");
-		}
-		System.out.println("<ValueOperator>"+this.getValueOperator()+"</ValueOperator");
-		System.out.println(this.getIndentSpace(indent+1) + "<Value>" + this.getValue()
-				+ "</Value>");
-	}
-
-	// Types
-
 	public String getSpecificContextInformationType() {
 		for (OWLClassExpression type : this.getTypes()) {
 			OWLClassImpl impl = (OWLClassImpl) type;

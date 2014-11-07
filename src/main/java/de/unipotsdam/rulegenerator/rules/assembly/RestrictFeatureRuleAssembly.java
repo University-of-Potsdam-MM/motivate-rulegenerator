@@ -31,10 +31,13 @@ public class RestrictFeatureRuleAssembly extends RuleAssembly {
 	}
 
 	@Override
-	public AdaptationRuleList generateRules(LearningUnitClassFactSet hasLearningUnitClassConstraintFactSet, LearningUnitClassFactSet hasNotLearningUnitClassConstraintFactSet) throws Exception {
+	public AdaptationRuleList generateRules(
+			LearningUnitClassFactSet hasLearningUnitClassConstraintFactSet,
+			LearningUnitClassFactSet hasNotLearningUnitClassConstraintFactSet)
+			throws Exception {
 		// use timestamp for unique ids
 		long timestamp = System.currentTimeMillis() / 1000;
-		
+
 		for (MyRestrictFeatureConstraint restrictFeatureConstraint : this.restrictFeatureConstraints) {
 			AdaptationRule featureConstraintRule = new AdaptationRule(
 					java.util.UUID.randomUUID().toString(),

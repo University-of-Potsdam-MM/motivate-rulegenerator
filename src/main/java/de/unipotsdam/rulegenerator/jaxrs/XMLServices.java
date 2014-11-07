@@ -25,6 +25,6 @@ public class XMLServices extends Services {
 	@Path("/get-adaptation-rules")
 	@Produces(MediaType.TEXT_XML)
 	public AdaptationRuleList getAdaptationRules() throws Exception {
-		return RuleGeneratorService.generateAdaptationRules();
+		return RuleGeneratorService.generateAdaptationRules(null, null);
 	}
 }

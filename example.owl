@@ -21,8 +21,8 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="knowledge" IRI="http://localhost:9998/owl/get-knowledge-ontology#"/>
-    <Import>http://localhost:9998/owl/get-knowledge-ontology</Import>
+    <Prefix name="knowledge" IRI="http://motivate-project.de/ontology/knowledge.owl#"/>
+    <Import>http://motivate-project.de/ontology/knowledge.owl</Import>
     <Declaration>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
     </Declaration>
@@ -283,12 +283,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
-        <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
+        <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasFeature"/>
@@ -343,12 +343,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
+        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
-        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
+        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasPrerequisite"/>
@@ -398,12 +398,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <NamedIndividual IRI="#Example-LatitudeParameter"/>
+        <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <NamedIndividual IRI="#Example-LongitudeParameter"/>
+        <NamedIndividual IRI="#Example-LatitudeParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
@@ -478,7 +478,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
-        <Literal datatypeIRI="&xsd;float">52.42357</Literal>
+        <Literal datatypeIRI="&xsd;float">52.39351</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLID"/>
@@ -533,7 +533,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
-        <Literal datatypeIRI="&xsd;float">14.2345</Literal>
+        <Literal datatypeIRI="&xsd;float">13.13024</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
@@ -563,7 +563,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
-        <Literal datatypeIRI="&xsd;float">52.12436</Literal>
+        <Literal datatypeIRI="&xsd;float">52.39346</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
@@ -573,7 +573,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
-        <Literal datatypeIRI="&xsd;float">13.34523</Literal>
+        <Literal datatypeIRI="&xsd;float">13.13021</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
@@ -598,12 +598,12 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasContentType"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <Literal datatypeIRI="&xsd;string">Image</Literal>
+        <Literal datatypeIRI="&xsd;string">Video</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasContentType"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-        <Literal datatypeIRI="&xsd;string">Video</Literal>
+        <Literal datatypeIRI="&xsd;string">Image</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
