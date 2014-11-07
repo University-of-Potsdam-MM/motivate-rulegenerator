@@ -1,16 +1,13 @@
 package de.unipotsdam.rulegenerator.jaxrs.services;
 
-import java.io.File;
-import java.net.URL;
+import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.AddImport;
-import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.util.InferredAxiomGenerator;
@@ -42,13 +39,9 @@ public class RuleGeneratorService {
 	 * @throws Exception
 	 */
 	public static AdaptationRuleList generateAdaptationRules(String aBox, String ontologyId) throws Exception {
-		System.out.println(aBox);
-		
 		manager = OWLManager.createOWLOntologyManager();
 		// load received ontology
-		ontology = manager.loadOntologyFromOntologyDocument(new File(
-				"example.owl"));
-		//ontology = manager.loadOntologyFromOntologyDocument(new ByteArrayInputStream(aBox.getBytes(StandardCharsets.UTF_8)));
+		ontology = manager.loadOntologyFromOntologyDocument(new ByteArrayInputStream(aBox.getBytes(StandardCharsets.UTF_8)));
 		// get Pellet reasoner
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);

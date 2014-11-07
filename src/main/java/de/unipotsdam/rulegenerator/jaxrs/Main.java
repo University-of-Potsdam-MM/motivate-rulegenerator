@@ -14,7 +14,8 @@ import org.glassfish.jersey.server.ResourceConfig;
 public class Main {
 
     // Base URI the Grizzly HTTP server will listen on
-    public static final String BASE_URI = "http://localhost:9998/";
+	public static String host = "localhost";
+	public static String port = "9998";
     
 	/**
 	 * Start server.
@@ -35,9 +36,13 @@ public class Main {
 
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
-        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), resourceConfig);
+        return GrizzlyHttpServerFactory.createHttpServer(URI.create(getBaseURL()), resourceConfig);
     }
 
+    public static String getBaseURL() {
+    	return "http://"+host+":"+port+"/";
+    }
+    
 	/**
 	 * The main method.
 	 *
@@ -45,9 +50,12 @@ public class Main {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void main(String[] args) throws IOException {
+		if (args.length > 0) host = args[0];
+		if (args.length > 1) port = args[1];
+		
 		final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with WADL available at "
-                + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
+                + "%sapplication.wadl\nHit enter to stop it...", getBaseURL()));
         System.in.read();
         server.shutdownNow();
 	}

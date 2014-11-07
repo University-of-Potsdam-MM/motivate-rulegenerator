@@ -8,11 +8,11 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Scanner;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -44,20 +44,13 @@ public class DSLServices extends Services implements ErrorListener,
 
 	@POST
 	@Path("/get-adaptation-rules")
+	@Consumes("application/x-www-form-urlencoded")
 	@Produces(MediaType.TEXT_PLAIN)
-	public String getAdaptationRules(@QueryParam("ontologyABox") String aBox,
-			@QueryParam("ontologyId") String ontologyId)
+	public String getAdaptationRules(@FormParam("ontologyABox") String aBox,
+			@FormParam("ontologyId") String ontologyId)
 			throws TransformerFactoryConfigurationError,
 			ParserConfigurationException, SAXException, TransformerException,
-			IOException {
-		// Write received ontology to file system
-
-		// String ontologyFileName = ontologyId + ".owl";
-		// PrintWriter writer = new PrintWriter("src/" + ontologyFileName,
-		// "UTF-8");
-		// writer.println(ABox);
-		// writer.close();
-
+			IOException {	
 		// generate rules
 		AdaptationRuleList adaptationRuleList;
 		try {
@@ -80,7 +73,7 @@ public class DSLServices extends Services implements ErrorListener,
 			throw new RuntimeException(e);
 		}
 
-		String xslt = new Scanner(new File("resources/noolsDSL.xslt"))
+		String xslt = new Scanner(new File("./resources/noolsDSL.xslt"))
 				.useDelimiter("\\Z").next();
 
 		System.setProperty("javax.xml.transform.TransformerFactory",
@@ -106,7 +99,8 @@ public class DSLServices extends Services implements ErrorListener,
 		transformer.transform(xmlInput, xmlOutput);
 
 		OutputStreamWriter outputWriter = new OutputStreamWriter(
-				new FileOutputStream("resources/noolsDSLOutput.nools"), "UTF-8");
+				new FileOutputStream("./resources/noolsDSLOutput.nools"),
+				"UTF-8");
 		outputWriter.write(xmlOutput.getWriter().toString());
 		outputWriter.close();
 
