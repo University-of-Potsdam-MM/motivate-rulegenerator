@@ -50,7 +50,7 @@ public class DSLServices extends Services implements ErrorListener,
 			@FormParam("ontologyId") String ontologyId)
 			throws TransformerFactoryConfigurationError,
 			ParserConfigurationException, SAXException, TransformerException,
-			IOException {	
+			IOException {
 		// generate rules
 		AdaptationRuleList adaptationRuleList;
 		try {

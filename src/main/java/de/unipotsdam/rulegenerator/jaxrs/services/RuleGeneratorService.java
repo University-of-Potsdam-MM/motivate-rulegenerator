@@ -5,7 +5,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.cli.MissingArgumentException;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.io.UnparsableOntologyException;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -41,7 +43,13 @@ public class RuleGeneratorService {
 	public static AdaptationRuleList generateAdaptationRules(String aBox, String ontologyId) throws Exception {
 		manager = OWLManager.createOWLOntologyManager();
 		// load received ontology
-		ontology = manager.loadOntologyFromOntologyDocument(new ByteArrayInputStream(aBox.getBytes(StandardCharsets.UTF_8)));
+		try {
+			ontology = manager.loadOntologyFromOntologyDocument(new ByteArrayInputStream(aBox.getBytes(StandardCharsets.UTF_8)));
+		} catch (NullPointerException e) {
+			throw new MissingArgumentException("You need to provide an ontology to generate rules from.");
+		} catch (UnparsableOntologyException e) {
+			throw new Exception("The provided ontology seems to be malformed. Please check that the ontology was URL encoded.");
+		}
 		// get Pellet reasoner
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);
