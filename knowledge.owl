@@ -23,13 +23,19 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&xsd;float">1.1</Literal>
+        <Literal datatypeIRI="&xsd;float">1.2</Literal>
     </Annotation>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
     <Declaration>
         <Class IRI="#AppointmentDetailContextParameter"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CancelAction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Constraint"/>
@@ -104,6 +110,9 @@
         <Class IRI="#Feature"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#FinishAction"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
     </Declaration>
     <Declaration>
@@ -149,6 +158,9 @@
         <Class IRI="#ParameterizedContextInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PauseAction"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#PersonalContext"/>
     </Declaration>
     <Declaration>
@@ -176,6 +188,12 @@
         <Class IRI="#RankingConstraintRequirement"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Reason"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecordedContextInformation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#RestrictFeatureConstraint"/>
     </Declaration>
     <Declaration>
@@ -185,10 +203,16 @@
         <Class IRI="#ScenarioContextInformation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Situation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#SituationalContext"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SituationalContextInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartAction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TargetLatitudeContextParameter"/>
@@ -210,6 +234,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TimeUntilTimestampMeasurableInformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TransmissionAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
     </Declaration>
     <Declaration>
         <Class IRI="#UserAgeMeasurableInformation"/>
@@ -305,6 +335,9 @@
         <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasAction"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasAlternative"/>
     </Declaration>
     <Declaration>
@@ -332,6 +365,9 @@
         <ObjectProperty IRI="#hasHelp"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasLearningUnit"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasLearningUnitClass"/>
     </Declaration>
     <Declaration>
@@ -344,13 +380,25 @@
         <ObjectProperty IRI="#hasPrerequisite"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasReason"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRecordedContextInformation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasReference"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasRelation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasSituation"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasVersion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isActionOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isBasisOf"/>
@@ -386,10 +434,19 @@
         <ObjectProperty IRI="#isPrerequisiteOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isRecordedContextInformationOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isReferenceOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isSituationOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isVersionOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAID"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasAcquisitionDate"/>
@@ -449,7 +506,16 @@
         <DataProperty IRI="#hasSubject"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTimestamp"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasTrigger"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUID"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasValue"/>
@@ -470,11 +536,40 @@
         <NamedIndividual IRI="#AppUsageFeature"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-Bob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-Mary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-Situation"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#LocationTrackingFeature"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SuggestAlternativeFeature"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Feature"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#AppUsageFeature"/>
+            <NamedIndividual IRI="#SuggestAlternativeFeature"/>
+            <NamedIndividual IRI="#LocationTrackingFeature"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#LocationContextInformation"/>
         <ObjectIntersectionOf>
@@ -584,6 +679,48 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="#Action"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasLearningUnit"/>
+            <Class IRI="#LearningUnit"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Action"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasReason"/>
+            <Class IRI="#Reason"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Action"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSituation"/>
+            <Class IRI="#Situation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Action"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSituation"/>
+            <Class IRI="#Situation"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Action"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasEndTime"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Action"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasStartingTime"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#AppointmentDetailContextParameter"/>
         <Class IRI="#ContextInformationParameter"/>
     </SubClassOf>
@@ -603,6 +740,10 @@
     <SubClassOf>
         <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
+        <Class IRI="#TechnicalContext"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
@@ -628,6 +769,10 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CancelAction"/>
+        <Class IRI="#Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Constraint"/>
@@ -1234,6 +1379,10 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#FinishAction"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FinishedLearningUnitMeasurableInformation"/>
         <Class IRI="#MeasurableContextInformation"/>
     </SubClassOf>
@@ -1505,6 +1654,10 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#PauseAction"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#PersonalContext"/>
         <Class IRI="#ContextClass"/>
     </SubClassOf>
@@ -1623,6 +1776,20 @@
         </DataAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RecordedContextInformation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+            <Class IRI="#MeasurableContextInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecordedContextInformation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTimestamp"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#RestrictFeatureConstraint"/>
         <Class IRI="#Constraint"/>
     </SubClassOf>
@@ -1644,8 +1811,19 @@
         <Class IRI="#SituationalContext"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Situation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRecordedContextInformation"/>
+            <Class IRI="#RecordedContextInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SituationalContext"/>
         <Class IRI="#ContextClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartAction"/>
+        <Class IRI="#Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TargetLatitudeContextParameter"/>
@@ -1715,6 +1893,31 @@
                 <Literal datatypeIRI="&rdf;PlainLiteral">NO_VALUE</Literal>
             </DataOneOf>
         </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TransmissionAction"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAction"/>
+            <Class IRI="#Action"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRecordedContextInformation"/>
+            <Class IRI="#RecordedContextInformation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasUID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#UserAgeMeasurableInformation"/>
@@ -3119,6 +3322,13 @@
         <Class IRI="#VideoCameraAvailableMeasurableInformation"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#CancelAction"/>
+        <Class IRI="#FinishAction"/>
+        <Class IRI="#PauseAction"/>
+        <Class IRI="#StartAction"/>
+        <Class IRI="#TransmissionAction"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#PersonalContext"/>
         <Class IRI="#PhysicalContext"/>
         <Class IRI="#SituationalContext"/>
@@ -3135,6 +3345,46 @@
         <NamedIndividual IRI="#AppUsageFeature"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CancelAction"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#Example-Mary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Situation"/>
+        <NamedIndividual IRI="#Example-Situation"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Feature"/>
         <NamedIndividual IRI="#LocationTrackingFeature"/>
     </ClassAssertion>
@@ -3142,6 +3392,66 @@
         <Class IRI="#Feature"/>
         <NamedIndividual IRI="#SuggestAlternativeFeature"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAction"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSituation"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+        <NamedIndividual IRI="#Example-Situation"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTimestamp"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+        <Literal datatypeIRI="&xsd;unsignedInt">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTimestamp"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
+        <Literal datatypeIRI="&xsd;unsignedInt">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
+        <Literal datatypeIRI="&xsd;float">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTimestamp"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
+        <Literal datatypeIRI="&xsd;unsignedInt">26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
+        <Literal datatypeIRI="&xsd;float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTimestamp"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
+        <Literal datatypeIRI="&xsd;unsignedInt">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
+        <Literal datatypeIRI="&xsd;float">5.0</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAlternative"/>
         <ObjectProperty IRI="#hasRelation"/>
@@ -3195,52 +3505,64 @@
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasBasis"/>
+        <ObjectProperty IRI="#isActionOf"/>
+        <ObjectProperty IRI="#hasAction"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#isBasisOf"/>
+        <ObjectProperty IRI="#hasBasis"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isConstraintRequirementOf"/>
         <ObjectProperty IRI="#hasConstraintRequirement"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextClass"/>
         <ObjectProperty IRI="#isContextClassOf"/>
+        <ObjectProperty IRI="#hasContextClass"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isContextInformationOf"/>
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isContextInformationParameterOf"/>
         <ObjectProperty IRI="#hasContextInformationParameter"/>
+        <ObjectProperty IRI="#isContextInformationParameterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
         <ObjectProperty IRI="#isExtensionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasFeature"/>
         <ObjectProperty IRI="#isFeatureOf"/>
+        <ObjectProperty IRI="#hasFeature"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isHelpOf"/>
         <ObjectProperty IRI="#hasHelp"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isLearningUnitClassOf"/>
         <ObjectProperty IRI="#hasLearningUnitClass"/>
+        <ObjectProperty IRI="#isLearningUnitClassOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
+        <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isPrerequisiteOf"/>
         <ObjectProperty IRI="#hasPrerequisite"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isReferenceOf"/>
+        <ObjectProperty IRI="#hasRecordedContextInformation"/>
+        <ObjectProperty IRI="#isRecordedContextInformationOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#hasReference"/>
+        <ObjectProperty IRI="#isReferenceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSituation"/>
+        <ObjectProperty IRI="#isSituationOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isVersionOf"/>
@@ -3433,6 +3755,14 @@
         <DataProperty IRI="#hasMetaData"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#hasTime"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasTimestamp"/>
+        <DataProperty IRI="#hasMetaData"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#hasVersionDate"/>
         <DataProperty IRI="#hasMetaData"/>
     </SubDataPropertyOf>
@@ -3444,6 +3774,9 @@
         <DataProperty IRI="#isScreenReaderSuitable"/>
         <DataProperty IRI="#hasMetaData"/>
     </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasAID"/>
+    </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasDataType"/>
     </FunctionalDataProperty>
@@ -3463,11 +3796,18 @@
         <DataProperty IRI="#hasName"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasUID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasVersionDate"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#isRequired"/>
     </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAID"/>
+        <Class IRI="#Action"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasLID"/>
         <Class IRI="#LearningUnit"/>
@@ -3481,9 +3821,17 @@
         <Class IRI="#LearningUnit"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasUID"/>
+        <Class IRI="#User"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasValueOperator"/>
         <Class IRI="#MeasurableContextInformation"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasAuthor"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -3540,8 +3888,16 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasTimestamp"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasTrigger"/>
         <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasUID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasValueOperator"/>
@@ -3562,31 +3918,62 @@
         <DataProperty IRI="#isRequired"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#CurrentTemperatureMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Aktuelle Temperatur</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DeviceTypeMeasurableInformation</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Device type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DeviceTypeMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Geräte-Typ</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#FinishedLearningUnitMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Abgeschlossene Lerneinheit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#HasScreenReaderFunctionalityMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Bietet Screenreader-Funktionalität</Literal>
-    </AnnotationAssertion>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#User"/>
+                <Variable IRI="urn:swrl#u"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Action"/>
+                <Variable IRI="urn:swrl#a"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Situation"/>
+                <Variable IRI="urn:swrl#s"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#RecordedContextInformation"/>
+                <Variable IRI="urn:swrl#r"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRecordedContextInformation"/>
+                <Variable IRI="urn:swrl#u"/>
+                <Variable IRI="urn:swrl#r"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAction"/>
+                <Variable IRI="urn:swrl#u"/>
+                <Variable IRI="urn:swrl#a"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasSituation"/>
+                <Variable IRI="urn:swrl#a"/>
+                <Variable IRI="urn:swrl#s"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasTimestamp"/>
+                <Variable IRI="urn:swrl#r"/>
+                <Variable IRI="urn:swrl#tr"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasTimestamp"/>
+                <Variable IRI="urn:swrl#a"/>
+                <Variable IRI="urn:swrl#ta"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable IRI="urn:swrl#tr"/>
+                <Variable IRI="urn:swrl#ta"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRecordedContextInformation"/>
+                <Variable IRI="urn:swrl#s"/>
+                <Variable IRI="urn:swrl#r"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#TargetLatitudeContextParameter</IRI>
@@ -3597,69 +3984,9 @@
         <IRI>#TargetLongitudeContextParameter</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Längengrad des Zielortes</Literal>
     </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserDidArriveAtLocationMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Benutzer ist an Position angekommen</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserDidLeaveLocationMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Benutzer hat Position verlassen</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserIsAtLocationMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Benutzer befindet sich an Position</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserLocationAddressMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Aktuelle Adresse des Benutzers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserLocationBuildingMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Gebäude in dem sich der Benutzer befindet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserLocationCountryMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Land in dem sich der Benutzer befindet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserLocationDistanceMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Entfernung des Benutzers zu einer Position</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserLocationLatitudeMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Aktueller Breitengrad des Benutzers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserLocationLongitudeMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Aktueller Längengrad des Benutzers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserLocationRegionMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Aktuelle Position des Benutzers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserMeansOfTransportationMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Fortbewegungsmittel des Benutzers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#UserMovementSpeedMeasurableInformation</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Fortbewegungsgeschwindigkeit des Benutzers</Literal>
-    </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
