@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.cli.MissingArgumentException;
+import org.protege.editor.owl.ui.ontology.imports.wizard.page.LoadedOntologyPage;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.io.UnparsableOntologyException;
 import org.semanticweb.owlapi.model.OWLAxiom;
@@ -28,42 +29,19 @@ import de.unipotsdam.rulegenerator.rules.RuleFactory;
 /**
  * The Class RuleGeneratorService.
  */
-public class RuleGeneratorService {
-	protected static PelletReasoner reasoner;
-	protected static OWLDataFactory dataFactory;
-	protected static OWLOntologyManager manager;
-	protected static OWLOntology ontology;
-
+public class RuleGeneratorService extends Service {
 	/**
 	 * Generate adaptation rules.
 	 * 
 	 * @return the adaptation rule list
 	 * @throws Exception
 	 */
-	public static AdaptationRuleList generateAdaptationRules(String aBox, String ontologyId) throws Exception {
-		manager = OWLManager.createOWLOntologyManager();
+	public static AdaptationRuleList generateAdaptationRules(String aBox,
+			String ontologyId) throws Exception {
 		// load received ontology
-		try {
-			ontology = manager.loadOntologyFromOntologyDocument(new ByteArrayInputStream(aBox.getBytes(StandardCharsets.UTF_8)));
-		} catch (NullPointerException e) {
-			throw new MissingArgumentException("You need to provide an ontology to generate rules from.");
-		} catch (UnparsableOntologyException e) {
-			throw new Exception("The provided ontology seems to be malformed. Please check that the ontology was URL encoded.");
-		}
-		// get Pellet reasoner
-		reasoner = PelletReasonerFactory.getInstance()
-				.createNonBufferingReasoner(ontology);
-		// listen for ontology changes (might be unnecessary)
-		manager.addOntologyChangeListener(reasoner);
-		// set up list of inferred axiom generators
-		List<InferredAxiomGenerator<? extends OWLAxiom>> generators = new ArrayList<InferredAxiomGenerator<? extends OWLAxiom>>();
-		generators.add(new InferredSubClassAxiomGenerator());
-		generators.add(new InferredClassAssertionAxiomGenerator());
-		generators.add(new InferredPropertyAssertionGenerator());
-		// create inferred ontology generator
-		InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner);
-		// fill inferred ontology into the existing one
-		iog.fillOntology(manager, ontology);
+		loadOntology(aBox);
+		// infer
+		inferOntology();
 		// create rule factory
 		RuleFactory ruleFactory = new RuleFactory(ontology);
 		// generate rules
