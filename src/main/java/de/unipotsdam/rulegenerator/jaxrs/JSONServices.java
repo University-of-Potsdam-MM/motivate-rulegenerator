@@ -22,6 +22,9 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.jaxrs.services.StatisticsService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
@@ -32,7 +35,8 @@ import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
  */
 @Path("/json")
 public class JSONServices extends Services {
-
+	final Logger logger = LoggerFactory.getLogger(JSONServices.class);
+	
 	@GET
 	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -73,7 +77,7 @@ public class JSONServices extends Services {
 
 		xmlTransformer.transform(new StreamSource(new StringReader(xml)),
 				new StreamResult(xmlResultResource));
-
+		
 		return xmlResultResource.getBuffer().toString();
 	}
 
@@ -83,7 +87,14 @@ public class JSONServices extends Services {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getStatistics(@FormParam("ontologyABox") String aBox,
 			@FormParam("ontologyId") String ontologyId) throws Exception {
-
-		return StatisticsService.generateStatistics(aBox, ontologyId);
+		logger.debug("foo {}", 1);
+		logger.info("bar");
+		try {
+			return StatisticsService.generateStatistics(aBox, ontologyId);
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		return null;
 	}
 }
