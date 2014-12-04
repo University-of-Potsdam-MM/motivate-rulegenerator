@@ -12,9 +12,14 @@ import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLSubDataPropertyOfAxiom;
 
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
+import de.unipotsdam.rulegenerator.ontology.CancelAction;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
+import de.unipotsdam.rulegenerator.ontology.StartAction;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
+import de.unipotsdam.rulegenerator.ontology.impl.DefaultAction;
+import de.unipotsdam.rulegenerator.ontology.impl.DefaultCancelAction;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultLearningUnit;
+import de.unipotsdam.rulegenerator.ontology.impl.DefaultStartAction;
 import de.unipotsdam.rulegenerator.rules.Fact;
 import de.unipotsdam.rulegenerator.rules.FactSet;
 import de.unipotsdam.rulegenerator.rules.FactSetElement;
@@ -188,36 +193,93 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		FactSetElement learningUnitFacts;
 		if (this.getContextInformationCount() > 1) {
 			learningUnitFacts = new FactSet();
-			// create facts for the context information associated to the learning
+			// create facts for the context information associated to the
+			// learning
 			// unit
 			int i = 0;
 			for (MyMeasurableContextInformation contextInformation : this
 					.getContextInformation()) {
-				Fact learningUnitFact = Fact.FactFromContextInformation(contextInformation);
+				Fact learningUnitFact = Fact
+						.FactFromContextInformation(contextInformation);
 				((FactSet) learningUnitFacts).addFact(learningUnitFact);
 				if (i < this.getContextInformationCount() - 1)
-					((FactSet) learningUnitFacts).addLogicalOperator(this.getLogicalOperator());
+					((FactSet) learningUnitFacts).addLogicalOperator(this
+							.getLogicalOperator());
 				i++;
 			}
 		} else {
-			learningUnitFacts = Fact.FactFromContextInformation((MyMeasurableContextInformation) this
-					.getContextInformation().toArray()[0]);
+			learningUnitFacts = Fact
+					.FactFromContextInformation((MyMeasurableContextInformation) this
+							.getContextInformation().toArray()[0]);
 		}
-		
+
 		return learningUnitFacts;
 	}
 
 	// Meta Data
-	
+
 	public Boolean hasMetaData() {
 		return this.getMetaDataCount() > 0;
 	}
-	
+
 	public Integer getMetaDataCount() {
-		return this.getDelegate().getPropertyValues(getOwlIndividual(), Vocabulary.DATA_PROPERTY_HASMETADATA, Object.class).toArray().length;
+		return this
+				.getDelegate()
+				.getPropertyValues(getOwlIndividual(),
+						Vocabulary.DATA_PROPERTY_HASMETADATA, Object.class)
+				.toArray().length;
 	}
 
 	public MetaDataMap getMetaData() {
-		return new MetaDataMap(getOwlIndividual(), getOwlOntology(), getDelegate());
+		return new MetaDataMap(getOwlIndividual(), getOwlOntology(),
+				getDelegate());
+	}
+
+	// Actions
+
+	public Boolean hasActions() {
+		return this.getActionCount() > 0;
+	}
+
+	public Integer getActionCount() {
+		return this.getActions().toArray().length;
+	}
+
+	public Collection<? extends WrappedIndividual> getActions() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_ISREFERENCEDBYACTION,
+				DefaultAction.class);
+	}
+
+	// Cancel Actions
+
+	public Boolean hasCancelActions() {
+		return this.getCancelActionCount() > 0;
+	}
+
+	public Integer getCancelActionCount() {
+		return this.getCancelActions().toArray().length;
+	}
+
+	public Collection<? extends CancelAction> getCancelActions() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_ISREFERENCEDBYCANCELACTION,
+				DefaultCancelAction.class);
+	}
+
+	// Start Actions
+
+	public Boolean hasStartActions() {
+		return this.getStartActionCount() > 0;
+	}
+
+	public Integer getStartActionCount() {
+		return this.getStartActions().toArray().length;
+	}
+
+	public Collection<? extends StartAction> getStartActions() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.OBJECT_PROPERTY_ISREFERENCEDBYSTARTACTION,
+				DefaultStartAction.class);
 	}
 }
