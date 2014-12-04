@@ -440,10 +440,22 @@
         <ObjectProperty IRI="#isReferenceOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isReferencedByAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isReferencedByCancelAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isReferencedByStartAction"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isSituationOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isVersionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#referencesLearningUnit"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasAID"/>
@@ -518,6 +530,9 @@
         <DataProperty IRI="#hasUID"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasUserCorrectedValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasValue"/>
     </Declaration>
     <Declaration>
@@ -527,6 +542,9 @@
         <DataProperty IRI="#hasVersionDate"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#isFalsePositive"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#isRequired"/>
     </Declaration>
     <Declaration>
@@ -534,27 +552,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AppUsageFeature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-Bob"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-Mary"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Example-Situation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LocationTrackingFeature"/>
@@ -1777,16 +1774,27 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RecordedContextInformation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMeasurableContextInformation"/>
-            <Class IRI="#MeasurableContextInformation"/>
-        </ObjectSomeValuesFrom>
+        <Class IRI="#ContextInformation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RecordedContextInformation"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasTimestamp"/>
             <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecordedContextInformation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasUserCorrectedValue"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecordedContextInformation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#isFalsePositive"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3345,46 +3353,6 @@
         <NamedIndividual IRI="#AppUsageFeature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Example-Bob"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#CancelAction"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User"/>
-        <NamedIndividual IRI="#Example-Mary"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#RecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#RecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#RecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#UserMovementSpeedMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Situation"/>
-        <NamedIndividual IRI="#Example-Situation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Feature"/>
         <NamedIndividual IRI="#LocationTrackingFeature"/>
     </ClassAssertion>
@@ -3392,66 +3360,6 @@
         <Class IRI="#Feature"/>
         <NamedIndividual IRI="#SuggestAlternativeFeature"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasAction"/>
-        <NamedIndividual IRI="#Example-Bob"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-Bob"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-Bob"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-Bob"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasSituation"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-        <NamedIndividual IRI="#Example-Situation"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTimestamp"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-        <Literal datatypeIRI="&xsd;unsignedInt">100</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTimestamp"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
-        <Literal datatypeIRI="&xsd;unsignedInt">50</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation"/>
-        <Literal datatypeIRI="&xsd;float">20.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTimestamp"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
-        <Literal datatypeIRI="&xsd;unsignedInt">26</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation2"/>
-        <Literal datatypeIRI="&xsd;float">0.0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasTimestamp"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
-        <Literal datatypeIRI="&xsd;unsignedInt">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Example-RecordedSpeedInformation3"/>
-        <Literal datatypeIRI="&xsd;float">5.0</Literal>
-    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAlternative"/>
         <ObjectProperty IRI="#hasRelation"/>
@@ -3501,6 +3409,14 @@
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isReferencedByCancelAction"/>
+        <ObjectProperty IRI="#isReferencedByAction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isReferencedByStartAction"/>
+        <ObjectProperty IRI="#isReferencedByAction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isVersionOf"/>
         <ObjectProperty IRI="#hasRelation"/>
     </SubObjectPropertyOf>
@@ -3525,24 +3441,24 @@
         <ObjectProperty IRI="#hasContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasContextInformationParameter"/>
         <ObjectProperty IRI="#isContextInformationParameterOf"/>
+        <ObjectProperty IRI="#hasContextInformationParameter"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasExtension"/>
         <ObjectProperty IRI="#isExtensionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isFeatureOf"/>
         <ObjectProperty IRI="#hasFeature"/>
+        <ObjectProperty IRI="#isFeatureOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isHelpOf"/>
         <ObjectProperty IRI="#hasHelp"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasLearningUnitClass"/>
         <ObjectProperty IRI="#isLearningUnitClassOf"/>
+        <ObjectProperty IRI="#hasLearningUnitClass"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasMeasurableContextInformation"/>
@@ -3567,6 +3483,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#isVersionOf"/>
         <ObjectProperty IRI="#hasVersion"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isReferencedByAction"/>
+        <ObjectProperty IRI="#referencesLearningUnit"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasVersion"/>
@@ -3915,6 +3835,10 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#isFalsePositive"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#isRequired"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
@@ -3974,16 +3898,26 @@
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#TargetLatitudeContextParameter</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Breitengrad des Zielortes</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#TargetLongitudeContextParameter</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Längengrad des Zielortes</Literal>
-    </AnnotationAssertion>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#CancelAction"/>
+                <Variable IRI="urn:swrl#a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#referencesLearningUnit"/>
+                <Variable IRI="urn:swrl#a"/>
+                <Variable IRI="urn:swrl#l"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isReferencedByCancelAction"/>
+                <Variable IRI="urn:swrl#l"/>
+                <Variable IRI="urn:swrl#a"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
 </Ontology>
 
 

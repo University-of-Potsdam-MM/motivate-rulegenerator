@@ -27,6 +27,12 @@
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-Bob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
     </Declaration>
     <Declaration>
@@ -81,10 +87,25 @@
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-Mary"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-Situation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
@@ -134,6 +155,14 @@
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:RestrictFeatureConstraint"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:User"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:CancelAction"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:CurrentTimeMeasurableInformation"/>
@@ -208,12 +237,44 @@
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:User"/>
+        <NamedIndividual IRI="#Example-Mary"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:RecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:RecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:RecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:LearningUnitClass"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:Situation"/>
+        <NamedIndividual IRI="#Example-Situation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
@@ -294,6 +355,36 @@
         <ObjectProperty abbreviatedIRI="knowledge:hasFeature"/>
         <NamedIndividual IRI="#Example-AppUsageRestrictFeatureConstraint"/>
         <NamedIndividual abbreviatedIRI="knowledge:AppUsageFeature"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasAction"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasSituation"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+        <NamedIndividual IRI="#Example-Situation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:referencesLearningUnit"/>
+        <NamedIndividual IRI="#Example-CancelAction"/>
+        <NamedIndividual IRI="#Example-LearningUnit-126"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
@@ -536,6 +627,36 @@
         <Literal datatypeIRI="&xsd;float">13.13024</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasTimestamp"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
+        <Literal datatypeIRI="&xsd;unsignedInt">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
+        <Literal datatypeIRI="&xsd;float">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasTimestamp"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+        <Literal datatypeIRI="&xsd;unsignedInt">26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+        <Literal datatypeIRI="&xsd;float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasTimestamp"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
+        <Literal datatypeIRI="&xsd;unsignedInt">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
+        <Literal datatypeIRI="&xsd;float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
         <Literal datatypeIRI="&xsd;string">AND</Literal>
@@ -619,5 +740,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
