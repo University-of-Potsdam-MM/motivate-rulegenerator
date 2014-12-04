@@ -740,10 +740,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
-        <Class IRI="#TechnicalContext"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AudioOutputAvailableMeasurableInformation"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#hasContextClass"/>
             <Class IRI="#TechnicalContext"/>
