@@ -1,0 +1,35 @@
+# 'this one works but swallows results ... :('
+PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+SELECT ?recContext ?recTime ?user ?action ?actTime ?lu ?metaDataProp ?metaDataValue WHERE {
+SELECT * WHERE {
+?recContext a kno:RecordedContextInformation ; 
+kno:hasTimestamp ?recTime ; 
+kno:isRecordedContextInformationOf ?user . 
+?user a kno:User ; 
+kno:hasAction ?action . 
+?action kno:referencesLearningUnit ?lu ;
+kno:hasTimestamp ?actTime .
+?metaDataProp rdfs:subPropertyOf kno:hasMetaData .
+?lu ?metaDataProp ?metaDataValue .
+FILTER (?recTime <= ?actTime) }
+ORDER BY DESC(?recTime)
+} LIMIT 1 
+
+# 'this one would be better if it produced bindings for all selected variables... :( :('
+PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?recContext (max(?rt) as ?recTime) ?user ?action ?actTime ?lu ?metaDataProp ?metaDataValue WHERE { 
+SELECT ?recContext ?rt ?user ?action ?actTime ?lu ?metaDataProp ?metaDataValue WHERE {
+?recContext a kno:RecordedContextInformation ; 
+kno:hasTimestamp ?rt ; 
+kno:isRecordedContextInformationOf ?user . 
+?user a kno:User ; 
+kno:hasAction ?action . 
+?action kno:referencesLearningUnit ?lu ;
+kno:hasTimestamp ?actTime .
+?metaDataProp rdfs:subPropertyOf kno:hasMetaData .
+?lu ?metaDataProp ?metaDataValue .
+FILTER (?rt <= ?actTime) }}
