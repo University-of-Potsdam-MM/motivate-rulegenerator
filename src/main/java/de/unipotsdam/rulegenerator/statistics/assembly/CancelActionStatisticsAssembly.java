@@ -27,7 +27,7 @@ public class CancelActionStatisticsAssembly extends ActionStatisticsAssembly {
 		super(ontology);
 	}
 
-	public StatisticsList generateStatistics() {
+	public StatisticsList generateStatistics(String queryString) {
 		for (MyLearningUnit currentLearningUnit : learningUnits) {
 			Collection<? extends CancelAction> cancelActions = currentLearningUnit
 					.getCancelActions();
@@ -44,19 +44,25 @@ public class CancelActionStatisticsAssembly extends ActionStatisticsAssembly {
 				InfModel model = ModelFactory.createInfModel(graph);
 				// Use the model to answer SPARQL queries
 
-				String queryString = "PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> "
+				/*queryString = "PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> "
 						+ "PREFIX rdfs: <"
 						+ RDFS.getURI()
 						+ "> "
 						+ "PREFIX owl: <"
 						+ OWL.getURI()
 						+ "> "
-						+ "SELECT ?r WHERE {"
+						+ "SELECT ?r ?t WHERE {"
 						+ "?r a kno:RecordedContextInformation ;"
+						+ "kno:hasTimestamp ?t ;"
 						+ "kno:isRecordedContextInformationOf ?u . "
-						+ "?u a kno:User . }";
+						+ "?u a kno:User ."
+						+ " }"
+						+ "ORDER BY DESC(?t) "
+						;
 						//+ "kno:hasAction "
 						//+ cancelAction.getOwlIndividual().getIRI() + " . }";
+				System.out.println(queryString);*/
+				
 				Query query = QueryFactory.create(queryString);
 				QueryExecution qe = QueryExecutionFactory.create(query, model);
 				com.hp.hpl.jena.query.ResultSet results = qe.execSelect();

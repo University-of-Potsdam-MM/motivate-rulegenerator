@@ -8,7 +8,7 @@ public abstract class StatisticsAssembly {
 	public OWLOntology ontology;
 	public StatisticsList reasons = new StatisticsList();
 	
-	public StatisticsList generateStatistics() throws Exception {
+	public StatisticsList generateStatistics(String query) throws Exception {
 		return reasons;
 	}
 }

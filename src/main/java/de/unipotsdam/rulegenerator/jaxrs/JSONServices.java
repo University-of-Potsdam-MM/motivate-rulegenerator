@@ -36,7 +36,7 @@ import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 @Path("/json")
 public class JSONServices extends Services {
 	final Logger logger = LoggerFactory.getLogger(JSONServices.class);
-	
+
 	@GET
 	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -86,11 +86,12 @@ public class JSONServices extends Services {
 	@Consumes("application/x-www-form-urlencoded")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getStatistics(@FormParam("ontologyABox") String aBox,
-			@FormParam("ontologyId") String ontologyId) throws Exception {
+			@FormParam("ontologyId") String ontologyId,
+			@FormParam("query") String query) throws Exception {
 		logger.debug("foo {}", 1);
 		logger.info("bar");
 		try {
-			return StatisticsService.generateStatistics(aBox, ontologyId);
+			return StatisticsService.generateStatistics(aBox, ontologyId, query);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e.getMessage());

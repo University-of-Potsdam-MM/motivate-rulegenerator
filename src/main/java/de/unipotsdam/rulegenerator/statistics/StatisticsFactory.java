@@ -19,11 +19,11 @@ public class StatisticsFactory {
 		this.statisticsAssemblies.add(new CancelActionStatisticsAssembly(ontology));
 	}
 	
-	public StatisticsList generateStatistics() throws Exception {
+	public StatisticsList generateStatistics(String query) throws Exception {
 		StatisticsList statistics = new StatisticsList();
 		
 		for (StatisticsAssembly statisticsAssembly : this.statisticsAssemblies) {
-			statistics.addReasons(statisticsAssembly.generateStatistics().getList());
+			statistics.addReasons(statisticsAssembly.generateStatistics(query).getList());
 		}
 
 		return statistics;

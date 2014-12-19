@@ -4,16 +4,26 @@ import de.unipotsdam.rulegenerator.statistics.StatisticsFactory;
 import de.unipotsdam.rulegenerator.statistics.StatisticsList;
 
 public class StatisticsService extends Service {
-	public static String generateStatistics(String aBox, String ontologyId)
+	
+	static String aBoxOld = "";
+	static StatisticsFactory statisticsFactory;
+	
+	public static String generateStatistics(String aBox, String ontologyId, String query)
 			throws Exception {
-		// load received ontology
-		loadOntology(aBox);
-		// infer
-		inferOntology();
-		// create rule factory
-		StatisticsFactory statisticsFactory = new StatisticsFactory(ontology);
+		
+		if (!aBoxOld.equals(aBox)) {
+			// load received ontology
+			loadOntology(aBox);
+			// infer
+			inferOntology();
+			// create rule factory
+			statisticsFactory = new StatisticsFactory(ontology);
+			
+			aBoxOld = aBox;
+		}
+				
 		// generate statistics
-		StatisticsList statisticsList = statisticsFactory.generateStatistics();
+		StatisticsList statisticsList = statisticsFactory.generateStatistics(query);
 
 		return null;
 	}
