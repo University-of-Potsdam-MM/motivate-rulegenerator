@@ -15,8 +15,6 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.vocabulary.OWL;
-import com.hp.hpl.jena.vocabulary.RDFS;
 
 import de.unipotsdam.rulegenerator.ontology.CancelAction;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;

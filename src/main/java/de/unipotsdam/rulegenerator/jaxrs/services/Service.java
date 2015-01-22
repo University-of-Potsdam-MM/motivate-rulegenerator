@@ -47,8 +47,13 @@ public class Service {
 
 	public static void inferOntology() {
 		// get Pellet reasoner
+		try {
 		reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		// listen for ontology changes (might be unnecessary)
 		manager.addOntologyChangeListener(reasoner);
 		// set up list of inferred axiom generators
