@@ -29,6 +29,8 @@ public class Service {
 
 	static {
 		manager = OWLManager.createOWLOntologyManager();
+		//dataFactory = manager.getOWLDataFactory();
+		
 	}
 
 	public static void loadOntology(String aBox) throws Exception {
@@ -62,8 +64,13 @@ public class Service {
 		generators.add(new InferredClassAssertionAxiomGenerator());
 		generators.add(new InferredPropertyAssertionGenerator());
 		// create inferred ontology generator
-		InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner);
+		InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner, generators);
 		// fill inferred ontology into the existing one
-		iog.fillOntology(manager, ontology);
+		try {
+			iog.fillOntology(manager, ontology);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

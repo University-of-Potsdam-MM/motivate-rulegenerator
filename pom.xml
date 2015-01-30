@@ -9,6 +9,13 @@
 	<version>0.0.3</version>
 	<name>rulegenerator</name>
 
+	<repositories>
+		<repository>
+			<id>motivate-repository</id>
+			<url>http://fossa.soft.cs.uni-potsdam.de:8081/artifactory/simple/motivate-repository/</url>
+		</repository>
+	</repositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -45,12 +52,6 @@
 			<version>1.0</version>
 			<type>maven-plugin</type>
 		</dependency>
-
-		<!-- <dependency> <groupId>com.github.ansell.pellet</groupId> <artifactId>pellet-owlapiv3</artifactId> 
-			<version>2.3.6-ansell</version> <exclusions> <exclusion> <groupId>com.hp.hpl.jena</groupId> 
-			<artifactId>jena</artifactId> </exclusion> <exclusion> <groupId>com.hp.hpl.jena</groupId> 
-			<artifactId>arq</artifactId> </exclusion> </exclusions> </dependency> -->
-
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
@@ -93,115 +94,52 @@
 		</dependency>
 
 		<dependency>
-			<groupId>pellet-owlapiv3</groupId>
-			<artifactId>pellet-owlapiv3</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-owlapiv3.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>pellet-core</groupId>
+			<groupId>com.clarkparsia.pellet</groupId>
 			<artifactId>pellet-core</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-core.jar</systemPath>
+			<version>2.3.2-20150129.140849-1</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
-			<groupId>pellet-jena</groupId>
-			<artifactId>pellet-jena</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-jena.jar</systemPath>
-<!-- 			<exclusions> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>com.hp.hpl.jena</groupId> -->
-<!-- 					<artifactId>jena</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 			</exclusions> -->
-		</dependency>
-		<dependency>
-			<groupId>pellet-datatypes</groupId>
-			<artifactId>pellet-datatypes</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-datatypes.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>pellet-rules</groupId>
-			<artifactId>pellet-rules</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-rules.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>pellet-el</groupId>
-			<artifactId>pellet-el</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-el.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>pellet-explanation</groupId>
+			<groupId>com.clarkparsia.pellet</groupId>
 			<artifactId>pellet-explanation</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-explanation.jar</systemPath>
+			<version>2.3.2-20150129.141030-1</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
-			<groupId>pellet-modularity</groupId>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-jena</artifactId>
+			<version>2.3.2-20150129.140907-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
 			<artifactId>pellet-modularity</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-modularity.jar</systemPath>
+			<version>2.3.2-20150129.141049-1</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
-			<groupId>pellet-pellint</groupId>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-owlapiv3</artifactId>
+			<version>2.3.2-20150129.140957-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
 			<artifactId>pellet-pellint</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-pellint.jar</systemPath>
+			<version>2.3.2-20150129.141110-1</version>
+			<type>pom</type>
 		</dependency>
 		<dependency>
-			<groupId>pellet-query</groupId>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-profiler</artifactId>
+			<version>2.3.2-20150129.141355-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
 			<artifactId>pellet-query</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-query.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>pellet-test</groupId>
-			<artifactId>pellet-test</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-test.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>pellet-cli</groupId>
-			<artifactId>pellet-cli</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\pellet-cli.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>aterm-java-1.6</groupId>
-			<artifactId>aterm-java-1.6</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\aterm-java-1.6.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>owlapi-distribution-3.4.3-bin</groupId>
-			<artifactId>owlapi-distribution-3.4.3-bin</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\owlapiv3\owlapi-distribution-3.4.3-bin.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>jgrapht-jdk1.5</groupId>
-			<artifactId>jgrapht-jdk1.5</artifactId>
-			<version>2.3.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}\lib\pellet-2.3.1\pellet-2.3.1\lib\jgrapht\jgrapht-jdk1.5.jar</systemPath>
+			<version>2.3.2-20150129.140945-1</version>
+			<type>pom</type>
 		</dependency>
 	</dependencies>
 

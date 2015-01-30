@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1418661645358" name="http://motivate-project.de/ontology/knowledge.owl" uri="knowledge.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1418661645358" name="http://www.motivate-project.de/ontologies/motivate.owl" uri="motivate-ontology-inferred.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1418661645358" name="http://www.semanticweb.org/tobias/ontologies/2014/7/untitled-ontology-43" uri="example.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1420716109757" name="http://motivate-project.de/ontology/knowledge.owl" uri="knowledge.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1420716109757" name="http://www.motivate-project.de/ontologies/motivate.owl" uri="motivate-ontology-inferred.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1420716109757" name="http://www.semanticweb.org/tobias/ontologies/2014/7/untitled-ontology-43" uri="example.owl"/>
     </group>
 </catalog>
