@@ -1,15 +1,10 @@
 package de.unipotsdam.rulegenerator.ontology.custom;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
 import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLDataProperty;
-import org.semanticweb.owlapi.model.OWLSubDataPropertyOfAxiom;
 
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.ontology.CancelAction;
@@ -65,10 +60,10 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 		return this.getContextInformation().toArray().length;
 	}
 
-	public Collection<? extends MyMeasurableContextInformation> getContextInformation() {
+	public Collection<? extends MyContextInformation> getContextInformation() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASMEASURABLECONTEXTINFORMATION,
-				MyMeasurableContextInformation.class);
+				MyContextInformation.class);
 	}
 
 	// Relations
@@ -197,7 +192,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 			// learning
 			// unit
 			int i = 0;
-			for (MyMeasurableContextInformation contextInformation : this
+			for (MyContextInformation contextInformation : this
 					.getContextInformation()) {
 				Fact learningUnitFact = Fact
 						.FactFromContextInformation(contextInformation);
@@ -209,7 +204,7 @@ public class MyLearningUnit extends DefaultLearningUnit implements LearningUnit 
 			}
 		} else {
 			learningUnitFacts = Fact
-					.FactFromContextInformation((MyMeasurableContextInformation) this
+					.FactFromContextInformation((MyContextInformation) this
 							.getContextInformation().toArray()[0]);
 		}
 

@@ -9,10 +9,9 @@ import javax.xml.bind.annotation.XmlAnyElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
-import de.unipotsdam.rulegenerator.enums.FactOperator;
 import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
-import de.unipotsdam.rulegenerator.ontology.custom.MyMeasurableContextInformation;
+import de.unipotsdam.rulegenerator.ontology.custom.MyContextInformation;
 
 @XmlRootElement(name = "factSet")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -28,7 +27,7 @@ public class FactSet implements FactSetElement {
 		if (requirement.getSpecificTailType().equals(
 				"ContextInformationConstraintRequirement")
 				&& requirement.hasContextInformation()) {
-			MyMeasurableContextInformation measurableInformation = (MyMeasurableContextInformation) requirement
+			MyContextInformation measurableInformation = (MyContextInformation) requirement
 					.getContextInformation().toArray()[0];
 			factSet.addFact(Fact
 					.FactFromContextInformation(measurableInformation));

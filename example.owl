@@ -114,6 +114,9 @@
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Example-UserCurrentLearningStylePerception"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
     </Declaration>
     <Declaration>
@@ -133,9 +136,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LocationContext"/>
@@ -165,23 +165,23 @@
         <NamedIndividual IRI="#Example-CancelAction"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:CurrentTimeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:CurrentTimeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserRoleMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:CurrentTemperatureMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:DeviceTypeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -201,7 +201,7 @@
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:LatitudeContextParameter"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationParameter"/>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -233,7 +233,7 @@
         <NamedIndividual IRI="#Example-LearningUnit-130"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:LongitudeContextParameter"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationParameter"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -249,23 +249,11 @@
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:RecordedContextInformation"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
-        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:RecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -281,23 +269,27 @@
         <NamedIndividual IRI="#Example-StartingTimeContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:TemperatureScaleContextParameter"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationParameter"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserDidArriveAtLocationMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
+        <NamedIndividual IRI="#Example-UserCurrentLearningStylePerception"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserLocationLatitudeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserLocationLongitudeMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-UserLocationLongitude"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserMovementSpeedMeasurableInformation"/>
+        <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -305,16 +297,12 @@
         <NamedIndividual IRI="#Example-UserRoleContextInformationRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:VelocityUnitContextParameter"/>
+        <Class abbreviatedIRI="knowledge:ContextInformationParameter"/>
         <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:LearningUnitClass"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:UserCurrentLearningStylePerceptionMeasurableInformation"/>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:LocationContext"/>
@@ -512,6 +500,11 @@
         <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
+        <Literal datatypeIRI="&xsd;string">CI_CURRENT_TIME</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
         <Literal datatypeIRI="&xsd;string">16:00:00</Literal>
@@ -520,6 +513,11 @@
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
         <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-ConstraintStartingTimeContextInformation"/>
+        <Literal datatypeIRI="&xsd;string">CI_CURRENT_TIME</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
@@ -532,6 +530,11 @@
         <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_ROLE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-ConstraintUserRoleTail"/>
         <Literal datatypeIRI="&xsd;string">Student</Literal>
@@ -542,6 +545,11 @@
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-CurrentTemperature"/>
+        <Literal datatypeIRI="&xsd;string">CI_CURRENT_TEMPERATURE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <Literal datatypeIRI="&xsd;float">30.0</Literal>
@@ -550,6 +558,11 @@
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <Literal datatypeIRI="&xsd;string">GREATER_THEN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
+        <Literal datatypeIRI="&xsd;string">CI_DEVICE_TYPE</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
@@ -565,6 +578,11 @@
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
         <Literal datatypeIRI="&xsd;string">OR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasPID"/>
+        <NamedIndividual IRI="#Example-LatitudeParameter"/>
+        <Literal datatypeIRI="&xsd;string">CP_LATITUDE</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
@@ -622,9 +640,19 @@
         <Literal datatypeIRI="&xsd;boolean">false</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasPID"/>
+        <NamedIndividual IRI="#Example-LongitudeParameter"/>
+        <Literal datatypeIRI="&xsd;string">CP_LONGITUDE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-LongitudeParameter"/>
         <Literal datatypeIRI="&xsd;float">13.13024</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_MOVEMENT_SPEED</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasTimestamp"/>
@@ -637,6 +665,11 @@
         <Literal datatypeIRI="&xsd;float">20.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_MOVEMENT_SPEED</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasTimestamp"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
         <Literal datatypeIRI="&xsd;unsignedInt">26</Literal>
@@ -645,6 +678,11 @@
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
         <Literal datatypeIRI="&xsd;float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_MOVEMENT_SPEED</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasTimestamp"/>
@@ -667,9 +705,29 @@
         <Literal datatypeIRI="&xsd;boolean">true</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasPID"/>
+        <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
+        <Literal datatypeIRI="&xsd;string">CP_TEMPERATURE_SCALE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
         <Literal datatypeIRI="&xsd;string">FAHRENHEIT</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-UserCurrentLearningStylePerception"/>
+        <Literal datatypeIRI="&xsd;string">CI_CURRENT_LEARNING_STYLE_PERCEPTION</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
+        <NamedIndividual IRI="#Example-UserCurrentLearningStylePerception"/>
+        <Literal datatypeIRI="&xsd;integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
+        <Literal datatypeIRI="&xsd;string">CI_DID_ARRIVE_AT_LOCATION</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
@@ -682,6 +740,11 @@
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-UserLocationLatitude"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_LOCATION_LATITUDE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
         <Literal datatypeIRI="&xsd;float">52.39346</Literal>
@@ -690,6 +753,11 @@
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserLocationLatitude"/>
         <Literal datatypeIRI="&xsd;string">IS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-UserLocationLongitude"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_LOCATION_LONGITUDE</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
@@ -702,6 +770,11 @@
         <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_MOVEMENT_SPEED</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
         <Literal datatypeIRI="&xsd;float">20.0</Literal>
@@ -710,6 +783,11 @@
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-UserMovementSpeedMeasurableInformation"/>
         <Literal datatypeIRI="&xsd;string">LESS_THEN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasPID"/>
+        <NamedIndividual IRI="#Example-VelocityUnitContextParameter"/>
+        <Literal datatypeIRI="&xsd;string">CP_VELOCITY_UNIT</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValue"/>
@@ -730,11 +808,6 @@
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-VideoOrImageContentLearningUnitClass"/>
         <Literal datatypeIRI="&xsd;string">OR</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
-        <NamedIndividual IRI="#ExampleUserCurrentLearningStylePerception"/>
-        <Literal datatypeIRI="&xsd;integer">10</Literal>
     </DataPropertyAssertion>
 </Ontology>
 

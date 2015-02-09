@@ -198,13 +198,20 @@
 		<contextClasses>
 			<contextClass id="CC_TECHNICAL" />
 		</contextClasses>
-		<contextValue type="STRING">
+		<contextValue type="ENUM">
 			<operators>
 				<operator id="CONTAINS" />
 				<operator id="IS" />
 				<operator id="IS_NOT" />
 				<operator id="NO_VALUE" />
 			</operators>
+			<possibleValues>
+				 <value>FEATURE_PHONE</value>
+				 <value>TABLET_COMPUTER</value>
+				 <value>SMARTPHONE</value>
+				 <value>SMARTWATCH</value>
+				 <value></value>
+			</possibleValues>
 		</contextValue>
 	</information>
 	<information id="CI_DISPLAY_RESOLUTION">
@@ -676,13 +683,18 @@
 		<contextClasses>
 			<contextClass id="CC_PERSONAL" />
 		</contextClasses>
-		<contextValue type="STRING">
+		<contextValue type="ENUM" default="UNKNOWN">
 			<operators>
 				<operator id="CONTAINS" />
 				<operator id="IS" />
 				<operator id="IS_NOT" />
 				<operator id="NO_VALUE" />
 			</operators>
+			<possibleValues>
+				<value>STUDENT</value>
+				<value>TEACHER</value>
+				<value>UNKNOWN</value>
+			</possibleValues>
 		</contextValue>
 	</information>
 	<information id="CI_VIDEO_CAMERA_AVAILABLE">

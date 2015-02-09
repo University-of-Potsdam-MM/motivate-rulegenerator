@@ -7,7 +7,6 @@ import org.protege.owl.codegeneration.inference.CodeGenerationInference;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 
-import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
 import de.unipotsdam.rulegenerator.ontology.ContextInformationParameter;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
 import de.unipotsdam.rulegenerator.ontology.impl.DefaultContextInformationParameter;
@@ -21,7 +20,7 @@ public class MyContextInformationParameter extends
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	// IRI
 
 	public String getIRIShort() {
@@ -29,22 +28,16 @@ public class MyContextInformationParameter extends
 	}
 
 	// Type
-	
+
 	public Set<OWLClassExpression> getTypes() {
 		return this.getOwlIndividual().getTypes(this.getOwlOntology());
 	}
 
-	// Type
-	
-	public String getSpecificType() {
-		for (OWLClassExpression type : this.getTypes()) {
-			OWLClassImpl impl = (OWLClassImpl) type;
-			String iriFragment = impl.getIRI().getFragment();
-			if (iriFragment.contains("ContextParameter"))
-				return iriFragment;
-		}
+	// ID
 
-		return "NO_VALUE";
+	public String getSpecificType() {
+		return this.hasHasPID() ? this.getHasPID().toArray()[0].toString()
+				: "NO_VALUE";
 	}
 
 	// Value

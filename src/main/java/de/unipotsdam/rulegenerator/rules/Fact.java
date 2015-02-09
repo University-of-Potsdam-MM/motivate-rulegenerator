@@ -11,8 +11,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import de.unipotsdam.rulegenerator.enums.DescriptionType;
 import de.unipotsdam.rulegenerator.enums.FactOperator;
+import de.unipotsdam.rulegenerator.ontology.custom.MyContextInformation;
 import de.unipotsdam.rulegenerator.ontology.custom.MyContextInformationParameter;
-import de.unipotsdam.rulegenerator.ontology.custom.MyMeasurableContextInformation;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -48,7 +48,7 @@ public class Fact implements FactSetElement {
 	}
 	
 	public static Fact FactFromContextInformation(
-			MyMeasurableContextInformation contextInformation) {
+			MyContextInformation contextInformation) {
 		Fact fact = new Fact();
 		fact.setContextInformation(contextInformation
 				.getSpecificContextInformationType());

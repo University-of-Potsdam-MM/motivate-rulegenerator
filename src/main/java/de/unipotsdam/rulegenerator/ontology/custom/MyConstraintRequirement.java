@@ -48,9 +48,9 @@ public class MyConstraintRequirement extends DefaultConstraintRequirement implem
 		return this.getContextInformation().toArray().length;
 	}
 
-	public Collection<? extends MyMeasurableContextInformation> getContextInformation() {
+	public Collection<? extends MyContextInformation> getContextInformation() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASMEASURABLECONTEXTINFORMATION,
-				MyMeasurableContextInformation.class);
+				MyContextInformation.class);
 	}
 }
