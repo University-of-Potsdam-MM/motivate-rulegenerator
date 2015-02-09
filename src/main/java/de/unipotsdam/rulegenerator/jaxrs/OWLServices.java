@@ -12,7 +12,6 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/owl")
 public class OWLServices extends Services {
-
 	@GET
 	@Path("/get-knowledge-ontology")
 	@Produces(MediaType.TEXT_PLAIN)
