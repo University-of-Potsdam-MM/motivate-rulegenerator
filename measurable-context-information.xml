@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE contextInformation SYSTEM "ContextInformation.dtd">
 <contextInformation>
+	<!-- Context information for the default rule generation assembly. -->
+	<information id="CI_CURRENT_LEARNING_UNIT">
+		<contextClasses>
+			<contextClass id="CC_SCENARIO" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_FINISHED_LEARNING_UNIT" multiplicity="MULTIPLE">
+		<contextClasses>
+			<contextClass id="CC_SCENARIO" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<!-- End -->
+	<!-- Context information that covers actions performed by the user. -->
+	<information id="CI_USER_DID_PERFORM_ACTION" multiplicity="MULTIPLE">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+			<contextClass id="CC_SITUATIONAL" />
+		</contextClasses>
+		<contextValue type="ENUM">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="CONTAINS" />
+			</operators>
+			<possibleValues>
+				<value>ACTIVATE_ACTION</value>
+				<value>CHOOSE_ACTION</value>
+				<value>DEACTIVATE_ACTION</value>
+				<value>RESUME_ACTION</value>
+				<value>SUSPEND_ACTION</value>
+				<value>WATCH_ACTION</value>
+				<value>VIEW_ACTION</value>
+				<value>USE_ACTION</value>
+				<value>LISTEN_ACTION</value>
+				<value>READ_ACTION</value>
+			</possibleValues>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_ACTION_START_TIMESTAMP">
+				<parameterValue type="INTEGER" />
+			</parameter>
+			<parameter id="CP_ACTION_END_TIMESTAMP">
+				<parameterValue type="INTEGER" />
+			</parameter>
+			<parameter id="CP_ACTION_REFERNCED_LEARNING_NUGGET">
+				<parameterValue type="STRING" />
+			</parameter>
+		</parameters>
+	</information>
+	<!-- End -->
 	<information id="CI_AUDIO_OUTPUT_AVAILABLE">
 		<contextClasses>
 			<contextClass id="CC_TECHNICAL" />
@@ -89,19 +154,6 @@
 				<operator id="IS" />
 				<operator id="IS_NOT" />
 				<operator id="LESS_THEN" />
-				<operator id="NO_VALUE" />
-			</operators>
-		</contextValue>
-	</information>
-	<information id="CI_CURRENT_LEARNING_UNIT">
-		<contextClasses>
-			<contextClass id="CC_SCENARIO" />
-		</contextClasses>
-		<contextValue type="STRING">
-			<operators>
-				<operator id="CONTAINS" />
-				<operator id="IS" />
-				<operator id="IS_NOT" />
 				<operator id="NO_VALUE" />
 			</operators>
 		</contextValue>
@@ -206,11 +258,11 @@
 				<operator id="NO_VALUE" />
 			</operators>
 			<possibleValues>
-				 <value>FEATURE_PHONE</value>
-				 <value>TABLET_COMPUTER</value>
-				 <value>SMARTPHONE</value>
-				 <value>SMARTWATCH</value>
-				 <value></value>
+				<value>FEATURE_PHONE</value>
+				<value>TABLET_COMPUTER</value>
+				<value>SMARTPHONE</value>
+				<value>SMARTWATCH</value>
+				<value></value>
 			</possibleValues>
 		</contextValue>
 	</information>
@@ -271,18 +323,6 @@
 			<contextClass id="CC_TECHNICAL" />
 		</contextClasses>
 		<contextValue type="BOOLEAN">
-			<operators>
-				<operator id="IS" />
-				<operator id="IS_NOT" />
-				<operator id="NO_VALUE" />
-			</operators>
-		</contextValue>
-	</information>
-	<information id="CI_FINISHED_LEARNING_UNIT" multiplicity="MULTIPLE">
-		<contextClasses>
-			<contextClass id="CC_SCENARIO" />
-		</contextClasses>
-		<contextValue type="STRING">
 			<operators>
 				<operator id="IS" />
 				<operator id="IS_NOT" />
@@ -715,8 +755,8 @@
 		</contextClasses>
 		<contextValue type="INTEGER" min="0" max="5">
 			<operators>
-				<operator id="GREATER_THEN"/>
-				<operator id="LESS_THEN"/>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
 				<operator id="IS" />
 				<operator id="IS_NOT" />
 				<operator id="NO_VALUE" />

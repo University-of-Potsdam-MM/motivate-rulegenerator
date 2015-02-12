@@ -21,10 +21,11 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+import org.json.JSONObject;
+import org.json.XML;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.unipotsdam.rulegenerator.contextinformation.ContextInformationList;
 import de.unipotsdam.rulegenerator.jaxrs.services.ContextInformationService;
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.jaxrs.services.StatisticsService;
@@ -101,7 +102,10 @@ public class JSONServices extends Services {
 	@GET
 	@Path("/get-context-information")
 	@Produces(MediaType.APPLICATION_JSON)
-	public ContextInformationList getContextInformation() throws Exception {
-		return ContextInformationService.getContextInformation();
+	public String getContextInformation() throws Exception {
+		String xmlString = ContextInformationService.getContextInformation();
+		JSONObject jsonObject = XML.toJSONObject(xmlString);
+		
+		return jsonObject.toString();
 	}
 }

@@ -11,7 +11,6 @@ import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-import de.unipotsdam.rulegenerator.contextinformation.ContextInformationList;
 import de.unipotsdam.rulegenerator.jaxrs.services.ContextInformationService;
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
@@ -43,10 +42,15 @@ public class XMLServices extends Services implements ErrorListener,
 		return null;
 	}
 
+	/**
+	 * Gets the context information.
+	 *
+	 * @return the context information
+	 */
 	@GET
 	@Path("/get-context-information")
 	@Produces(MediaType.TEXT_XML)
-	public ContextInformationList getContextInformation() {
+	public String getContextInformation() {
 		try {
 			return ContextInformationService.getContextInformation();
 		} catch (Exception e) {
