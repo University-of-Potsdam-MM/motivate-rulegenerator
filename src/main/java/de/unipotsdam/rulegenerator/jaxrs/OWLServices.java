@@ -14,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 public class OWLServices extends Services {
 	@GET
 	@Path("/get-knowledge-ontology")
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.TEXT_XML)
 	public String getKnowledgeOntology() throws IOException {
 		File file = new File("knowledge.owl");
 		
