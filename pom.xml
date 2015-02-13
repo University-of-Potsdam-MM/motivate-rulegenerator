@@ -44,6 +44,13 @@
 		</plugins>
 	</reporting>
 
+	<repositories>
+		<repository>
+			<id>motivate-repository</id>
+			<url>http://fossa.soft.cs.uni-potsdam.de:8081/artifactory/simple/motivate-repository/</url>
+		</repository>
+	</repositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -172,9 +179,10 @@
 			<version>2.2.1</version>
 		</dependency>
 		<dependency>
-			<groupId>com.github.ansell.pellet</groupId>
-			<artifactId>pellet-owlapiv3</artifactId>
-			<version>2.3.6-ansell</version>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>maven-wadl-plugin</artifactId>
+			<version>1.19</version>
+			<type>maven-plugin</type>
 		</dependency>
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
@@ -205,10 +213,59 @@
 			<version>1.8</version>
 		</dependency>
 		<dependency>
-			<groupId>com.sun.jersey.contribs</groupId>
-			<artifactId>maven-wadl-plugin</artifactId>
-			<version>1.19</version>
-			<type>maven-plugin</type>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>2.1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena</artifactId>
+			<type>pom</type>
+			<version>2.12.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-core</artifactId>
+			<version>2.3.2-20150129.140849-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-explanation</artifactId>
+			<version>2.3.2-20150129.141030-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-jena</artifactId>
+			<version>2.3.2-20150129.140907-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-modularity</artifactId>
+			<version>2.3.2-20150129.141049-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-owlapiv3</artifactId>
+			<version>2.3.2-20150129.140957-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-pellint</artifactId>
+			<version>2.3.2-20150129.141110-1</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.clarkparsia.pellet</groupId>
+			<artifactId>pellet-profiler</artifactId>
+			<version>2.3.2-20150129.141355-1</version>
+			<type>pom</type>
 		</dependency>
 	</dependencies>
 
