@@ -8,7 +8,7 @@ public class StatisticsService extends Service {
 	static String aBoxOld = "";
 	static StatisticsFactory statisticsFactory;
 	
-	public static String generateStatistics(String aBox, String ontologyId, String query)
+	public static String generateStatistics(String aBox, String ontologyId)
 			throws Exception {
 		
 		if (!aBoxOld.equals(aBox)) {
@@ -23,7 +23,7 @@ public class StatisticsService extends Service {
 		}
 				
 		// generate statistics
-		StatisticsList statisticsList = statisticsFactory.generateStatistics(query);
+		StatisticsList statisticsList = statisticsFactory.generateStatistics();
 
 		return null;
 	}

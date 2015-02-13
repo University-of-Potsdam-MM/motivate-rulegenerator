@@ -86,12 +86,9 @@ public class JSONServices extends Services {
 	@Consumes("application/x-www-form-urlencoded")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getStatistics(@FormParam("ontologyABox") String aBox,
-			@FormParam("ontologyId") String ontologyId,
-			@FormParam("query") String query) throws Exception {
-		logger.debug("foo {}", 1);
-		logger.info("bar");
+			@FormParam("ontologyId") String ontologyId) throws Exception {
 		try {
-			return StatisticsService.generateStatistics(aBox, ontologyId, query);
+			return StatisticsService.generateStatistics(aBox, ontologyId);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e.getMessage());

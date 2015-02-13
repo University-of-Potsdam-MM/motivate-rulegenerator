@@ -12,6 +12,7 @@ import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -25,7 +26,8 @@ public class CancelActionStatisticsAssembly extends ActionStatisticsAssembly {
 		super(ontology);
 	}
 
-	public StatisticsList generateStatistics(String queryString) {
+	public StatisticsList generateStatistics() {
+		
 		for (MyLearningUnit currentLearningUnit : learningUnits) {
 			Collection<? extends CancelAction> cancelActions = currentLearningUnit
 					.getCancelActions();
@@ -42,31 +44,18 @@ public class CancelActionStatisticsAssembly extends ActionStatisticsAssembly {
 				InfModel model = ModelFactory.createInfModel(graph);
 				// Use the model to answer SPARQL queries
 
-				/*queryString = "PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> "
-						+ "PREFIX rdfs: <"
-						+ RDFS.getURI()
-						+ "> "
-						+ "PREFIX owl: <"
-						+ OWL.getURI()
-						+ "> "
-						+ "SELECT ?r ?t WHERE {"
-						+ "?r a kno:RecordedContextInformation ;"
-						+ "kno:hasTimestamp ?t ;"
-						+ "kno:isRecordedContextInformationOf ?u . "
-						+ "?u a kno:User ."
-						+ " }"
-						+ "ORDER BY DESC(?t) "
-						;
-						//+ "kno:hasAction "
-						//+ cancelAction.getOwlIndividual().getIRI() + " . }";
-				System.out.println(queryString);*/
+				action = cancelAction.getOwlIndividual().getIRI().toString();				
+				System.out.println(queryFirst);
 				
-				Query query = QueryFactory.create(queryString);
+				Query query = QueryFactory.create(queryFirst);
 				QueryExecution qe = QueryExecutionFactory.create(query, model);
-				com.hp.hpl.jena.query.ResultSet results = qe.execSelect();
-
+				ResultSet results = qe.execSelect();
 				ResultSetFormatter.out(System.out, results, query);
 				qe.close();
+				
+				while(results.hasNext()) {
+					results.next();
+				}
 			}
 		}
 
