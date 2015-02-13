@@ -10,7 +10,6 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBContext;
@@ -22,9 +21,12 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+import org.json.JSONObject;
+import org.json.XML;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import de.unipotsdam.rulegenerator.jaxrs.services.ContextInformationService;
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.jaxrs.services.StatisticsService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
@@ -36,12 +38,13 @@ import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 @Path("/json")
 public class JSONServices extends Services {
 	final Logger logger = LoggerFactory.getLogger(JSONServices.class);
-
-	@GET
-	@Path("/get-adaptation-rules/{ontologyABox}/{ontologyId}")
-	@Produces(MediaType.TEXT_PLAIN)
-	public String getAdaptationRules(@PathParam("ontologyABox") String aBox,
-			@PathParam("ontologyId") String ontologyId)
+	
+	@POST
+	@Path("/get-adaptation-rules")
+	@Consumes("application/x-www-form-urlencoded")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getAdaptationRules(@FormParam("ontologyABox") String aBox,
+			@FormParam("ontologyId") String ontologyId)
 			throws TransformerFactoryConfigurationError, Exception {
 		// Write received ontology to file system
 
@@ -84,7 +87,7 @@ public class JSONServices extends Services {
 	@POST
 	@Path("/get-statistics")
 	@Consumes("application/x-www-form-urlencoded")
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.APPLICATION_JSON)
 	public String getStatistics(@FormParam("ontologyABox") String aBox,
 			@FormParam("ontologyId") String ontologyId) throws Exception {
 		try {
@@ -94,5 +97,15 @@ public class JSONServices extends Services {
 			System.out.println(e.getMessage());
 		}
 		return null;
+	}
+	
+	@GET
+	@Path("/get-context-information")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getContextInformation() throws Exception {
+		String xmlString = ContextInformationService.getContextInformation();
+		JSONObject jsonObject = XML.toJSONObject(xmlString);
+		
+		return jsonObject.toString();
 	}
 }

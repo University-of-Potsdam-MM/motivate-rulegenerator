@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE contextInformation SYSTEM "ContextInformation.dtd">
+<contextInformation>
+	<!-- Context information for the default rule generation assembly. -->
+	<information id="CI_CURRENT_LEARNING_UNIT">
+		<contextClasses>
+			<contextClass id="CC_SCENARIO" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_FINISHED_LEARNING_UNIT" multiplicity="MULTIPLE">
+		<contextClasses>
+			<contextClass id="CC_SCENARIO" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<!-- End -->
+	<!-- Context information that covers actions performed by the user. -->
+	<information id="CI_USER_DID_PERFORM_ACTION" multiplicity="MULTIPLE">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+			<contextClass id="CC_SITUATIONAL" />
+		</contextClasses>
+		<contextValue type="ENUM">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="CONTAINS" />
+			</operators>
+			<possibleValues>
+				<value>ACTIVATE_ACTION</value>
+				<value>CHOOSE_ACTION</value>
+				<value>DEACTIVATE_ACTION</value>
+				<value>RESUME_ACTION</value>
+				<value>SUSPEND_ACTION</value>
+				<value>WATCH_ACTION</value>
+				<value>VIEW_ACTION</value>
+				<value>USE_ACTION</value>
+				<value>LISTEN_ACTION</value>
+				<value>READ_ACTION</value>
+			</possibleValues>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_ACTION_START_TIMESTAMP">
+				<parameterValue type="INTEGER" />
+			</parameter>
+			<parameter id="CP_ACTION_END_TIMESTAMP">
+				<parameterValue type="INTEGER" />
+			</parameter>
+			<parameter id="CP_ACTION_REFERNCED_LEARNING_NUGGET">
+				<parameterValue type="STRING" />
+			</parameter>
+		</parameters>
+	</information>
+	<!-- End -->
+	<information id="CI_AUDIO_OUTPUT_AVAILABLE">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_CURRENT_AIR_PRESSURE">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="FLOAT">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_PRESSURE_UNIT">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>BAR</value>
+						<value>MILLIMETER_OF_MERCURY</value>
+						<value>PASCAL</value>
+						<value>TORR</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_CURRENT_AMBIENT_NOISE">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="FLOAT">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_CURRENT_APPOINTMENT">
+		<contextClasses>
+			<contextClass id="CC_SITUATIONAL" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_APPOINTMENT_DETAIL">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>DATE</value>
+						<value>LOCATION</value>
+						<value>NOTES</value>
+						<value>TIME</value>
+						<value>TITLE</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_CURRENT_HUMIDITY">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="FLOAT">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_CURRENT_LUMINOSITY">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="FLOAT">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_CURRENTLY_RAINING">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_CURRENTLY_SUNNY">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_CURRENT_TEMPERATURE">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="FLOAT">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_TEMPERATURE_SCALE">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>CELSIUS</value>
+						<value>FAHRENHEIT</value>
+						<value>KELVIN</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_CURRENT_TIME">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="INTEGER">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_TIME_COMPONENT">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>HOURS</value>
+						<value>MINUTES</value>
+						<value>SECONDS</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_DEVICE_TYPE">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="ENUM">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+			<possibleValues>
+				<value>FEATURE_PHONE</value>
+				<value>TABLET_COMPUTER</value>
+				<value>SMARTPHONE</value>
+				<value>SMARTWATCH</value>
+				<value></value>
+			</possibleValues>
+		</contextValue>
+	</information>
+	<information id="CI_DISPLAY_RESOLUTION">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="INTEGER">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_RESOLUTION_COMPONENT">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>WIDTH</value>
+						<value>HEIGHT</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+			<parameter id="CP_RESOLUTION_UNIT">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>PIXELS</value>
+						<value>POINTS</value>
+						<value>CENTIMETERS</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_EXPECTED_TIME_NEEDED_FOR_COMPLETION">
+		<contextClasses>
+			<contextClass id="CC_SCENARIO" />
+		</contextClasses>
+		<contextValue type="INTEGER">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_LEARNING_UNIT_ID">
+				<parameterValue type="STRING" />
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_EXTERNAL_DISPLAY_AVAILABLE">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_HAS_SCREEN_READER_FUNCTIONALITY">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_MICROPHONE_AVAILABLE">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_NEXT_APPOINTMENT">
+		<contextClasses>
+			<contextClass id="CC_SITUATIONAL" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_APPOINTMENT_DETAIL">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>DATE</value>
+						<value>LOCATION</value>
+						<value>NOTES</value>
+						<value>TIME</value>
+						<value>TITLE</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_PHOTO_CAMERA_AVAILABLE">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_PRINTER_AVAILABLE">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_TIME_UNTIL_TIMESTAMP">
+		<contextClasses>
+			<contextClass id="CC_SITUATIONAL" />
+		</contextClasses>
+		<contextValue type="INTEGER">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_AGE">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+		</contextClasses>
+		<contextValue type="INTEGER">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_CURRENT_LEARNING_STYLE_INPUT">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+		</contextClasses>
+		<contextValue type="INTEGER" min="-11" max="11">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_CURRENT_LEARNING_STYLE_PERCEPTION">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+		</contextClasses>
+		<contextValue type="INTEGER" min="-11" max="11">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_CURRENT_LEARNING_STYLE_PROCESSING">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+		</contextClasses>
+		<contextValue type="INTEGER" min="-11" max="11">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_CURRENT_LEARNING_STYLE_UNDERSTANDING">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+		</contextClasses>
+		<contextValue type="INTEGER" min="-11" max="11">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_DESTINATION">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_TARGET_LATITUDE">
+				<parameterValue type="FLOAT" min="-90" max="90" />
+			</parameter>
+			<parameter id="CP_TARGET_LONGITUDE">
+				<parameterValue type="FLOAT" min="-180" max="180" />
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_DID_ARRIVE_AT_LOCATION">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_LATITUDE">
+				<parameterValue type="FLOAT" min="-90" max="90" />
+			</parameter>
+			<parameter id="CP_LONGITUDE">
+				<parameterValue type="FLOAT" min="-180" max="180" />
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_DID_LEAVE_LOCATION">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_LATITUDE">
+				<parameterValue type="FLOAT" min="-90" max="90" />
+			</parameter>
+			<parameter id="CP_LONGITUDE">
+				<parameterValue type="FLOAT" min="-180" max="180" />
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_IS_AT_LOCATION">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_LATITUDE">
+				<parameterValue type="FLOAT" min="-90" max="90" />
+			</parameter>
+			<parameter id="CP_LONGITUDE">
+				<parameterValue type="FLOAT" min="-180" max="180" />
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_USER_LOCATION_ADDRESS">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_LOCATION_BUILDING">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_LOCATION_COUNTRY">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_LOCATION_DISTANCE">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="FLOAT">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_TAGET_LATITUDE">
+				<parameterValue type="FLOAT" min="-90" max="90" />
+			</parameter>
+			<parameter id="CP_TARGET_LONGITUDE">
+				<parameterValue type="FLOAT" min="-180" max="180" />
+			</parameter>
+			<parameter id="CP_DISTANCE_UNIT">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>KILOMETERS</value>
+						<value>MILES</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_USER_LOCATION_LATITUDE">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="FLOAT" min="-90" max="90">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_LOCATION_LONGITUDE">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="FLOAT" min="-180" max="180">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="LESS_THEN" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_LOCATION_REGION">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="STRING">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_MEANS_OF_TRANSPORTATION">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="ENUM">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+			<possibleValues>
+				<value>AFOOT</value>
+				<value>BY_BIKE</value>
+				<value>TRANSPORTATION</value>
+			</possibleValues>
+		</contextValue>
+	</information>
+	<information id="CI_USER_MOVEMENT_SPEED">
+		<contextClasses>
+			<contextClass id="CC_LOCATION" />
+		</contextClasses>
+		<contextValue type="FLOAT">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_VELOCITY_UNIT">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>KILOMETERS_PER_HOUR</value>
+						<value>MILES2_PER_HOUR</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+	<information id="CI_USER_ROLE" multiplicity="MULTIPLE">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+		</contextClasses>
+		<contextValue type="ENUM" default="UNKNOWN">
+			<operators>
+				<operator id="CONTAINS" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+			<possibleValues>
+				<value>STUDENT</value>
+				<value>TEACHER</value>
+				<value>UNKNOWN</value>
+			</possibleValues>
+		</contextValue>
+	</information>
+	<information id="CI_VIDEO_CAMERA_AVAILABLE">
+		<contextClasses>
+			<contextClass id="CC_TECHNICAL" />
+		</contextClasses>
+		<contextValue type="BOOLEAN">
+			<operators>
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+	</information>
+	<information id="CI_USER_STATE_OF_MIND">
+		<contextClasses>
+			<contextClass id="CC_PERSONAL" />
+		</contextClasses>
+		<contextValue type="INTEGER" min="0" max="5">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_STATE_OF_MIND">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>ANGER</value>
+						<value>BOREDOM</value>
+						<value>CONCENTRATION</value>
+						<value>CONFUSION</value>
+						<value>CURIOSITY</value>
+						<value>DISTRACTION</value>
+						<value>HAPPINESS</value>
+						<value>OPTIMISM</value>
+						<value>SADNESS</value>
+						<value>TIREDNESS</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
+</contextInformation>

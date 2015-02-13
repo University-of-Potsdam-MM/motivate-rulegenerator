@@ -33,4 +33,11 @@ public class MyFactory extends GeneratedFactory {
     public Collection<? extends MyLearningUnitClassConstraint> getAllLearningUnitConstraintInstances() {
 		return delegate.getWrappedIndividuals(Vocabulary.CLASS_LEARNINGUNITCLASSCONSTRAINT, MyLearningUnitClassConstraint.class);
     }
+    
+    /**
+     * Gets all instances of MeasurableContextInformation from the ontology.
+     */
+    public Collection<? extends MyContextInformation> getAllMeasurableContextInformationInstances() {
+		return delegate.getWrappedIndividuals(Vocabulary.CLASS_CONTEXTINFORMATION, MyContextInformation.class);
+    }
 }

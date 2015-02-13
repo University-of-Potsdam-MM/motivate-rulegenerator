@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+	<!ENTITY % widgets SYSTEM "Widget.dtd">
+	%widgets;
+	<!ENTITY % interpreters SYSTEM "Interpreter.dtd">
+	%interpreters;
+	]>
+<widgets>
+	<widget id="UserLocationLatitudeWidget">
+		<output>
+			<information id="CI_USER_LOCATION_LATITUDE" />
+		</output>
+		<parameters />
+	</widget>
+	<widget id="UserLocationLongitudeWidget">
+		<output>
+			<information id="CI_USER_LOCATION_LONGITUDE" />
+		</output>
+		<parameters />
+	</widget>
+	<widget id="CurrentAirPressureWidget">
+		<output>
+			<information id="CI_CURRENT_AIR_PRESSURE" />
+		</output>
+		<parameters>
+			<parameter id="CP_PRESSURE_UNIT" />
+		</parameters>
+	</widget>
+</widgets>
+<interpreters>
+	<interpreter id="UserLocationCoordinatesToAddressInterpreter">
+		<input>
+			<information id="CI_USER_LOCATION_LATITUDE" />
+			<information id="CI_USER_LOCATION_LONGITUDE" />
+		</input>
+		<output>
+			<information id="CI_USER_LOCATION_ADDRESS"></information>
+		</output>
+	</interpreter>
+	<interpreter id="BarToTorrAirPressureConverter">
+		<input>
+			<information id="CI_CURRENT_AIR_PRESSURE">
+				<parameters>
+					<parameter id="CP_PRESSURE_UNIT" value="BAR" />
+				</parameters>
+			</information>
+		</input>
+		<output>
+			<information id="CI_CURRENT_AIR_PRESSURE">
+				<parameters>
+					<parameter id="CP_PRESSURE_UNIT" value="TORR" />
+				</parameters>
+			</information>
+		</output>
+	</interpreter>
+</interpreters>

@@ -19,6 +19,11 @@ public class RuleFactory {
 	private LearningUnitClassFactSet hasLearningUnitClassConstraintFactSet = new LearningUnitClassFactSet();
 	private LearningUnitClassFactSet hasNotLearningUnitClassConstraintFactSet = new LearningUnitClassFactSet();
 	
+	/**
+	 * Instantiates a new rule factory.
+	 *
+	 * @param ontology the ontology
+	 */
 	public RuleFactory(OWLOntology ontology) {
 		super();
 
@@ -32,6 +37,12 @@ public class RuleFactory {
 		this.ruleAssemblies.add(new DefaultRuleAssembly(ontology));
 	}
 
+	/**
+	 * Generate rules.
+	 *
+	 * @return the adaptation rule list
+	 * @throws Exception the exception
+	 */
 	public AdaptationRuleList generateRules() throws Exception {
 		// delete existing rules?
 		AdaptationRuleList adaptationRules = new AdaptationRuleList();

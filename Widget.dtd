@@ -1,0 +1,8 @@
+<!ELEMENT widgets (widget)*>
+<!ELEMENT widget (output,parameters?)>
+<!ATTLIST widget id ID #REQUIRED>
+<!ELEMENT output (information)+>
+<!ATTLIST information id ID #REQUIRED>
+<!ELEMENT parameters (parameter)*>
+<!ELEMENT parameter (#PCDATA)>
+<!ATTLIST parameter id ID #REQUIRED>

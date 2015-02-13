@@ -10,13 +10,12 @@ import org.semanticweb.owlapi.model.OWLClassExpression;
 import uk.ac.manchester.cs.owl.owlapi.OWLClassImpl;
 import de.unipotsdam.rulegenerator.ontology.ContextInformation;
 import de.unipotsdam.rulegenerator.ontology.Vocabulary;
-import de.unipotsdam.rulegenerator.ontology.impl.DefaultMeasurableContextInformation;
+import de.unipotsdam.rulegenerator.ontology.impl.DefaultContextInformation;
 
-public class MyMeasurableContextInformation extends
-		DefaultMeasurableContextInformation implements ContextInformation {
+public class MyContextInformation extends DefaultContextInformation implements
+		ContextInformation {
 
-	public MyMeasurableContextInformation(CodeGenerationInference inference,
-			IRI iri) {
+	public MyContextInformation(CodeGenerationInference inference, IRI iri) {
 		super(inference, iri);
 		// TODO Auto-generated constructor stub
 	}
@@ -26,28 +25,24 @@ public class MyMeasurableContextInformation extends
 	public Set<OWLClassExpression> getTypes() {
 		return this.getOwlIndividual().getTypes(this.getOwlOntology());
 	}
-	
-	public String getSpecificContextInformationType() {
-		for (OWLClassExpression type : this.getTypes()) {
-			OWLClassImpl impl = (OWLClassImpl) type;
-			String iriFragment = impl.getIRI().getFragment();
-			if (iriFragment.contains("MeasurableInformation"))
-				return iriFragment;
-		}
 
-		return "NO_VALUE";
+	// ID
+
+	public String getSpecificContextInformationType() {
+		return this.hasHasCID() ? this.getHasCID().toArray()[0].toString()
+				: "NO_VALUE";
 	}
 
 	// Parameters
-	
+
 	public Boolean hasContextInformationParameters() {
 		return this.getContextInformationParameterCount() > 0;
 	}
-	
+
 	public Integer getContextInformationParameterCount() {
 		return this.getContextInformationParameters().toArray().length;
 	}
-	
+
 	public Collection<MyContextInformationParameter> getContextInformationParameters() {
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.OBJECT_PROPERTY_HASCONTEXTINFORMATIONPARAMETER,
@@ -55,16 +50,20 @@ public class MyMeasurableContextInformation extends
 	}
 
 	// Value Operator
-	
+
 	public String getValueOperator() {
-		Object[] valuesOperators = this.getHasValueOperator()
-				.toArray();
+		Object[] valuesOperators = this.getHasValueOperator().toArray();
 		if (valuesOperators.length > 0)
 			return valuesOperators[0].toString();
 		else
 			return "NO_VALUE";
 	}
-	
+
+	public Collection<? extends String> getHasValueOperator() {
+		return getDelegate().getPropertyValues(getOwlIndividual(),
+				Vocabulary.DATA_PROPERTY_HASVALUEOPERATOR, String.class);
+	}
+
 	// Value
 
 	public Object getValue() {
@@ -78,4 +77,5 @@ public class MyMeasurableContextInformation extends
 		return getDelegate().getPropertyValues(getOwlIndividual(),
 				Vocabulary.DATA_PROPERTY_HASVALUE, Object.class);
 	}
+
 }
