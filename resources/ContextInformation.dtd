@@ -1,28 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+A list of context information that will be made available through the interfaces of the rule generator.
+It should contain all the context information that can be acquired or processed by the context detection through widgets and interpreters.
+ 
+@title Measurable Context Information
+@doctype contextInformation SYSTEM "resources/ContextInformation.dtd"
+@root contextInformation
+-->
 <!ELEMENT contextInformation (information)*>
+<!-- A context information that can be processed by or is available through widgets and interpreters. -->
 <!ELEMENT information (contextClasses?,contextValue,parameters?)>
+<!--
+@attr id The identifier of the context information. This value should be used by widgets and interpreters to state that they provide or process the context information.
+@attr multiplicity State if the context information is unique (only one value can exist simultaneously but a history of past values can be saved) or 
+if multiple values can be present at the same time (this effectively deactivates the history for this information).
+@attr nohistory States that no history will be available for this context information. This parameter is only relevant for unique context information. Context
+information with multiple values never saves old values.
+-->
 <!ATTLIST information 
 	id ID #REQUIRED
-	multiplicity (UNIQUE|MULTIPLE) "UNIQUE">
+	multiplicity (UNIQUE|MULTIPLE) "UNIQUE"
+	nohistory CDATA "nohistory">
+<!-- 
+A list of context classes the information belongs to. 
+-->
 <!ELEMENT contextClasses (contextClass)*>
+<!-- 
+A context class. 
+
+@example <contextClass id="CC_TECHNICAL" />
+-->
 <!ELEMENT contextClass EMPTY>
+<!-- 
+@attr id The identifier of the context class.
+-->
 <!ATTLIST contextClass id (CC_TECHNICAL|CC_PHYSICAL|CC_PERSONAL|CC_SITUATIONAL|CC_SCENARIO|CC_LOCATION) #REQUIRED>
+<!-- The value of the context information. -->
 <!ELEMENT contextValue (operators,possibleValues?)>
+<!-- 
+@attr type The expected data type for the value of the context information.
+@attr min The minimal value of the context information.
+@attr max The maximal value of the context information.
+@attr default The default value of the context information.
+-->
 <!ATTLIST contextValue 
 	type (STRING|FLOAT|INTEGER|BOOLEAN|ENUM) #REQUIRED
 	min CDATA #IMPLIED
 	max CDATA #IMPLIED
 	default CDATA #IMPLIED>
+<!-- A list of operators that can be used with the context information value. -->
 <!ELEMENT operators (operator)+>
+<!-- An operator that can be used with the value of the context information. -->
 <!ELEMENT operator EMPTY>
+<!--
+@attr id The identifier of the operator.
+-->
 <!ATTLIST operator id (GREATER_THEN|LESS_THEN|IS|IS_NOT|CONTAINS|NO_VALUE) #REQUIRED>
+<!-- A list of parameters that define the context information more precisely. -->
 <!ELEMENT parameters (parameter)+>
+<!-- A parameter of the context information. -->
 <!ELEMENT parameter (parameterValue)>
+<!--
+@attr id The identifier for the parameter.
+-->
 <!ATTLIST parameter id CDATA #REQUIRED>
+<!-- The value of the parameter. -->
 <!ELEMENT parameterValue (possibleValues?)>
+<!-- 
+@attr type The expected data type for the parameter of the context information.
+@attr min The minimal value of the parameter.
+@attr max The maximal value of the parameter.
+@attr default The default value of the parameter.
+-->
 <!ATTLIST parameterValue 
 	type (STRING|FLOAT|INTEGER|BOOLEAN|ENUM) #REQUIRED
 	min CDATA #IMPLIED
 	max CDATA #IMPLIED
 	default CDATA #IMPLIED>
+<!-- A list of possible values for a parameter or a context information that has its data type set to ENUM. -->
 <!ELEMENT possibleValues (value)+>
+<!-- A concrete value for a parameter or a context information that has its data type set to ENUM. -->
 <!ELEMENT value (#PCDATA)>
