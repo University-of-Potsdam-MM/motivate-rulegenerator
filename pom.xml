@@ -9,6 +9,21 @@
 	<version>0.0.3</version>
 	<name>rulegenerator</name>
 
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>net.sf.dtddoc</groupId>
+				<artifactId>dtddoc-maven-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<docTitle>MOTIVATE Rule Generator Document Type Definitions</docTitle>
+					<sourceDirectory>resources</sourceDirectory>
+					<outputDirectory>dtddoc</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
