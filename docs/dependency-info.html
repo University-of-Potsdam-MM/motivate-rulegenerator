@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>rulegenerator - About</title>
+    <title>rulegenerator - Dependency Information</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -54,14 +54,14 @@
                           <a href="dependency-convergence.html" title="Dependency Convergence">Dependency Convergence</a>
             </li>
                       <li class="none">
-                          <a href="dependency-info.html" title="Dependency Information">Dependency Information</a>
-            </li>
+            <strong>Dependency Information</strong>
+          </li>
                       <li class="none">
                           <a href="dependency-management.html" title="Dependency Management">Dependency Management</a>
             </li>
                       <li class="none">
-            <strong>About</strong>
-          </li>
+                          <a href="index.html" title="About">About</a>
+            </li>
                       <li class="none">
                           <a href="plugin-management.html" title="Plugin Management">Plugin Management</a>
             </li>
@@ -87,8 +87,43 @@
     <div id="bodyColumn">
       <div id="contentBox">
         <div class="section">
-<h2>About rulegenerator<a name="About_rulegenerator"></a></h2><a name="About_rulegenerator"></a>
-<p>There is currently no description associated with this project.</p></div>
+<h2>Dependency Information<a name="Dependency_Information"></a></h2><a name="Dependency_Information"></a>
+<div class="section">
+<h3>Apache Maven<a name="Apache_Maven"></a></h3><a name="Apache_Maven"></a>
+<div class="source">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;de.unipotsdam&lt;/groupId&gt;
+  &lt;artifactId&gt;rulegenerator&lt;/artifactId&gt;
+  &lt;version&gt;0.0.3&lt;/version&gt;
+&lt;/dependency&gt;</pre></div></div>
+<div class="section">
+<h3>Apache Buildr<a name="Apache_Buildr"></a></h3><a name="Apache_Buildr"></a>
+<div class="source">
+<pre>'de.unipotsdam:rulegenerator:jar:0.0.3'</pre></div></div>
+<div class="section">
+<h3>Apache Ivy<a name="Apache_Ivy"></a></h3><a name="Apache_Ivy"></a>
+<div class="source">
+<pre>&lt;dependency org=&quot;de.unipotsdam&quot; name=&quot;rulegenerator&quot; rev=&quot;0.0.3&quot;&gt;
+  &lt;artifact name=&quot;rulegenerator&quot; type=&quot;jar&quot; /&gt;
+&lt;/dependency&gt;</pre></div></div>
+<div class="section">
+<h3>Groovy Grape<a name="Groovy_Grape"></a></h3><a name="Groovy_Grape"></a>
+<div class="source">
+<pre>@Grapes(
+@Grab(group='de.unipotsdam', module='rulegenerator', version='0.0.3')
+)</pre></div></div>
+<div class="section">
+<h3>Grails<a name="Grails"></a></h3><a name="Grails"></a>
+<div class="source">
+<pre>compile 'de.unipotsdam:rulegenerator:0.0.3'</pre></div></div>
+<div class="section">
+<h3>Leiningen<a name="Leiningen"></a></h3><a name="Leiningen"></a>
+<div class="source">
+<pre>[de.unipotsdam/rulegenerator &quot;0.0.3&quot;]</pre></div></div>
+<div class="section">
+<h3>SBT<a name="SBT"></a></h3><a name="SBT"></a>
+<div class="source">
+<pre>libraryDependencies += &quot;de.unipotsdam&quot; % &quot;rulegenerator&quot; % &quot;0.0.3&quot;</pre></div></div></div>
       </div>
     </div>
     <div class="clear">
