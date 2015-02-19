@@ -18,7 +18,7 @@ public class ContextInformationService extends Service {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static String getContextInformation() throws IOException {
-		byte[] encoded = Files.readAllBytes(Paths.get("measurable-context-information.xml"));
+		byte[] encoded = Files.readAllBytes(Paths.get("resources/measurable-context-information.xml"));
 		return new String(encoded, StandardCharsets.UTF_8);
 	}
 }

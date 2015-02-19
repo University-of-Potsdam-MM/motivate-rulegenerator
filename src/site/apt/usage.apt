@@ -1,0 +1,18 @@
+Usage
+
+  The rule generator is based on the {{{https://grizzly.java.net/}Grizzly NIO framework}} and {{{https://jersey.java.net/}Jersey RESTful Web services}}.
+
+* Starting
+
+  The server for the rule generator can be started with the following command:
+  
++-----------------------------------------
+java -jar rulegenerator.js <HOST> <PORT>
++-----------------------------------------
+
+  The executable accepts two parameters to configure the domain of the host and the port through which the server will be is reachable. If no host
+  or port are passed the host defaults to "localhost" and the port to "9998".
+  
+* Requests
+
+  All queries to the rule generator are HTTP Requests. The rule generator offers different interfaces to carry out specific tasks (see {{{./interfaces.html}Interfaces}}).
