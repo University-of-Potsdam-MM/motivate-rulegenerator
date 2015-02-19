@@ -7,14 +7,42 @@
 	<artifactId>rulegenerator</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.3</version>
-	<name>rulegenerator</name>
 
-	<repositories>
-		<repository>
-			<id>motivate-repository</id>
-			<url>http://fossa.soft.cs.uni-potsdam.de:8081/artifactory/simple/motivate-repository/</url>
-		</repository>
-	</repositories>
+	<name>MOTIVATE Rule Generator</name>
+	<inceptionYear>2014</inceptionYear>
+
+	<reporting>
+		<outputDirectory>docs</outputDirectory>
+		<plugins>
+			<plugin>
+				<groupId>net.sf.dtddoc</groupId>
+				<artifactId>dtddoc-maven-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<docTitle>MOTIVATE Rule Generator Document Type Definitions</docTitle>
+					<outputDirectory>dtddoc</outputDirectory>
+					<sourceDirectory>resources</sourceDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.1</version>
+				<configuration>
+					<destDir>javadoc</destDir>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<outputDirectory>project-info</outputDirectory>
+					<project.reporting.outputDirectory>project-info</project.reporting.outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
 
 	<dependencyManagement>
 		<dependencies>
@@ -25,10 +53,101 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.16</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.10</version>
+			</dependency>
+			<dependency>
+				<groupId>classworlds</groupId>
+				<artifactId>classworlds</artifactId>
+				<version>1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1.3</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-cli</groupId>
+				<artifactId>commons-cli</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.plexus</groupId>
+				<artifactId>plexus-utils</artifactId>
+				<version>3.0.15</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sourceforge.owlapi</groupId>
+				<artifactId>owlapi-distribution</artifactId>
+				<version>3.4.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-artifact</artifactId>
+				<version>2.0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-core</artifactId>
+				<version>2.0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-plugin-api</artifactId>
+				<version>2.0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.plexus</groupId>
+				<artifactId>plexus-archiver</artifactId>
+				<version>2.4.4</version>
+			</dependency>
+			<dependency>
+				<groupId>xerces</groupId>
+				<artifactId>xercesImpl</artifactId>
+				<version>2.10.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-model</artifactId>
+				<version>2.0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-project</artifactId>
+				<version>2.0.9</version>
+			</dependency>
+			<dependency>
+				<groupId>xml-apis</groupId>
+				<artifactId>xml-apis</artifactId>
+				<version>1.4.01</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
+		<dependency>
+			<groupId>lt.velykis.maven.skins</groupId>
+			<artifactId>reflow-velocity-tools</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<!-- Reflow skin requires Velocity >= 1.7 -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -43,13 +162,9 @@
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-grizzly2-http</artifactId>
 		</dependency>
-		<!-- uncomment this to get JSON support: <dependency> <groupId>org.glassfish.jersey.media</groupId> 
-			<artifactId>jersey-media-moxy</artifactId> </dependency> -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.9</version>
-			<scope>test</scope>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-moxy</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -57,10 +172,9 @@
 			<version>2.2.1</version>
 		</dependency>
 		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>maven-wadl-plugin</artifactId>
-			<version>1.0</version>
-			<type>maven-plugin</type>
+			<groupId>com.github.ansell.pellet</groupId>
+			<artifactId>pellet-owlapiv3</artifactId>
+			<version>2.3.6-ansell</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
@@ -91,71 +205,34 @@
 			<version>1.8</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>2.1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.jena</groupId>
-			<artifactId>apache-jena</artifactId>
-			<type>pom</type>
-			<version>2.12.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-core</artifactId>
-			<version>2.3.2-20150129.140849-1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-explanation</artifactId>
-			<version>2.3.2-20150129.141030-1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-jena</artifactId>
-			<version>2.3.2-20150129.140907-1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-modularity</artifactId>
-			<version>2.3.2-20150129.141049-1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-owlapiv3</artifactId>
-			<version>2.3.2-20150129.140957-1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-pellint</artifactId>
-			<version>2.3.2-20150129.141110-1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-profiler</artifactId>
-			<version>2.3.2-20150129.141355-1</version>
-			<type>pom</type>
-		</dependency>
-		<dependency>
-			<groupId>com.clarkparsia.pellet</groupId>
-			<artifactId>pellet-query</artifactId>
-			<version>2.3.2-20150129.140945-1</version>
-			<type>pom</type>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>maven-wadl-plugin</artifactId>
+			<version>1.19</version>
+			<type>maven-plugin</type>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.3</version>
+					<dependencies>
+						<dependency>
+							<groupId>lt.velykis.maven.skins</groupId>
+							<artifactId>reflow-velocity-tools</artifactId>
+							<version>1.1.1</version>
+						</dependency>
+						<!-- Reflow skin requires Velocity >= 1.7 -->
+						<dependency>
+							<groupId>org.apache.velocity</groupId>
+							<artifactId>velocity</artifactId>
+							<version>1.7</version>
+						</dependency>
+					</dependencies>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -268,4 +345,5 @@
 		<jersey.version>2.13</jersey.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<url>http://motivate-project.de/</url>
 </project>
