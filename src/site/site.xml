@@ -6,6 +6,7 @@
 	<publishDate position="navigation-bottom" format="yyyy-MM-dd" />
 	<version position="right" />
 
+	<!-- 
 	<skin>
 		<groupId>lt.velykis.maven.skins</groupId>
 		<artifactId>reflow-maven-skin</artifactId>
@@ -22,7 +23,7 @@
 				<href>http://andriusvelykis.github.io/reflow-maven-skin/</href>
 			</brand>
 		</reflowSkin>
-	</custom>
+	</custom> -->
 
 	<body>
 		<menu name="Overview">
