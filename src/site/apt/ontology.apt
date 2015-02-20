@@ -1,0 +1,34 @@
+MOTIVATE Knowledge Ontology
+
+
+* {Classes} 
+
+  Es folgt eine Dokumentation der T-Box:
+
+ <<LearningUnit>>
+
+ <<LearningUnitClass>>
+
+ <<ContextInformation>>
+
+ <<ContextInformationParameter>>
+
+ <<ContextClass>>
+
+ <<Constraint>>
+
+ <<ConstraintRequirement>>
+
+ <<Properties>>
+
+ <<Object Properties>>
+
+ <<Data Properties>>
+
+ <<Annotation Properties>>
+
+
+
+* {Individuals}
+
+  Und hier die Dokumentation der A-Box:
