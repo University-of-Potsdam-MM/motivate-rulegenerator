@@ -30,9 +30,6 @@
         <NamedIndividual IRI="#Example-Bob"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
     </Declaration>
     <Declaration>
@@ -48,9 +45,6 @@
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
     </Declaration>
     <Declaration>
@@ -58,6 +52,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-IsFeaturePhoneContextInformationConstraintRequirement"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-LatitudeParameter"/>
@@ -161,10 +158,6 @@
         <NamedIndividual IRI="#Example-Bob"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:CancelAction"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="knowledge:ContextInformation"/>
         <NamedIndividual IRI="#Example-ConstraintEndTimeContextInformation"/>
     </ClassAssertion>
@@ -186,10 +179,6 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
         <NamedIndividual IRI="#Example-EndTimeContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -199,6 +188,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:LearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:ContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-IsFeaturePhoneContextInformationConstraintRequirement"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:ContextInformationParameter"/>
@@ -345,11 +338,6 @@
         <NamedIndividual abbreviatedIRI="knowledge:AppUsageFeature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasAction"/>
-        <NamedIndividual IRI="#Example-Bob"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
         <NamedIndividual IRI="#Example-Bob"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
@@ -365,24 +353,9 @@
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasSituation"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-        <NamedIndividual IRI="#Example-Situation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:referencesLearningUnit"/>
-        <NamedIndividual IRI="#Example-CancelAction"/>
-        <NamedIndividual IRI="#Example-LearningUnit-126"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-CurrentTemperature"/>
         <NamedIndividual IRI="#Example-TemperatureScaleParameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
@@ -402,12 +375,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasConstraintRequirement"/>
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
-        <NamedIndividual IRI="#Example-DeviceTypeContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-IsFeaturePhoneContextInformationConstraintRequirement"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasNotLearningUnitClass"/>
         <NamedIndividual IRI="#Example-HasNotLearningUnitClassConstraint"/>
         <NamedIndividual IRI="#Example-ScreenReaderSuitableLearningUnitClass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasMeasurableContextInformation"/>
+        <NamedIndividual IRI="#Example-IsFeaturePhoneContextInformationConstraintRequirement"/>
+        <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasAlternative"/>
@@ -572,12 +550,12 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasValueOperator"/>
         <NamedIndividual IRI="#Example-DeviceTypeContextInformation"/>
-        <Literal datatypeIRI="&xsd;string">IS_NOT</Literal>
+        <Literal datatypeIRI="&xsd;string">IS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-HasLearningUnitClassConstraint"/>
-        <Literal datatypeIRI="&xsd;string">OR</Literal>
+        <Literal datatypeIRI="&xsd;string">AND</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasPID"/>
@@ -613,6 +591,16 @@
         <DataProperty abbreviatedIRI="knowledge:hasLogicalOperator"/>
         <NamedIndividual IRI="#Example-LearningUnit-126"/>
         <Literal datatypeIRI="&xsd;string">AND</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:isScreenReaderSuitable"/>
+        <NamedIndividual IRI="#Example-LearningUnit-126"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasContentType"/>
+        <NamedIndividual IRI="#Example-LearningUnit-127"/>
+        <Literal datatypeIRI="&xsd;string">Image</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasLID"/>

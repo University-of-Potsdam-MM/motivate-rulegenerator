@@ -139,7 +139,7 @@ public class Situation {
 			if (this.constraints.size() > 0)
 				this.constraints.addLogicalOperator(LogicalOperator.AND);
 			this.constraints.addFact(new Fact(
-					"CurrentLearningUnitMeasurableInformation",
+					"CI_CURRENT_LEARNING_UNIT",
 					FactOperator.IS, currentLearningUnit.getID()));
 			break;
 		case PREREQUISITES:

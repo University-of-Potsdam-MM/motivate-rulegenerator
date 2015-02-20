@@ -3,10 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
 
-	<publishDate position="navigation-bottom" format="yyyy-MM-dd" />
-	<version position="right" />
+	<publishDate position="bottom" format="yyyy-MM-dd" />
+	<version position="bottom" />
 
-	<!-- 
 	<skin>
 		<groupId>lt.velykis.maven.skins</groupId>
 		<artifactId>reflow-maven-skin</artifactId>
@@ -19,11 +18,11 @@
 			<theme>bootswatch-spacelab</theme>
 			<highlightJs>true</highlightJs>
 			<brand>
-				<name>My Project</name>
-				<href>http://andriusvelykis.github.io/reflow-maven-skin/</href>
+				<name>MOTIVATE Rule Generator</name>
 			</brand>
+			<toc>sidebar</toc>
 		</reflowSkin>
-	</custom> -->
+	</custom>
 
 	<body>
 		<menu name="Overview">

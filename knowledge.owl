@@ -26,12 +26,6 @@
         <Literal datatypeIRI="&xsd;float">1.3</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="#Action"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CancelAction"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Constraint"/>
     </Declaration>
     <Declaration>
@@ -53,9 +47,6 @@
         <Class IRI="#Feature"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#FinishAction"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#LearningUnit"/>
     </Declaration>
     <Declaration>
@@ -75,9 +66,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ParameterizedContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PauseAction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PersonalContext"/>
@@ -119,16 +107,10 @@
         <Class IRI="#SituationalContextInformation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#StartAction"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#TechnicalContext"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TechnicalContextInformation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TransmissionAction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#User"/>
@@ -480,52 +462,6 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="#Action"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasReason"/>
-            <Class IRI="#Reason"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Action"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSituation"/>
-            <Class IRI="#Situation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Action"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#referencesLearningUnit"/>
-            <Class IRI="#LearningUnit"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Action"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasSituation"/>
-            <Class IRI="#Situation"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Action"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasEndTime"/>
-            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Action"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasStartingTime"/>
-            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CancelAction"/>
-        <Class IRI="#Action"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Constraint"/>
         <ObjectIntersectionOf>
             <DataAllValuesFrom>
@@ -596,10 +532,6 @@
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="#hasValue"/>
         </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FinishAction"/>
-        <Class IRI="#Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LearningUnit"/>
@@ -677,10 +609,6 @@
     <SubClassOf>
         <Class IRI="#LocationContext"/>
         <Class IRI="#PhysicalContext"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PauseAction"/>
-        <Class IRI="#Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PersonalContext"/>
@@ -762,23 +690,8 @@
         <Class IRI="#ContextClass"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#StartAction"/>
-        <Class IRI="#Action"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#TechnicalContext"/>
         <Class IRI="#ContextClass"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TransmissionAction"/>
-        <Class IRI="#Action"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasAction"/>
-            <Class IRI="#Action"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User"/>
@@ -794,13 +707,6 @@
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#CancelAction"/>
-        <Class IRI="#FinishAction"/>
-        <Class IRI="#PauseAction"/>
-        <Class IRI="#StartAction"/>
-        <Class IRI="#TransmissionAction"/>
-    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#PersonalContext"/>
         <Class IRI="#PhysicalContext"/>
@@ -1210,10 +1116,6 @@
         <DataProperty IRI="#isRequired"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasAID"/>
-        <Class IRI="#Action"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasCID"/>
         <Class IRI="#ContextInformation"/>
     </DataPropertyDomain>
@@ -1328,82 +1230,6 @@
         <DataProperty IRI="#isRequired"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-    <DLSafeRule>
-        <Body>
-            <ClassAtom>
-                <Class IRI="#User"/>
-                <Variable IRI="urn:swrl#u"/>
-            </ClassAtom>
-            <ClassAtom>
-                <Class IRI="#Action"/>
-                <Variable IRI="urn:swrl#a"/>
-            </ClassAtom>
-            <ClassAtom>
-                <Class IRI="#Situation"/>
-                <Variable IRI="urn:swrl#s"/>
-            </ClassAtom>
-            <ClassAtom>
-                <Class IRI="#RecordedContextInformation"/>
-                <Variable IRI="urn:swrl#r"/>
-            </ClassAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#hasRecordedContextInformation"/>
-                <Variable IRI="urn:swrl#u"/>
-                <Variable IRI="urn:swrl#r"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#hasAction"/>
-                <Variable IRI="urn:swrl#u"/>
-                <Variable IRI="urn:swrl#a"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#hasSituation"/>
-                <Variable IRI="urn:swrl#a"/>
-                <Variable IRI="urn:swrl#s"/>
-            </ObjectPropertyAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="#hasTimestamp"/>
-                <Variable IRI="urn:swrl#r"/>
-                <Variable IRI="urn:swrl#tr"/>
-            </DataPropertyAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="#hasTimestamp"/>
-                <Variable IRI="urn:swrl#a"/>
-                <Variable IRI="urn:swrl#ta"/>
-            </DataPropertyAtom>
-            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
-                <Variable IRI="urn:swrl#tr"/>
-                <Variable IRI="urn:swrl#ta"/>
-            </BuiltInAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#hasRecordedContextInformation"/>
-                <Variable IRI="urn:swrl#s"/>
-                <Variable IRI="urn:swrl#r"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Body>
-            <ClassAtom>
-                <Class IRI="#CancelAction"/>
-                <Variable IRI="urn:swrl#a"/>
-            </ClassAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#referencesLearningUnit"/>
-                <Variable IRI="urn:swrl#a"/>
-                <Variable IRI="urn:swrl#l"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#isReferencedByCancelAction"/>
-                <Variable IRI="urn:swrl#l"/>
-                <Variable IRI="urn:swrl#a"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
 </Ontology>
 
 

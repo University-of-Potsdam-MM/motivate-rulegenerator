@@ -1,4 +1,5 @@
 .settings
+noolsDSLOutput.nools
 /target/
 catalog-v001.xml
-resources/noolsDSLOutput.nools
+.classpath
