@@ -21,7 +21,6 @@ public class Main {
 	 * Start server.
 	 *
 	 * @return the http server
-	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
     public static HttpServer startServer() {
         // create a resource config that scans for JAX-RS resources and providers
