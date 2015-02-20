@@ -29,10 +29,14 @@
 		<menu name="Overview">
 			<item name="Introduction" href="index.html" />
 			<item name="Usage" href="usage.html" />
-			<item name="Interfaces" href="interfaces.html">
-				<item name="get-context-information" href="interfaces.html#get-context-information" />
-				<item name="get-adaptation-rules" href="interfaces.html#get-adaptation-rules" />
-				<item name="get-knowledge-ontology" href="interfaces.html#get-knowledge-ontology" />
+			<item name="Interfaces" href="interfaces.html" collapse="true">
+				<item name="get-context-information" href="interfaces.html#get-context-information" collapse="true" />
+				<item name="get-adaptation-rules" href="interfaces.html#get-adaptation-rules" collapse="true" />
+				<item name="get-knowledge-ontology" href="interfaces.html#get-knowledge-ontology" collapse="true" />
+			</item>
+			<item name="Ontology" href="ontology.html" collapse="true">
+				<item name="Classes" href="ontology.html#Classes" collapse="true" />  
+				<item name="Individuals" href="ontology.html#Individuals" collapse="true" />
 			</item>
 			<item name="FAQ" href="faq.html" />
 		</menu>
