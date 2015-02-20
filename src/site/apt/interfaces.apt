@@ -9,7 +9,7 @@ http://HOST:PORT/RETURN_FORMAT/INTERFACE
 
   An interface may respond to at least one and up to four return formats (JSON, XML, OWL, DSL). The number of supported formats may vary from interface to interface (see the documentation of the specific interface). 
 
-* /{get-context-information} 
+* /{get-context-information}get-context-information 
 
   Returns a list of context information that can be be acquired or processed by the context detection through widgets and interpreters. For a detailed explanation of the structure of the list see the {{{./dtddoc/ContextInformation.dtd.html}Measurable Context Information DTD}}.
   
@@ -85,7 +85,7 @@ http://HOST:PORT/RETURN_FORMAT/INTERFACE
 }
 +-----
   
-* /{get-adaptation-rules}
+* /{get-adaptation-rules}get-adaptation-rules
 
   This interfaces generates adaptation rules from an URL encoded ontology ABox.
   
@@ -124,7 +124,7 @@ rule "505570d5-2dd6-435e-bf96-2cc3f73c8f55" {
 }
 +---------
 
-* /{get-knowledge-ontology}
+* /{get-knowledge-ontology}get-knowledge-ontology
 
   Foo
   
