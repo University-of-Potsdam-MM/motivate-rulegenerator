@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv='CONTENT-TYPE' content='text/html; charset=ISO-8859-1' />
+<link rel='StyleSheet' href='DTDDocStyle.css' type='text/css' media='screen' />
+<title>Measurable Context Information</title>
+</head><body>
+<p class='DTDSource'><b><code>ContextInformation.dtd</code></b>: <a href='ContextInformation.dtd.html'>Elements</a> - Entities - <a href='ContextInformation.dtd.org.html'>Source</a> | <a href='intro.html'>Intro</a> - <a href='elementsIndex.html'>Index</a><br /><a href='index.html' target='_top'>FRAMES</a>&nbsp;/&nbsp;<a href='ContextInformation.dtd.html' target='_top'>NO FRAMES</a></p><h1>Measurable Context Information</h1>
+<a name='contextInformation'></a>
+<br /><table class='elementTitle' summary="contextInformation"><tr><td class='leftElementTitle'>
+&lt;contextInformation&gt;</td><td class='rightElementTitle'>
+Root element
+</td></tr></table>
+<p>A list of context information that will be made available through the interfaces of the rule generator.
+It should contain all the context information that can be acquired or processed by the context detection through widgets and interpreters.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;contextInformation&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;contextInformation&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#information'>information</a></td><td>Any number</td></tr>
+</tbody></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#information'>information</a>)*</p><a name='information'></a>
+<br /><table class='elementTitle' summary="information"><tr><td class='leftElementTitle'>
+&lt;information&gt;</td><td class='rightElementTitle'>
+Child of <a href='#contextInformation'>contextInformation</a>
+</td></tr></table>
+<p>A context information that can be processed by or is available through widgets and interpreters.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;information&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;information&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#contextClasses'>contextClasses</a></td><td>One or none</td></tr>
+<tr><td><a href='#contextValue'>contextValue</a></td><td>Only one</td></tr>
+<tr><td><a href='#parameters'>parameters</a></td><td>One or none</td></tr>
+</tbody></table></td><td class='construct'><table  summary="&lt;information&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;information&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#information_id'>id</a></td><td><i>Match the ID rules.</i></td><td></td></tr><tr><td><a href='#information_multiplicity'>multiplicity</a></td><td>UNIQUE, MULTIPLE</td><td>UNIQUE</td></tr><tr><td><a href='#information_nohistory'>nohistory</a></td><td></td><td>nohistory</td></tr></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#contextClasses'>contextClasses</a>?, <a href='#contextValue'>contextValue</a>, <a href='#parameters'>parameters</a>?)</p><a name='information_id'></a>
+<br /><table class='attributeTitle' summary="id"><tr><td class='leftAttributeTitle'>
+@id</td><td class='rightAttributeTitle'>
+Attribute of <a href='#information'>information</a>
+</td></tr></table>
+<p>The identifier of the context information. This value should be used by widgets and interpreters to state that they provide or process the context information.</p><p><span class='inTextTitle'>Possible values</span>: <i>Match the ID rules.</i> - <span class='inTextTitle'>Required</span></p><a name='information_multiplicity'></a>
+<br /><table class='attributeTitle' summary="multiplicity"><tr><td class='leftAttributeTitle'>
+@multiplicity</td><td class='rightAttributeTitle'>
+Attribute of <a href='#information'>information</a>
+</td></tr></table>
+<p>State if the context information is unique (only one value can exist simultaneously but a history of past values can be saved) or
+if multiple values can be present at the same time (this effectively deactivates the history for this information).</p><p><span class='inTextTitle'>Possible values</span>: UNIQUE, MULTIPLE - <span class='inTextTitle'>Default value</span>: UNIQUE</p><a name='information_nohistory'></a>
+<br /><table class='attributeTitle' summary="nohistory"><tr><td class='leftAttributeTitle'>
+@nohistory</td><td class='rightAttributeTitle'>
+Attribute of <a href='#information'>information</a>
+</td></tr></table>
+<p>States that no history will be available for this context information. This parameter is only relevant for unique context information. Context
+information with multiple values never saves old values.</p><p><span class='inTextTitle'>Default value</span>: nohistory</p><a name='contextClasses'></a>
+<br /><table class='elementTitle' summary="contextClasses"><tr><td class='leftElementTitle'>
+&lt;contextClasses&gt;</td><td class='rightElementTitle'>
+Child of <a href='#information'>information</a>
+</td></tr></table>
+<p>A list of context classes the information belongs to.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;contextClasses&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;contextClasses&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#contextClass'>contextClass</a></td><td>Any number</td></tr>
+</tbody></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#contextClass'>contextClass</a>)*</p><a name='contextClass'></a>
+<br /><table class='elementTitle' summary="contextClass"><tr><td class='leftElementTitle'>
+&lt;contextClass/&gt;</td><td class='rightElementTitle'>
+Child of <a href='#contextClasses'>contextClasses</a>
+</td></tr></table>
+<p>A context class.</p><p><span class='inTextTitle'>Example:</span> &lt;contextClass id="CC_TECHNICAL" /></p><blockquote>
+<table  summary="&lt;contextClass&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;contextClass&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#contextClass_id'>id</a></td><td>CC_TECHNICAL, CC_PHYSICAL, CC_PERSONAL, CC_SITUATIONAL, CC_SCENARIO, CC_LOCATION</td><td></td></tr></table></blockquote>
+<p class='emptyTagNote'>This element is always empty.</p><a name='contextClass_id'></a>
+<br /><table class='attributeTitle' summary="id"><tr><td class='leftAttributeTitle'>
+@id</td><td class='rightAttributeTitle'>
+Attribute of <a href='#contextClass'>contextClass</a>
+</td></tr></table>
+<p>The identifier of the context class.</p><p><span class='inTextTitle'>Possible values</span>: CC_TECHNICAL, CC_PHYSICAL, CC_PERSONAL, CC_SITUATIONAL, CC_SCENARIO, CC_LOCATION - <span class='inTextTitle'>Required</span></p><a name='contextValue'></a>
+<br /><table class='elementTitle' summary="contextValue"><tr><td class='leftElementTitle'>
+&lt;contextValue&gt;</td><td class='rightElementTitle'>
+Child of <a href='#information'>information</a>
+</td></tr></table>
+<p>The value of the context information.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;contextValue&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;contextValue&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#operators'>operators</a></td><td>Only one</td></tr>
+<tr><td><a href='#possibleValues'>possibleValues</a></td><td>One or none</td></tr>
+</tbody></table></td><td class='construct'><table  summary="&lt;contextValue&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;contextValue&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#contextValue_default'>default</a></td><td></td><td></td></tr><tr><td><a href='#contextValue_max'>max</a></td><td></td><td></td></tr><tr><td><a href='#contextValue_min'>min</a></td><td></td><td></td></tr><tr><td><a href='#contextValue_type'>type</a></td><td>STRING, FLOAT, INTEGER, BOOLEAN, ENUM</td><td></td></tr></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#operators'>operators</a>, <a href='#possibleValues'>possibleValues</a>?)</p><a name='contextValue_type'></a>
+<br /><table class='attributeTitle' summary="type"><tr><td class='leftAttributeTitle'>
+@type</td><td class='rightAttributeTitle'>
+Attribute of <a href='#contextValue'>contextValue</a>
+</td></tr></table>
+<p>The expected data type for the value of the context information.</p><p><span class='inTextTitle'>Possible values</span>: STRING, FLOAT, INTEGER, BOOLEAN, ENUM - <span class='inTextTitle'>Required</span></p><a name='contextValue_min'></a>
+<br /><table class='attributeTitle' summary="min"><tr><td class='leftAttributeTitle'>
+@min</td><td class='rightAttributeTitle'>
+Attribute of <a href='#contextValue'>contextValue</a>
+</td></tr></table>
+<p>The minimal value of the context information.</p><a name='contextValue_max'></a>
+<br /><table class='attributeTitle' summary="max"><tr><td class='leftAttributeTitle'>
+@max</td><td class='rightAttributeTitle'>
+Attribute of <a href='#contextValue'>contextValue</a>
+</td></tr></table>
+<p>The maximal value of the context information.</p><a name='contextValue_default'></a>
+<br /><table class='attributeTitle' summary="default"><tr><td class='leftAttributeTitle'>
+@default</td><td class='rightAttributeTitle'>
+Attribute of <a href='#contextValue'>contextValue</a>
+</td></tr></table>
+<p>The default value of the context information.</p><a name='operators'></a>
+<br /><table class='elementTitle' summary="operators"><tr><td class='leftElementTitle'>
+&lt;operators&gt;</td><td class='rightElementTitle'>
+Child of <a href='#contextValue'>contextValue</a>
+</td></tr></table>
+<p>A list of operators that can be used with the context information value.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;operators&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;operators&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#operator'>operator</a></td><td>At least one</td></tr>
+</tbody></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#operator'>operator</a>)+</p><a name='operator'></a>
+<br /><table class='elementTitle' summary="operator"><tr><td class='leftElementTitle'>
+&lt;operator/&gt;</td><td class='rightElementTitle'>
+Child of <a href='#operators'>operators</a>
+</td></tr></table>
+<p>An operator that can be used with the value of the context information.</p><blockquote>
+<table  summary="&lt;operator&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;operator&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#operator_id'>id</a></td><td>GREATER_THEN, LESS_THEN, IS, IS_NOT, CONTAINS, NO_VALUE</td><td></td></tr></table></blockquote>
+<p class='emptyTagNote'>This element is always empty.</p><a name='operator_id'></a>
+<br /><table class='attributeTitle' summary="id"><tr><td class='leftAttributeTitle'>
+@id</td><td class='rightAttributeTitle'>
+Attribute of <a href='#operator'>operator</a>
+</td></tr></table>
+<p>The identifier of the operator.</p><p><span class='inTextTitle'>Possible values</span>: GREATER_THEN, LESS_THEN, IS, IS_NOT, CONTAINS, NO_VALUE - <span class='inTextTitle'>Required</span></p><a name='parameters'></a>
+<br /><table class='elementTitle' summary="parameters"><tr><td class='leftElementTitle'>
+&lt;parameters&gt;</td><td class='rightElementTitle'>
+Child of <a href='#information'>information</a>
+</td></tr></table>
+<p>A list of parameters that define the context information more precisely.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;parameters&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;parameters&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#parameter'>parameter</a></td><td>At least one</td></tr>
+</tbody></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#parameter'>parameter</a>)+</p><a name='parameter'></a>
+<br /><table class='elementTitle' summary="parameter"><tr><td class='leftElementTitle'>
+&lt;parameter&gt;</td><td class='rightElementTitle'>
+Child of <a href='#parameters'>parameters</a>
+</td></tr></table>
+<p>A parameter of the context information.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;parameter&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;parameter&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#parameterValue'>parameterValue</a></td><td>Only one</td></tr>
+</tbody></table></td><td class='construct'><table  summary="&lt;parameter&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;parameter&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#parameter_id'>id</a></td><td></td><td></td></tr></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#parameterValue'>parameterValue</a>)</p><a name='parameter_id'></a>
+<br /><table class='attributeTitle' summary="id"><tr><td class='leftAttributeTitle'>
+@id</td><td class='rightAttributeTitle'>
+Attribute of <a href='#parameter'>parameter</a>
+</td></tr></table>
+<p>The identifier for the parameter.</p><p><span class='inTextTitle'>Required</span></p><a name='parameterValue'></a>
+<br /><table class='elementTitle' summary="parameterValue"><tr><td class='leftElementTitle'>
+&lt;parameterValue&gt;</td><td class='rightElementTitle'>
+Child of <a href='#parameter'>parameter</a>
+</td></tr></table>
+<p>The value of the parameter.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;parameterValue&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;parameterValue&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#possibleValues'>possibleValues</a></td><td>One or none</td></tr>
+</tbody></table></td><td class='construct'><table  summary="&lt;parameterValue&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;parameterValue&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#parameterValue_default'>default</a></td><td></td><td></td></tr><tr><td><a href='#parameterValue_max'>max</a></td><td></td><td></td></tr><tr><td><a href='#parameterValue_min'>min</a></td><td></td><td></td></tr><tr><td><a href='#parameterValue_type'>type</a></td><td>STRING, FLOAT, INTEGER, BOOLEAN, ENUM</td><td></td></tr></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#possibleValues'>possibleValues</a>?)</p><a name='parameterValue_type'></a>
+<br /><table class='attributeTitle' summary="type"><tr><td class='leftAttributeTitle'>
+@type</td><td class='rightAttributeTitle'>
+Attribute of <a href='#parameterValue'>parameterValue</a>
+</td></tr></table>
+<p>The expected data type for the parameter of the context information.</p><p><span class='inTextTitle'>Possible values</span>: STRING, FLOAT, INTEGER, BOOLEAN, ENUM - <span class='inTextTitle'>Required</span></p><a name='parameterValue_min'></a>
+<br /><table class='attributeTitle' summary="min"><tr><td class='leftAttributeTitle'>
+@min</td><td class='rightAttributeTitle'>
+Attribute of <a href='#parameterValue'>parameterValue</a>
+</td></tr></table>
+<p>The minimal value of the parameter.</p><a name='parameterValue_max'></a>
+<br /><table class='attributeTitle' summary="max"><tr><td class='leftAttributeTitle'>
+@max</td><td class='rightAttributeTitle'>
+Attribute of <a href='#parameterValue'>parameterValue</a>
+</td></tr></table>
+<p>The maximal value of the parameter.</p><a name='parameterValue_default'></a>
+<br /><table class='attributeTitle' summary="default"><tr><td class='leftAttributeTitle'>
+@default</td><td class='rightAttributeTitle'>
+Attribute of <a href='#parameterValue'>parameterValue</a>
+</td></tr></table>
+<p>The default value of the parameter.</p><a name='possibleValues'></a>
+<br /><table class='elementTitle' summary="possibleValues"><tr><td class='leftElementTitle'>
+&lt;possibleValues&gt;</td><td class='rightElementTitle'>
+Child of <a href='#contextValue'>contextValue</a>, <a href='#parameterValue'>parameterValue</a>
+</td></tr></table>
+<p>A list of possible values for a parameter or a context information that has its data type set to ENUM.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;possibleValues&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;possibleValues&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#value'>value</a></td><td>At least one</td></tr>
+</tbody></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#value'>value</a>)+</p><a name='value'></a>
+<br /><table class='elementTitle' summary="value"><tr><td class='leftElementTitle'>
+&lt;value&gt;</td><td class='rightElementTitle'>
+Child of <a href='#possibleValues'>possibleValues</a>
+</td></tr></table>
+<p>A concrete value for a parameter or a context information that has its data type set to ENUM.</p></body></html>
