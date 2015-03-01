@@ -35,6 +35,7 @@
 			</item>
 			<item name="Ontology" href="ontology.html" collapse="true">
 				<item name="Classes" href="ontology.html#Classes" collapse="true" />  
+				<item name="Properties" href="ontology.html#Properties" collapse="true" />  				
 				<item name="Individuals" href="ontology.html#Individuals" collapse="true" />
 			</item>
 			<item name="FAQ" href="faq.html" />
