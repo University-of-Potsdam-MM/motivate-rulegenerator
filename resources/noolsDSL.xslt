@@ -1,9 +1,9 @@
 <xsl:stylesheet version="2.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:foo="http://whatever"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:motivate="http://www.motivate-project.de/"
 	xmlns="http://www.w3.org/1999/xhtml">
 	<xsl:output method="text" encoding="UTF-8" indent="no" />
 
-	<xsl:function name="foo:exploreFactSetElement">
+	<xsl:function name="motivate:exploreFactSetElement">
 		<xsl:param name="factSetElement" />
 		<xsl:param name="contextInformation" />
 
@@ -11,7 +11,7 @@
 		<xsl:choose>
 			<xsl:when test="$currentElementName = 'fact'">
 				<xsl:variable name="alias"
-					select="foo:getAliasForContextInformation($contextInformation, concat($factSetElement/contextInformation, $factSetElement/value))" />
+					select="motivate:getAliasForContextInformation($contextInformation, concat($factSetElement/contextInformation, $factSetElement/value))" />
 				<xsl:text>(</xsl:text>
 				<xsl:value-of select="$alias" />
 				<xsl:text>.id == '</xsl:text>
@@ -60,7 +60,7 @@
 				<xsl:text>(</xsl:text>
 				<xsl:for-each select="$factSetElement/*">
 					<xsl:value-of
-						select="foo:exploreFactSetElement(current(), $contextInformation)" />
+						select="motivate:exploreFactSetElement(current(), $contextInformation)" />
 				</xsl:for-each>
 				<xsl:text>)</xsl:text>
 			</xsl:when>
@@ -77,7 +77,7 @@
 		</xsl:choose>
 	</xsl:function>
 
-	<xsl:function name="foo:gatherAliases">
+	<xsl:function name="motivate:gatherAliases">
 		<xsl:param name="facts" />
 		<xsl:param name="factContextInformation" />
 		<xsl:param name="index" />
@@ -89,7 +89,7 @@
 		<xsl:choose>
 			<xsl:when test="$index &lt;= count($facts)">
 				<xsl:sequence
-					select="foo:gatherAliases($facts, $newFactContextInformation, $index + 1)" />
+					select="motivate:gatherAliases($facts, $newFactContextInformation, $index + 1)" />
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:for-each select="distinct-values($factContextInformation)">
@@ -99,7 +99,7 @@
 		</xsl:choose>
 	</xsl:function>
 
-	<xsl:function name="foo:getAliasForContextInformation">
+	<xsl:function name="motivate:getAliasForContextInformation">
 		<xsl:param name="contextInformationSequence" />
 		<xsl:param name="contextInformation" />
 
@@ -127,7 +127,7 @@
 			<xsl:text>&#x9;when {&#xa;</xsl:text>
 			<!-- Gather all facts -->
 			<xsl:variable name="contextInformation"
-				select="foo:gatherAliases(situation//fact, (), 1)" />
+				select="motivate:gatherAliases(situation//fact, (), 1)" />
 			<xsl:variable name="negation" select="current()/negation" />
 			<xsl:for-each select="$contextInformation">
 				<xsl:text>&#x9;&#x9;</xsl:text>
@@ -154,7 +154,7 @@
 			<!-- Constraints -->
 			<xsl:for-each select="situation/constraints/*">
 				<xsl:value-of
-					select="foo:exploreFactSetElement(current(), $contextInformation)" />
+					select="motivate:exploreFactSetElement(current(), $contextInformation)" />
 			</xsl:for-each>
 			<xsl:if
 				test="count(situation/constraints/*) > 0 and count(situation/userFacts/*) > 0">
@@ -163,7 +163,7 @@
 			<!-- User Facts -->
 			<xsl:for-each select="situation/userFacts/*">
 				<xsl:value-of
-					select="foo:exploreFactSetElement(current(), $contextInformation)" />
+					select="motivate:exploreFactSetElement(current(), $contextInformation)" />
 			</xsl:for-each>
 			<xsl:if test="current()/negation = 'true'">
 				<xsl:text>)</xsl:text>
