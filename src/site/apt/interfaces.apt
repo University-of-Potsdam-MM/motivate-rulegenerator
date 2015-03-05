@@ -91,7 +91,9 @@ http://HOST:PORT/RETURN_FORMAT/INTERFACE
   
 ** Request Method
 
-  HTTP POST  
+  HTTP POST 
+  
+  The content type need to be set to "application/x-www-form-urlencoded". 
   
 ** Supported Return Formats
 
