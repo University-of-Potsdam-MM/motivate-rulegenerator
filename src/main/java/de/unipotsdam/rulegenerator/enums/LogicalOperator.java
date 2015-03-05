@@ -17,4 +17,17 @@ public enum LogicalOperator implements FactSetElement {
 	/** The no value. */
 	NO_VALUE,
 	MIXED;
+
+	private LogicalOperator opposite;
+	
+	static {
+		AND.opposite = OR;
+		OR.opposite = AND;
+		NO_VALUE.opposite = NO_VALUE;
+		MIXED.opposite = MIXED;
+	}
+	
+	public LogicalOperator getOpposite() {
+		return opposite;
+	}
 }

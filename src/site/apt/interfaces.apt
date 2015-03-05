@@ -87,11 +87,13 @@ http://HOST:PORT/RETURN_FORMAT/INTERFACE
   
 * /{get-adaptation-rules}get-adaptation-rules
 
-  This interfaces generates adaptation rules from an URL encoded ontology ABox.
+  Generates adaptation rules from an URL encoded ontology ABox.
   
 ** Request Method
 
-  HTTP POST  
+  HTTP POST 
+  
+  The content type needs to be set to "application/x-www-form-urlencoded". 
   
 ** Supported Return Formats
 
@@ -126,7 +128,7 @@ rule "505570d5-2dd6-435e-bf96-2cc3f73c8f55" {
 
 * /{get-knowledge-ontology}get-knowledge-ontology
 
-  Foo
+  Returns the ontology TBox for the knowledge ontology (see {{{ontology.html}Ontology}}).
   
 ** Request Method
 

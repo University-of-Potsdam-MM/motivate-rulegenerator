@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.semanticweb.owlapi.model.OWLOntology;
 
 import de.unipotsdam.rulegenerator.enums.ActionOperator;
+import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
 import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
@@ -35,35 +36,29 @@ public class RestrictFeatureRuleAssembly extends RuleAssembly {
 			LearningUnitClassFactSet hasLearningUnitClassConstraintFactSet,
 			LearningUnitClassFactSet hasNotLearningUnitClassConstraintFactSet)
 			throws Exception {
-		// use timestamp for unique ids
-		long timestamp = System.currentTimeMillis() / 1000;
-
 		for (MyRestrictFeatureConstraint restrictFeatureConstraint : this.restrictFeatureConstraints) {
 			AdaptationRule featureConstraintRule = new AdaptationRule(
 					java.util.UUID.randomUUID().toString(),
 					ActionOperator.RESTRICT_FEATURE, restrictFeatureConstraint
 							.getFeature().getIRIShort());
-			featureConstraintRule.setNegation(true);
 			featureConstraintRule.setTrigger(new Trigger(
 					TriggeringMode.ON_ENTRY));
 			Situation featureConstraintRuleSituation = new Situation();
 			int i = 0;
 			for (MyConstraintRequirement constraintRequirement : restrictFeatureConstraint
 					.getConstraintRequirements()) {
-				featureConstraintRuleSituation
-						.addConstraint(FactSet
-								.FactSetFromConstraintRequirement(constraintRequirement));
+				featureConstraintRuleSituation.addConstraint(FactSet
+						.FactSetFromConstraintRequirement(
+								constraintRequirement));
 				if (i < restrictFeatureConstraint
 						.getConstraintRequirementsCount() - 1)
 					featureConstraintRuleSituation
 							.addConstraint(restrictFeatureConstraint
-									.getLogicalOperator());
+									.getLogicalOperator().getOpposite());
 				i++;
 			}
 			featureConstraintRule.setSituation(featureConstraintRuleSituation);
 			adaptationRules.addAdaptationRule(featureConstraintRule);
-
-			timestamp++;
 		}
 		return adaptationRules;
 	}

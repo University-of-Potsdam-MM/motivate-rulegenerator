@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> <head>
+<meta http-equiv='CONTENT-TYPE' content='text/html; charset=ISO-8859-1' />
+<link rel='StyleSheet' href='DTDDocStyle.css' type='text/css' media='screen' />
+<title>Measurable Context Information</title>
+</head><body>
+<p class='DTDSource'><b><code>ContextInformation.dtd</code></b>: <a href='ContextInformation.dtd.html'>Elements</a> - Entities - <a href='ContextInformation.dtd.org.html'>Source</a> | <a href='intro.html'>Intro</a> - <a href='elementsIndex.html'>Index</a><br /><a href='index.html' target='_top'>FRAMES</a>&nbsp;/&nbsp;<a href='ContextInformation.dtd.org.html' target='_top'>NO FRAMES</a></p><pre id='dtd_source'><span class="dtd_processing_instruction">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">A list of context information that will be made available through the interfaces of the rule generator.</span>
+<span class="dtd_comment">It should contain all the context information that can be acquired or processed by the context detection through widgets and interpreters.</span>
+<span class="dtd_comment"> </span>
+<span class="dtd_dtddoc_tag">@title</span><span class="dtd_comment"> Measurable Context Information</span>
+<span class="dtd_dtddoc_tag">@doctype</span><span class="dtd_comment"> contextInformation SYSTEM &quot;resources/ContextInformation.dtd&quot;</span>
+<span class="dtd_dtddoc_tag">@root</span><span class="dtd_comment"> contextInformation</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">contextInformation</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">information</span><span class="dtd_plain">)*</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- A context information that can be processed by or is available through widgets and interpreters. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">information</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">contextClasses</span><span class="dtd_plain">?,</span><span class="dtd_attribute_name">contextValue</span><span class="dtd_plain">,</span><span class="dtd_attribute_name">parameters</span><span class="dtd_plain">?)</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_dtddoc_tag">@attr id</span><span class="dtd_comment"> The identifier of the context information. This value should be used by widgets and interpreters to state that they provide or process the context information.</span>
+<span class="dtd_dtddoc_tag">@attr multiplicity</span><span class="dtd_comment"> State if the context information is unique (only one value can exist simultaneously but a history of past values can be saved) or </span>
+<span class="dtd_comment">if multiple values can be present at the same time (this effectively deactivates the history for this information).</span>
+<span class="dtd_dtddoc_tag">@attr nohistory</span><span class="dtd_comment"> States that no history will be available for this context information. This parameter is only relevant for unique context information. Context</span>
+<span class="dtd_comment">information with multiple values never saves old values.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">information</span><span class="dtd_plain"> </span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">id</span><span class="dtd_plain"> </span><span class="dtd_keyword">ID</span><span class="dtd_plain"> </span><span class="dtd_keyword">#REQUIRED</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">multiplicity</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">UNIQUE</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">MULTIPLE</span><span class="dtd_plain">) </span><span class="dtd_attribute_value">&quot;UNIQUE&quot;</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">nohistory</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_attribute_value">&quot;nohistory&quot;</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- </span>
+<span class="dtd_comment">A list of context classes the information belongs to. </span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">contextClasses</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">contextClass</span><span class="dtd_plain">)*</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- </span>
+<span class="dtd_comment">A context class. </span>
+
+<span class="dtd_dtddoc_tag">@example</span><span class="dtd_comment"> &lt;contextClass id=&quot;CC_TECHNICAL&quot; /&gt;</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">contextClass</span><span class="dtd_plain"> </span><span class="dtd_keyword">EMPTY</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- </span>
+<span class="dtd_dtddoc_tag">@attr id</span><span class="dtd_comment"> The identifier of the context class.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">contextClass</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">id</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">CC_TECHNICAL</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">CC_PHYSICAL</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">CC_PERSONAL</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">CC_SITUATIONAL</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">CC_SCENARIO</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">CC_LOCATION</span><span class="dtd_plain">) </span><span class="dtd_keyword">#REQUIRED</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- The value of the context information. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">contextValue</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">operators</span><span class="dtd_plain">,</span><span class="dtd_attribute_name">possibleValues</span><span class="dtd_plain">?)</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- </span>
+<span class="dtd_dtddoc_tag">@attr type</span><span class="dtd_comment"> The expected data type for the value of the context information.</span>
+<span class="dtd_dtddoc_tag">@attr min</span><span class="dtd_comment"> The minimal value of the context information.</span>
+<span class="dtd_dtddoc_tag">@attr max</span><span class="dtd_comment"> The maximal value of the context information.</span>
+<span class="dtd_dtddoc_tag">@attr default</span><span class="dtd_comment"> The default value of the context information.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">contextValue</span><span class="dtd_plain"> </span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">type</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">STRING</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">FLOAT</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">INTEGER</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">BOOLEAN</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">ENUM</span><span class="dtd_plain">) </span><span class="dtd_keyword">#REQUIRED</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">min</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_keyword">#IMPLIED</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">max</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_keyword">#IMPLIED</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">default</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_keyword">#IMPLIED</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- A list of operators that can be used with the context information value. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">operators</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">operator</span><span class="dtd_plain">)+</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- An operator that can be used with the value of the context information. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">operator</span><span class="dtd_plain"> </span><span class="dtd_keyword">EMPTY</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_dtddoc_tag">@attr id</span><span class="dtd_comment"> The identifier of the operator.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">operator</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">id</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">GREATER_THEN</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">LESS_THEN</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">IS</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">IS_NOT</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">CONTAINS</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">NO_VALUE</span><span class="dtd_plain">) </span><span class="dtd_keyword">#REQUIRED</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- A list of parameters that define the context information more precisely. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">parameters</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">parameter</span><span class="dtd_plain">)+</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- A parameter of the context information. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">parameter</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">parameterValue</span><span class="dtd_plain">)</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_dtddoc_tag">@attr id</span><span class="dtd_comment"> The identifier for the parameter.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">parameter</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">id</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_keyword">#REQUIRED</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- The value of the parameter. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">parameterValue</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">possibleValues</span><span class="dtd_plain">?)</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- </span>
+<span class="dtd_dtddoc_tag">@attr type</span><span class="dtd_comment"> The expected data type for the parameter of the context information.</span>
+<span class="dtd_dtddoc_tag">@attr min</span><span class="dtd_comment"> The minimal value of the parameter.</span>
+<span class="dtd_dtddoc_tag">@attr max</span><span class="dtd_comment"> The maximal value of the parameter.</span>
+<span class="dtd_dtddoc_tag">@attr default</span><span class="dtd_comment"> The default value of the parameter.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">parameterValue</span><span class="dtd_plain"> </span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">type</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">STRING</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">FLOAT</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">INTEGER</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">BOOLEAN</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">ENUM</span><span class="dtd_plain">) </span><span class="dtd_keyword">#REQUIRED</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">min</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_keyword">#IMPLIED</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">max</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_keyword">#IMPLIED</span>
+<span class="dtd_plain">    </span><span class="dtd_attribute_name">default</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_keyword">#IMPLIED</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- A list of possible values for a parameter or a context information that has its data type set to ENUM. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">possibleValues</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">value</span><span class="dtd_plain">)+</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- A concrete value for a parameter or a context information that has its data type set to ENUM. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">value</span><span class="dtd_plain"> (</span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain">)</span><span class="dtd_tag_symbols">&gt;</span>
+</pre>
+</body></html>
