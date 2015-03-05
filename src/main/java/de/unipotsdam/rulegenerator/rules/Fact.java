@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import de.unipotsdam.rulegenerator.enums.DescriptionType;
 import de.unipotsdam.rulegenerator.enums.FactOperator;
+import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.ontology.custom.MyContextInformation;
 import de.unipotsdam.rulegenerator.ontology.custom.MyContextInformationParameter;
 
@@ -46,15 +47,22 @@ public class Fact implements FactSetElement {
 			return (Fact) factSet.getLastChild();
 		}
 	}
-	
+
 	public static Fact FactFromContextInformation(
 			MyContextInformation contextInformation) {
+		return FactFromContextInformation(contextInformation, false);
+	}
+
+	public static Fact FactFromContextInformation(
+			MyContextInformation contextInformation, Boolean negate) {
 		Fact fact = new Fact();
 		fact.setContextInformation(contextInformation
 				.getSpecificContextInformationType());
 		fact.setValue(contextInformation.getValue().toString());
-		fact.setOperator(FactOperator.valueOf(contextInformation
-				.getValueOperator()));
+		FactOperator factOperator = FactOperator.valueOf(contextInformation
+				.getValueOperator());
+		fact.setOperator(negate ? factOperator.getOpposite() : factOperator);
+		// TODO: negate fact parameters
 		if (contextInformation.hasContextInformationParameters()) {
 			for (MyContextInformationParameter contextInformationParameter : contextInformation
 					.getContextInformationParameters()) {
