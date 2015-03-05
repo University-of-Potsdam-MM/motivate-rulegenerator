@@ -21,28 +21,15 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
  */
 @XmlRootElement(name = "situation")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "userFactsLogicalOperator", "constraints",
-		"userFacts" })
+@XmlType(name = "", propOrder = { "factSets", "constraints", "userFacts" })
 public class Situation {
-	@XmlTransient
+	
 	private final FactSet factSets = new FactSet();
 
 	protected FactSet constraints = new FactSet();
 	protected FactSet userFacts = new FactSet();
 
-	private LogicalOperator userFactsLogicalOperator;
-
-	/**
-	 * Instantiates a new situation.
-	 * 
-	 * @throws Exception
-	 */
 	public Situation() throws Exception {
-		this(LogicalOperator.AND);
-	}
-
-	public Situation(LogicalOperator logicalOperator) throws Exception {
-		this.userFactsLogicalOperator = logicalOperator;
 		this.factSets.addFactSet(this.constraints, LogicalOperator.AND);
 		this.factSets.addFactSet(this.userFacts);
 	}
@@ -57,21 +44,13 @@ public class Situation {
 			MyLearningUnit targetLearningUnit) throws Exception {
 		this.applyTemplate(template, currentLearningUnit, targetLearningUnit);
 	}
-	
+
 	public void addConstraint(FactSetElement constraint) throws Exception {
 		this.constraints.addFactSetElement(constraint);
 	}
-	
+
 	public void addUserFact(FactSetElement userFact) throws Exception {
 		this.userFacts.addFactSetElement(userFact);
-	}
-
-	public LogicalOperator getUserFactsLogicalOperator() {
-		return userFactsLogicalOperator;
-	}
-
-	public void setUserFactsLogicalOperator(LogicalOperator userFactsLogicalOperator) {
-		this.userFactsLogicalOperator = userFactsLogicalOperator;
 	}
 
 	public void addPrerequisites(
@@ -89,7 +68,7 @@ public class Situation {
 				FactSet alternativePrerequisitesFactSets = new FactSet();
 				// add the prerequisite learning unit to the fact set
 				alternativePrerequisitesFactSets.addFact(new Fact(
-						"FinishedLearningUnitMeasurableInformation",
+						"CI_FINISHED_LEARNING_UNIT",
 						FactOperator.IS, prerequisiteLearningUnit.getID()),
 						LogicalOperator.OR);
 				// iterate over the alternative representations
@@ -99,7 +78,7 @@ public class Situation {
 					MyLearningUnit alternativePrerequisiteLearningUnit = (MyLearningUnit) wrappedIndividual;
 					// add the prerequisite learning unit to the fact set
 					alternativePrerequisitesFactSets.addFact(new Fact(
-							"FinishedLearningUnitMeasurableInformation",
+							"CI_FINISHED_LEARNING_UNIT",
 							FactOperator.IS,
 							alternativePrerequisiteLearningUnit.getID()));
 					if (j < prerequisiteLearningUnit.getAlternativesCount() - 1)
@@ -112,7 +91,7 @@ public class Situation {
 			} else {
 				// add the prerequisite learning unit to the fact set
 				prerequisitesFactSet.addFact(new Fact(
-						"FinishedLearningUnitMeasurableInformation",
+						"CI_FINISHED_LEARNING_UNIT",
 						FactOperator.IS, prerequisiteLearningUnit.getID()));
 			}
 			if (i < prerequisites.size() - 1)
@@ -133,13 +112,13 @@ public class Situation {
 		switch (template) {
 		case CURRENT_LEARNING_UNIT_FACTS:
 			if (currentLearningUnit.getContextInformationCount() > 0)
-				this.userFacts.addFactSetElement(currentLearningUnit.getFacts());
+				this.userFacts
+						.addFactSetElement(currentLearningUnit.getFacts());
 			break;
 		case CURRENT_LEARNING_UNIT_ID:
 			if (this.constraints.size() > 0)
 				this.constraints.addLogicalOperator(LogicalOperator.AND);
-			this.constraints.addFact(new Fact(
-					"CI_CURRENT_LEARNING_UNIT",
+			this.constraints.addFact(new Fact("CI_CURRENT_LEARNING_UNIT",
 					FactOperator.IS, currentLearningUnit.getID()));
 			break;
 		case PREREQUISITES:
