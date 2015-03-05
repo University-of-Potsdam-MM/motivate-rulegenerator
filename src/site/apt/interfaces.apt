@@ -93,7 +93,7 @@ http://HOST:PORT/RETURN_FORMAT/INTERFACE
 
   HTTP POST 
   
-  The content type need to be set to "application/x-www-form-urlencoded". 
+  The content type needs to be set to "application/x-www-form-urlencoded". 
   
 ** Supported Return Formats
 
