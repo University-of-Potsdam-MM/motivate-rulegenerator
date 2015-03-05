@@ -1,5 +1,7 @@
 package de.unipotsdam.rulegenerator.enums;
 
+import com.hp.hpl.jena.reasoner.rulesys.builtins.LE;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Enum FactOperator.
@@ -26,5 +28,25 @@ public enum FactOperator {
 	/** The contains. */
 	CONTAINS,
 	/** The complete. */
-	COMPLETE
+	COMPLETE;
+	
+	private FactOperator opposite;
+	
+	static {
+		IS.opposite = IS_NOT;
+		IS_NOT.opposite = IS;
+		GREATER_THEN.opposite = LESS_THEN;
+		LESS_THEN.opposite = GREATER_THEN;
+		DEVIDE.opposite = DEVIDE;
+		MULTIPLY.opposite = MULTIPLY;
+		SUBTRACT.opposite = SUBTRACT;
+		SUM.opposite = SUM;
+		NO_VALUE.opposite = NO_VALUE;
+		CONTAINS.opposite = CONTAINS;
+		COMPLETE.opposite = COMPLETE;
+	}
+	
+	public FactOperator getOpposite() {
+		return opposite;
+	}
 }
