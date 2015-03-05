@@ -49,7 +49,7 @@ public class RestrictFeatureRuleAssembly extends RuleAssembly {
 					.getConstraintRequirements()) {
 				featureConstraintRuleSituation.addConstraint(FactSet
 						.FactSetFromConstraintRequirement(
-								constraintRequirement, true));
+								constraintRequirement));
 				if (i < restrictFeatureConstraint
 						.getConstraintRequirementsCount() - 1)
 					featureConstraintRuleSituation
