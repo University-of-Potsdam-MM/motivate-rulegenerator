@@ -1,13 +1,13 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
+import de.unipotsdam.rulegenerator.jaxrs.services.ConversionService;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/owl")
@@ -20,5 +20,19 @@ public class OWLServices extends Services {
 		
 		byte[] encoded = Files.readAllBytes(file.toPath());
 		return new String(encoded, StandardCharsets.UTF_8);
+	}
+
+	@POST
+	@Path("/convert-from-json-ld")
+	@Consumes("application/x-www-form-urlencoded")
+	@Produces(MediaType.TEXT_XML)
+	public String convertFromJSONLD(@FormParam("jsonld") String jsonld) {
+		try {
+			return ConversionService.convertJSONLDToOWLXML(jsonld);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
