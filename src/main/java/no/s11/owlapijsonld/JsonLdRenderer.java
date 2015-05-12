@@ -127,7 +127,7 @@ public class JsonLdRenderer extends RDFRendererAdapter {
 			return;
 		}
 		seen.add(node);
-		Collection<RDFTriple> newTriples = getGraph().getTriplesForSubject(node, false);
+		Collection<RDFTriple> newTriples = getGraph().getTriplesForSubject(node);
 		triplesToJsonLd(newTriples);
 		for (RDFTriple triple : newTriples) {
 			RDFNode object = triple.getObject();
