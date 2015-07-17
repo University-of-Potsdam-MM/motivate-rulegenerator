@@ -1,7 +1,7 @@
 <xsl:stylesheet
 	version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:motivate="http://www.motivate-project.de/"
+	xmlns:motivate="http://www.motivate-project.de/XSL"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns="http://www.w3.org/1999/xhtml">
 	<xsl:output
@@ -18,7 +18,7 @@
 		<!-- function parameters: -->
 	
 		<!-- sequence of fact, logOp or factSet nodes -->
-		<!-- initially constraints or userFacts, resp. -->
+		<!-- initially relationFacts or contextFacts, resp. -->
 		<xsl:param
 			name="situationseq"
 			as="node()*" /> 
@@ -62,7 +62,7 @@
 		<!-- next fact's ID gets incremented if it's preceded by 'AND' -->
 		<xsl:variable name="newId">
 			<xsl:choose>
-				<xsl:when test="$name = 'logicalOperator' and $situation='AND'">
+				<xsl:when test="$name = 'logicalOperator' and $situation = 'AND'">
 					<xsl:value-of select="$index+1" />
 				</xsl:when>
 				<xsl:otherwise>
@@ -82,7 +82,7 @@
 
 		<!-- generate code for subnodes (this applies to root node and factSets) -->
 		<xsl:if
-			test="$name = 'factSet' or $name = 'constraints' or $name = 'userFacts'">
+			test="$name = 'factSet' or $name = 'relationFacts' or $name = 'contextFacts'">
 			<xsl:text>(</xsl:text>
 			<xsl:sequence select="motivate:generate($situation/*, $newqueue, $newId)" />
 			<xsl:text>)</xsl:text>
@@ -213,7 +213,7 @@
 
 		<!-- extra recursion of subnodes -->
 		<xsl:if
-			test="$name = 'factSet' or $name = 'constraints' or $name = 'userFacts'">
+			test="$name = 'factSet' or $name = 'relationFacts' or $name = 'contextFacts'">
 			<xsl:sequence
 				select="motivate:gatherAliases($situation/*, $newqueue, $newId)" />
 		</xsl:if>
@@ -228,8 +228,6 @@
 		</xsl:choose>
 	</xsl:function>
 	<!-- END GATHER ALIASES -->
-	
-	
 
 	<!-- *********************** ADAPTATION RULE TEMPLATE *********************** -->
 
@@ -242,13 +240,13 @@
 	
 		<!-- Gather ContextInformation -->
 	
-		<!-- gather aliases for facts from constraints -->
+		<!-- gather aliases for facts from relationFacts -->
 		<xsl:variable
 			name="constraintAliases"
-			select="motivate:gatherAliases(situation/constraints, (), 1)" />
+			select="motivate:gatherAliases(situation/relationFacts, (), 1)" />
 			
-		<!-- of these, get highest ID and increment it by 1 (as the basis for userFacts processing) -->
-		<!-- if there are no constraints, this will be '1'  -->
+		<!-- of these, get highest ID and increment it by 1 (as the basis for contextFacts processing) -->
+		<!-- if there are no relationFacts, this will be '1'  -->
 		<xsl:variable name="max">
 			<xsl:choose>
 				<xsl:when test="empty($constraintAliases)">
@@ -262,18 +260,18 @@
 		
 		<!-- same procedure for user facts, starting with apropriate ID -->
 		<xsl:variable
-			name="userFactsAliases"
-			select="motivate:gatherAliases(situation/userFacts, (), $max)" />
+			name="contextFactsAliases"
+			select="motivate:gatherAliases(situation/contextFacts, (), $max)" />
 		
 		<!-- lastly: get overall maximum value of all IDs -->
 		<!-- this will be the number of the rule's ContextInformation facts -->
 		<xsl:variable name="contextInformation">
 			<xsl:choose>
-				<xsl:when test="empty($userFactsAliases)">
+				<xsl:when test="empty($contextFactsAliases)">
 					<xsl:value-of select="$max - 1" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="max($userFactsAliases)" />
+					<xsl:value-of select="max($contextFactsAliases)" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -290,12 +288,8 @@
 						<xsl:value-of select="concat('c', position())" />
 						<xsl:text> : ContextInformation;&#xa;</xsl:text>
 					</xsl:when>
-					<!-- Last ContextInformation and Constraints -->
+					<!-- Last ContextInformation and relationFacts -->
 					<xsl:otherwise>
-						<!-- Negation -->
-						<xsl:if test="negation = 'true'">
-							<xsl:text>not(</xsl:text>
-						</xsl:if>
 						<xsl:value-of select="concat('c', position())" />
 						<xsl:text> : ContextInformation </xsl:text>
 					</xsl:otherwise>
@@ -306,25 +300,21 @@
 
 		<!-- Phrase the rule -->
 
-		<!-- Constraints -->
-		<xsl:if test="count(situation/constraints/*) > 0">
-			<xsl:value-of select="motivate:generate(situation/constraints, (), 1)" />
+		<!-- relationFacts -->
+		<xsl:if test="count(situation/relationFacts/*) > 0">
+			<xsl:value-of select="motivate:generate(situation/relationFacts, (), 1)" />
 		</xsl:if>
 
 		<xsl:if
-			test="count(situation/constraints/*) > 0 and count(situation/userFacts/*) > 0">
+			test="count(situation/relationFacts/*) > 0 and count(situation/contextFacts/*) > 0">
 			<xsl:text> &amp;&amp; </xsl:text>
 		</xsl:if>
 
 		<!-- User Facts -->
-		<xsl:if test="count(situation/userFacts/*) > 0">
-			<xsl:value-of select="motivate:generate(situation/userFacts, (), $max)" />
+		<xsl:if test="count(situation/contextFacts/*) > 0">
+			<xsl:value-of select="motivate:generate(situation/contextFacts, (), $max)" />
 		</xsl:if>
 
-		<!-- Negation -->
-		<xsl:if test="negation = 'true'">
-			<xsl:text>)</xsl:text>
-		</xsl:if>
 		<xsl:text>;</xsl:text>
 
 		<!-- Action -->
