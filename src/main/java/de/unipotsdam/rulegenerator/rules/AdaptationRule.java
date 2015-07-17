@@ -151,10 +151,10 @@ public class AdaptationRule {
 				if (constraintLearningUnitClass.getMetaData().equals(
 						currentLearningUnit.getMetaData(),
 						constraintLearningUnitClass.getLogicalOperator())) {
-					if (this.getSituation().constraints.getChildrenCount() > 0)
-						this.getSituation().constraints
+					if (this.getSituation().relationFacts.getChildrenCount() > 0)
+						this.getSituation().relationFacts
 								.addLogicalOperator(LogicalOperator.AND);
-					this.getSituation().constraints.addFactSet(factSet);
+					this.getSituation().relationFacts.addFactSet(factSet);
 				}
 			}
 			// apply constraints for facts not matching the meta data
@@ -168,10 +168,10 @@ public class AdaptationRule {
 				if (!constraintLearningUnitClass.getMetaData().equals(
 						currentLearningUnit.getMetaData(),
 						constraintLearningUnitClass.getLogicalOperator())) {
-					if (this.getSituation().constraints.getChildrenCount() > 0)
-						this.getSituation().constraints
+					if (this.getSituation().relationFacts.getChildrenCount() > 0)
+						this.getSituation().relationFacts
 								.addLogicalOperator(LogicalOperator.AND);
-					this.getSituation().constraints.addFactSet(factSet);
+					this.getSituation().relationFacts.addFactSet(factSet);
 				}
 			}
 		}

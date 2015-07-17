@@ -22,6 +22,11 @@ public class FactSet implements FactSetElement {
 
 	static public FactSet FactSetFromConstraintRequirement(
 			MyConstraintRequirement requirement) throws Exception {
+		return FactSetFromConstraintRequirement(requirement, false);
+	}
+
+	static public FactSet FactSetFromConstraintRequirement(
+			MyConstraintRequirement requirement, Boolean negateValueOperator) throws Exception {
 		FactSet factSet = new FactSet();
 
 		if (requirement.getSpecificTailType().equals(
@@ -30,7 +35,7 @@ public class FactSet implements FactSetElement {
 			MyContextInformation measurableInformation = (MyContextInformation) requirement
 					.getContextInformation().toArray()[0];
 			factSet.addFact(Fact
-					.FactFromContextInformation(measurableInformation));
+					.FactFromContextInformation(measurableInformation, negateValueOperator));
 		} else if (requirement.getSpecificTailType().equals(
 				"RankingConstraintRequirement")) {
 
