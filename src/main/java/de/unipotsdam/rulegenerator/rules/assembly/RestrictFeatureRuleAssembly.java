@@ -5,7 +5,6 @@ import java.util.Collection;
 import org.semanticweb.owlapi.model.OWLOntology;
 
 import de.unipotsdam.rulegenerator.enums.ActionOperator;
-import de.unipotsdam.rulegenerator.enums.LogicalOperator;
 import de.unipotsdam.rulegenerator.enums.TriggeringMode;
 import de.unipotsdam.rulegenerator.ontology.custom.MyConstraintRequirement;
 import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
@@ -47,13 +46,13 @@ public class RestrictFeatureRuleAssembly extends RuleAssembly {
 			int i = 0;
 			for (MyConstraintRequirement constraintRequirement : restrictFeatureConstraint
 					.getConstraintRequirements()) {
-				featureConstraintRuleSituation.addConstraint(FactSet
+				featureConstraintRuleSituation.addRelationFact(FactSet
 						.FactSetFromConstraintRequirement(
-								constraintRequirement));
+								constraintRequirement, true));
 				if (i < restrictFeatureConstraint
 						.getConstraintRequirementsCount() - 1)
 					featureConstraintRuleSituation
-							.addConstraint(restrictFeatureConstraint
+							.addRelationFact(restrictFeatureConstraint
 									.getLogicalOperator().getOpposite());
 				i++;
 			}

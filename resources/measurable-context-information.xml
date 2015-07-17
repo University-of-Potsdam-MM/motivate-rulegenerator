@@ -221,6 +221,30 @@
 			</parameter>
 		</parameters>
 	</information>
+	<information id="CI_CURRENT_UNIX_TIME">
+		<contextClasses>
+			<contextClass id="CC_PHYSICAL" />
+		</contextClasses>
+		<contextValue type="INTEGER">
+			<operators>
+				<operator id="GREATER_THEN" />
+				<operator id="LESS_THEN" />
+				<operator id="IS" />
+				<operator id="IS_NOT" />
+				<operator id="NO_VALUE" />
+			</operators>
+		</contextValue>
+		<parameters>
+			<parameter id="CP_UNIX_TIME_UNIT">
+				<parameterValue type="ENUM">
+					<possibleValues>
+						<value>SECONDS</value>
+						<value>MILLISECONDS</value>
+					</possibleValues>
+				</parameterValue>
+			</parameter>
+		</parameters>
+	</information>
 	<information id="CI_CURRENT_TIME">
 		<contextClasses>
 			<contextClass id="CC_PHYSICAL" />
@@ -621,7 +645,7 @@
 			</operators>
 		</contextValue>
 		<parameters>
-			<parameter id="CP_TAGET_LATITUDE">
+			<parameter id="CP_TARGET_LATITUDE">
 				<parameterValue type="FLOAT" min="-90" max="90" />
 			</parameter>
 			<parameter id="CP_TARGET_LONGITUDE">
@@ -713,7 +737,7 @@
 				<parameterValue type="ENUM">
 					<possibleValues>
 						<value>KILOMETERS_PER_HOUR</value>
-						<value>MILES2_PER_HOUR</value>
+						<value>MILES_PER_HOUR</value>
 					</possibleValues>
 				</parameterValue>
 			</parameter>
