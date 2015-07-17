@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b3e6fb3-c568-4d3c-85dc-7fc28cc1d424" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\css\bootswatch.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\css\docs.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\css\lightbox.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\css\print.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\css\reflow-skin.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\css\site.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dependencies.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dependency-convergence.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dependency-info.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dependency-management.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\ContextInformation.dtd.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\ContextInformation.dtd.org.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\DTDDocStyle.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\cctree.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\dtreeStyle.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\elementsIndex.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\empty.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\join.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\joinbottom.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\line.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\minus.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\minusbottom.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\plus.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\img\plusbottom.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\intro.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\dtddoc\toc.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\faq.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\images\close.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\images\contextInformationUML.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\img\close.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\img\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\img\next.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\img\prev.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\interfaces.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\allclasses-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\allclasses-noframe.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\constant-values.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\debugging\PelletTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\debugging\class-use\PelletTest.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\debugging\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\debugging\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\debugging\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\debugging\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\ActionOperator.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\ContextInformationType.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\DataType.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\DescriptionType.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\EnumUtils.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\FactOperator.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\LogicalOperator.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\SituationTemplate.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\TriggeringMode.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\ActionOperator.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\ContextInformationType.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\DataType.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\DescriptionType.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\EnumUtils.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\FactOperator.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\LogicalOperator.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\SituationTemplate.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\class-use\TriggeringMode.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\enums\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\AuthenticationFilter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\DSLServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\JSONServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\Main.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\OWLServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\Services.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\XMLServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\class-use\AuthenticationFilter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\class-use\DSLServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\class-use\JSONServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\class-use\Main.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\class-use\OWLServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\class-use\Services.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\class-use\XMLServices.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\ContextInformationService.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\RuleGeneratorService.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\Service.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\StatisticsService.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\class-use\ContextInformationService.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\class-use\RuleGeneratorService.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\class-use\Service.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\class-use\StatisticsService.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\jaxrs\services\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\Action.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\CancelAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\Constraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ContextClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ContextInformationConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ContextInformationParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\Feature.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\FinishAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\GeneratedFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\LearningUnit.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\LearningUnitClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\LearningUnitClassConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\LocationContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\LocationContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\MixedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ParameterizedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\PauseAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\PersonalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\PersonalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\PhysicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\PhysicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\RankingConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\Reason.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\RecordedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\RestrictFeatureConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ScenarioContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\ScenarioContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\Situation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\SituationalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\SituationalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\StartAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\TechnicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\TechnicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\TransmissionAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\User.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\Vocabulary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\Action.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\CancelAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\Constraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ContextClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ContextInformationConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ContextInformationParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\Feature.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\FinishAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\GeneratedFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\LearningUnit.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\LearningUnitClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\LearningUnitClassConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\LocationContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\LocationContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\MixedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ParameterizedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\PauseAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\PersonalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\PersonalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\PhysicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\PhysicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\RankingConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\Reason.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\RecordedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\RestrictFeatureConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ScenarioContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\ScenarioContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\Situation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\SituationalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\SituationalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\StartAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\TechnicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\TechnicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\TransmissionAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\User.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\class-use\Vocabulary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MetaDataMap.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyContextInformationParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyFeature.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyLearningUnit.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyLearningUnitClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyLearningUnitClassConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\MyRestrictFeatureConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MetaDataMap.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyContextInformationParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyFeature.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyLearningUnit.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyLearningUnitClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyLearningUnitClassConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\class-use\MyRestrictFeatureConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\custom\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultCancelAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultContextClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultContextInformationConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultContextInformationParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultFeature.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultFinishAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultLearningUnit.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultLearningUnitClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultLearningUnitClassConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultLocationContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultLocationContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultMixedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultParameterizedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultPauseAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultPersonalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultPersonalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultPhysicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultPhysicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultRankingConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultReason.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultRecordedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultRestrictFeatureConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultScenarioContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultScenarioContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultSituation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultSituationalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultSituationalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultStartAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultTechnicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultTechnicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultTransmissionAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\DefaultUser.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultCancelAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultContextClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultContextInformationConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultContextInformationParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultFeature.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultFinishAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultLearningUnit.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultLearningUnitClass.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultLearningUnitClassConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultLocationContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultLocationContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultMixedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultParameterizedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultPauseAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultPersonalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultPersonalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultPhysicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultPhysicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultRankingConstraintRequirement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultReason.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultRecordedContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultRestrictFeatureConstraint.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultScenarioContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultScenarioContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultSituation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultSituationalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultSituationalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultStartAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultTechnicalContext.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultTechnicalContextInformation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultTransmissionAction.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\class-use\DefaultUser.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\impl\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\ontology\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\AdaptationRule.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\AdaptationRuleList.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\Fact.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\FactParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\FactSet.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\FactSetElement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\LearningUnitClassFactSet.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\PreloadAdaptationRule.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\RuleFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\SelectAdaptationRule.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\Situation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\Trigger.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\DefaultRuleAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\RestrictFeatureRuleAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\RuleAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\class-use\DefaultRuleAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\class-use\RestrictFeatureRuleAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\class-use\RuleAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\assembly\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\AdaptationRule.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\AdaptationRuleList.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\Fact.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\FactParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\FactSet.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\FactSetElement.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\LearningUnitClassFactSet.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\PreloadAdaptationRule.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\RuleFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\SelectAdaptationRule.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\Situation.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\class-use\Trigger.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\rules\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\Reason.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\StatisticsFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\StatisticsList.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\ActionStatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\CancelActionStatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\StartActionStatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\StatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\class-use\ActionStatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\class-use\CancelActionStatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\class-use\StartActionStatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\class-use\StatisticsAssembly.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\assembly\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\class-use\Reason.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\class-use\StatisticsFactory.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\class-use\StatisticsList.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\de\unipotsdam\rulegenerator\statistics\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\deprecated-list.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\help-doc.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\index-all.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\overview-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\overview-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\overview-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\package-list" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\resources\background.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\resources\tab.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\resources\titlebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\resources\titlebar_end.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\javadoc\stylesheet.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\js\lightbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\js\reflow-scroll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\js\reflow-skin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\ontology.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\plugin-management.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\plugins.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\project-info.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\project-reports.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\project-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\docs\usage.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\elis\Desktop\workspace\motivate-rulegenerator\src\test\java\de\unipotsdam\rulegenerator\jaxrs\MainTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/CancelActionStatisticsAssembly.java" afterPath="$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/CancelActionStatisticsAssembly.java" />
+    </list>
+    <ignored path="rulegenerator.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="rulegenerator" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MyLearningUnit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/ontology/custom/MyLearningUnit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
+              <folding>
+                <element signature="e#7261#7262#0" expanded="true" />
+                <element signature="e#7305#7306#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vocabulary.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/ontology/Vocabulary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="751" column="130" selection-start-line="751" selection-start-column="130" selection-end-line="751" selection-end-column="130" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleInference.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/protege/org.protege.editor.owl.codegeneration/1.0.2/org.protege.editor.owl.codegeneration-1.0.2-sources.jar!/org/protege/owl/codegeneration/inference/SimpleInference.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding>
+                <element signature="e#4503#4523#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WrappedIndividualImpl.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/protege/org.protege.editor.owl.codegeneration/1.0.2/org.protege.editor.owl.codegeneration-1.0.2-sources.jar!/org/protege/owl/codegeneration/impl/WrappedIndividualImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <element signature="e#2176#2177#0" expanded="true" />
+                <element signature="e#2232#2233#0" expanded="true" />
+                <element signature="e#2254#2255#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CancelActionStatisticsAssembly.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/CancelActionStatisticsAssembly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionStatisticsAssembly.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/ActionStatisticsAssembly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.3180723">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSONServices.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/JSONServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/services/StatisticsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OWLIndividualImpl.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/OWLIndividualImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding>
+                <element signature="e#6105#6154#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OWLOntologyImpl.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/OWLOntologyImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1252" column="0" selection-start-line="1252" selection-start-column="0" selection-end-line="1252" selection-end-column="0" />
+              <folding>
+                <element signature="e#8334#8335#0" expanded="true" />
+                <element signature="e#8364#8365#0" expanded="true" />
+                <element signature="e#8422#8423#0" expanded="true" />
+                <element signature="e#8455#8456#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/ActionStatisticsAssembly.java" />
+        <option value="$PROJECT_DIR$/resources/noolsDSL.xslt" />
+        <option value="$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/CancelActionStatisticsAssembly.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="MOTIVATE Rule Generator" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="MOTIVATE Rule Generator" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Run Configurations" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RunConfigurationsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1040" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="motivate-rulegenerator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="de/unipotsdam/rulegenerator/statistics/assembly">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="recentsLimit" value="5" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="de.unipotsdam.rulegenerator.jaxrs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="de.unipotsdam.rulegenerator.jaxrs.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rulegenerator" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="noolsDSL.xslt" type="XSLT" factoryName="XSLT" temporary="true">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <XsltFile url="file://$PROJECT_DIR$/resources/noolsDSL.xslt" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="PLAIN_TEXT" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="de.unipotsdam.rulegenerator.jaxrs.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rulegenerator" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/lib/dk.brics.automaton-1.11-2.jar" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="assembly:single" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rulegenerator [compile]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+                <option value="assembly:single" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Maven.rulegenerator [compile]" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="2" class="java.lang.String" itemvalue="XSLT.noolsDSL.xslt" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="XSLT.noolsDSL.xslt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b3e6fb3-c568-4d3c-85dc-7fc28cc1d424" name="Default" comment="" />
+      <created>1437046020816</created>
+      <option name="number" value="Default" />
+      <updated>1437046020816</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1040" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36101696" sideWeight="0.4959514" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57457626" sideWeight="0.5040486" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13562752" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.4959514" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23684211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3142415" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.6152344" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/DSLServices.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/CancelActionStatisticsAssembly.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/CancelActionStatisticsAssembly.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/edu/stanford/protege/org.protege.editor.owl.codegeneration/1.0.2/org.protege.editor.owl.codegeneration-1.0.2-sources.jar!/org/protege/owl/codegeneration/inference/SimpleInference.java</url>
+          <line>123</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="36" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/noolsDSL.xslt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/DSLServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="392" column="72" selection-start-line="392" selection-start-column="71" selection-end-line="392" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/StartActionStatisticsAssembly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16790123">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33235294">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.13/jersey-server-2.13-sources.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/noolsDSLOutput.nools">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="392" column="72" selection-start-line="392" selection-start-column="71" selection-end-line="392" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/noolsDSL.xslt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="213" column="44" selection-start-line="213" selection-start-column="44" selection-end-line="213" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/DSLServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/StatisticsAssembly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/StatisticsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#253#261#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/StatisticsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/org/semanticweb/owlapi/model/OWLOntologyID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="e#7272#7273#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/OWLOntologyManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/org/semanticweb/owlapi/util/CollectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
+          <folding>
+            <element signature="e#14702#14703#0" expanded="false" />
+            <element signature="e#14752#14753#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/AbstractInternalsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="347" column="0" selection-start-line="347" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/OWLObjectImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/org/semanticweb/owlapi/util/MultiMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/MapPointer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#2365#2366#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/InternalsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/OWLOntologyImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1252" column="0" selection-start-line="1252" selection-start-column="0" selection-end-line="1252" selection-end-column="0" />
+          <folding>
+            <element signature="e#8334#8335#0" expanded="true" />
+            <element signature="e#8364#8365#0" expanded="true" />
+            <element signature="e#8422#8423#0" expanded="true" />
+            <element signature="e#8455#8456#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-distribution/3.4.9/owlapi-distribution-3.4.9-sources.jar!/uk/ac/manchester/cs/owl/owlapi/OWLIndividualImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="e#6105#6154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/services/StatisticsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/protege/org.protege.editor.owl.codegeneration/1.0.2/org.protege.editor.owl.codegeneration-1.0.2-sources.jar!/org/protege/owl/codegeneration/impl/CodeGenerationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325301">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/protege/org.protege.editor.owl.codegeneration/1.0.2/org.protege.editor.owl.codegeneration-1.0.2-sources.jar!/org/protege/owl/codegeneration/impl/WrappedIndividualImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#2176#2177#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#2254#2255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/jaxrs/JSONServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/ontology/Vocabulary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="751" column="130" selection-start-line="751" selection-start-column="130" selection-end-line="751" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/edu/stanford/protege/org.protege.editor.owl.codegeneration/1.0.2/org.protege.editor.owl.codegeneration-1.0.2-sources.jar!/org/protege/owl/codegeneration/inference/SimpleInference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="e#4503#4523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.owl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37564766">
+          <caret line="111" column="18" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/ontology/custom/MyLearningUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
+          <folding>
+            <element signature="e#7261#7262#0" expanded="true" />
+            <element signature="e#7305#7306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/CancelActionStatisticsAssembly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/unipotsdam/rulegenerator/statistics/assembly/ActionStatisticsAssembly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3180723">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>rulegenerator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
