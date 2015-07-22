@@ -3,6 +3,7 @@ package de.unipotsdam.rulegenerator.statistics.assembly;
 import java.util.Collection;
 
 import com.hp.hpl.jena.query.*;
+import de.unipotsdam.rulegenerator.statistics.Reason;
 import org.mindswap.pellet.KnowledgeBase;
 import org.mindswap.pellet.jena.PelletInfGraph;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -22,7 +23,7 @@ public class CancelActionStatisticsAssembly extends ActionStatisticsAssembly {
 	}
 
 	public StatisticsList generateStatistics() {
-		
+
 		for (MyLearningUnit currentLearningUnit : learningUnits) {
 			String lid = currentLearningUnit.getID().toString();
 			Collection<? extends CancelAction> cancelActions = currentLearningUnit
@@ -40,20 +41,56 @@ public class CancelActionStatisticsAssembly extends ActionStatisticsAssembly {
 				InfModel model = ModelFactory.createInfModel(graph);
 				// Use the model to answer SPARQL queries
 
-				action = cancelAction.getOwlIndividual().getIRI().toString();
-				System.out.println(queryFirst);
+				action = cancelAction.getOwlIndividual().getIRI().toQuotedString();
+				String firstQuery = null;
+				String secondQuery = null;
 
-				Query query = QueryFactory.create(queryFirst);
-				QueryExecution qe = QueryExecutionFactory.create(query, model);
-				ResultSet results = qe.execSelect();
-				ResultSetFormatter.out(System.out, results, query);
-				qe.close();
+				try {
+					firstQuery = getFirstQuery();
 
-				while(results.hasNext()) {
-					QuerySolution row = results.next();
-					user = row.getResource("user").getLocalName();
-					actTime = row.get("actTime").toString();
-					recTime = row.get("recTime").toString();
+					//"select * where {"+action+" ?x ?z. ?a ?b "+action+". }"
+					Query fquery = QueryFactory.create(firstQuery);
+					QueryExecution fqe = QueryExecutionFactory.create(fquery, model);
+					ResultSet results = fqe.execSelect();
+					//ResultSetFormatter.out(System.out, results, fquery);
+
+					while(results.hasNext()) {
+						QuerySolution row = results.next();
+						user = row.get("user");
+						actTime = row.get("actTime");
+						recTime = row.get("recTime");
+
+						secondQuery = getSecondQuery();
+						Query squery = QueryFactory.create(secondQuery);
+						QueryExecution sqe = QueryExecutionFactory.create(squery, model);
+						ResultSet finalResults = sqe.execSelect();
+						ResultSetFormatter.out(System.out, finalResults, squery);
+
+						while (finalResults.hasNext()) {
+							QuerySolution srow = finalResults.next();
+							lu = srow.get("lu");
+							recContext = srow.get("recContext");
+							metaDataProp = srow.get("metaDataProp");
+							metaDataValue = srow.get("metaDataValue");
+
+							Reason reason = new Reason();
+							reason.setAction(action);
+							reason.setActionTime(actTime);
+							reason.setUser(user);
+							reason.setRecordedTime(recTime);
+							reason.setLearningUnit(lu);
+							reason.setRecordedContextInformation(recContext);
+							reason.setMetaDataProperty(metaDataProp);
+							reason.setMetaDataValue(metaDataValue);
+
+							reasons.addReason(reason);
+						}
+						sqe.close();
+					}
+					fqe.close();
+
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
 				}
 			}
 		}
