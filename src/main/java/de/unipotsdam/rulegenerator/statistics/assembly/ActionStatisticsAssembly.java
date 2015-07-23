@@ -2,6 +2,7 @@ package de.unipotsdam.rulegenerator.statistics.assembly;
 
 import java.util.Collection;
 
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import org.semanticweb.owlapi.model.OWLOntology;
 
@@ -17,7 +18,8 @@ import javax.annotation.Resource;
 public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 	protected Collection<? extends MyLearningUnit> learningUnits;
 	protected String action;
-	protected RDFNode recTime, user, actTime, recContext, lu, metaDataProp, metaDataValue;
+	protected RDFNode user, recContext, lu, metaDataProp;
+	protected Literal recTime, actTime, metaDataValue;
 
 	protected String getFirstQuery() throws Exception {
 		if (action == null)
@@ -74,23 +76,24 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 				+ "?recContext "
 				+ "	a kno:RecordedContextInformation ; "
 				+ "	kno:hasTimestamp "
-				+ recTime.asResource().getURI()
+				+ recTime.getLexicalForm()
 				+ "; "
-				+ "	kno:isRecordedContextInformationOf "
-				+ user.asResource().getURI()
-				+ " . "
-				+ user.asResource().getURI()
-				+ "	a kno:User ; "
+				+ "	kno:isRecordedContextInformationOf <"
+				+ user.toString()
+				+ "> . <"
+				+ user.toString()
+				+ "> a kno:User ; "
 				+ "	kno:hasAction "
 				+ action
 				+ ". "
 				+ action
 				+ "	kno:referencesLearningUnit ?lu ;"
 				+ "	kno:hasTimestamp "
-				+ actTime.asResource().toString()
+				+ actTime.getLexicalForm()
 				+ " ."
 				+ "?metaDataProp rdfs:subPropertyOf kno:hasMetaData ."
 				+ "?lu ?metaDataProp ?metaDataValue ."
+				+ "}"
 				;
 	}
 

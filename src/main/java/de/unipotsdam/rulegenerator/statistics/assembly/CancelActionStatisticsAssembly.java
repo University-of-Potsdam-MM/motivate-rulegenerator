@@ -57,21 +57,21 @@ public class CancelActionStatisticsAssembly extends ActionStatisticsAssembly {
 					while(results.hasNext()) {
 						QuerySolution row = results.next();
 						user = row.get("user");
-						actTime = row.get("actTime");
-						recTime = row.get("recTime");
+						actTime = row.getLiteral("actTime");
+						recTime = row.getLiteral("recTime");
 
 						secondQuery = getSecondQuery();
 						Query squery = QueryFactory.create(secondQuery);
 						QueryExecution sqe = QueryExecutionFactory.create(squery, model);
 						ResultSet finalResults = sqe.execSelect();
-						ResultSetFormatter.out(System.out, finalResults, squery);
+						//ResultSetFormatter.out(System.out, finalResults, squery);
 
 						while (finalResults.hasNext()) {
 							QuerySolution srow = finalResults.next();
 							lu = srow.get("lu");
 							recContext = srow.get("recContext");
 							metaDataProp = srow.get("metaDataProp");
-							metaDataValue = srow.get("metaDataValue");
+							metaDataValue = srow.getLiteral("metaDataValue");
 
 							Reason reason = new Reason();
 							reason.setAction(action);
