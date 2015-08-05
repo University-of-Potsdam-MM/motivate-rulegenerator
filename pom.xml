@@ -39,7 +39,6 @@
 				<version>2.8</version>
 				<configuration>
 					<outputDirectory>project-info</outputDirectory>
-					<project.reporting.outputDirectory>project-info</project.reporting.outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -11,10 +11,10 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/tobias/ontologies/2014/7/untitled-ontology-43"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/tobias/ontologies/2014/7/untitled-ontology-43">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -88,6 +88,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-MovementSpeedContextInformationRequirement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Example-RecordedCancelActionInformation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
@@ -239,6 +242,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="knowledge:RecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-RecordedCancelActionInformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="knowledge:RecordedContextInformation"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -338,6 +345,16 @@
         <NamedIndividual abbreviatedIRI="knowledge:AppUsageFeature"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasAction"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedCancelActionInformation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
+        <NamedIndividual IRI="#Example-Bob"/>
+        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
         <NamedIndividual IRI="#Example-Bob"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation3"/>
@@ -346,11 +363,6 @@
         <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
         <NamedIndividual IRI="#Example-Bob"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="knowledge:hasRecordedContextInformation"/>
-        <NamedIndividual IRI="#Example-Bob"/>
-        <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation2"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
@@ -423,6 +435,11 @@
         <NamedIndividual IRI="#Example-LearningUnit-127"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="knowledge:isReferencedByCancelAction"/>
+        <NamedIndividual IRI="#Example-LearningUnit-126"/>
+        <NamedIndividual IRI="#Example-RecordedCancelActionInformation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasAlternative"/>
         <NamedIndividual IRI="#Example-LearningUnit-128"/>
         <NamedIndividual IRI="#Example-LearningUnit-125"/>
@@ -455,12 +472,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <NamedIndividual IRI="#Example-LongitudeParameter"/>
+        <NamedIndividual IRI="#Example-LatitudeParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
         <NamedIndividual IRI="#Example-UserDidArriveAtLocation"/>
-        <NamedIndividual IRI="#Example-LatitudeParameter"/>
+        <NamedIndividual IRI="#Example-LongitudeParameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="knowledge:hasContextInformationParameter"/>
@@ -639,6 +656,21 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="knowledge:hasCID"/>
+        <NamedIndividual IRI="#Example-RecordedCancelActionInformation"/>
+        <Literal datatypeIRI="&xsd;string">CI_USER_DID_PERFORM_ACTION</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasTimestamp"/>
+        <NamedIndividual IRI="#Example-RecordedCancelActionInformation"/>
+        <Literal datatypeIRI="&xsd;integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasValue"/>
+        <NamedIndividual IRI="#Example-RecordedCancelActionInformation"/>
+        <Literal datatypeIRI="&xsd;string">SUSPEND_ACTION</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="knowledge:hasCID"/>
         <NamedIndividual IRI="#Example-RecordedMovementSpeedInformation"/>
         <Literal datatypeIRI="&xsd;string">CI_USER_MOVEMENT_SPEED</Literal>
     </DataPropertyAssertion>
@@ -801,5 +833,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
 

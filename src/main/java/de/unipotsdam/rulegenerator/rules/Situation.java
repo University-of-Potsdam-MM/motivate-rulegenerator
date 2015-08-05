@@ -5,7 +5,6 @@ import java.util.Collection;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 import org.protege.owl.codegeneration.WrappedIndividual;
@@ -21,17 +20,17 @@ import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
  */
 @XmlRootElement(name = "situation")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = { "factSets", "constraints", "userFacts" })
+@XmlType(name = "", propOrder = { "factSets", "relationFacts", "contextFacts"})
 public class Situation {
 	
 	private final FactSet factSets = new FactSet();
 
-	protected FactSet constraints = new FactSet();
-	protected FactSet userFacts = new FactSet();
+	protected FactSet relationFacts = new FactSet();
+	protected FactSet contextFacts = new FactSet();
 
 	public Situation() throws Exception {
-		this.factSets.addFactSet(this.constraints, LogicalOperator.AND);
-		this.factSets.addFactSet(this.userFacts);
+		this.factSets.addFactSet(this.relationFacts, LogicalOperator.AND);
+		this.factSets.addFactSet(this.contextFacts);
 	}
 
 	public Situation(SituationTemplate template,
@@ -45,12 +44,12 @@ public class Situation {
 		this.applyTemplate(template, currentLearningUnit, targetLearningUnit);
 	}
 
-	public void addConstraint(FactSetElement constraint) throws Exception {
-		this.constraints.addFactSetElement(constraint);
+	public void addRelationFact(FactSetElement relationFact) throws Exception {
+		this.relationFacts.addFactSetElement(relationFact);
 	}
 
-	public void addUserFact(FactSetElement userFact) throws Exception {
-		this.userFacts.addFactSetElement(userFact);
+	public void addContextFact(FactSetElement contextFact) throws Exception {
+		this.contextFacts.addFactSetElement(contextFact);
 	}
 
 	public void addPrerequisites(
@@ -98,7 +97,7 @@ public class Situation {
 				prerequisitesFactSet.addLogicalOperator(LogicalOperator.AND);
 			i++;
 		}
-		this.constraints.addFactSet(prerequisitesFactSet);
+		this.relationFacts.addFactSet(prerequisitesFactSet);
 	}
 
 	public void applyTemplate(SituationTemplate template,
@@ -112,19 +111,19 @@ public class Situation {
 		switch (template) {
 		case CURRENT_LEARNING_UNIT_FACTS:
 			if (currentLearningUnit.getContextInformationCount() > 0)
-				this.userFacts
+				this.contextFacts
 						.addFactSetElement(currentLearningUnit.getFacts());
 			break;
 		case CURRENT_LEARNING_UNIT_ID:
-			if (this.constraints.size() > 0)
-				this.constraints.addLogicalOperator(LogicalOperator.AND);
-			this.constraints.addFact(new Fact("CI_CURRENT_LEARNING_UNIT",
+			if (this.relationFacts.size() > 0)
+				this.relationFacts.addLogicalOperator(LogicalOperator.AND);
+			this.relationFacts.addFact(new Fact("CI_CURRENT_LEARNING_UNIT",
 					FactOperator.IS, currentLearningUnit.getID()));
 			break;
 		case PREREQUISITES:
 			if (currentLearningUnit.hasPrerequisites()) {
-				if (this.constraints.size() > 0)
-					this.constraints.addLogicalOperator(LogicalOperator.AND);
+				if (this.relationFacts.size() > 0)
+					this.relationFacts.addLogicalOperator(LogicalOperator.AND);
 				this.addPrerequisites(currentLearningUnit.getPrerequisites());
 			}
 			break;

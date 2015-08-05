@@ -27,6 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.unipotsdam.rulegenerator.jaxrs.services.ContextInformationService;
+import de.unipotsdam.rulegenerator.jaxrs.services.ConversionService;
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.jaxrs.services.StatisticsService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
@@ -107,5 +108,19 @@ public class JSONServices extends Services {
 		JSONObject jsonObject = XML.toJSONObject(xmlString);
 		
 		return jsonObject.toString();
+	}
+	
+	@POST
+	@Path("/convert-from-owl-xml")
+	@Consumes("application/x-www-form-urlencoded")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String convertFromOWLXML(@FormParam("ontologyABox") String aBox) {
+		try {
+			return ConversionService.convertOWLXMLToJSONLD(aBox);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

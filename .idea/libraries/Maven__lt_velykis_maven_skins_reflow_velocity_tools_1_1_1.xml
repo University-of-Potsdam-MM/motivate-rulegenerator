@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: lt.velykis.maven.skins:reflow-velocity-tools:1.1.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/lt/velykis/maven/skins/reflow-velocity-tools/1.1.1/reflow-velocity-tools-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/lt/velykis/maven/skins/reflow-velocity-tools/1.1.1/reflow-velocity-tools-1.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/lt/velykis/maven/skins/reflow-velocity-tools/1.1.1/reflow-velocity-tools-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

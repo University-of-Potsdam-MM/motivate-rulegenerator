@@ -367,7 +367,7 @@ public class Vocabulary {
 
     /**
      * A constant to give access to the Manchester OWL api representation of the class TRANSMISSIONACTION.<p>
-     * 
+     *
      */
     public static final OWLClass CLASS_TRANSMISSIONACTION = factory.getOWLClass(IRI.create("http://motivate-project.de/ontology/knowledge.owl#TransmissionAction"));
 
@@ -594,10 +594,10 @@ public class Vocabulary {
     /* ***************************************************
      * Object Property http://motivate-project.de/ontology/knowledge.owl#isActionOf
      */
-     
+
     /**
      * A constant to give access to the Manchester OWL API representation of the object property ISACTIONOF.<p>
-     * 
+     *
      */
     public static final OWLObjectProperty OBJECT_PROPERTY_ISACTIONOF = factory.getOWLObjectProperty(IRI.create("http://motivate-project.de/ontology/knowledge.owl#isActionOf"));
 
@@ -734,30 +734,30 @@ public class Vocabulary {
     /* ***************************************************
      * Object Property http://motivate-project.de/ontology/knowledge.owl#isReferencedByAction
      */
-     
+
     /**
      * A constant to give access to the Manchester OWL API representation of the object property ISREFERENCEDBYACTION.<p>
-     * 
+     *
      */
     public static final OWLObjectProperty OBJECT_PROPERTY_ISREFERENCEDBYACTION = factory.getOWLObjectProperty(IRI.create("http://motivate-project.de/ontology/knowledge.owl#isReferencedByAction"));
 
     /* ***************************************************
      * Object Property http://motivate-project.de/ontology/knowledge.owl#isReferencedByCancelAction
      */
-     
+
     /**
      * A constant to give access to the Manchester OWL API representation of the object property ISREFERENCEDBYCANCELACTION.<p>
-     * 
+     *
      */
     public static final OWLObjectProperty OBJECT_PROPERTY_ISREFERENCEDBYCANCELACTION = factory.getOWLObjectProperty(IRI.create("http://motivate-project.de/ontology/knowledge.owl#isReferencedByCancelAction"));
 
     /* ***************************************************
      * Object Property http://motivate-project.de/ontology/knowledge.owl#isReferencedByStartAction
      */
-     
+
     /**
      * A constant to give access to the Manchester OWL API representation of the object property ISREFERENCEDBYSTARTACTION.<p>
-     * 
+     *
      */
     public static final OWLObjectProperty OBJECT_PROPERTY_ISREFERENCEDBYSTARTACTION = factory.getOWLObjectProperty(IRI.create("http://motivate-project.de/ontology/knowledge.owl#isReferencedByStartAction"));
 
