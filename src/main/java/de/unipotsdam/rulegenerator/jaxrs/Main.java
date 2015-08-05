@@ -1,4 +1,4 @@
-package de.unipotsdam.rulegenerator.jaxrs;
+package main.java.de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.IOException;
 import java.net.URI;

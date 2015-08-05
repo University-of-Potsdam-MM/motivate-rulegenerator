@@ -1,13 +1,14 @@
 
 package de.unipotsdam.rulegenerator.jaxrs;
 
+import main.java.de.unipotsdam.rulegenerator.jaxrs.Main;
+
 import org.glassfish.grizzly.http.server.HttpServer;
 
 import com.sun.jersey.core.header.MediaTypes;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 
-import de.unipotsdam.rulegenerator.jaxrs.Main;
 import junit.framework.TestCase;
 
 
