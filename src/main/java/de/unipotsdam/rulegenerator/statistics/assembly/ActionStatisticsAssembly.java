@@ -30,6 +30,15 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 	protected String action;
 	protected RDFNode user, recContext, lu, metaDataProp;
 	protected Literal recTime, actTime, metaDataValue;
+	protected InfModel model;
+	private final String namespace = "" +
+			"PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> "
+			+ "PREFIX rdfs: <"
+			+ RDFS.getURI()
+			+ "> "
+			+ "PREFIX owl: <"
+			+ OWL.getURI()
+			+ "> ";
 
 	public ActionStatisticsAssembly(OWLOntology ontology) {
 		this.ontology = ontology;
@@ -46,93 +55,21 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 		this.learningUnits = learningUnits;
 	}
 
-	protected String getFirstQuery() throws Exception {
-		if (action == null)
-			throw new Exception("Action is not defined.");
-		return ""
-				+ "PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> "
-				+ "PREFIX rdfs: <"
-				+ RDFS.getURI()
-				+ "> "
-				+ "PREFIX owl: <"
-				+ OWL.getURI()
-				+ "> "
-				+ "SELECT ?user ?actTime (max(?rt) as ?recTime) WHERE {"
-				+ "?recContext "
-				+ "	a kno:RecordedContextInformation ; "
-				+ "	kno:hasTimestamp ?rt ; "
-				+ "	kno:isRecordedContextInformationOf ?user . "
-				+ "?user "
-				+ "	a kno:User ; "
-				+ "	kno:hasAction "
-				+ action
-				+ " . "
-				+ action
-				+ "	kno:referencesLearningUnit ?lu ;"
-				+ "	kno:hasTimestamp ?actTime ."
-				+ "?metaDataProp rdfs:subPropertyOf kno:hasMetaData ."
-				+ "?lu ?metaDataProp ?metaDataValue ."
-				+ "FILTER (?rt <= ?actTime) "
-				+ "}"
-				+ "GROUP BY ?user ?actTime"
-				;
-	}
-
-	protected String getSecondQuery() throws Exception {
-		if (user == null)
-			throw new Exception("User is not defined.");
-		if (action == null)
-			throw new Exception("Action is not defined.");
-		if (recTime == null)
-			throw new Exception("RecTime is not defined.");
-		if (actTime == null)
-			throw new Exception("ActTime is not defined.");
-		return ""
-				+ "PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> "
-				+ "PREFIX rdfs: <"
-				+ RDFS.getURI()
-				+ "> "
-				+ "PREFIX owl: <"
-				+ OWL.getURI()
-				+ "> "
-				+ "SELECT ?recContext ?lu ?metaDataProp ?metaDataValue WHERE {"
-				+ "?recContext "
-				+ "	a kno:RecordedContextInformation ; "
-				+ "	kno:hasTimestamp "
-				+ recTime.getLexicalForm()
-				+ "; "
-				+ "	kno:isRecordedContextInformationOf <"
-				+ user.toString()
-				+ "> . <"
-				+ user.toString()
-				+ "> a kno:User ; "
-				+ "	kno:hasAction "
-				+ action
-				+ ". "
-				+ action
-				+ "	kno:referencesLearningUnit ?lu ;"
-				+ "	kno:hasTimestamp "
-				+ actTime.getLexicalForm()
-				+ " ."
-				+ "?metaDataProp rdfs:subPropertyOf kno:hasMetaData ."
-				+ "?lu ?metaDataProp ?metaDataValue ."
-				+ "}"
-				;
-	}
-
-	protected void collectReasonsForGivenAction() {
-
+	// avoid doing this work for every individual action x learning unit
+	protected void createModel() {
 		PelletReasoner reasoner = PelletReasonerFactory.getInstance()
 				.createNonBufferingReasoner(ontology);
-
 		// Get the KB from the reasoner
 		KnowledgeBase kb = reasoner.getKB();
 		// Create a Pellet graph using the KB from OWLAPI
 		PelletInfGraph graph = new org.mindswap.pellet.jena.PelletReasoner()
 				.bind(kb);
 		// Wrap the graph in a model
-		InfModel model = ModelFactory.createInfModel(graph);
-		// Use the model to answer SPARQL queries
+		model = ModelFactory.createInfModel(graph);
+	}
+
+	// do the actual querying and gather context information for each action
+	protected void collectReasonsForGivenAction() {
 
 		String firstQuery = null;
 		String secondQuery = null;
@@ -184,5 +121,70 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+	}
+
+
+/*** QUERY STRING FACTORY ***/
+
+	protected String getFirstQuery() throws Exception {
+		if (action == null)
+			throw new Exception("Action is not defined.");
+		return ""
+				+ namespace
+				+ "SELECT ?user ?actTime (max(?rt) as ?recTime) WHERE {"
+				+ "?recContext "
+				+ "	a kno:RecordedContextInformation ; "
+				+ "	kno:hasTimestamp ?rt ; "
+				+ "	kno:isRecordedContextInformationOf ?user . "
+				+ "?user "
+				+ "	a kno:User ; "
+				+ "	kno:hasAction "
+				+ action
+				+ " . "
+				+ action
+				+ "	kno:referencesLearningUnit ?lu ;"
+				+ "	kno:hasTimestamp ?actTime ."
+				+ "?metaDataProp rdfs:subPropertyOf kno:hasMetaData ."
+				+ "?lu ?metaDataProp ?metaDataValue ."
+				+ "FILTER (?rt <= ?actTime) "
+				+ "}"
+				+ "GROUP BY ?user ?actTime"
+				;
+	}
+
+	protected String getSecondQuery() throws Exception {
+		if (user == null)
+			throw new Exception("User is not defined.");
+		if (action == null)
+			throw new Exception("Action is not defined.");
+		if (recTime == null)
+			throw new Exception("RecTime is not defined.");
+		if (actTime == null)
+			throw new Exception("ActTime is not defined.");
+		return ""
+				+ namespace
+				+ "SELECT ?recContext ?lu ?metaDataProp ?metaDataValue WHERE {"
+				+ "?recContext "
+				+ "	a kno:RecordedContextInformation ; "
+				+ "	kno:hasTimestamp "
+				+ recTime.getLexicalForm()
+				+ "; "
+				+ "	kno:isRecordedContextInformationOf <"
+				+ user.toString()
+				+ "> . <"
+				+ user.toString()
+				+ "> a kno:User ; "
+				+ "	kno:hasAction "
+				+ action
+				+ ". "
+				+ action
+				+ "	kno:referencesLearningUnit ?lu ;"
+				+ "	kno:hasTimestamp "
+				+ actTime.getLexicalForm()
+				+ " ."
+				+ "?metaDataProp rdfs:subPropertyOf kno:hasMetaData ."
+				+ "?lu ?metaDataProp ?metaDataValue ."
+				+ "}"
+				;
 	}
 }
