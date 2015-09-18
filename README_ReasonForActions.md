@@ -11,13 +11,13 @@ Derzeit betrifft das nur die **CancelActionStatisticsAssembly**.
 
 ## Jeder *Reason* umfasst folgende Felder: 
 - **String action** : der IRI der Nutzeraktion 
-- **RDFNode user** : der [RDFNode] des Nutzers
-- **RDFNode actionTime** : der RDFNode des Zeitstempels der Aktion
-- **RDFNode recordedTime** : der RDFNode des Zeitstempels einer gemessenen Kontextinformation
-- **RDFNode recordedContextInformation** : der RDFNode dieser Kontextinformation
-- **RDFNode learningUnit** : der RDFNode der Lerneinheit, mit der die Nutzeraktion ausgeführt, d.h. die z.B. abgebrochen oder gestartet wurde
-- **RDFNode metaDataProperty** : der RDFNode der Data Property, die eine Subproperty von *hasMetaData* ist, also z.B. *hasContentType* oder *isScreenReaderSuitable* dieser Lerneinheit
-- **RDFNode metaDataValue** : der RDFNode des dazugehörigen Werts, z.B. "Image" bzw. "true".
+- **[RDFNode] user** : der RDFNode des Nutzers
+- **[RDFNode] actionTime** : der RDFNode des Zeitstempels der Aktion (Downcast nach [Literal] möglich)
+- **[RDFNode] recordedTime** : der RDFNode des Zeitstempels einer gemessenen Kontextinformation (Downcast nach [Literal] möglich)
+- **[RDFNode] recordedContextInformation** : der RDFNode dieser Kontextinformation
+- **[RDFNode] learningUnit** : der RDFNode der Lerneinheit, mit der die Nutzeraktion ausgeführt, d.h. die z.B. abgebrochen oder gestartet wurde
+- **[RDFNode] metaDataProperty** : der RDFNode der Data Property, die eine Subproperty von *hasMetaData* ist, also z.B. *hasContentType* oder *isScreenReaderSuitable* dieser Lerneinheit
+- **[RDFNode] metaDataValue** : der RDFNode des dazugehörigen Werts, z.B. "Image" bzw. "true" (Downcast nach [Literal] möglich)
 
 ## Zugriff auf diese Informationen:
 
@@ -30,3 +30,4 @@ Derzeit betrifft das nur die **CancelActionStatisticsAssembly**.
 
 
 [RDFNode]:https://jena.apache.org/documentation/javadoc/jena/index.html?org/apache/jena/rdf/model/RDFNode.html
+[Literal]:https://jena.apache.org/documentation/javadoc/jena/org/apache/jena/rdf/model/Literal.html
