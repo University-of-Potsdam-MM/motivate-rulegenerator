@@ -9,9 +9,7 @@ import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFNode;
-import de.unipotsdam.rulegenerator.ontology.CancelAction;
 import de.unipotsdam.rulegenerator.statistics.Reason;
-import de.unipotsdam.rulegenerator.statistics.StatisticsList;
 import org.mindswap.pellet.KnowledgeBase;
 import org.mindswap.pellet.jena.PelletInfGraph;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -22,8 +20,6 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 import de.unipotsdam.rulegenerator.ontology.LearningUnit;
 import de.unipotsdam.rulegenerator.ontology.custom.MyFactory;
 import de.unipotsdam.rulegenerator.ontology.custom.MyLearningUnit;
-
-import javax.annotation.Resource;
 
 public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 	protected Collection<? extends MyLearningUnit> learningUnits;
@@ -71,52 +67,40 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 	// do the actual querying and gather context information for each action
 	protected void collectReasonsForGivenAction() {
 
-		String firstQuery = null;
-		String secondQuery = null;
+		String queryString = null;
 
 		try {
-			firstQuery = getFirstQuery();
+			queryString = getQueryString();
 
 			//"select * where {"+action+" ?x ?z. ?a ?b "+action+". }"
-			Query fquery = QueryFactory.create(firstQuery);
-			QueryExecution fqe = QueryExecutionFactory.create(fquery, model);
-			ResultSet results = fqe.execSelect();
-			//ResultSetFormatter.out(System.out, results, fquery);
+			Query query = QueryFactory.create(queryString);
+			QueryExecution qe = QueryExecutionFactory.create(query, model);
+			ResultSet results = qe.execSelect();
+			//ResultSetFormatter.out(System.out, results, query);
 
 			while(results.hasNext()) {
 				QuerySolution row = results.next();
 				user = row.get("user");
 				actTime = row.getLiteral("actTime");
 				recTime = row.getLiteral("recTime");
+				lu = row.get("lu");
+				recContext = row.get("recContext");
+				metaDataProp = row.get("metaDataProp");
+				metaDataValue = row.getLiteral("metaDataValue");
 
-				secondQuery = getSecondQuery();
-				Query squery = QueryFactory.create(secondQuery);
-				QueryExecution sqe = QueryExecutionFactory.create(squery, model);
-				ResultSet finalResults = sqe.execSelect();
-				//ResultSetFormatter.out(System.out, finalResults, squery);
+				Reason reason = new Reason();
+				reason.setAction(action);
+				reason.setActionTime(actTime);
+				reason.setUser(user);
+				reason.setRecordedTime(recTime);
+				reason.setLearningUnit(lu);
+				reason.setRecordedContextInformation(recContext);
+				reason.setMetaDataProperty(metaDataProp);
+				reason.setMetaDataValue(metaDataValue);
 
-				while (finalResults.hasNext()) {
-					QuerySolution srow = finalResults.next();
-					lu = srow.get("lu");
-					recContext = srow.get("recContext");
-					metaDataProp = srow.get("metaDataProp");
-					metaDataValue = srow.getLiteral("metaDataValue");
-
-					Reason reason = new Reason();
-					reason.setAction(action);
-					reason.setActionTime(actTime);
-					reason.setUser(user);
-					reason.setRecordedTime(recTime);
-					reason.setLearningUnit(lu);
-					reason.setRecordedContextInformation(recContext);
-					reason.setMetaDataProperty(metaDataProp);
-					reason.setMetaDataValue(metaDataValue);
-
-					reasons.addReason(reason);
-				}
-				sqe.close();
+				reasons.addReason(reason);
 			}
-			fqe.close();
+			qe.close();
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -126,15 +110,15 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 
 /*** QUERY STRING FACTORY ***/
 
-	protected String getFirstQuery() throws Exception {
+	protected String getQueryString() throws Exception {
 		if (action == null)
 			throw new Exception("Action is not defined.");
 		return ""
 				+ namespace
-				+ "SELECT ?user ?actTime (max(?rt) as ?recTime) WHERE {"
+				+ "SELECT ?user ?actTime ?recTime ?recContext ?lu ?metaDataProp ?metaDataValue WHERE {"
 				+ "?recContext "
 				+ "	a kno:RecordedContextInformation ; "
-				+ "	kno:hasTimestamp ?rt ; "
+				+ "	kno:hasTimestamp ?recTime ; "
 				+ "	kno:isRecordedContextInformationOf ?user . "
 				+ "?user "
 				+ "	a kno:User ; "
@@ -146,44 +130,7 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 				+ "	kno:hasTimestamp ?actTime ."
 				+ "?metaDataProp rdfs:subPropertyOf kno:hasMetaData ."
 				+ "?lu ?metaDataProp ?metaDataValue ."
-				+ "FILTER (?rt <= ?actTime) "
-				+ "}"
-				+ "GROUP BY ?user ?actTime"
-				;
-	}
-
-	protected String getSecondQuery() throws Exception {
-		if (user == null)
-			throw new Exception("User is not defined.");
-		if (action == null)
-			throw new Exception("Action is not defined.");
-		if (recTime == null)
-			throw new Exception("RecTime is not defined.");
-		if (actTime == null)
-			throw new Exception("ActTime is not defined.");
-		return ""
-				+ namespace
-				+ "SELECT ?recContext ?lu ?metaDataProp ?metaDataValue WHERE {"
-				+ "?recContext "
-				+ "	a kno:RecordedContextInformation ; "
-				+ "	kno:hasTimestamp "
-				+ recTime.getLexicalForm()
-				+ "; "
-				+ "	kno:isRecordedContextInformationOf <"
-				+ user.toString()
-				+ "> . <"
-				+ user.toString()
-				+ "> a kno:User ; "
-				+ "	kno:hasAction "
-				+ action
-				+ ". "
-				+ action
-				+ "	kno:referencesLearningUnit ?lu ;"
-				+ "	kno:hasTimestamp "
-				+ actTime.getLexicalForm()
-				+ " ."
-				+ "?metaDataProp rdfs:subPropertyOf kno:hasMetaData ."
-				+ "?lu ?metaDataProp ?metaDataValue ."
+				+ "FILTER (?recTime <= ?actTime) "
 				+ "}"
 				;
 	}

@@ -24,7 +24,7 @@ public class OWLServices extends Services {
 
 	@POST
 	@Path("/convert-from-json-ld")
-	@Consumes("application/x-www-form-urlencoded")
+	@Consumes("application/ld+json")
 	@Produces(MediaType.TEXT_XML)
 	public String convertFromJSONLD(@FormParam("jsonld") String jsonld) {
 		try {
