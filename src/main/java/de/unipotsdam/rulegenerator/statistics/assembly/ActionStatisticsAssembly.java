@@ -25,7 +25,7 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 	protected Collection<? extends MyLearningUnit> learningUnits;
 	protected String action;
 	protected RDFNode user, recContext, lu, metaDataProp;
-	protected Literal recTime, actTime, metaDataValue;
+	protected Literal recTime, recCID, recValue, actTime, metaDataValue;
 	protected InfModel model;
 	private final String namespace = "" +
 			"PREFIX kno: <http://motivate-project.de/ontology/knowledge.owl#> "
@@ -80,21 +80,27 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 
 			while(results.hasNext()) {
 				QuerySolution row = results.next();
+				// RDFNodes
 				user = row.get("user");
+				recContext = row.get("recContext");
+				lu = row.get("lu");
+				metaDataProp = row.get("metaDataProp");
+				// Literals
 				actTime = row.getLiteral("actTime");
 				recTime = row.getLiteral("recTime");
-				lu = row.get("lu");
-				recContext = row.get("recContext");
-				metaDataProp = row.get("metaDataProp");
+				recCID = row.getLiteral("recCID");
+				recValue = row.getLiteral("recValue");
 				metaDataValue = row.getLiteral("metaDataValue");
 
 				Reason reason = new Reason();
 				reason.setAction(action);
-				reason.setActionTime(actTime);
 				reason.setUser(user);
-				reason.setRecordedTime(recTime);
-				reason.setLearningUnit(lu);
+				reason.setActionTime(actTime);
 				reason.setRecordedContextInformation(recContext);
+				reason.setRecordedTime(recTime);
+				reason.setRecordedCID(recCID);
+				reason.setRecordedValue(recValue);
+				reason.setLearningUnit(lu);
 				reason.setMetaDataProperty(metaDataProp);
 				reason.setMetaDataValue(metaDataValue);
 
@@ -115,10 +121,12 @@ public abstract class ActionStatisticsAssembly extends StatisticsAssembly {
 			throw new Exception("Action is not defined.");
 		return ""
 				+ namespace
-				+ "SELECT ?user ?actTime ?recTime ?recContext ?lu ?metaDataProp ?metaDataValue WHERE {"
+				+ "SELECT ?user ?actTime ?recContext ?recTime ?recCID ?recValue ?lu ?metaDataProp ?metaDataValue WHERE {"
 				+ "?recContext "
 				+ "	a kno:RecordedContextInformation ; "
 				+ "	kno:hasTimestamp ?recTime ; "
+				+ " kno:hasCID ?recCID; "
+				+ " kno:hasValue ?recValue; "
 				+ "	kno:isRecordedContextInformationOf ?user . "
 				+ "?user "
 				+ "	a kno:User ; "

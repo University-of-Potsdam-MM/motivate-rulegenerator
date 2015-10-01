@@ -6,8 +6,15 @@ import com.hp.hpl.jena.rdf.model.Resource;
 public class Reason {
 
     private String action;
-    private RDFNode user, actionTime, recordedTime, recordedContextInformation,
-            learningUnit, metaDataProperty, metaDataValue;
+    private RDFNode user;
+    private RDFNode actionTime;
+    private RDFNode recordedContextInformation;
+    private RDFNode recordedTime;
+    private RDFNode recordedCID;
+    private RDFNode recordedValue;
+    private RDFNode learningUnit;
+    private RDFNode metaDataProperty;
+    private RDFNode metaDataValue;
 
     public String getAction() { return action; }
 
@@ -31,6 +38,14 @@ public class Reason {
         this.actionTime = actionTime;
     }
 
+    public RDFNode getRecordedContextInformation() {
+        return recordedContextInformation;
+    }
+
+    public void setRecordedContextInformation(RDFNode recordedContextInformation) {
+        this.recordedContextInformation = recordedContextInformation;
+    }
+
     public RDFNode getRecordedTime() {
         return recordedTime;
     }
@@ -39,12 +54,21 @@ public class Reason {
         this.recordedTime = recordedTime;
     }
 
-    public RDFNode getRecordedContextInformation() {
-        return recordedContextInformation;
+
+    public RDFNode getRecordedCID() {
+        return recordedCID;
     }
 
-    public void setRecordedContextInformation(RDFNode recordedContextInformation) {
-        this.recordedContextInformation = recordedContextInformation;
+    public void setRecordedCID(RDFNode recordedCID) {
+        this.recordedCID = recordedCID;
+    }
+
+    public RDFNode getRecordedValue() {
+        return recordedValue;
+    }
+
+    public void setRecordedValue(RDFNode recordedValue) {
+        this.recordedValue = recordedValue;
     }
 
     public RDFNode getLearningUnit() {

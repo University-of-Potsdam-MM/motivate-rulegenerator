@@ -13,8 +13,10 @@ Derzeit betrifft das nur die **CancelActionStatisticsAssembly**.
 - **String action** : der IRI der Nutzeraktion 
 - **[RDFNode] user** : der RDFNode des Nutzers
 - **[RDFNode] actionTime** : der RDFNode des Zeitstempels der Aktion (Downcast nach [Literal] möglich)
-- **[RDFNode] recordedTime** : der RDFNode des Zeitstempels einer gemessenen Kontextinformation (Downcast nach [Literal] möglich)
-- **[RDFNode] recordedContextInformation** : der RDFNode dieser Kontextinformation
+- **[RDFNode] recordedContextInformation** : der RDFNode einer gemessenen Kontextinformation
+- **[RDFNode] recordedTime** : der RDFNode des Zeitstempels dieser Kontextinformation (Downcast nach [Literal] möglich)
+- **[RDFNode] recordedCID** : der RDFNode der ID dieser Kontextinformation (Downcast nach [Literal] möglich)
+- **[RDFNode] recordedValue** : der RDFNode des Werts dieser Kontextinformation (Downcast nach [Literal] möglich)
 - **[RDFNode] learningUnit** : der RDFNode der Lerneinheit, mit der die Nutzeraktion ausgeführt, d.h. die z.B. abgebrochen oder gestartet wurde
 - **[RDFNode] metaDataProperty** : der RDFNode der Data Property, die eine Subproperty von *hasMetaData* ist, also z.B. *hasContentType* oder *isScreenReaderSuitable* dieser Lerneinheit
 - **[RDFNode] metaDataValue** : der RDFNode des dazugehörigen Werts, z.B. "Image" bzw. "true" (Downcast nach [Literal] möglich)
