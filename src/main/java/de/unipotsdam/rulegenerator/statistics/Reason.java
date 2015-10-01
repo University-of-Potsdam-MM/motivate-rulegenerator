@@ -9,9 +9,7 @@ public class Reason {
     private RDFNode user, actionTime, recordedTime, recordedContextInformation,
             learningUnit, metaDataProperty, metaDataValue;
 
-    public String getAction() {
-        return action;
-    }
+    public String getAction() { return action; }
 
     public void setAction(String action) {
         this.action = action;
@@ -72,6 +70,5 @@ public class Reason {
     public void setMetaDataValue(RDFNode metaDataValue) {
         this.metaDataValue = metaDataValue;
     }
-
 
 }
