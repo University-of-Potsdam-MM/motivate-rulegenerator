@@ -116,7 +116,9 @@ public class JSONServices extends Services {
 	@Produces(MediaType.APPLICATION_JSON)
 	public String convertFromOWLXML(@FormParam("ontologyABox") String aBox) {
 		try {
-			return ConversionService.convertOWLXMLToJSONLD(aBox);
+			String jsonld = ConversionService.convertOWLXMLToJSONLD(aBox);
+			System.out.println(jsonld);
+			return jsonld;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
