@@ -1,8 +1,6 @@
 package de.unipotsdam.rulegenerator.jaxrs;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.xml.transform.ErrorListener;
 import javax.xml.transform.TransformerException;
@@ -29,12 +27,13 @@ public class XMLServices extends Services implements ErrorListener,
 	 * @return the adaptation rule list
 	 * @throws Exception
 	 */
-	@GET
+	@POST
 	@Path("/get-adaptation-rules")
+	@Consumes("application/x-www-form-urlencoded")
 	@Produces(MediaType.TEXT_XML)
-	public AdaptationRuleList getAdaptationRules() {
+	public AdaptationRuleList getAdaptationRules(@FormParam("ontologyABox") String aBox, @FormParam("ontologyId") String ontologyId) {
 		try {
-			return RuleGeneratorService.generateAdaptationRules(null, null);
+			return RuleGeneratorService.generateAdaptationRules(aBox, ontologyId);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

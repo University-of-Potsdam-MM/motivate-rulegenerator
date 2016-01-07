@@ -1,7 +1,5 @@
 package de.unipotsdam.rulegenerator.enums;
 
-import com.hp.hpl.jena.reasoner.rulesys.builtins.LE;
-
 // TODO: Auto-generated Javadoc
 /**
  * The Enum FactOperator.

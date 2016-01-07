@@ -168,8 +168,7 @@ public class FactSet implements FactSetElement {
 			if (factSetElement.getClass() == LogicalOperator.class) {
 				if (logicalOperator == LogicalOperator.NO_VALUE) {
 					logicalOperator = (LogicalOperator) factSetElement;
-				} else if (logicalOperator != LogicalOperator.NO_VALUE
-						&& logicalOperator != (LogicalOperator) factSetElement) {
+				} else if (logicalOperator != factSetElement) {
 					logicalOperator = LogicalOperator.MIXED;
 				}
 			}

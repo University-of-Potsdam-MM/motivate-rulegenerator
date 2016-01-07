@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.motivate-project.de/XSL" elementFormDefault="qualified" xmlns:xsl="http://www.motivate-project.de/XSL">
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+               schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+    <xs:import namespace="http://www.w3.org/2001/XMLSchema"
+               schemaLocation="http://www.w3.org/2001/XMLSchema.xsd"/>
+
+</xs:schema>

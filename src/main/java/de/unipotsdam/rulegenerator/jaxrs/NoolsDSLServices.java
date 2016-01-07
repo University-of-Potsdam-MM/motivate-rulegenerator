@@ -38,8 +38,8 @@ import org.xml.sax.SAXParseException;
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
 
-@Path("/dsl")
-public class DSLServices extends Services implements ErrorListener,
+@Path("/noolsdsl")
+public class NoolsDSLServices extends Services implements ErrorListener,
 		ErrorHandler {
 
 	@POST
@@ -61,17 +61,7 @@ public class DSLServices extends Services implements ErrorListener,
 					+ this.stackTraceToString(e);
 		}
 
-		String xml;
-		StringWriter stringWriter = new StringWriter();
-		try {
-			JAXBContext context = JAXBContext
-					.newInstance(AdaptationRuleList.class);
-			Marshaller carMarshaller = context.createMarshaller();
-			carMarshaller.marshal(adaptationRuleList, stringWriter);
-			xml = stringWriter.toString();
-		} catch (JAXBException e) {
-			throw new RuntimeException(e);
-		}
+		String xml = RuleGeneratorService.XMLFromAdaptationRules(adaptationRuleList);
 
 		String xslt = new Scanner(new File("./resources/noolsDSL.xslt"))
 				.useDelimiter("\\Z").next();
@@ -85,13 +75,12 @@ public class DSLServices extends Services implements ErrorListener,
 		SAXSource xmlInput = new SAXSource(parser.getXMLReader(),
 				new InputSource(new StringReader(xml)));
 
-		stringWriter = new StringWriter();
+		StringWriter stringWriter = new StringWriter();
 		StreamResult xmlOutput = new StreamResult(stringWriter);
 		TransformerFactory transformerFactory = TransformerFactory
 				.newInstance();
 
 		StreamSource source = new StreamSource(new StringReader(xslt));
-		// source.setSystemId("resources/noolsDSL.xslt");
 		Transformer transformer = transformerFactory.newTransformer(source);
 		transformer.setErrorListener(this);
 		transformer.setOutputProperty(OutputKeys.INDENT, "yes");

@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import de.unipotsdam.rulegenerator.enums.FactOperator;
+import org.apache.commons.validator.GenericValidator;
 
 @XmlRootElement(name = "factParameter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -12,6 +13,8 @@ public class FactParameter {
 
 	/** The context information. */
 	private String contextInformation;
+
+	private String contextInformationType = "STRING";
 
 	/** The operator. */
 	private FactOperator operator;
@@ -21,12 +24,11 @@ public class FactParameter {
 
 	public FactParameter() { }
 	
-	public FactParameter(String contextInformation, FactOperator operator,
-			String value) {
+	public FactParameter(String contextInformation, FactOperator operator, String value) {
 		super();
-		this.contextInformation = contextInformation;
-		this.operator = operator;
-		this.value = value;
+		this.setContextInformation(contextInformation);
+		this.setOperator(operator);
+		this.setValue(value);
 	}
 
 	public String getContextInformation() {
@@ -51,6 +53,15 @@ public class FactParameter {
 
 	public void setValue(String value) {
 		this.value = value;
+
+		if (GenericValidator.isInt(value)) {
+			this.contextInformationType = "INTEGER";
+		} else if (GenericValidator.isFloat(value)) {
+			this.contextInformationType = "FLOAT";
+		} else if (value.equals("true") || value.equals("false")) {
+			this.contextInformationType = "BOOLEAN";
+		} else {
+			this.contextInformationType = "STRING";
+		}
 	}
-	
 }

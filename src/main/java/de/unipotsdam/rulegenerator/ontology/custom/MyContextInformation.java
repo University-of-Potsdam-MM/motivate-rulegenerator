@@ -20,7 +20,7 @@ public class MyContextInformation extends DefaultContextInformation implements
 		// TODO Auto-generated constructor stub
 	}
 
-	// Type
+	// Types
 
 	public Set<OWLClassExpression> getTypes() {
 		return this.getOwlIndividual().getTypes(this.getOwlOntology());

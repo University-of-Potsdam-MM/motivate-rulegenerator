@@ -60,8 +60,8 @@
 			<parameter id="CP_ACTION_END_TIMESTAMP">
 				<parameterValue type="INTEGER" />
 			</parameter>
-			<parameter id="CP_ACTION_REFERNCED_LEARNING_NUGGET">
-				<parameterValue type="STRING" />
+			<parameter id="CP_ACTION_REFERENCED_LEARNING_NUGGET">
+				<parameterValue type="INTEGER" />
 			</parameter>
 		</parameters>
 	</information>

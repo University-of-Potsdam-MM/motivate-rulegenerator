@@ -11,10 +11,10 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://motivate-project.de/ontology/knowledge.owl"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://motivate-project.de/ontology/knowledge.owl">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -323,6 +323,9 @@
         <DataProperty IRI="#hasUserCorrectedValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasValidity"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasValue"/>
     </Declaration>
     <Declaration>
@@ -353,8 +356,8 @@
         <Class IRI="#Feature"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#AppUsageFeature"/>
-            <NamedIndividual IRI="#SuggestAlternativeFeature"/>
             <NamedIndividual IRI="#LocationTrackingFeature"/>
+            <NamedIndividual IRI="#SuggestAlternativeFeature"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -658,6 +661,12 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RecordedContextInformation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValidity"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#RestrictFeatureConstraint"/>
         <Class IRI="#Constraint"/>
     </SubClassOf>
@@ -796,8 +805,8 @@
         <ObjectProperty IRI="#hasAction"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isBasisOf"/>
         <ObjectProperty IRI="#hasBasis"/>
+        <ObjectProperty IRI="#isBasisOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isConstraintRequirementOf"/>
@@ -824,16 +833,16 @@
         <ObjectProperty IRI="#hasFeature"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isHelpOf"/>
         <ObjectProperty IRI="#hasHelp"/>
+        <ObjectProperty IRI="#isHelpOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasLearningUnitClass"/>
         <ObjectProperty IRI="#isLearningUnitClassOf"/>
+        <ObjectProperty IRI="#hasLearningUnitClass"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
         <ObjectProperty IRI="#isMeasurableContextInformationOf"/>
+        <ObjectProperty IRI="#hasMeasurableContextInformation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isPrerequisiteOf"/>
@@ -848,16 +857,16 @@
         <ObjectProperty IRI="#isReferenceOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasSituation"/>
         <ObjectProperty IRI="#isSituationOf"/>
+        <ObjectProperty IRI="#hasSituation"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isVersionOf"/>
         <ObjectProperty IRI="#hasVersion"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isReferencedByAction"/>
         <ObjectProperty IRI="#referencesLearningUnit"/>
+        <ObjectProperty IRI="#isReferencedByAction"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#hasVersion"/>

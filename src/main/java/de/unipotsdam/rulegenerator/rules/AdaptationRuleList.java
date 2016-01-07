@@ -13,25 +13,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "adaptationRules")
 public class AdaptationRuleList {
-	@XmlElement(name = "adaptationRule")
-	@JsonProperty("adaptationRule")
-	private List<AdaptationRule> list = new ArrayList<AdaptationRule>();
+    @XmlElement(name = "adaptationRule")
+    @JsonProperty("adaptationRule")
+    private List<AdaptationRule> list = new ArrayList<AdaptationRule>();
 
-	public List<AdaptationRule> getList() {
-		return list;
-	}
+    public List<AdaptationRule> getList() {
+        return list;
+    }
 
-	public void setList(List<AdaptationRule> list) {
-		this.list = list;
-	}
-	
-	public void addAdaptationRule(AdaptationRule adaptationRule) {
-		this.list.add(adaptationRule);
-	}
-	
-	public void addAdaptationRules(List<AdaptationRule> adaptationRules) {
-		for (AdaptationRule adaptationRule : adaptationRules) {
-			this.addAdaptationRule(adaptationRule);
-		}
-	}
+    public void setList(List<AdaptationRule> list) {
+        this.list = list;
+    }
+
+    public void addAdaptationRule(AdaptationRule adaptationRule) {
+        this.list.add(adaptationRule);
+    }
+
+    public void addAdaptationRules(List<AdaptationRule> adaptationRules) {
+        for (AdaptationRule adaptationRule : adaptationRules) {
+            this.addAdaptationRule(adaptationRule);
+        }
+    }
 }

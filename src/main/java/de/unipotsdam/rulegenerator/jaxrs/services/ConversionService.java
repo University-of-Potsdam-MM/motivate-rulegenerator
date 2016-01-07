@@ -3,6 +3,8 @@ package de.unipotsdam.rulegenerator.jaxrs.services;
 import no.s11.owlapijsonld.JsonLdOntologyFormat;
 import no.s11.owlapijsonld.JsonLdParserFactory;
 import no.s11.owlapijsonld.JsonLdStorer;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.coode.owlapi.turtle.TurtleOntologyFormat;
 import org.semanticweb.owlapi.io.OWLXMLOntologyFormat;
 import org.semanticweb.owlapi.io.RDFXMLOntologyFormat;
@@ -17,6 +19,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 public class ConversionService extends Service {
+	private Log log = LogFactory.getLog(ConversionService.class);
 
 	/**
 	 *
@@ -37,8 +40,8 @@ public class ConversionService extends Service {
 
 	/**
 	 *
-	 * @param jsonld
-	 * @return
+	 * @param jsonld {String}
+	 * @return String
 	 * @throws OWLOntologyCreationException
 	 * @throws OWLOntologyStorageException
 	 * @throws UnsupportedEncodingException
