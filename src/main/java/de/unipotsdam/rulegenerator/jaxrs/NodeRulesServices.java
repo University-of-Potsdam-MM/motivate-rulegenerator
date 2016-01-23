@@ -2,6 +2,7 @@ package de.unipotsdam.rulegenerator.jaxrs;
 
 import de.unipotsdam.rulegenerator.jaxrs.services.RuleGeneratorService;
 import de.unipotsdam.rulegenerator.rules.AdaptationRuleList;
+import no.s11.owlapijsonld.JsonLdParserFactory;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -9,6 +10,7 @@ import org.xml.sax.SAXParseException;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -26,15 +28,16 @@ public class NodeRulesServices extends Services implements ErrorListener,
     @Path("/get-adaptation-rules")
     @Consumes("application/x-www-form-urlencoded")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getAdaptationRules(@FormParam("ontologyABox") String aBox, @FormParam("ontologyId") String ontologyId) throws IOException, ParserConfigurationException, SAXException, TransformerException {
+    public Response getAdaptationRules(@FormParam("ontologyABox") String aBox, @FormParam("ontologyId") String ontologyId) throws IOException, ParserConfigurationException, SAXException, TransformerException {
         // generate rules
         AdaptationRuleList adaptationRuleList;
         try {
+            JsonLdParserFactory.register();
             adaptationRuleList = RuleGeneratorService.generateAdaptationRules(
                     aBox, ontologyId);
         } catch (Exception e) {
-            return e.getClass() + " " + e.getMessage() + "\n\n"
-                    + this.stackTraceToString(e);
+            System.out.println(e.getClass() + " " + e.getMessage() + "\n\n" + this.stackTraceToString(e));
+            return null;
         }
 
         String xml = RuleGeneratorService.XMLFromAdaptationRules(adaptationRuleList);
@@ -69,7 +72,11 @@ public class NodeRulesServices extends Services implements ErrorListener,
         outputWriter.write(xmlOutput.getWriter().toString());
         outputWriter.close();
 
-        return xmlOutput.getWriter().toString();
+        return Response.ok() //200
+                .entity(xmlOutput.getWriter().toString())
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS").build();
     }
 
     @Override

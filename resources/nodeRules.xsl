@@ -404,6 +404,11 @@
             <xsl:value-of select="motivate:generate(situation/contextFacts, (), $max)" />
         </xsl:if>
 
+
+        <xsl:if test="count(situation/relationFacts/*) = 0 and count(situation/contextFacts/*) = 0">
+            <xsl:text>true</xsl:text>
+        </xsl:if>
+
         <xsl:text>);</xsl:text>
 
         <!-- Action -->
@@ -413,17 +418,17 @@
         <xsl:text>&#x9;&#x9;</xsl:text>
         <xsl:choose>
             <xsl:when test="action/operator = 'SELECT'">
-                <xsl:text>&#x9;if (typeof window["ruleEngine"]._callbacks["selectLearningUnit"] != "undefined") {&#xa;</xsl:text>
-                <xsl:text>&#x9;&#x9;window["ruleEngine"]._callbacks["selectLearningUnit"](</xsl:text>
+                <xsl:text>&#x9;if (typeof window["ruleEngine"]._callbacks["selectLearningUnitCallback"] != "undefined") {&#xa;</xsl:text>
+                <xsl:text>&#x9;&#x9;window["ruleEngine"]._callbacks["selectLearningUnitCallback"]("</xsl:text>
                 <xsl:value-of select="action/learningUnitId" />
-                <xsl:text>, null);&#xa;</xsl:text>
+                <xsl:text>", null);&#xa;</xsl:text>
                 <xsl:text>&#x9;}&#xa;</xsl:text>
             </xsl:when>
             <xsl:when test="action/operator = 'PRELOAD'">
                 <xsl:text>&#x9;if (typeof window["ruleEngine"]._callbacks["preloadLearningUnitCallback"] != "undefined") {&#xa;</xsl:text>
-                <xsl:text>&#x9;&#x9;window["ruleEngine"]._callbacks["preloadLearningUnitCallback"](</xsl:text>
+                <xsl:text>&#x9;&#x9;window["ruleEngine"]._callbacks["preloadLearningUnitCallback"]("</xsl:text>
                 <xsl:value-of select="action/learningUnitId" />
-                <xsl:text>, null);&#xa;</xsl:text>
+                <xsl:text>", null);&#xa;</xsl:text>
                 <xsl:text>&#x9;}&#xa;</xsl:text>
             </xsl:when>
             <xsl:when test="action/operator = 'RESTRICT_FEATURE'">

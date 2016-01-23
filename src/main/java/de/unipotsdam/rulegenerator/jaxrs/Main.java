@@ -16,7 +16,7 @@ public class Main {
     // Base URI the Grizzly HTTP server will listen on
 	public static String host = "localhost";
 	public static String port = "9998";
-    
+
 	/**
 	 * Start server.
 	 *

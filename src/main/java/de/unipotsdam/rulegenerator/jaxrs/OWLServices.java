@@ -9,6 +9,7 @@ import java.nio.file.Files;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 @Path("/owl")
 public class OWLServices extends Services {
@@ -26,9 +27,13 @@ public class OWLServices extends Services {
 	@Path("/convert-from-json-ld")
 	@Consumes("application/x-www-form-urlencoded")
 	@Produces(MediaType.TEXT_XML)
-	public String convertFromJSONLD(@FormParam("jsonld") String jsonld) {
+	public Response convertFromJSONLD(@FormParam("jsonld") String jsonld) {
 		try {
-			return ConversionService.convertJSONLDToOWLXML(jsonld);
+			return Response.ok() //200
+					.entity(ConversionService.convertJSONLDToOWLXML(jsonld))
+					.header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+					.allow("OPTIONS").build();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

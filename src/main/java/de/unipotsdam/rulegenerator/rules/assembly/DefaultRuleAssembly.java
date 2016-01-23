@@ -41,11 +41,10 @@ public class DefaultRuleAssembly extends RuleAssembly {
 
 			// create a select rule for the current learning unit if its context
 			// information are present
-			if (currentLearningUnit.getContextInformationCount() > 0)
-				adaptationRules.addAdaptationRule(new SelectAdaptationRule(
-						currentLearningUnit,
-						hasLearningUnitClassConstraintFactSet,
-						hasNotLearningUnitClassConstraintFactSet));
+			adaptationRules.addAdaptationRule(new SelectAdaptationRule(
+					currentLearningUnit,
+					hasLearningUnitClassConstraintFactSet,
+					hasNotLearningUnitClassConstraintFactSet));
 
 			/** RELATIONS **/
 
