@@ -40,43 +40,49 @@ public class NodeRulesServices extends Services implements ErrorListener,
             return null;
         }
 
-        String xml = RuleGeneratorService.XMLFromAdaptationRules(adaptationRuleList);
+        try {
+            String xml = RuleGeneratorService.XMLFromAdaptationRules(adaptationRuleList);
 
-        String xslt = new Scanner(new File("./resources/nodeRules.xsl"))
-                .useDelimiter("\\Z").next();
+            String xslt = new Scanner(new File("./resources/nodeRules.xsl"))
+                    .useDelimiter("\\Z").next();
 
-        System.setProperty("javax.xml.transform.TransformerFactory",
-                "net.sf.saxon.TransformerFactoryImpl");
+            System.setProperty("javax.xml.transform.TransformerFactory",
+                    "net.sf.saxon.TransformerFactoryImpl");
 
-        SAXParserFactory parserFactory = SAXParserFactory.newInstance();
-        SAXParser parser = parserFactory.newSAXParser();
-        parser.getXMLReader().setErrorHandler(this);
-        SAXSource xmlInput = new SAXSource(parser.getXMLReader(),
-                new InputSource(new StringReader(xml)));
+            SAXParserFactory parserFactory = SAXParserFactory.newInstance();
+            SAXParser parser = parserFactory.newSAXParser();
+            parser.getXMLReader().setErrorHandler(this);
+            SAXSource xmlInput = new SAXSource(parser.getXMLReader(),
+                    new InputSource(new StringReader(xml)));
 
-        StringWriter stringWriter = new StringWriter();
-        StreamResult xmlOutput = new StreamResult(stringWriter);
-        TransformerFactory transformerFactory = TransformerFactory
-                .newInstance();
+            StringWriter stringWriter = new StringWriter();
+            StreamResult xmlOutput = new StreamResult(stringWriter);
+            TransformerFactory transformerFactory = TransformerFactory
+                    .newInstance();
 
-        StreamSource source = new StreamSource(new StringReader(xslt));
-        Transformer transformer = transformerFactory.newTransformer(source);
-        transformer.setErrorListener(this);
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-        transformer.transform(xmlInput, xmlOutput);
+            StreamSource source = new StreamSource(new StringReader(xslt));
+            Transformer transformer = transformerFactory.newTransformer(source);
+            transformer.setErrorListener(this);
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+            transformer.transform(xmlInput, xmlOutput);
 
-        OutputStreamWriter outputWriter = new OutputStreamWriter(
-                new FileOutputStream("./resources/noolsDSLOutput.nools"),
-                "UTF-8");
-        outputWriter.write(xmlOutput.getWriter().toString());
-        outputWriter.close();
+            OutputStreamWriter outputWriter = new OutputStreamWriter(
+                    new FileOutputStream("./resources/nodeRulesOutput.nools"),
+                    "UTF-8");
+            outputWriter.write(xmlOutput.getWriter().toString());
+            outputWriter.close();
 
-        return Response.ok() //200
-                .entity(xmlOutput.getWriter().toString())
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
-                .allow("OPTIONS").build();
+            return Response.ok() //200
+                    .entity(xmlOutput.getWriter().toString())
+                    .header("Access-Control-Allow-Origin", "*")
+                    .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                    .header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, X-Codingpedia")
+                    .allow("OPTIONS").build();
+        } catch (Exception e) {
+            System.out.println(e.getClass() + " " + e.getMessage() + "\n\n" + this.stackTraceToString(e));
+            return null;
+        }
     }
 
     @Override

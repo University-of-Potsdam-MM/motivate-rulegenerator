@@ -1,4 +1,4 @@
-package main.java.de.unipotsdam.rulegenerator.jaxrs;
+package de.unipotsdam.rulegenerator.jaxrs;
 
 import java.io.IOException;
 import java.net.URI;
@@ -53,7 +53,7 @@ public class Main {
 		if (args.length > 1) port = args[1];
 		
 		final HttpServer server = startServer();
-        System.out.println(String.format("Jersey app started with WADL available at "
+		System.out.println(String.format("Jersey app started with WADL available at "
                 + "%sapplication.wadl\nHit enter to stop it...", getBaseURL()));
         System.in.read();
         server.shutdownNow();

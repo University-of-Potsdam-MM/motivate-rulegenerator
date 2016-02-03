@@ -127,6 +127,9 @@
                 <xsl:when test="$situation/operator = 'NO_VALUE'">
                     <xsl:text>==</xsl:text>
                 </xsl:when>
+                <xsl:when test="$situation/operator = 'CONTAINS'">
+                    <xsl:text>contains</xsl:text>
+                </xsl:when>
             </xsl:choose>
             <xsl:text>", "</xsl:text>
             <xsl:if test="$situation/operator != 'NO_VALUE'">
